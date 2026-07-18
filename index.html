@@ -52,9 +52,8 @@
   }
   .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
   .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--ink)}
-  .brand .dot{
-    width:26px;height:26px;border-radius:8px;
-    background:linear-gradient(135deg,var(--blue),var(--green));
+  .brand .app-icon{
+    width:26px;height:26px;flex:none;border-radius:8px;
     box-shadow:0 4px 12px rgba(0,122,255,.35);
   }
   .nav-links{display:flex;gap:26px;font-size:15px}
@@ -178,7 +177,7 @@
 <!-- Nav -->
 <nav class="nav">
   <div class="wrap">
-    <div class="brand"><span class="dot"></span>MonoProxy</div>
+    <div class="brand"><img class="app-icon" src="images/app-icon.jpg" width="128" height="128" alt="" fetchpriority="high" decoding="async">MonoProxy</div>
     <div class="nav-links">
       <a href="#features">Features</a>
       <a href="#themes">Themes</a>
@@ -348,7 +347,7 @@
 <!-- Footer -->
 <footer>
   <div class="wrap">
-    <div class="brand"><span class="dot"></span>MonoProxy</div>
+    <div class="brand"><img class="app-icon" src="images/app-icon.jpg" width="128" height="128" alt="" decoding="async">MonoProxy</div>
     <div class="flinks">
       <a href="privacy-en.html">Privacy</a>
       <a href="support-en.html">Support</a>
