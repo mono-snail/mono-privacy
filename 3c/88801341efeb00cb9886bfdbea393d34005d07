@@ -1,0 +1,60 @@
+CNAME
+  s_b84c923e9c1659::t_2d0a0e1256ca4e 1 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a5ca50ac630eb529fff2a5b","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Single":1}]}]}
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "3c88801341efeb00cb9886bfdbea393d34005d07",
+  "prompts": {},
+  "sessions": {
+    "s_b84c923e9c1659": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a5b71679c6647d0f7cec756",
+        "model": "gpt-5.5__dev"
+      },
+      "human_author": "yanjun <yanjun.micro@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {
+    "CNAME": [
+      {
+        "hash": "s_b84c923e9c1659::t_2d0a0e1256ca4e",
+        "line_ranges": [
+          {
+            "Single": 1
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a5ca50ac630eb529fff2a5b",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Single": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "s_b84c923e9c1659": {
+      "tool": "trae",
+      "conversation_id": "6a5b71679c6647d0f7cec756",
+      "session_id": "6a5b71679c6647d0f7cec756",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_b84c923e9c1659::t_2d0a0e1256ca4e": {
+      "tool": "trae",
+      "conversation_id": "6a5b71679c6647d0f7cec756",
+      "session_id": "6a5b71679c6647d0f7cec756",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
