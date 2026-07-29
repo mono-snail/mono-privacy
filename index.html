@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MonoProxy — One Port. Every Proxy.</title>
-<meta name="description" content="A small, beautiful proxy for iPhone. HTTP, HTTPS and SOCKS4/4a/5 on a single port, with a built-in self-test, live traffic stats and ambient sound.">
-<meta property="og:title" content="MonoProxy — One Port. Every Proxy.">
-<meta property="og:description" content="HTTP, HTTPS and SOCKS4/4a/5 on a single port. Built-in self-test, live stats, ambient sound. Small but beautiful.">
+<title>MonoProxy — Your iPhone as a Local Proxy Hub</title>
+<meta name="description" content="Turn your iPhone into a local HTTP, HTTPS and SOCKS proxy hub for Macs, PCs, tablets and test devices. Start, connect and verify real traffic.">
+<meta property="og:title" content="MonoProxy — Your Local Proxy Hub">
+<meta property="og:description" content="One iPhone, one local address, every device. Start the proxy, connect a client and know when traffic is verified.">
 <meta property="og:type" content="website">
 <style>
   :root{
@@ -126,6 +126,21 @@
   .fcard h3{font-size:18px;margin-bottom:8px}
   .fcard p{font-size:15px;color:var(--muted)}
 
+  /* ---------- Core journey ---------- */
+  .journey{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+  .step{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);
+    border-radius:var(--radius);padding:28px;box-shadow:0 12px 30px rgba(15,23,42,.05)}
+  .step::after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;
+    right:-55px;top:-55px;background:var(--step-color);opacity:.08}
+  .step-num{font:700 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+    letter-spacing:.08em;color:var(--blue);margin-bottom:22px}
+  .step h3{font-size:22px;margin-bottom:10px}
+  .step p{font-size:15px;color:var(--muted)}
+  .notice{margin-top:28px;padding:18px 22px;border-radius:16px;
+    background:linear-gradient(120deg,rgba(0,122,255,.07),rgba(52,199,89,.08));
+    border:1px solid rgba(0,122,255,.14);color:var(--muted);font-size:15px}
+  .notice strong{color:var(--ink)}
+
   /* ---------- Themes showcase ---------- */
   .themes{text-align:center}
   .theme-row{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
@@ -163,7 +178,7 @@
     .hero h1{font-size:42px}
     .hero p.sub{font-size:18px}
     .hero-phone{transform:none;margin-top:8px}
-    .features{grid-template-columns:1fr}
+    .features,.journey{grid-template-columns:1fr}
     .theme-row{grid-template-columns:1fr}
     .theme-item .phone{width:250px}
     .plist{grid-template-columns:1fr}
@@ -179,8 +194,9 @@
   <div class="wrap">
     <div class="brand"><img class="app-icon" src="images/app-icon.jpg" width="128" height="128" alt="" fetchpriority="high" decoding="async">MonoProxy</div>
     <div class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#themes">Themes</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#features">Capabilities</a>
+      <a href="#experience">Experience</a>
       <a href="#privacy">Privacy</a>
       <a href="support-en.html">Support</a>
     </div>
@@ -191,39 +207,68 @@
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">Small but beautiful</span>
-      <h1>One port.<br><span class="grad">Every proxy.</span></h1>
-      <p class="sub">MonoProxy turns your iPhone into a lightweight proxy server — HTTP, HTTPS and SOCKS4/4a/5 all on a single port. Start it in one tap, verify it with the built-in self-test.</p>
+      <span class="eyebrow">Your local proxy hub</span>
+      <h1>One iPhone.<br><span class="grad">Every device.</span></h1>
+      <p class="sub">Turn your iPhone into a local proxy gateway for Macs, PCs, tablets and test devices. Start the service, share one address and know when real client traffic is flowing.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="#features">▶ See what it does</a>
-        <a class="btn btn-ghost" href="support-en.html">Get support</a>
+        <a class="btn btn-primary" href="https://apps.apple.com/app/id6748090836" target="_blank" rel="noopener">View on the App Store</a>
+        <a class="btn btn-ghost" href="#how-it-works">See how it works</a>
       </div>
       <div class="badges">
         <span><b>iOS 15+</b> supported</span>
-        <span>🔒 <b>No data</b> collected</span>
-        <span>⚡ <b>One tap</b> to start</span>
+        <span>🔒 <b>Local</b> by design</span>
+        <span>✓ <b>Real traffic</b> verified</span>
       </div>
     </div>
     <div>
-      <div class="phone hero-phone"><img src="images/web/1.jpg" width="640" height="1391" alt="MonoProxy main screen" fetchpriority="high" decoding="async"></div>
+      <div class="phone hero-phone"><img src="images/web/1.jpg" width="640" height="1391" alt="MonoProxy home screen with local proxy status" fetchpriority="high" decoding="async"></div>
     </div>
   </div>
 </header>
 
-<!-- Spotlight: one port, every protocol -->
+<!-- Core journey -->
+<section class="section" id="how-it-works">
+  <div class="wrap">
+    <span class="eyebrow">One clear path</span>
+    <h2>Start. Connect. Know it works.</h2>
+    <p class="lead">MonoProxy treats opening a port and proving a client connection as different events, so the status always tells the truth.</p>
+    <div class="journey">
+      <article class="step" style="--step-color:#007AFF">
+        <div class="step-num">01 / START</div>
+        <h3>Open the hub</h3>
+        <p>Choose the Wi-Fi or LAN address your client can reach, then start the local proxy service.</p>
+      </article>
+      <article class="step" style="--step-color:#AF52DE">
+        <div class="step-num">02 / CONNECT</div>
+        <h3>Bring a device in</h3>
+        <p>Open Connect a Device, copy the address or scan the QR code, then follow the guide for your platform.</p>
+      </article>
+      <article class="step" style="--step-color:#34C759">
+        <div class="step-num">03 / VERIFY</div>
+        <h3>See real traffic</h3>
+        <p>Listening becomes Client Connected, then Traffic Verified only after data passes through the real proxy path.</p>
+      </article>
+    </div>
+    <div class="notice"><strong>Already purchased MonoProxy?</strong> When the app moves to a Free + one-time Pro model, every previous paid download keeps permanent Pro access automatically.</div>
+  </div>
+</section>
+
+<!-- Spotlight: local proxy hub -->
 <section class="section" style="padding-top:40px">
   <div class="spotlight">
     <div class="inner">
-      <div class="phone"><img src="images/web/3.jpg" width="640" height="1391" alt="MonoProxy running with HTTP/HTTPS and SOCKS4/5" loading="lazy" decoding="async"></div>
+      <div class="phone"><img src="images/web/3.jpg" width="640" height="1391" alt="MonoProxy local proxy hub running on one address" loading="lazy" decoding="async"></div>
       <div>
-        <span class="eyebrow">The core idea</span>
-        <h2>All protocols, one address</h2>
-        <p class="lead">No more juggling ports. MonoProxy auto-detects whether a client speaks HTTP, HTTPS or SOCKS and handles it on the same listening address.</p>
+        <span class="eyebrow">The hub model</span>
+        <h2>One address for every client</h2>
+        <p class="lead">Point a Mac, PC, tablet or test device at the same local address. MonoProxy identifies HTTP, HTTPS or SOCKS traffic without making you manage separate ports.</p>
         <div class="chips">
           <span class="chip blue">🌐 HTTP / HTTPS</span>
           <span class="chip green">🔁 SOCKS4 / 4a / 5</span>
+          <span class="chip">💻 Mac &amp; PC</span>
+          <span class="chip">📱 Phones &amp; tablets</span>
         </div>
-        <p class="portline">Point every client at <code>your-ip:8080</code> — that's it. <em>All proxies share the same port.</em></p>
+        <p class="portline">Point every client at <code>your-ip:8080</code>. The host and port stay simple even when the client protocols differ.</p>
       </div>
     </div>
   </div>
@@ -232,9 +277,9 @@
 <!-- Feature grid -->
 <section class="section" id="features" style="padding-top:24px">
   <div class="wrap">
-    <span class="eyebrow">Features</span>
-    <h2>Everything you need, nothing you don't</h2>
-    <p class="lead">A focused toolset for developers, testers and power users who just want a reliable proxy on the device in their pocket.</p>
+    <span class="eyebrow">Capabilities</span>
+    <h2>Built around the connection</h2>
+    <p class="lead">The home screen prioritizes starting, sharing and verifying the proxy. Advanced controls remain available without taking over the primary path.</p>
 
     <div class="features">
       <div class="fcard">
@@ -248,24 +293,24 @@
         <p>Turn on username/password authentication when you need it. Credentials stay on device and never touch a log.</p>
       </div>
       <div class="fcard">
-        <div class="ficon">✅</div>
-        <h3>Built-in self-test</h3>
-        <p>Verify HTTP, HTTPS, SOCKS4 and SOCKS5 in one tap. A live Info Output window reveals handshake details when something fails.</p>
+        <div class="ficon">📲</div>
+        <h3>Guided device setup</h3>
+        <p>Copy the active address, scan a QR configuration, or follow concise setup steps for iPhone, Android, macOS and Windows.</p>
       </div>
       <div class="fcard">
-        <div class="ficon">📊</div>
-        <h3>Live traffic stats</h3>
-        <p>Watch real-time upload/download speed, total transfer, runtime and a rolling traffic trend chart.</p>
+        <div class="ficon">✓</div>
+        <h3>Truthful connection states</h3>
+        <p>Listening, Client Connected and Traffic Verified are separate states driven by the real connection and transfer path.</p>
       </div>
       <div class="fcard">
         <div class="ficon">📡</div>
         <h3>Pick your interface</h3>
-        <p>Choose exactly which network interface the proxy listens on — Wi-Fi, cellular tether or a VPN tunnel.</p>
+        <p>Choose exactly which reachable Wi-Fi or LAN address the proxy listens on. Network changes never switch silently.</p>
       </div>
       <div class="fcard">
-        <div class="ficon">🎧</div>
-        <h3>Ambient sound</h3>
-        <p>Listen to rain, waves and other ambient tracks while your proxy service is running.</p>
+        <div class="ficon">📊</div>
+        <h3>Live session insight</h3>
+        <p>See upload and download rates, transferred bytes, accepted clients, active connections and latest verified activity.</p>
       </div>
     </div>
   </div>
@@ -292,7 +337,7 @@
 </section>
 
 <!-- Themes -->
-<section class="section themes" id="themes">
+<section class="section themes" id="experience">
   <div class="wrap">
     <span class="eyebrow">Made to look good</span>
     <h2>Three themes, always tidy</h2>
@@ -300,11 +345,11 @@
     <div class="theme-row">
       <div class="theme-item">
         <div class="phone"><img src="images/web/3.jpg" width="640" height="1391" alt="MonoProxy blue theme" loading="lazy" decoding="async"></div>
-        <div class="cap">Ocean Blue<span>Clean & classic</span></div>
+        <div class="cap">Ocean Blue<span>Clean &amp; classic</span></div>
       </div>
       <div class="theme-item">
         <div class="phone"><img src="images/web/6.jpg" width="640" height="1391" alt="MonoProxy mint theme" loading="lazy" decoding="async"></div>
-        <div class="cap">Fresh Mint<span>Calm & bright</span></div>
+        <div class="cap">Fresh Mint<span>Calm &amp; bright</span></div>
       </div>
       <div class="theme-item">
         <div class="phone"><img src="images/web/5.jpg" width="640" height="1391" alt="MonoProxy dark theme" loading="lazy" decoding="async"></div>
@@ -321,9 +366,10 @@
       <div>
         <span class="eyebrow">Stay informed</span>
         <h2>See every byte</h2>
-        <p class="lead">A dedicated statistics view tracks total runtime, start count, cumulative upload and download, plus a traffic trend you can scan at a glance.</p>
+        <p class="lead">A dedicated statistics view summarizes the current session: duration, accepted clients, active connections, transferred bytes and latest verified activity.</p>
         <div class="chips">
-          <span class="chip">⏱ Total runtime</span>
+          <span class="chip">⏱ Session duration</span>
+          <span class="chip">👥 Clients</span>
           <span class="chip">⬆ Upload</span>
           <span class="chip">⬇ Download</span>
           <span class="chip">📈 Trend</span>
@@ -344,8 +390,8 @@
       <div class="plist">
         <div class="pitem"><div class="pi">🔒</div><div><h3>Credentials never leave the device</h3><p>SOCKS5 username &amp; password are stored locally, never uploaded, and never written to any log.</p></div></div>
         <div class="pitem"><div class="pi">🚫</div><div><h3>No data collection</h3><p>No tracking, no profiling, no third-party analytics. Proxied traffic is not logged or stored.</p></div></div>
-        <div class="pitem"><div class="pi">🧪</div><div><h3>Self-test hits only a public host</h3><p>The connectivity check talks to a public test address and never involves your personal data.</p></div></div>
-        <div class="pitem"><div class="pi">📴</div><div><h3>Works offline of any cloud</h3><p>Everything happens on-device. There's simply no server for us to peek into.</p></div></div>
+        <div class="pitem"><div class="pi">🔐</div><div><h3>TLS stays end to end</h3><p>HTTPS tunnels are relayed without certificate installation, decryption or content inspection.</p></div></div>
+        <div class="pitem"><div class="pi">🗂</div><div><h3>Optional history stays local</h3><p>Host-only history and site totals are off by default, stored locally, bounded and clearable at any time.</p></div></div>
       </div>
       <p style="margin-top:30px"><a href="privacy-en.html" style="color:#5fe08a">Read the full privacy policy →</a></p>
     </div>
@@ -355,11 +401,11 @@
 <!-- CTA band -->
 <section class="band">
   <div class="wrap">
-    <h2>Small app. Serious proxy.</h2>
-    <p>One port for everything, verified in a tap, private by design.</p>
+    <h2>Make your iPhone the local proxy hub.</h2>
+    <p>Start once, connect every device and see when real traffic arrives.</p>
     <div class="cta" style="justify-content:center">
-      <a class="btn btn-primary" href="support-en.html">Questions? Contact support</a>
-      <a class="btn btn-ghost" href="privacy-en.html">Privacy policy</a>
+      <a class="btn btn-primary" href="https://apps.apple.com/app/id6748090836" target="_blank" rel="noopener">View on the App Store</a>
+      <a class="btn btn-ghost" href="support-en.html">Questions? Contact support</a>
     </div>
   </div>
 </section>
