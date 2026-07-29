@@ -103,6 +103,31 @@
   .phone img{width:100%;height:auto;aspect-ratio:1206 / 2622;display:block;border-radius:33px}
   .hero-phone{transform:rotate(1.5deg)}
 
+  /* ---------- Network topology ---------- */
+  .topology{padding:56px 0 72px}
+  .topology-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px}
+  .topology-head .lead{max-width:560px}
+  .topology-panel{
+    margin-top:32px;overflow:hidden;border:1px solid var(--line);border-radius:30px;
+    background:#f4f8fd;box-shadow:0 24px 60px rgba(15,23,42,.09)
+  }
+  .topology-art{position:relative}
+  .topology-art img{display:block;width:100%;height:auto;aspect-ratio:16 / 9;object-fit:cover}
+  .hub-badge{
+    position:absolute;left:50%;bottom:20px;transform:translateX(-50%);
+    display:flex;align-items:center;gap:9px;white-space:nowrap;padding:10px 16px;
+    border:1px solid rgba(0,122,255,.2);border-radius:999px;
+    background:rgba(255,255,255,.9);box-shadow:0 10px 26px rgba(15,23,42,.14);
+    backdrop-filter:blur(14px);font-size:14px;font-weight:700
+  }
+  .hub-dot{width:9px;height:9px;border-radius:50%;background:var(--green);
+    box-shadow:0 0 0 5px rgba(52,199,89,.14)}
+  .client-strip{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-top:1px solid var(--line)}
+  .client{padding:18px 20px;border-right:1px solid var(--line)}
+  .client:last-child{border-right:0}
+  .client strong{display:block;font-size:15px}
+  .client span{display:block;margin-top:2px;color:var(--muted);font-size:13px}
+
   /* ---------- Feature: spotlight ---------- */
   .spotlight{background:linear-gradient(180deg,#f7f9fd,#eef3fb);border-radius:36px;margin:0 24px}
   .spotlight .inner{max-width:var(--maxw);margin:0 auto;padding:72px 24px;
@@ -182,6 +207,11 @@
     .theme-row{grid-template-columns:1fr}
     .theme-item .phone{width:250px}
     .plist{grid-template-columns:1fr}
+    .topology-head{display:block}
+    .topology-head .lead{margin-top:14px}
+    .client-strip{grid-template-columns:repeat(2,1fr)}
+    .client:nth-child(2){border-right:0}
+    .client:nth-child(-n+2){border-bottom:1px solid var(--line)}
     .section{padding:64px 0}
     .nav-links{display:none}
   }
@@ -225,6 +255,31 @@
     </div>
   </div>
 </header>
+
+<!-- Network topology -->
+<section class="topology" aria-labelledby="topology-title">
+  <div class="wrap">
+    <div class="topology-head">
+      <div>
+        <span class="eyebrow">Your devices, one hub</span>
+        <h2 id="topology-title">The iPhone at the center of your local network</h2>
+      </div>
+      <p class="lead">Run MonoProxy once, then route the computers, tablets and test devices already on your Wi-Fi through the same local endpoint.</p>
+    </div>
+    <figure class="topology-panel">
+      <div class="topology-art">
+        <img src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=Premium+editorial+product+illustration+for+a+modern+Apple-style+website%2C+landscape+16%3A9.+A+bright+clean+home+workspace+network+diagram%3A+centered+iPhone+displaying+a+blue+local+proxy+hub+screen%2C+connected+by+subtle+glowing+blue+and+green+curved+lines+to+a+silver+MacBook+on+the+left%2C+a+dark+Windows+desktop+PC+on+the+right%2C+a+tablet+and+two+small+test+phones+in+the+foreground.+Devices+arranged+as+a+clear+hub-and-spoke+topology+in+a+home+Wi-Fi+environment%2C+soft+off-white+background%2C+realistic+3D+product+rendering%2C+restrained+shadows%2C+polished+SaaS+landing+page+aesthetic%2C+no+text%2C+no+logos%2C+no+watermarks%2C+ample+negative+space%2C+crisp+high+resolution.&amp;image_size=landscape_16_9" width="1024" height="576" alt="Home network topology with an iPhone running MonoProxy at the center, linked to a Mac, Windows PC, tablet and test phones." loading="lazy" decoding="async">
+        <div class="hub-badge"><span class="hub-dot"></span>MonoProxy on iPhone</div>
+      </div>
+      <figcaption class="client-strip">
+        <div class="client"><strong>Home Mac</strong><span>Browser and app traffic</span></div>
+        <div class="client"><strong>Windows PC</strong><span>HTTP, HTTPS or SOCKS</span></div>
+        <div class="client"><strong>Tablet</strong><span>Shared Wi-Fi connection</span></div>
+        <div class="client"><strong>Test devices</strong><span>One reachable endpoint</span></div>
+      </figcaption>
+    </figure>
+  </div>
+</section>
 
 <!-- Core journey -->
 <section class="section" id="how-it-works">
