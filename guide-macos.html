@@ -134,7 +134,7 @@
   </div>
 </main>
 
-<footer><div class="wrap"><a data-home-link href="index.html?lang=en">MonoProxy</a> · <a data-guide-link="guide-windows.html" href="guide-windows.html?lang=en">Windows guide / Windows 指南</a> · <a data-support-link href="support-en.html">Support</a></div></footer>
+<footer><div class="wrap"><a data-home-link href="index.html?lang=en">MonoProxy</a> · <a data-guide-link="guide-windows.html" href="guide-windows.html?lang=en">Windows guide / Windows 指南</a> · <a href="https://support.monoware.app/?product=monoproxy">Support</a></div></footer>
 <script>
   const panels = document.querySelectorAll("[data-lang]");
   const buttons = document.querySelectorAll("[data-switch]");
@@ -144,7 +144,6 @@
     document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
     document.querySelectorAll("[data-home-link]").forEach(link => link.href = `index.html?lang=${language}`);
     document.querySelectorAll("[data-guide-link]").forEach(link => link.href = `${link.dataset.guideLink}?lang=${language}`);
-    document.querySelectorAll("[data-support-link]").forEach(link => link.href = language === "zh" ? "support.html" : "support-en.html");
     if (updateAddress) {
       const url = new URL(location.href);
       url.searchParams.set("lang", language);
