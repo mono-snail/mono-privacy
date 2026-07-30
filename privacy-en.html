@@ -18,9 +18,16 @@
         .highlight { background-color: #f0f8ff; padding: 10px; border-radius: 5px; }
         .check { color: #28a745; }
         .cross { color: #dc3545; }
+        .page-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+        .page-nav a { color: #007AFF; text-decoration: none; }
+        .page-nav .active { color: #333; font-weight: 700; }
     </style>
 </head>
 <body>
+    <nav class="page-nav">
+        <a href="index.html?lang=en">MonoProxy</a>
+        <span><span class="active">English</span> · <a href="privacy.html">中文</a></span>
+    </nav>
     <h1>MonoProxy Privacy Policy</h1>
     <p><strong>Effective Date: July 2026</strong></p>
     
@@ -60,7 +67,7 @@
         <li>The proxy service only forwards HTTP / HTTPS and SOCKS4 / SOCKS4a / SOCKS5 requests locally</li>
         <li>Does not record or store access content</li>
         <li>Does not analyze network traffic</li>
-        <li>If SOCKS5 username/password authentication is enabled, credentials are stored only on the device, never uploaded, and never written to any log</li>
+        <li>If proxy username/password authentication is enabled, credentials are stored only on the device, never uploaded, and never written to any log</li>
         <li>HTTPS tunnels are relayed without certificate installation, decryption, or content inspection</li>
     </ul>
     

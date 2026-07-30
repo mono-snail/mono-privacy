@@ -49,7 +49,7 @@
 <header>
   <div class="wrap">
     <nav>
-      <a class="brand" href="index.html">MonoProxy</a>
+      <a class="brand" data-home-link href="index.html?lang=en">MonoProxy</a>
       <div class="language" aria-label="Language">
         <button type="button" data-switch="en">English</button>
         <button type="button" data-switch="zh">中文</button>
@@ -128,18 +128,26 @@
   </div>
 </main>
 
-<footer><div class="wrap"><a href="index.html">MonoProxy</a> · <a href="guide-macos.html">macOS guide / macOS 指南</a> · <a href="support-en.html">Support</a></div></footer>
+<footer><div class="wrap"><a data-home-link href="index.html?lang=en">MonoProxy</a> · <a data-guide-link="guide-macos.html" href="guide-macos.html?lang=en">macOS guide / macOS 指南</a> · <a data-support-link href="support-en.html">Support</a></div></footer>
 <script>
   const panels = document.querySelectorAll("[data-lang]");
   const buttons = document.querySelectorAll("[data-switch]");
-  function showLanguage(language) {
+  function showLanguage(language, updateAddress = false) {
     panels.forEach(panel => panel.classList.toggle("visible", panel.dataset.lang === language));
     buttons.forEach(button => button.classList.toggle("active", button.dataset.switch === language));
     document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+    document.querySelectorAll("[data-home-link]").forEach(link => link.href = `index.html?lang=${language}`);
+    document.querySelectorAll("[data-guide-link]").forEach(link => link.href = `${link.dataset.guideLink}?lang=${language}`);
+    document.querySelectorAll("[data-support-link]").forEach(link => link.href = language === "zh" ? "support.html" : "support-en.html");
+    if (updateAddress) {
+      const url = new URL(location.href);
+      url.searchParams.set("lang", language);
+      history.replaceState({}, "", url);
+    }
   }
   const requested = new URLSearchParams(location.search).get("lang");
   showLanguage(requested === "zh" || (!requested && navigator.language.startsWith("zh")) ? "zh" : "en");
-  buttons.forEach(button => button.addEventListener("click", () => showLanguage(button.dataset.switch)));
+  buttons.forEach(button => button.addEventListener("click", () => showLanguage(button.dataset.switch, true)));
 </script>
 </body>
 </html>

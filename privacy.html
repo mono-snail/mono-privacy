@@ -18,9 +18,16 @@
         .highlight { background-color: #f0f8ff; padding: 10px; border-radius: 5px; }
         .check { color: #28a745; }
         .cross { color: #dc3545; }
+        .page-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+        .page-nav a { color: #007AFF; text-decoration: none; }
+        .page-nav .active { color: #333; font-weight: 700; }
     </style>
 </head>
 <body>
+    <nav class="page-nav">
+        <a href="index.html?lang=zh">MonoProxy</a>
+        <span><a href="privacy-en.html">English</a> · <span class="active">中文</span></span>
+    </nav>
     <h1>MonoProxy 隐私政策</h1>
     <p><strong>生效日期：2026年7月</strong></p>
     
@@ -60,7 +67,7 @@
         <li>代理服务仅在本机转发 HTTP / HTTPS 及 SOCKS4 / SOCKS4a / SOCKS5 请求</li>
         <li>不会记录或存储访问内容</li>
         <li>不会分析网络流量</li>
-        <li>若启用 SOCKS5 账号密码验证，凭据仅保存在设备本地，绝不上传，也不会输出到任何日志</li>
+        <li>若启用代理账号密码验证，凭据仅保存在设备本地，绝不上传，也不会输出到任何日志</li>
         <li>HTTPS 隧道仅做转发，不安装证书、不解密，也不检查内容</li>
     </ul>
     
