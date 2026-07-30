@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MonoProxy Windows Setup Guide</title>
+<meta name="description" content="Connect a Windows PC to MonoProxy using Windows manual proxy settings or an app-specific SOCKS configuration.">
+<style>
+  :root{--blue:#007aff;--green:#248a3d;--ink:#1c1c1e;--muted:#667085;--bg:#f5f7fb;--card:#fff;--line:#e4e7ec;--max:860px}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{background:linear-gradient(135deg,#eef6ff,#f2fbf4);border-bottom:1px solid var(--line)}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+  .brand{font-weight:800;color:var(--ink)}
+  .language{display:flex;gap:8px}
+  .language button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;color:var(--muted);cursor:pointer}
+  .language button.active{border-color:var(--blue);color:var(--blue);background:#eef6ff}
+  .hero{padding:64px 0 56px}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+  h1{font-size:44px;line-height:1.12;letter-spacing:-.03em;margin:12px 0 16px}
+  .lead{max-width:650px;color:var(--muted);font-size:18px}
+  main{padding:48px 0 80px}
+  h2{font-size:26px;margin:44px 0 16px}
+  .checklist,.steps,.note{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+  .checklist ul{margin:8px 0 0;padding-left:22px}
+  .step{display:grid;grid-template-columns:42px 1fr;gap:14px;padding:20px 0;border-bottom:1px solid var(--line)}
+  .step:first-child{padding-top:0}
+  .step:last-child{border-bottom:0;padding-bottom:0}
+  .number{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-weight:700}
+  .step h3{margin:2px 0 5px;font-size:18px}
+  .step p{margin:0;color:var(--muted)}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f2f4f7;border-radius:6px;padding:2px 6px;color:var(--ink)}
+  .important{margin-top:18px;border-left:4px solid var(--blue);background:#eef6ff;padding:16px 18px;border-radius:10px}
+  .success{border-left-color:var(--green);background:#eef9f0}
+  .protocols{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .protocol{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .protocol strong{display:block;margin-bottom:6px}
+  .protocol span{color:var(--muted);font-size:14px}
+  footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px}
+  [data-lang]{display:none}
+  [data-lang].visible{display:block}
+  @media(max-width:650px){h1{font-size:34px}.protocols{grid-template-columns:1fr}.hero{padding:42px 0}.step{grid-template-columns:36px 1fr}.wrap{padding:0 18px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="index.html">MonoProxy</a>
+      <div class="language" aria-label="Language">
+        <button type="button" data-switch="en">English</button>
+        <button type="button" data-switch="zh">中文</button>
+      </div>
+    </nav>
+    <section class="hero" data-lang="en">
+      <div class="eyebrow">Client setup</div>
+      <h1>Connect Windows to MonoProxy</h1>
+      <p class="lead">Use Windows manual proxy settings for HTTP and HTTPS traffic, or configure SOCKS inside an application that supports it.</p>
+    </section>
+    <section class="hero" data-lang="zh">
+      <div class="eyebrow">客户端配置</div>
+      <h1>将 Windows 连接到 MonoProxy</h1>
+      <p class="lead">通过 Windows 手动代理设置接入 HTTP 与 HTTPS 流量；需要 SOCKS 时，请在支持 SOCKS 的应用中单独配置。</p>
+    </section>
+  </div>
+</header>
+
+<main class="wrap">
+  <div data-lang="en">
+    <section class="checklist">
+      <strong>Before you begin</strong>
+      <ul>
+        <li>Connect the iPhone and Windows PC to the same Wi-Fi or local network.</li>
+        <li>Start MonoProxy and wait until it shows <strong>Listening</strong>.</li>
+        <li>Keep the displayed IP address and port available, for example <code>192.168.1.20:8080</code>.</li>
+      </ul>
+    </section>
+
+    <h2>Windows 11 system proxy</h2>
+    <section class="steps">
+      <div class="step"><div class="number">1</div><div><h3>Open Proxy settings</h3><p>Open <strong>Settings</strong> → <strong>Network &amp; internet</strong> → <strong>Proxy</strong>.</p></div></div>
+      <div class="step"><div class="number">2</div><div><h3>Open manual setup</h3><p>Under <strong>Manual proxy setup</strong>, select <strong>Set up</strong> next to Use a proxy server.</p></div></div>
+      <div class="step"><div class="number">3</div><div><h3>Enter the MonoProxy address</h3><p>Turn on <strong>Use a proxy server</strong>. Enter the iPhone IP in Proxy IP address and the MonoProxy port in Port.</p></div></div>
+      <div class="step"><div class="number">4</div><div><h3>Save and verify</h3><p>Select <strong>Save</strong>, then open an HTTP and an HTTPS website. MonoProxy should move from Listening to Client Connected and then Traffic Verified.</p></div></div>
+    </section>
+    <div class="important"><strong>The Windows system proxy covers HTTP and HTTPS.</strong> It does not provide a general SOCKS switch.</div>
+
+    <h2>Using SOCKS4 or SOCKS5</h2>
+    <section class="protocols">
+      <div class="protocol"><strong>Browser or app setting</strong><span>Choose SOCKS4 or SOCKS5 in an application that supports a custom proxy, then use the same MonoProxy IP and port.</span></div>
+      <div class="protocol"><strong>Authentication</strong><span>If MonoProxy authentication is enabled, enter the configured username and password in the client application.</span></div>
+    </section>
+
+    <h2>When you finish</h2>
+    <div class="note success">Turn off <strong>Use a proxy server</strong> after MonoProxy stops. Leaving an unavailable manual proxy enabled can make Windows apps appear offline.</div>
+  </div>
+
+  <div data-lang="zh">
+    <section class="checklist">
+      <strong>开始之前</strong>
+      <ul>
+        <li>确保 iPhone 和 Windows 电脑连接到同一个 Wi-Fi 或局域网。</li>
+        <li>启动 MonoProxy，并等待状态显示为“正在监听”。</li>
+        <li>记下 App 显示的 IP 和端口，例如 <code>192.168.1.20:8080</code>。</li>
+      </ul>
+    </section>
+
+    <h2>Windows 11 系统代理</h2>
+    <section class="steps">
+      <div class="step"><div class="number">1</div><div><h3>打开代理设置</h3><p>进入<strong>设置</strong> → <strong>网络和 Internet</strong> → <strong>代理</strong>。</p></div></div>
+      <div class="step"><div class="number">2</div><div><h3>打开手动代理</h3><p>在<strong>手动设置代理</strong>下，点击“使用代理服务器”旁边的<strong>设置</strong>。</p></div></div>
+      <div class="step"><div class="number">3</div><div><h3>填写 MonoProxy 地址</h3><p>开启<strong>使用代理服务器</strong>，代理 IP 地址填写 iPhone 的 IP，端口填写 MonoProxy 显示的端口。</p></div></div>
+      <div class="step"><div class="number">4</div><div><h3>保存并验证</h3><p>点击<strong>保存</strong>，分别打开一个 HTTP 与 HTTPS 网站。MonoProxy 应从“正在监听”变为“客户端已连接”，随后显示“流量已验证”。</p></div></div>
+    </section>
+    <div class="important"><strong>Windows 系统代理会处理 HTTP 和 HTTPS。</strong>该页面没有全局 SOCKS 开关。</div>
+
+    <h2>使用 SOCKS4 或 SOCKS5</h2>
+    <section class="protocols">
+      <div class="protocol"><strong>浏览器或应用内设置</strong><span>在支持自定义代理的应用中选择 SOCKS4 或 SOCKS5，并填写相同的 MonoProxy IP 和端口。</span></div>
+      <div class="protocol"><strong>认证</strong><span>如果 MonoProxy 开启了认证，请在客户端应用中填写对应的用户名和密码。</span></div>
+    </section>
+
+    <h2>使用结束后</h2>
+    <div class="note success">MonoProxy 停止运行后，请关闭“使用代理服务器”，否则部分 Windows 应用可能表现为无法联网。</div>
+  </div>
+</main>
+
+<footer><div class="wrap"><a href="index.html">MonoProxy</a> · <a href="guide-macos.html">macOS guide / macOS 指南</a> · <a href="support-en.html">Support</a></div></footer>
+<script>
+  const panels = document.querySelectorAll("[data-lang]");
+  const buttons = document.querySelectorAll("[data-switch]");
+  function showLanguage(language) {
+    panels.forEach(panel => panel.classList.toggle("visible", panel.dataset.lang === language));
+    buttons.forEach(button => button.classList.toggle("active", button.dataset.switch === language));
+    document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+  }
+  const requested = new URLSearchParams(location.search).get("lang");
+  showLanguage(requested === "zh" || (!requested && navigator.language.startsWith("zh")) ? "zh" : "en");
+  buttons.forEach(button => button.addEventListener("click", () => showLanguage(button.dataset.switch)));
+</script>
+</body>
+</html>

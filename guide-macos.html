@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MonoProxy macOS Setup Guide</title>
+<meta name="description" content="Connect a Mac to MonoProxy using the macOS HTTP, HTTPS, or SOCKS proxy settings.">
+<style>
+  :root{--blue:#007aff;--green:#248a3d;--ink:#1c1c1e;--muted:#667085;--bg:#f5f7fb;--card:#fff;--line:#e4e7ec;--max:860px}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{background:linear-gradient(135deg,#eef6ff,#f2fbf4);border-bottom:1px solid var(--line)}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+  .brand{font-weight:800;color:var(--ink)}
+  .language{display:flex;gap:8px}
+  .language button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;color:var(--muted);cursor:pointer}
+  .language button.active{border-color:var(--blue);color:var(--blue);background:#eef6ff}
+  .hero{padding:64px 0 56px}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+  h1{font-size:44px;line-height:1.12;letter-spacing:-.03em;margin:12px 0 16px}
+  .lead{max-width:650px;color:var(--muted);font-size:18px}
+  main{padding:48px 0 80px}
+  h2{font-size:26px;margin:44px 0 16px}
+  .checklist,.steps,.note{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+  .checklist ul{margin:8px 0 0;padding-left:22px}
+  .step{display:grid;grid-template-columns:42px 1fr;gap:14px;padding:20px 0;border-bottom:1px solid var(--line)}
+  .step:first-child{padding-top:0}
+  .step:last-child{border-bottom:0;padding-bottom:0}
+  .number{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-weight:700}
+  .step h3{margin:2px 0 5px;font-size:18px}
+  .step p{margin:0;color:var(--muted)}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f2f4f7;border-radius:6px;padding:2px 6px;color:var(--ink)}
+  .important{margin-top:18px;border-left:4px solid var(--blue);background:#eef6ff;padding:16px 18px;border-radius:10px}
+  .success{border-left-color:var(--green);background:#eef9f0}
+  .protocols{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .protocol{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .protocol strong{display:block;margin-bottom:6px}
+  .protocol span{color:var(--muted);font-size:14px}
+  footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px}
+  [data-lang]{display:none}
+  [data-lang].visible{display:block}
+  @media(max-width:650px){h1{font-size:34px}.protocols{grid-template-columns:1fr}.hero{padding:42px 0}.step{grid-template-columns:36px 1fr}.wrap{padding:0 18px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="index.html">MonoProxy</a>
+      <div class="language" aria-label="Language">
+        <button type="button" data-switch="en">English</button>
+        <button type="button" data-switch="zh">中文</button>
+      </div>
+    </nav>
+    <section class="hero" data-lang="en">
+      <div class="eyebrow">Client setup</div>
+      <h1>Connect your Mac to MonoProxy</h1>
+      <p class="lead">Configure both macOS web proxy switches with the address shown in MonoProxy, then confirm that real traffic reaches the iPhone.</p>
+    </section>
+    <section class="hero" data-lang="zh">
+      <div class="eyebrow">客户端配置</div>
+      <h1>将 Mac 连接到 MonoProxy</h1>
+      <p class="lead">把 MonoProxy 显示的地址同时填入 macOS 的两个 Web 代理开关，然后确认真实流量已经到达 iPhone。</p>
+    </section>
+  </div>
+</header>
+
+<main class="wrap">
+  <div data-lang="en">
+    <section class="checklist">
+      <strong>Before you begin</strong>
+      <ul>
+        <li>Connect the iPhone and Mac to the same Wi-Fi or local network.</li>
+        <li>Start MonoProxy and wait until it shows <strong>Listening</strong>.</li>
+        <li>Keep the displayed IP address and port available, for example <code>192.168.1.20:8080</code>.</li>
+      </ul>
+    </section>
+
+    <h2>System proxy setup</h2>
+    <section class="steps">
+      <div class="step"><div class="number">1</div><div><h3>Open the active network</h3><p>Open <strong>System Settings</strong> → <strong>Network</strong>. Select the Wi-Fi or Ethernet connection currently in use, then choose <strong>Details</strong>.</p></div></div>
+      <div class="step"><div class="number">2</div><div><h3>Open Proxies</h3><p>Select <strong>Proxies</strong> in the sidebar.</p></div></div>
+      <div class="step"><div class="number">3</div><div><h3>Configure HTTP</h3><p>Enable <strong>Web Proxy (HTTP)</strong>. Enter the MonoProxy IP in Server and its port in Port.</p></div></div>
+      <div class="step"><div class="number">4</div><div><h3>Configure HTTPS</h3><p>Enable <strong>Secure Web Proxy (HTTPS)</strong> and enter the same server and port. This separate switch is required for HTTPS websites.</p></div></div>
+      <div class="step"><div class="number">5</div><div><h3>Add credentials if enabled</h3><p>If authentication is enabled in MonoProxy, turn on the password option and enter the same username and password for both proxy entries.</p></div></div>
+      <div class="step"><div class="number">6</div><div><h3>Apply and verify</h3><p>Select <strong>OK</strong>, then <strong>Apply</strong>. Open an HTTP and an HTTPS website. MonoProxy should move from Listening to Client Connected and then Traffic Verified.</p></div></div>
+    </section>
+    <div class="important"><strong>Do not enable only Web Proxy (HTTP).</strong> macOS handles HTTPS through the separate Secure Web Proxy (HTTPS) entry.</div>
+
+    <h2>Protocol choices</h2>
+    <section class="protocols">
+      <div class="protocol"><strong>HTTP</strong><span>Use Web Proxy (HTTP).</span></div>
+      <div class="protocol"><strong>HTTPS</strong><span>Use Secure Web Proxy (HTTPS).</span></div>
+      <div class="protocol"><strong>SOCKS</strong><span>Enable SOCKS Proxy instead when the client specifically needs SOCKS4/5.</span></div>
+    </section>
+
+    <h2>When you finish</h2>
+    <div class="note success">Return to the same Proxies screen and disable the proxy switches when MonoProxy is no longer running. Otherwise the Mac may appear offline.</div>
+  </div>
+
+  <div data-lang="zh">
+    <section class="checklist">
+      <strong>开始之前</strong>
+      <ul>
+        <li>确保 iPhone 和 Mac 连接到同一个 Wi-Fi 或局域网。</li>
+        <li>启动 MonoProxy，并等待状态显示为“正在监听”。</li>
+        <li>记下 App 显示的 IP 和端口，例如 <code>192.168.1.20:8080</code>。</li>
+      </ul>
+    </section>
+
+    <h2>配置系统代理</h2>
+    <section class="steps">
+      <div class="step"><div class="number">1</div><div><h3>打开当前网络</h3><p>进入<strong>系统设置</strong> → <strong>网络</strong>，选择正在使用的 Wi-Fi 或以太网，然后点击<strong>详细信息</strong>。</p></div></div>
+      <div class="step"><div class="number">2</div><div><h3>打开代理设置</h3><p>在侧边栏选择<strong>代理</strong>。</p></div></div>
+      <div class="step"><div class="number">3</div><div><h3>配置 HTTP</h3><p>启用 <strong>Web 代理 (HTTP)</strong>，服务器填写 MonoProxy 的 IP，端口填写 App 显示的端口。</p></div></div>
+      <div class="step"><div class="number">4</div><div><h3>配置 HTTPS</h3><p>启用<strong>安全 Web 代理 (HTTPS)</strong>，填写相同的服务器和端口。HTTPS 网站必须单独开启这个开关。</p></div></div>
+      <div class="step"><div class="number">5</div><div><h3>按需填写凭据</h3><p>如果 MonoProxy 开启了认证，请在两个代理配置中都启用密码选项，并填写相同的用户名和密码。</p></div></div>
+      <div class="step"><div class="number">6</div><div><h3>应用并验证</h3><p>点击<strong>好</strong>和<strong>应用</strong>，分别打开一个 HTTP 与 HTTPS 网站。MonoProxy 应从“正在监听”变为“客户端已连接”，随后显示“流量已验证”。</p></div></div>
+    </section>
+    <div class="important"><strong>不要只开启 Web 代理 (HTTP)。</strong>macOS 会通过独立的“安全 Web 代理 (HTTPS)”处理 HTTPS 网站。</div>
+
+    <h2>协议选择</h2>
+    <section class="protocols">
+      <div class="protocol"><strong>HTTP</strong><span>使用 Web 代理 (HTTP)。</span></div>
+      <div class="protocol"><strong>HTTPS</strong><span>使用安全 Web 代理 (HTTPS)。</span></div>
+      <div class="protocol"><strong>SOCKS</strong><span>客户端明确需要 SOCKS4/5 时，改为启用 SOCKS 代理。</span></div>
+    </section>
+
+    <h2>使用结束后</h2>
+    <div class="note success">MonoProxy 停止运行后，请回到同一代理页面关闭相关开关，否则 Mac 可能表现为无法联网。</div>
+  </div>
+</main>
+
+<footer><div class="wrap"><a href="index.html">MonoProxy</a> · <a href="guide-windows.html">Windows guide / Windows 指南</a> · <a href="support-en.html">Support</a></div></footer>
+<script>
+  const panels = document.querySelectorAll("[data-lang]");
+  const buttons = document.querySelectorAll("[data-switch]");
+  function showLanguage(language) {
+    panels.forEach(panel => panel.classList.toggle("visible", panel.dataset.lang === language));
+    buttons.forEach(button => button.classList.toggle("active", button.dataset.switch === language));
+    document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+  }
+  const requested = new URLSearchParams(location.search).get("lang");
+  showLanguage(requested === "zh" || (!requested && navigator.language.startsWith("zh")) ? "zh" : "en");
+  buttons.forEach(button => button.addEventListener("click", () => showLanguage(button.dataset.switch)));
+</script>
+</body>
+</html>
