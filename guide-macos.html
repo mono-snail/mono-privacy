@@ -152,7 +152,7 @@
     }
   }
   const requested = new URLSearchParams(location.search).get("lang");
-  showLanguage(requested === "zh" || (!requested && navigator.language.startsWith("zh")) ? "zh" : "en");
+  showLanguage(requested === "zh" ? "zh" : "en");
   buttons.forEach(button => button.addEventListener("click", () => showLanguage(button.dataset.switch, true)));
 </script>
 </body>

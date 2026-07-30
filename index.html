@@ -801,10 +801,6 @@
       button.setAttribute("aria-pressed", String(active));
     });
 
-    try {
-      localStorage.setItem("monoproxy-language", selected);
-    } catch (_) {}
-
     if (updateAddress) {
       const url = new URL(window.location.href);
       url.searchParams.set("lang", selected);
@@ -813,14 +809,9 @@
   }
 
   const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
-  let storedLanguage = null;
-  try {
-    storedLanguage = localStorage.getItem("monoproxy-language");
-  } catch (_) {}
-  const browserLanguage = navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en";
   const initialLanguage = requestedLanguage === "zh" || requestedLanguage === "en"
     ? requestedLanguage
-    : (storedLanguage || browserLanguage);
+    : "en";
 
   applyLanguage(initialLanguage, false);
   languageButtons.forEach(button => {
