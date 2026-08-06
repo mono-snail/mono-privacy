@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MonoProxy - Turn Your iPhone Into a Local Proxy Hub</title>
-<meta name="description" content="Run HTTP, HTTPS and SOCKS proxy services on your iPhone, connect devices on the same network, and verify real traffic locally.">
-<meta property="og:title" content="MonoProxy - Your iPhone, One Local Proxy Hub">
-<meta property="og:description" content="Connect Macs, PCs, tablets and test devices through one private local proxy endpoint.">
+<title>MonoProxy - iPhone Local Proxy Hub for HTTP, HTTPS and SOCKS</title>
+<meta name="description" content="MonoProxy turns your iPhone into a private local proxy hub with a redesigned status UI, shared HTTP/HTTPS/SOCKS endpoint, QR setup, diagnostics and on-device traffic insight.">
+<meta property="og:title" content="MonoProxy - Your iPhone, One Private Proxy Hub">
+<meta property="og:description" content="Share one local endpoint with Macs, PCs, tablets and test devices, then verify real HTTP, HTTPS and SOCKS traffic on device.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://proxy.monoware.app/images/proxy-topology.jpg">
 <meta name="theme-color" content="#07111f">
@@ -137,6 +137,41 @@
   .protocol-list{display:grid;grid-template-columns:repeat(5,1fr)}
   .protocol-list span{padding:20px;text-align:center;border-right:1px solid var(--line);font-size:14px;font-weight:800;color:#425269}
   .protocol-list span:last-child{border-right:0}
+
+  /* Latest release */
+  .release{padding:78px 0 108px;background:linear-gradient(180deg,#fff 0%,#f5f9fd 100%)}
+  .release-panel{
+    position:relative;overflow:hidden;padding:44px;border:1px solid var(--line);border-radius:34px;background:
+      radial-gradient(48% 60% at 100% 0%,rgba(8,124,240,.11),transparent 65%),
+      radial-gradient(40% 56% at 0% 100%,rgba(48,199,109,.1),transparent 66%),
+      #fff;
+    box-shadow:0 22px 70px rgba(28,54,83,.08);
+  }
+  .release-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:end;margin-bottom:34px}
+  .release-version{
+    display:inline-flex;align-items:center;gap:9px;width:max-content;margin-bottom:18px;padding:8px 12px;
+    border:1px solid #cfe3f7;border-radius:999px;color:#176fbf;background:#eff7ff;font-size:12px;font-weight:850;
+    letter-spacing:.08em;text-transform:uppercase;
+  }
+  .release-version::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(48,199,109,.13)}
+  .release-head h2{margin-bottom:0}
+  .release-head p{margin-bottom:0;color:var(--muted);font-size:17px;line-height:1.72}
+  .release-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .release-card{
+    min-height:214px;padding:20px;border:1px solid #dce7f1;border-radius:22px;background:rgba(255,255,255,.88);
+    box-shadow:0 14px 34px rgba(28,54,83,.055);
+  }
+  .release-index{
+    width:34px;height:34px;display:grid;place-items:center;margin-bottom:18px;border-radius:12px;color:var(--blue);
+    background:#eaf4ff;font:850 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  .release-card strong{display:block;margin-bottom:8px;font-size:16px;line-height:1.25;letter-spacing:-.02em}
+  .release-card p{margin-bottom:0;color:var(--muted);font-size:13px;line-height:1.58}
+  .release-proof{
+    display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-top:22px;padding:15px 17px;
+    border:1px solid #d8eadf;border-radius:18px;background:#f1fbf5;color:#486156;font-size:14px;
+  }
+  .release-proof strong{color:#163724}
 
   /* Flow */
   .flow-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:70px;align-items:center}
@@ -270,6 +305,8 @@
     .hero-copy p{margin-left:auto;margin-right:auto}
     .hero .actions,.hero-facts{justify-content:center}
     .phone-stage{min-height:620px}
+    .release-head{grid-template-columns:1fr;gap:18px}
+    .release-grid{grid-template-columns:repeat(2,1fr)}
     .flow-copy{position:static}
     .network-copy{grid-template-columns:1fr;padding:46px 38px 30px}
     .showcase-card.large,.showcase-card.small,.showcase-card.half{grid-column:span 6}
@@ -290,6 +327,10 @@
     .protocol-list span{padding:14px 8px;font-size:12px}
     .protocol-list span:nth-child(3){border-right:0}
     .protocol-list span:nth-child(-n+3){border-bottom:1px solid var(--line)}
+    .release{padding:56px 0 78px}
+    .release-panel{padding:28px 20px;border-radius:28px}
+    .release-grid{grid-template-columns:1fr}
+    .release-card{min-height:auto}
     .flow-visual{min-height:570px}
     .flow-phone-a{left:28px;top:48px;width:190px}
     .flow-phone-b{right:28px;bottom:45px;width:190px}
@@ -327,6 +368,7 @@
     </a>
     <div class="nav-right">
       <div class="nav-links">
+        <a href="#latest" data-i18n="nav.latest">What’s new</a>
         <a href="#flow" data-i18n="nav.flow">How it works</a>
         <a href="#features" data-i18n="nav.features">Features</a>
         <a href="#themes" data-i18n="nav.themes">Themes</a>
@@ -345,33 +387,33 @@
   <header class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <span class="kicker" data-i18n="hero.kicker">Private local proxy for iPhone</span>
+        <span class="kicker" data-i18n="hero.kicker">iOS 1.2.5 release ready</span>
         <h1>
-          <span data-i18n="hero.line1">One iPhone.</span><br>
-          <span class="gradient" data-i18n="hero.line2">Every device connected.</span>
+          <span data-i18n="hero.line1">A cleaner proxy hub.</span><br>
+          <span class="gradient" data-i18n="hero.line2">Every local device connected.</span>
         </h1>
-        <p data-i18n="hero.body">Turn your iPhone into a local HTTP, HTTPS and SOCKS proxy hub. Share one reachable address with Macs, PCs, tablets and test devices, then see when real traffic arrives.</p>
+        <p data-i18n="hero.body">The latest MonoProxy for iOS brings a redesigned Hub view, shared HTTP/HTTPS/SOCKS endpoint, QR setup, on-device diagnostics and feedback from the first screen.</p>
         <div class="actions">
           <a class="button primary" href="https://apps.apple.com/app/id6748090836" target="_blank" rel="noopener" data-i18n="action.appstore">View on the App Store</a>
           <a class="button secondary" href="#flow" data-i18n="action.explore">See how it works</a>
         </div>
         <div class="hero-facts">
-          <span class="hero-fact"><i></i><span data-i18n="hero.fact1">Real traffic verified</span></span>
-          <span class="hero-fact" data-i18n="hero.fact2">One paid app</span>
-          <span class="hero-fact" data-i18n="hero.fact3">No account or subscription</span>
+          <span class="hero-fact"><i></i><span data-i18n="hero.fact1">New Proxy Hub UI</span></span>
+          <span class="hero-fact" data-i18n="hero.fact2">HTTP/HTTPS + SOCKS4/5</span>
+          <span class="hero-fact" data-i18n="hero.fact3">QR setup and support built in</span>
         </div>
       </div>
       <div class="phone-stage" aria-label="MonoProxy app preview">
         <div class="orb"></div>
         <div class="phone phone-main">
-          <img src="images/web/2.jpg" width="720" height="1560" alt="MonoProxy running with traffic verified" fetchpriority="high" decoding="async">
+          <img src="images/web/1.jpg" width="720" height="1560" alt="MonoProxy Proxy Hub Ready screen" fetchpriority="high" decoding="async">
         </div>
         <div class="phone phone-mini">
-          <img src="images/web/1.jpg" width="720" height="1560" alt="MonoProxy ready to start" fetchpriority="high" decoding="async">
+          <img src="images/web/2.jpg" width="720" height="1560" alt="MonoProxy running with traffic verified" fetchpriority="high" decoding="async">
         </div>
         <div class="live-card">
-          <strong data-i18n="hero.liveTitle">Traffic verified</strong>
-          <span data-i18n="hero.liveBody">A client is using the real proxy path.</span>
+          <strong data-i18n="hero.liveTitle">Hub ready</strong>
+          <span data-i18n="hero.liveBody">One port, clear status, faster setup.</span>
         </div>
       </div>
     </div>
@@ -386,6 +428,49 @@
       <span>SOCKS5</span>
     </div>
   </div>
+
+  <section class="release" id="latest">
+    <div class="wrap release-panel">
+      <div class="release-head">
+        <div>
+          <span class="release-version" data-i18n="release.version">New in iOS 1.2.5</span>
+          <h2 data-i18n="release.title">A release focused on clarity, speed and confidence.</h2>
+        </div>
+        <p data-i18n="release.body">The new interface puts the selected network address, protocol support, service state, diagnostics and support paths where users expect them: one tap from the main screen.</p>
+      </div>
+      <div class="release-grid">
+        <article class="release-card">
+          <div class="release-index">01</div>
+          <strong data-i18n="release.card1Title">Proxy Hub Ready</strong>
+          <p data-i18n="release.card1Body">A new visual status card shows the reachable interface, shared port model and current service state without digging into settings.</p>
+        </article>
+        <article class="release-card">
+          <div class="release-index">02</div>
+          <strong data-i18n="release.card2Title">One shared endpoint</strong>
+          <p data-i18n="release.card2Body">HTTP, HTTPS, SOCKS4, SOCKS4a and SOCKS5 stay on one host and port, with automatic protocol detection for clients.</p>
+        </article>
+        <article class="release-card">
+          <div class="release-index">03</div>
+          <strong data-i18n="release.card3Title">QR setup up front</strong>
+          <p data-i18n="release.card3Body">The QR entry is now a top-level action, making it faster to bring a Mac, PC, tablet or test device onto the proxy.</p>
+        </article>
+        <article class="release-card">
+          <div class="release-index">04</div>
+          <strong data-i18n="release.card4Title">Insight menu</strong>
+          <p data-i18n="release.card4Body">Connections, statistics, site traffic, diagnostics and browsing history are grouped behind one compact chart icon.</p>
+        </article>
+        <article class="release-card">
+          <div class="release-index">05</div>
+          <strong data-i18n="release.card5Title">Feedback from the app</strong>
+          <p data-i18n="release.card5Body">A dedicated support entry helps users report problems with useful context instead of leaving the connection flow.</p>
+        </article>
+      </div>
+      <div class="release-proof">
+        <strong data-i18n="release.proofTitle">Release focus:</strong>
+        <span data-i18n="release.proofBody">shorter setup paths, clearer runtime signals and local-first diagnostics for real proxy use.</span>
+      </div>
+    </div>
+  </section>
 
   <section class="section" id="flow">
     <div class="wrap flow-grid">
@@ -609,24 +694,40 @@
 <script>
   const translations = {
     en: {
-      metaTitle: "MonoProxy - Turn Your iPhone Into a Local Proxy Hub",
-      metaDescription: "Run HTTP, HTTPS and SOCKS proxy services on your iPhone, connect devices on the same network, and verify real traffic locally.",
+      metaTitle: "MonoProxy - iPhone Local Proxy Hub for HTTP, HTTPS and SOCKS",
+      metaDescription: "MonoProxy turns your iPhone into a private local proxy hub with a redesigned status UI, shared HTTP/HTTPS/SOCKS endpoint, QR setup, diagnostics and on-device traffic insight.",
+      "nav.latest": "What’s new",
       "nav.flow": "How it works",
       "nav.features": "Features",
       "nav.themes": "Themes",
       "nav.guides": "Setup guides",
       "nav.support": "Support",
-      "hero.kicker": "Private local proxy for iPhone",
-      "hero.line1": "One iPhone.",
-      "hero.line2": "Every device connected.",
-      "hero.body": "Turn your iPhone into a local HTTP, HTTPS and SOCKS proxy hub. Share one reachable address with Macs, PCs, tablets and test devices, then see when real traffic arrives.",
+      "hero.kicker": "iOS 1.2.5 release ready",
+      "hero.line1": "A cleaner proxy hub.",
+      "hero.line2": "Every local device connected.",
+      "hero.body": "The latest MonoProxy for iOS brings a redesigned Hub view, shared HTTP/HTTPS/SOCKS endpoint, QR setup, on-device diagnostics and feedback from the first screen.",
       "action.appstore": "View on the App Store",
       "action.explore": "See how it works",
-      "hero.fact1": "Real traffic verified",
-      "hero.fact2": "One paid app",
-      "hero.fact3": "No account or subscription",
-      "hero.liveTitle": "Traffic verified",
-      "hero.liveBody": "A client is using the real proxy path.",
+      "hero.fact1": "New Proxy Hub UI",
+      "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
+      "hero.fact3": "QR setup and support built in",
+      "hero.liveTitle": "Hub ready",
+      "hero.liveBody": "One port, clear status, faster setup.",
+      "release.version": "New in iOS 1.2.5",
+      "release.title": "A release focused on clarity, speed and confidence.",
+      "release.body": "The new interface puts the selected network address, protocol support, service state, diagnostics and support paths where users expect them: one tap from the main screen.",
+      "release.card1Title": "Proxy Hub Ready",
+      "release.card1Body": "A new visual status card shows the reachable interface, shared port model and current service state without digging into settings.",
+      "release.card2Title": "One shared endpoint",
+      "release.card2Body": "HTTP, HTTPS, SOCKS4, SOCKS4a and SOCKS5 stay on one host and port, with automatic protocol detection for clients.",
+      "release.card3Title": "QR setup up front",
+      "release.card3Body": "The QR entry is now a top-level action, making it faster to bring a Mac, PC, tablet or test device onto the proxy.",
+      "release.card4Title": "Insight menu",
+      "release.card4Body": "Connections, statistics, site traffic, diagnostics and browsing history are grouped behind one compact chart icon.",
+      "release.card5Title": "Feedback from the app",
+      "release.card5Body": "A dedicated support entry helps users report problems with useful context instead of leaving the connection flow.",
+      "release.proofTitle": "Release focus:",
+      "release.proofBody": "shorter setup paths, clearer runtime signals and local-first diagnostics for real proxy use.",
       "flow.kicker": "A clear connection path",
       "flow.title": "Start it. Connect it. Know it works.",
       "flow.body": "MonoProxy keeps “the port is open” separate from “a client is connected” and “traffic really moved,” so every status has a precise meaning.",
@@ -692,24 +793,40 @@
       "footer.windows": "Windows guide"
     },
     zh: {
-      metaTitle: "MonoProxy - 把 iPhone 变成本地代理中心",
-      metaDescription: "在 iPhone 上运行 HTTP、HTTPS 与 SOCKS 代理，连接同一网络中的设备，并在本地验证真实流量。",
+      metaTitle: "MonoProxy - iPhone 本地 HTTP、HTTPS 与 SOCKS 代理中心",
+      metaDescription: "MonoProxy 把 iPhone 变成私有本地代理中心，提供新版状态界面、HTTP/HTTPS/SOCKS 共享端点、二维码配置、诊断与本地流量洞察。",
+      "nav.latest": "本次更新",
       "nav.flow": "工作方式",
       "nav.features": "功能",
       "nav.themes": "主题",
       "nav.guides": "配置指南",
       "nav.support": "支持",
-      "hero.kicker": "iPhone 私有本地代理",
-      "hero.line1": "一台 iPhone，",
-      "hero.line2": "连接你的所有设备。",
-      "hero.body": "把 iPhone 变成本地 HTTP、HTTPS 与 SOCKS 代理中心。向 Mac、PC、平板和测试设备共享一个可达地址，并确认真实流量何时到达。",
+      "hero.kicker": "iOS 1.2.5 已准备发版",
+      "hero.line1": "更清晰的代理中心，",
+      "hero.line2": "连接所有本地设备。",
+      "hero.body": "最新版 iOS MonoProxy 带来全新的 Hub 首屏、HTTP/HTTPS/SOCKS 共享端点、二维码配置、设备端诊断，以及首屏可达的反馈入口。",
       "action.appstore": "前往 App Store",
       "action.explore": "查看工作方式",
-      "hero.fact1": "验证真实流量",
-      "hero.fact2": "单一付费 App",
-      "hero.fact3": "无账号、无订阅",
-      "hero.liveTitle": "流量已验证",
-      "hero.liveBody": "客户端正在使用真实代理链路。",
+      "hero.fact1": "新版 Proxy Hub 界面",
+      "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
+      "hero.fact3": "内置二维码配置与支持入口",
+      "hero.liveTitle": "Hub 已就绪",
+      "hero.liveBody": "单端口、清晰状态、更快配置。",
+      "release.version": "iOS 1.2.5 新内容",
+      "release.title": "围绕清晰、速度和可靠感打磨的一次发版。",
+      "release.body": "新版界面把网络地址、协议支持、服务状态、诊断和支持入口放到用户最需要的位置：从首屏一步可达。",
+      "release.card1Title": "Proxy Hub Ready",
+      "release.card1Body": "新的可视化状态卡直接展示可连接地址、共享端口模型和当前服务状态，不必进入设置翻找。",
+      "release.card2Title": "一个共享端点",
+      "release.card2Body": "HTTP、HTTPS、SOCKS4、SOCKS4a 与 SOCKS5 共用同一主机和端口，并自动识别客户端协议。",
+      "release.card3Title": "二维码配置前置",
+      "release.card3Body": "二维码入口提升为首屏核心操作，让 Mac、PC、平板和测试设备更快接入代理。",
+      "release.card4Title": "洞察菜单",
+      "release.card4Body": "连接、统计、站点流量、诊断和浏览历史统一收进紧凑的图表入口。",
+      "release.card5Title": "App 内反馈",
+      "release.card5Body": "独立支持入口让用户带着有效上下文反馈问题，不需要离开当前连接流程。",
+      "release.proofTitle": "发版重点：",
+      "release.proofBody": "更短配置路径、更清晰运行信号，以及面向真实代理使用的本地优先诊断。",
       "flow.kicker": "清晰的连接路径",
       "flow.title": "启动、连接，并确认它真的有效。",
       "flow.body": "MonoProxy 将“端口已监听”“客户端已连接”和“流量确实传输”区分开，让每个状态都有准确含义。",
