@@ -69,12 +69,18 @@
   .nav-links{gap:23px;color:#526174;font-size:14px;font-weight:650}
   .nav-links a{transition:color .18s ease}
   .nav-links a:hover{color:var(--blue)}
-  .language-switch{padding:3px;border:1px solid var(--line);border-radius:999px;background:#f6f9fc}
-  .language-switch button{
-    border:0;border-radius:999px;padding:6px 10px;color:#66758a;background:transparent;
-    cursor:pointer;font-size:12px;font-weight:800;transition:.18s ease;
+  .language-switch{position:relative}
+  .language-switch select{
+    appearance:none;-webkit-appearance:none;border:1px solid var(--line);border-radius:999px;
+    padding:7px 28px 7px 11px;color:#66758a;background:#f6f9fc;cursor:pointer;
+    font-size:12px;font-weight:800;line-height:1;outline:none;transition:.18s ease;
   }
-  .language-switch button.active{color:#fff;background:var(--navy);box-shadow:0 4px 12px rgba(7,17,31,.2)}
+  .language-switch select:focus{border-color:rgba(8,124,240,.55);box-shadow:0 0 0 3px rgba(8,124,240,.1)}
+  .language-switch::after{
+    content:"";position:absolute;right:11px;top:50%;width:6px;height:6px;
+    border-right:1.5px solid #7a8797;border-bottom:1.5px solid #7a8797;
+    transform:translateY(-62%) rotate(45deg);pointer-events:none;
+  }
 
   /* Hero */
   .hero{
@@ -375,11 +381,13 @@
         <a data-href-en="guide-macos.html?lang=en" data-href-zh="guide-macos.html?lang=zh" data-href-ja="guide-macos.html?lang=en" data-href-ko="guide-macos.html?lang=en" data-i18n="nav.guides">Setup guides</a>
         <a data-href-en="https://support.monoware.app/?product=monoproxy" data-href-zh="https://support.monoware.app/?product=monoproxy" data-href-ja="https://support.monoware.app/?product=monoproxy" data-href-ko="https://support.monoware.app/?product=monoproxy" data-i18n="nav.support">Support</a>
       </div>
-      <div class="language-switch" aria-label="Language">
-        <button type="button" data-language="en" aria-pressed="true">EN</button>
-        <button type="button" data-language="zh" aria-pressed="false">中文</button>
-        <button type="button" data-language="ja" aria-pressed="false">日本語</button>
-        <button type="button" data-language="ko" aria-pressed="false">한국어</button>
+      <div class="language-switch">
+        <select data-language-select aria-label="Language">
+          <option value="en">EN</option>
+          <option value="zh">中文</option>
+          <option value="ja">日本語</option>
+          <option value="ko">한국어</option>
+        </select>
       </div>
     </div>
   </div>
@@ -1093,7 +1101,7 @@
     }
   };
 
-  const languageButtons = document.querySelectorAll("[data-language]");
+  const languageSelect = document.querySelector("[data-language-select]");
   const supportedLanguages = new Set(Object.keys(translations));
   const htmlLanguageCodes = {
     en: "en",
@@ -1119,11 +1127,7 @@
       element.setAttribute("href", element.getAttribute(`data-href-${selected}`) || element.getAttribute("data-href-en"));
     });
 
-    languageButtons.forEach(button => {
-      const active = button.dataset.language === selected;
-      button.classList.toggle("active", active);
-      button.setAttribute("aria-pressed", String(active));
-    });
+    if (languageSelect) languageSelect.value = selected;
 
     if (updateAddress) {
       const url = new URL(window.location.href);
@@ -1136,9 +1140,9 @@
   const initialLanguage = supportedLanguages.has(requestedLanguage) ? requestedLanguage : "en";
 
   applyLanguage(initialLanguage, false);
-  languageButtons.forEach(button => {
-    button.addEventListener("click", () => applyLanguage(button.dataset.language, true));
-  });
+  if (languageSelect) {
+    languageSelect.addEventListener("change", () => applyLanguage(languageSelect.value, true));
+  }
 </script>
 </body>
 </html>
