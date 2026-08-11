@@ -178,6 +178,68 @@
     box-shadow:0 15px 34px rgba(10,132,255,.36);font-size:28px;font-weight:300;
   }
 
+  .network{padding:0 0 108px}
+  .network-panel{
+    overflow:hidden;border-radius:38px;color:#fff;background:
+      radial-gradient(55% 68% at 86% 2%,rgba(10,132,255,.26),transparent 70%),
+      radial-gradient(42% 60% at 7% 98%,rgba(24,199,111,.18),transparent 68%),
+      linear-gradient(145deg,var(--navy),#102f55);
+    box-shadow:0 28px 80px rgba(7,17,31,.17);
+  }
+  .network-copy{display:grid;grid-template-columns:.92fr 1.08fr;gap:52px;align-items:end;padding:58px 58px 34px}
+  .network-copy .kicker{color:#76d8ff}
+  .network-copy h2{margin-bottom:0}
+  .network-copy p{margin-bottom:4px;color:#b0bfd1;font-size:17px}
+  .network-map{
+    position:relative;min-height:560px;margin:0 22px 22px;overflow:hidden;border-radius:26px;
+    background:
+      linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px),
+      rgba(255,255,255,.06);
+    background-size:42px 42px;border:1px solid rgba(255,255,255,.12);
+  }
+  .network-map::before{
+    content:"";position:absolute;left:50%;top:50%;width:580px;height:360px;transform:translate(-50%,-50%);
+    border:1px solid rgba(118,216,255,.22);border-radius:50%;box-shadow:0 0 0 70px rgba(10,132,255,.035);
+  }
+  .network-line{
+    position:absolute;left:50%;top:50%;height:1px;width:260px;transform-origin:left center;
+    background:linear-gradient(90deg,rgba(118,216,255,.62),rgba(118,216,255,0));
+  }
+  .network-line.l1{transform:rotate(-154deg)}
+  .network-line.l2{transform:rotate(-28deg)}
+  .network-line.l3{transform:rotate(151deg)}
+  .network-line.l4{transform:rotate(27deg)}
+  .device-node{
+    position:absolute;z-index:2;width:178px;padding:13px;border:1px solid rgba(255,255,255,.16);border-radius:22px;
+    background:rgba(255,255,255,.1);box-shadow:0 22px 46px rgba(0,0,0,.24);backdrop-filter:blur(14px);
+  }
+  .device-node strong{display:block;margin-top:10px;font-size:14px;letter-spacing:-.01em}
+  .device-node span{display:block;color:#a8bbd0;font-size:12px}
+  .device-node.laptop{left:58px;top:58px}
+  .device-node.desktop{right:62px;top:70px}
+  .device-node.tablet{left:86px;bottom:72px}
+  .device-node.console{right:88px;bottom:74px}
+  .device-art{
+    display:grid;place-items:center;height:84px;border-radius:16px;background:rgba(255,255,255,.1);
+  }
+  .device-art::before{content:"";display:block;border:2px solid rgba(255,255,255,.72);background:rgba(255,255,255,.08)}
+  .laptop .device-art::before{width:92px;height:50px;border-radius:7px;box-shadow:0 16px 0 -8px rgba(255,255,255,.72)}
+  .desktop .device-art::before{width:82px;height:52px;border-radius:7px;box-shadow:0 22px 0 -10px rgba(255,255,255,.72)}
+  .tablet .device-art::before{width:54px;height:72px;border-radius:12px}
+  .console .device-art::before{width:92px;height:42px;border-radius:18px}
+  .network-phone{
+    position:absolute;left:50%;top:50%;z-index:4;width:218px;transform:translate(-50%,-50%);
+  }
+  .network-phone img{border-radius:29px}
+  .network-badge{
+    position:absolute;left:50%;top:50%;z-index:5;display:flex;align-items:center;gap:9px;
+    transform:translate(-50%,128px);padding:9px 14px;border:1px solid rgba(255,255,255,.16);
+    border-radius:999px;background:rgba(7,22,44,.72);box-shadow:0 18px 38px rgba(0,0,0,.26);
+    color:#d7e9fb;font-size:13px;font-weight:900;backdrop-filter:blur(14px);
+  }
+  .network-badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(24,199,111,.13)}
+
   .bridge{padding:0 0 108px}
   .bridge-panel{
     overflow:hidden;border-radius:38px;color:#fff;background:
@@ -266,6 +328,7 @@
     .release-head,.bridge-copy{grid-template-columns:1fr;gap:18px}
     .capability-grid{grid-template-columns:repeat(2,1fr)}
     .flow-copy{position:static}
+    .network-copy{grid-template-columns:1fr;gap:18px}
     .showcase-card.large,.showcase-card.small,.showcase-card.half{grid-column:span 6}
     .route-grid{grid-template-columns:repeat(2,1fr)}
   }
@@ -291,6 +354,19 @@
     .flow-phone-a{left:28px;top:48px;width:190px}
     .flow-phone-b{right:28px;bottom:45px;width:190px}
     .flow-arrow{width:58px;height:58px;font-size:23px}
+    .network{padding-bottom:78px}
+    .network-copy{padding:38px 25px 26px}
+    .network-map{min-height:620px;margin:0 10px 10px}
+    .network-map::before{width:360px;height:520px}
+    .network-phone{width:190px}
+    .network-badge{top:50%;transform:translate(-50%,116px)}
+    .network-line{display:none}
+    .device-node{width:142px;padding:10px}
+    .device-node.laptop{left:18px;top:24px}
+    .device-node.desktop{right:18px;top:58px}
+    .device-node.tablet{left:18px;bottom:92px}
+    .device-node.console{right:18px;bottom:118px}
+    .device-art{height:62px}
     .bridge{padding-bottom:78px}
     .bridge-copy{padding:38px 25px 28px}
     .route-map{margin:0 10px 10px;padding:24px}
@@ -310,6 +386,9 @@
     .status-chip{top:78px;width:155px}
     .flow-visual{min-height:500px}
     .flow-phone-a,.flow-phone-b{width:165px}
+    .network-map{min-height:580px}
+    .network-phone{width:160px}
+    .device-node{width:128px}
   }
 </style>
 </head>
@@ -323,6 +402,7 @@
     <div class="nav-links">
       <a href="../">iOS</a>
       <a href="#setup">Setup</a>
+      <a href="#network">Network</a>
       <a href="#bridge">VPN Bridge</a>
       <a href="#features">Features</a>
       <a href="#privacy">Privacy</a>
@@ -442,6 +522,48 @@
     </div>
   </section>
 
+  <section class="network" id="network">
+    <div class="wrap network-panel">
+      <div class="network-copy">
+        <div>
+          <span class="kicker">Home network</span>
+          <h2>Put the Android phone in the middle.</h2>
+        </div>
+        <p>Run MonoProxy once, then point nearby laptops, desktops, tablets and test devices at the phone's local endpoint.</p>
+      </div>
+      <div class="network-map" aria-label="Android phone sharing one local proxy endpoint with nearby home devices">
+        <span class="network-line l1" aria-hidden="true"></span>
+        <span class="network-line l2" aria-hidden="true"></span>
+        <span class="network-line l3" aria-hidden="true"></span>
+        <span class="network-line l4" aria-hidden="true"></span>
+        <article class="device-node laptop">
+          <div class="device-art" aria-hidden="true"></div>
+          <strong>Laptop</strong>
+          <span>HTTP / SOCKS</span>
+        </article>
+        <article class="device-node desktop">
+          <div class="device-art" aria-hidden="true"></div>
+          <strong>Desktop</strong>
+          <span>Browser proxy</span>
+        </article>
+        <article class="device-node tablet">
+          <div class="device-art" aria-hidden="true"></div>
+          <strong>Tablet</strong>
+          <span>PAC or manual</span>
+        </article>
+        <article class="device-node console">
+          <div class="device-art" aria-hidden="true"></div>
+          <strong>TV / console</strong>
+          <span>Same LAN</span>
+        </article>
+        <div class="phone network-phone">
+          <img src="../images/android/home_running.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy running on an Android phone at the center of the local network" loading="lazy" decoding="async">
+        </div>
+        <div class="network-badge">One phone endpoint</div>
+      </div>
+    </div>
+  </section>
+
   <section class="bridge" id="bridge">
     <div class="wrap bridge-panel">
       <div class="bridge-copy">
@@ -449,7 +571,7 @@
           <span class="kicker">VPN Bridge</span>
           <h2>Share the phone's active route, including VPN.</h2>
         </div>
-        <p>MonoProxy does not create a device-wide VPN. It binds proxy upstream sockets to the selected Android network, so client traffic can exit through default routing, Wi-Fi, cellular or an already-active VPN network.</p>
+        <p>MonoProxy does not create a device-wide VPN. It binds proxy upstream sockets to the selected Android network, so client traffic can exit through default routing, Wi-Fi, cellular or an already-active VPN network. Useful when only the phone has the desired VPN route.</p>
       </div>
       <div class="route-map" aria-label="Outbound routing modes">
         <div class="route-grid">
