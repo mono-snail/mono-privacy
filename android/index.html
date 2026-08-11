@@ -229,13 +229,16 @@
   .screen-well.green{background:linear-gradient(145deg,#eafaf1,#f7fdf9)}
   .screen-shot{
     position:relative;flex:none;width:min(266px,72%);padding:8px;border-radius:38px;
-    background:#111722;box-shadow:0 24px 55px rgba(17,29,46,.22);
+    overflow:hidden;background:#111722;box-shadow:0 24px 55px rgba(17,29,46,.22);
   }
   .screen-shot::after{
     content:"";position:absolute;left:50%;top:15px;width:72px;height:20px;transform:translateX(-50%);
     border-radius:14px;background:#0a0d12;
   }
-  .screen-shot img{border-radius:30px;aspect-ratio:1080 / 2400;object-fit:cover}
+  .screen-shot img{
+    display:block;width:100%;height:auto;aspect-ratio:1080 / 2400;
+    border-radius:30px;object-fit:contain;
+  }
   .showcase-card.large .screen-shot{width:min(304px,64%)}
 
   .privacy{background:#fff}
