@@ -8,7 +8,7 @@
 <meta property="og:title" content="MonoProxy for Android - Private LAN Proxy Gateway">
 <meta property="og:description" content="A paid Android proxy gateway for nearby devices. One local endpoint, guided setup, VPN Bridge, device management and traffic verification.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://proxy.monoware.app/images/android/home_running.jpg">
+<meta property="og:image" content="https://proxy.monoware.app/images/android/home_running.jpg?v=20260811-wave2">
 <meta name="theme-color" content="#07162c">
 <style>
   :root{
@@ -114,7 +114,7 @@
   }
   .phone-secondary img{border-radius:26px}
   .status-chip{
-    position:absolute;right:-6px;bottom:104px;z-index:4;width:220px;padding:17px 18px;
+    position:absolute;right:-6px;top:112px;z-index:4;width:220px;padding:17px 18px;
     border:1px solid rgba(255,255,255,.18);border-radius:20px;background:rgba(9,28,52,.84);
     box-shadow:0 24px 54px rgba(0,0,0,.34);backdrop-filter:blur(14px);
   }
@@ -220,6 +220,7 @@
     margin:8px 22px 0;padding-top:32px;overflow:hidden;border-radius:24px 24px 0 0;
     background:linear-gradient(145deg,#eaf4ff,#f7fbff);border:1px solid #dfeaf4;border-bottom:0;
   }
+  .screen-well.wave-focus{align-items:flex-end;padding-top:0}
   .screen-well.gold{background:linear-gradient(145deg,#fff4db,#f8fbff)}
   .screen-well.green{background:linear-gradient(145deg,#eafaf1,#f7fdf9)}
   .screen-shot{
@@ -278,7 +279,7 @@
     .android-stage{min-height:530px}
     .phone-main{width:232px}
     .phone-secondary{left:0;bottom:25px;width:138px}
-    .status-chip{right:0;bottom:60px;width:170px;padding:13px}
+    .status-chip{right:0;top:88px;width:170px;padding:13px}
     .protocol-list{grid-template-columns:repeat(3,1fr)}
     .protocol-list span{padding:14px 8px;font-size:12px}
     .protocol-list span:nth-child(3){border-right:0}
@@ -306,7 +307,7 @@
     .android-stage{min-height:480px}
     .phone-main{width:214px}
     .phone-secondary{width:124px}
-    .status-chip{width:155px}
+    .status-chip{top:78px;width:155px}
     .flow-visual{min-height:500px}
     .flow-phone-a,.flow-phone-b{width:165px}
   }
@@ -350,10 +351,10 @@
       <div class="android-stage" aria-label="MonoProxy Android app preview">
         <div class="halo"></div>
         <div class="phone phone-main">
-          <img src="../images/android/home_running.jpg" width="1080" height="2400" alt="MonoProxy Android home screen with proxy service running" fetchpriority="high" decoding="async">
+          <img src="../images/android/home_running.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android home screen with proxy service running" fetchpriority="high" decoding="async">
         </div>
         <div class="phone phone-secondary">
-          <img src="../images/android/connect_device.jpg" width="1080" height="2400" alt="MonoProxy Android guided device connection screen" fetchpriority="high" decoding="async">
+          <img src="../images/android/connect_device.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android guided device connection screen" fetchpriority="high" decoding="async">
         </div>
         <div class="status-chip">
           <strong>Traffic verified</strong>
@@ -431,11 +432,11 @@
       </div>
       <div class="flow-visual">
         <div class="phone flow-phone-a">
-          <img src="../images/android/home.jpg" width="1080" height="2400" alt="MonoProxy Android stopped home screen" loading="lazy" decoding="async">
+          <img src="../images/android/home_running.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android running home screen with visible traffic wave" loading="lazy" decoding="async">
         </div>
         <div class="flow-arrow" aria-hidden="true">→</div>
         <div class="phone flow-phone-b">
-          <img src="../images/android/connect_device.jpg" width="1080" height="2400" alt="MonoProxy Android connect device flow" loading="lazy" decoding="async">
+          <img src="../images/android/connect_device.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android connect device flow" loading="lazy" decoding="async">
         </div>
       </div>
     </div>
@@ -492,8 +493,8 @@
             <h3>Live status, four checks and a wave chart</h3>
             <p>The Android home panel keeps the service state, selected endpoint, connection path, session traffic and live rate trend visible at once.</p>
           </div>
-          <div class="screen-well">
-            <div class="screen-shot"><img src="../images/android/home_running.jpg" width="1080" height="2400" alt="MonoProxy Android running home screen" loading="lazy" decoding="async"></div>
+          <div class="screen-well wave-focus">
+            <div class="screen-shot"><img src="../images/android/home_running.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android running home screen" loading="lazy" decoding="async"></div>
           </div>
         </article>
 
@@ -504,7 +505,7 @@
             <p>Choose a client, configure proxy values, then verify reachability and traffic without squeezing everything into one dialog.</p>
           </div>
           <div class="screen-well gold">
-            <div class="screen-shot"><img src="../images/android/connect_device.jpg" width="1080" height="2400" alt="MonoProxy Android connect device screen" loading="lazy" decoding="async"></div>
+            <div class="screen-shot"><img src="../images/android/connect_device.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android connect device screen" loading="lazy" decoding="async"></div>
           </div>
         </article>
 
@@ -515,7 +516,7 @@
             <p>Site traffic is aggregated by host, with upload, download and last activity totals kept locally on the phone.</p>
           </div>
           <div class="screen-well green">
-            <div class="screen-shot"><img src="../images/android/site_traffic.jpg" width="1080" height="2400" alt="MonoProxy Android site traffic screen with YouTube and Google traffic totals" loading="lazy" decoding="async"></div>
+            <div class="screen-shot"><img src="../images/android/site_traffic.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android site traffic screen with YouTube and Google traffic totals" loading="lazy" decoding="async"></div>
           </div>
         </article>
 
@@ -526,7 +527,7 @@
             <p>Browsing history records host-level proxy sessions only when enabled, so connection problems are easier to explain without storing paths or credentials.</p>
           </div>
           <div class="screen-well gold">
-            <div class="screen-shot"><img src="../images/android/browsing_history.jpg" width="1080" height="2400" alt="MonoProxy Android browsing history screen with active YouTube and Google proxy sessions" loading="lazy" decoding="async"></div>
+            <div class="screen-shot"><img src="../images/android/browsing_history.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android browsing history screen with active YouTube and Google proxy sessions" loading="lazy" decoding="async"></div>
           </div>
         </article>
 
@@ -537,7 +538,7 @@
             <p>Configure SOCKS, authentication, private LAN access, outbound network mode, trusted network resume and local analytics.</p>
           </div>
           <div class="screen-well">
-            <div class="screen-shot"><img src="../images/android/settings.jpg" width="1080" height="2400" alt="MonoProxy Android settings screen" loading="lazy" decoding="async"></div>
+            <div class="screen-shot"><img src="../images/android/settings.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android settings screen" loading="lazy" decoding="async"></div>
           </div>
         </article>
 
@@ -548,7 +549,7 @@
             <p>Group clients by IP, add aliases, disconnect sessions, temporarily block devices and apply per-client limits for connections, bandwidth and quota.</p>
           </div>
           <div class="screen-well green">
-            <div class="screen-shot"><img src="../images/android/device_management.jpg" width="1080" height="2400" alt="MonoProxy Android device management screen" loading="lazy" decoding="async"></div>
+            <div class="screen-shot"><img src="../images/android/device_management.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android device management screen" loading="lazy" decoding="async"></div>
           </div>
         </article>
       </div>
