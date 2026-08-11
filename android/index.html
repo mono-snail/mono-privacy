@@ -106,17 +106,12 @@
     position:relative;z-index:2;width:292px;padding:9px;border-radius:46px;background:linear-gradient(145deg,#39485b,#070a10);
     box-shadow:0 36px 90px rgba(0,0,0,.42),inset 0 0 0 1px rgba(255,255,255,.16);
   }
-  .phone::before{
-    content:"";position:absolute;left:50%;top:17px;z-index:3;width:88px;height:22px;
-    transform:translateX(-50%);border-radius:18px;background:#080b10;
-  }
   .phone img{width:100%;height:auto;border-radius:36px}
   .phone-main{transform:rotate(1.4deg)}
   .phone-secondary{
     position:absolute;left:8px;bottom:42px;z-index:3;width:178px;padding:7px;border-radius:32px;
     transform:rotate(-7deg);box-shadow:0 25px 58px rgba(0,0,0,.45);
   }
-  .phone-secondary::before{top:13px;width:58px;height:16px}
   .phone-secondary img{border-radius:26px}
   .status-chip{
     position:absolute;right:-6px;bottom:104px;z-index:4;width:220px;padding:17px 18px;
@@ -230,10 +225,6 @@
   .screen-shot{
     position:relative;flex:none;width:min(266px,72%);padding:8px;border-radius:38px;
     overflow:hidden;background:#111722;box-shadow:0 24px 55px rgba(17,29,46,.22);
-  }
-  .screen-shot::after{
-    content:"";position:absolute;left:50%;top:15px;width:72px;height:20px;transform:translateX(-50%);
-    border-radius:14px;background:#0a0d12;
   }
   .screen-shot img{
     display:block;width:100%;height:auto;aspect-ratio:1080 / 2400;
