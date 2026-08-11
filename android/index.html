@@ -8,7 +8,7 @@
 <meta property="og:title" content="MonoProxy for Android - Private LAN Proxy Gateway">
 <meta property="og:description" content="A paid Android proxy gateway for nearby devices. One local endpoint, guided setup, VPN Bridge, device management and traffic verification.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://proxy.monoware.app/images/android/home_running.jpg?v=20260811-wave2">
+<meta property="og:image" content="https://proxy.monoware.app/images/android/home_running.jpg?v=20260811-wave3">
 <meta name="theme-color" content="#07162c">
 <style>
   :root{
@@ -110,27 +110,23 @@
     border-radius:999px;background:rgba(255,255,255,.055);color:#d3e1f1;font-size:13px;font-weight:750;
   }
   .price-strip i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(24,199,111,.13)}
-  .android-stage{position:relative;min-height:690px;display:flex;align-items:center;justify-content:center}
-  .halo{position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(10,132,255,.38),transparent 68%)}
+  .android-stage{position:relative;min-height:710px;display:flex;align-items:center;justify-content:center}
+  .halo{position:absolute;width:610px;height:610px;border-radius:50%;background:radial-gradient(circle,rgba(10,132,255,.38),transparent 68%)}
   .phone{
     position:relative;z-index:2;width:292px;padding:9px;border-radius:46px;background:linear-gradient(145deg,#39485b,#070a10);
     box-shadow:0 36px 90px rgba(0,0,0,.42),inset 0 0 0 1px rgba(255,255,255,.16);
   }
   .phone img{width:100%;height:auto;border-radius:36px}
-  .phone-main{transform:rotate(1.4deg)}
+  .phone-main{
+    z-index:4;width:328px;transform:translateX(58px) rotate(1.1deg);
+    box-shadow:0 42px 104px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.08),inset 0 0 0 1px rgba(255,255,255,.16);
+  }
   .phone-secondary{
-    position:absolute;left:8px;bottom:42px;z-index:3;width:178px;padding:7px;border-radius:32px;
-    transform:rotate(-7deg);box-shadow:0 25px 58px rgba(0,0,0,.45);
+    position:absolute;left:8px;top:96px;z-index:2;width:214px;padding:7px;border-radius:34px;
+    transform:rotate(-5deg);opacity:.82;filter:saturate(.88) brightness(.96);
+    box-shadow:0 28px 66px rgba(0,0,0,.34);
   }
   .phone-secondary img{border-radius:26px}
-  .status-chip{
-    position:absolute;right:-6px;top:112px;z-index:4;width:220px;padding:17px 18px;
-    border:1px solid rgba(255,255,255,.18);border-radius:20px;background:rgba(9,28,52,.84);
-    box-shadow:0 24px 54px rgba(0,0,0,.34);backdrop-filter:blur(14px);
-  }
-  .status-chip strong{display:flex;align-items:center;gap:9px;margin-bottom:5px;font-size:14px}
-  .status-chip strong::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(24,199,111,.13)}
-  .status-chip span{color:#a9b8ca;font-size:12px}
 
   .protocol-bar{border-bottom:1px solid var(--line);background:#fff}
   .protocol-list{display:grid;grid-template-columns:repeat(6,1fr)}
@@ -349,10 +345,9 @@
     .hero{padding:70px 0 54px}
     .hero-grid{gap:30px}
     .hero-copy p{font-size:17px}
-    .android-stage{min-height:530px}
-    .phone-main{width:232px}
-    .phone-secondary{left:0;bottom:25px;width:138px}
-    .status-chip{right:0;top:88px;width:170px;padding:13px}
+    .android-stage{min-height:540px}
+    .phone-main{width:254px;transform:translateX(36px) rotate(1.1deg)}
+    .phone-secondary{left:0;top:72px;width:158px}
     .protocol-list{grid-template-columns:repeat(3,1fr)}
     .protocol-list span{padding:14px 8px;font-size:12px}
     .protocol-list span:nth-child(3){border-right:0}
@@ -390,10 +385,9 @@
   }
   @media(max-width:420px){
     .brand span{display:none}
-    .android-stage{min-height:480px}
-    .phone-main{width:214px}
-    .phone-secondary{width:124px}
-    .status-chip{top:78px;width:155px}
+    .android-stage{min-height:500px}
+    .phone-main{width:232px;transform:translateX(28px) rotate(1.1deg)}
+    .phone-secondary{width:142px;top:72px}
     .flow-visual{min-height:500px}
     .flow-phone-a,.flow-phone-b{width:165px}
     .network-map{min-height:580px}
@@ -452,14 +446,10 @@
       <div class="android-stage" aria-label="MonoProxy Android app preview">
         <div class="halo"></div>
         <div class="phone phone-main">
-          <img src="../images/android/home_running.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android home screen with proxy service running" fetchpriority="high" decoding="async">
+          <img src="../images/android/home_running.jpg?v=20260811-wave3" width="1080" height="2400" alt="MonoProxy Android home screen with proxy service running and visible traffic wave" fetchpriority="high" decoding="async">
         </div>
         <div class="phone phone-secondary">
-          <img src="../images/android/connect_device.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android guided device connection screen" fetchpriority="high" decoding="async">
-        </div>
-        <div class="status-chip">
-          <strong data-i18n="hero.statusTitle">Traffic verified</strong>
-          <span data-i18n="hero.statusBody">Live sessions, wave history and local traffic records.</span>
+          <img src="../images/android/home.jpg?v=20260811-standby2" width="1080" height="2400" alt="MonoProxy Android home screen before the proxy service starts" fetchpriority="high" decoding="async">
         </div>
       </div>
     </div>
