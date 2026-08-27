@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connected but No Traffic? Diagnose a Local Proxy | MonoProxy</title>
+<meta name="description" content="Diagnose a local proxy that is listening or connected but not carrying traffic. Check the network, address, protocol, authentication, and client settings.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<link rel="canonical" href="https://proxy.monoware.app/guide-troubleshooting.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Connected but No Traffic? Diagnose a Local Proxy">
+<meta property="og:description" content="Use MonoProxy's three connection states to find where a local proxy setup is failing.">
+<meta property="og:url" content="https://proxy.monoware.app/guide-troubleshooting.html">
+<meta property="og:image" content="https://proxy.monoware.app/images/proxy-topology.jpg">
+<meta property="og:image:alt" content="MonoProxy local proxy topology for an iPhone and nearby client devices">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Connected but No Traffic? Diagnose a Local Proxy">
+<meta name="twitter:description" content="Check the network, address, protocol, authentication, and client settings in a clear order.">
+<meta name="twitter:image" content="https://proxy.monoware.app/images/proxy-topology.jpg">
+<meta name="apple-itunes-app" content="app-id=6748090836, affiliate-data=pt=127849696&amp;ct=seo_diagnose_231&amp;mt=8">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://proxy.monoware.app/guide-troubleshooting.html#article",
+      "headline": "Connected but No Traffic? Diagnose a Local Proxy",
+      "description": "Diagnose a local proxy that is listening or connected but not carrying traffic by checking the network, address, protocol, authentication, and client settings.",
+      "url": "https://proxy.monoware.app/guide-troubleshooting.html",
+      "mainEntityOfPage": {"@id": "https://proxy.monoware.app/guide-troubleshooting.html"},
+      "author": {"@type": "Organization", "name": "MonoWare"},
+      "dateModified": "2026-08-27",
+      "image": "https://proxy.monoware.app/images/proxy-topology.jpg"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "MonoProxy", "item": "https://proxy.monoware.app/"},
+        {"@type": "ListItem", "position": 2, "name": "Proxy Troubleshooting", "item": "https://proxy.monoware.app/guide-troubleshooting.html"}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root{--blue:#007aff;--green:#248a3d;--amber:#a15c00;--ink:#1c1c1e;--muted:#667085;--bg:#f5f7fb;--card:#fff;--line:#e4e7ec;--max:860px}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{background:linear-gradient(135deg,#eef6ff,#f2fbf4);border-bottom:1px solid var(--line)}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+  .brand{font-weight:800;color:var(--ink)}
+  .language{display:flex;gap:8px}
+  .language button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;color:var(--muted);cursor:pointer}
+  .language button.active{border-color:var(--blue);color:var(--blue);background:#eef6ff}
+  .hero{padding:64px 0 56px}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+  h1,.localized-title{font-size:44px;font-weight:700;line-height:1.12;letter-spacing:-.03em;margin:12px 0 16px}
+  .lead{max-width:690px;color:var(--muted);font-size:18px}
+  main{padding:48px 0 80px}
+  h2{font-size:26px;margin:44px 0 16px}
+  .states,.steps,.note{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+  .state{padding:18px 0;border-bottom:1px solid var(--line)}
+  .state:first-child{padding-top:0}
+  .state:last-child{border-bottom:0;padding-bottom:0}
+  .state strong{display:block;font-size:18px}
+  .state p{margin:4px 0 0;color:var(--muted)}
+  .step{display:grid;grid-template-columns:42px 1fr;gap:14px;padding:20px 0;border-bottom:1px solid var(--line)}
+  .step:first-child{padding-top:0}
+  .step:last-child{border-bottom:0;padding-bottom:0}
+  .number{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-weight:700}
+  .step h3{margin:2px 0 5px;font-size:18px}
+  .step p{margin:0;color:var(--muted)}
+  .important{margin-top:18px;border-left:4px solid var(--amber);background:#fff8ed;padding:16px 18px;border-radius:10px}
+  .success{border-left-color:var(--green);background:#eef9f0}
+  figure{margin:32px 0}
+  figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:16px}
+  figcaption{margin-top:9px;color:var(--muted);font-size:14px}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f2f4f7;border-radius:6px;padding:2px 6px;color:var(--ink)}
+  .store-link{display:inline-block;margin-top:22px;font-weight:700}
+  footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px}
+  [data-lang]{display:none}
+  [data-lang].visible{display:block}
+  @media(max-width:650px){h1,.localized-title{font-size:34px}.hero{padding:42px 0}.step{grid-template-columns:36px 1fr}.wrap{padding:0 18px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" data-home-link href="index.html?lang=en">MonoProxy</a>
+      <div class="language" aria-label="Language">
+        <button type="button" data-switch="en">English</button>
+        <button type="button" data-switch="zh">中文</button>
+      </div>
+    </nav>
+    <section class="hero" data-lang="en">
+      <div class="eyebrow">Troubleshooting</div>
+      <h1>Connected but no traffic?</h1>
+      <p class="lead">Use MonoProxy's three connection states to identify whether the problem is the server, local network, client address, protocol, or authentication.</p>
+    </section>
+    <section class="hero" data-lang="zh">
+      <div class="eyebrow">故障诊断</div>
+      <p class="localized-title" role="heading" aria-level="1">已连接，但没有流量？</p>
+      <p class="lead">根据 MonoProxy 的三个连接状态，判断问题出在服务器、局域网、客户端地址、协议还是认证。</p>
+    </section>
+  </div>
+</header>
+
+<main class="wrap">
+  <div data-lang="en">
+    <h2>Read the current state first</h2>
+    <section class="states">
+      <div class="state"><strong>Listening</strong><p>The server is ready, but no client has reached it. Check the network, address, port, and client proxy switch.</p></div>
+      <div class="state"><strong>Client Connected</strong><p>A client opened a connection, but usable proxy traffic has not passed yet. Check protocol choice, authentication, and the app generating traffic.</p></div>
+      <div class="state"><strong>Traffic Verified</strong><p>MonoProxy has relayed real traffic. If the client still fails, inspect the destination, client application, or network policy.</p></div>
+    </section>
+
+    <figure>
+      <img src="images/proxy-topology.jpg" width="1600" height="900" alt="An iPhone running MonoProxy as a local proxy between nearby devices and the internet">
+      <figcaption>MonoProxy must be reachable from the client over the same local network before it can relay traffic.</figcaption>
+    </figure>
+
+    <h2>Check in this order</h2>
+    <section class="steps">
+      <div class="step"><div class="number">1</div><div><h3>Confirm MonoProxy is listening</h3><p>Start the server and keep MonoProxy in a state where it displays an IP address and port. If it is stopped, every client setting will fail.</p></div></div>
+      <div class="step"><div class="number">2</div><div><h3>Use the same local network</h3><p>Connect the iPhone or iPad and the client to the same Wi-Fi or LAN. Guest Wi-Fi and client isolation can block devices from reaching each other.</p></div></div>
+      <div class="step"><div class="number">3</div><div><h3>Choose a reachable address</h3><p>Enter the IP shown for the active local interface, not <code>127.0.0.1</code>, a cellular address, or an address from a disconnected interface.</p></div></div>
+      <div class="step"><div class="number">4</div><div><h3>Match the client protocol</h3><p>macOS needs both HTTP and Secure Web Proxy switches for browser traffic. Windows uses its manual HTTP/HTTPS proxy. SOCKS must be selected inside a client that supports SOCKS4 or SOCKS5.</p></div></div>
+      <div class="step"><div class="number">5</div><div><h3>Check authentication</h3><p>If authentication is enabled, copy the current username and password into every relevant proxy entry. Saved credentials from an older profile can open a connection but fail the request.</p></div></div>
+      <div class="step"><div class="number">6</div><div><h3>Generate fresh traffic</h3><p>Open a new browser tab and load a normal website after saving the proxy settings. Existing connections or cached pages may not create a new observable session.</p></div></div>
+      <div class="step"><div class="number">7</div><div><h3>Remove competing network layers</h3><p>Temporarily disable another VPN, proxy, relay, firewall rule, or managed network profile on the client. Re-enable each layer after the direct local path works.</p></div></div>
+    </section>
+
+    <div class="important"><strong>HTTPS remains encrypted.</strong> MonoProxy relays HTTPS CONNECT tunnels without installing a certificate or decrypting request and response content. Traffic Verified confirms relay activity, not content inspection.</div>
+
+    <h2>If the state still does not advance</h2>
+    <div class="note success">Run MonoProxy diagnostics and export a redacted report. Include the client platform, selected protocol, current state, and whether another VPN or managed network profile is active when contacting support.</div>
+    <a class="store-link" href="https://apps.apple.com/app/apple-store/id6748090836?pt=127849696&amp;ct=seo_diagnose_231&amp;mt=8" target="_blank" rel="noopener">View MonoProxy on the App Store</a>
+  </div>
+
+  <div data-lang="zh">
+    <h2>先看当前状态</h2>
+    <section class="states">
+      <div class="state"><strong>正在监听</strong><p>服务器已经就绪，但客户端尚未到达。检查网络、地址、端口和客户端代理开关。</p></div>
+      <div class="state"><strong>客户端已连接</strong><p>客户端已建立连接，但尚未通过可用代理流量。检查协议选择、认证和实际产生流量的应用。</p></div>
+      <div class="state"><strong>流量已验证</strong><p>MonoProxy 已转发真实流量。若客户端仍失败，应继续检查目标站点、客户端应用或网络策略。</p></div>
+    </section>
+
+    <figure>
+      <img src="images/proxy-topology.jpg" width="1600" height="900" alt="iPhone 上的 MonoProxy 作为附近设备与互联网之间的局域网代理">
+      <figcaption>客户端必须先能通过同一局域网访问 MonoProxy，之后才能转发流量。</figcaption>
+    </figure>
+
+    <h2>按顺序检查</h2>
+    <section class="steps">
+      <div class="step"><div class="number">1</div><div><h3>确认 MonoProxy 正在监听</h3><p>启动服务器，并确认 App 已显示 IP 地址和端口。服务器停止时，任何客户端配置都无法工作。</p></div></div>
+      <div class="step"><div class="number">2</div><div><h3>使用同一局域网</h3><p>让 iPhone 或 iPad 与客户端连接到同一个 Wi-Fi 或局域网。访客网络和客户端隔离可能阻止设备互相访问。</p></div></div>
+      <div class="step"><div class="number">3</div><div><h3>选择可访问的地址</h3><p>填写当前局域网接口显示的 IP，不要使用 <code>127.0.0.1</code>、蜂窝地址或已断开接口的地址。</p></div></div>
+      <div class="step"><div class="number">4</div><div><h3>匹配客户端协议</h3><p>macOS 浏览流量需要同时开启 HTTP 和安全 Web 代理。Windows 使用手动 HTTP/HTTPS 代理。SOCKS 需要在支持 SOCKS4 或 SOCKS5 的客户端中选择。</p></div></div>
+      <div class="step"><div class="number">5</div><div><h3>检查认证</h3><p>如果开启了认证，请把当前用户名和密码填入所有相关代理项。旧 Profile 留下的凭据可能能建立连接，但无法通过请求。</p></div></div>
+      <div class="step"><div class="number">6</div><div><h3>产生新的流量</h3><p>保存代理设置后打开新的浏览器标签页并访问普通网站。已有连接或缓存页面可能不会产生新的可观察会话。</p></div></div>
+      <div class="step"><div class="number">7</div><div><h3>排除冲突的网络层</h3><p>临时关闭客户端上的其他 VPN、代理、中继、防火墙规则或受管网络配置。直接局域网路径可用后，再逐项恢复。</p></div></div>
+    </section>
+
+    <div class="important"><strong>HTTPS 内容仍保持加密。</strong>MonoProxy 通过 HTTPS CONNECT 转发隧道，不安装证书，也不解密请求和响应正文。“流量已验证”表示已发生转发，不代表查看了内容。</div>
+
+    <h2>状态仍未推进</h2>
+    <div class="note success">运行 MonoProxy 诊断并导出脱敏报告。联系支持时，请说明客户端平台、所选协议、当前状态，以及是否启用了其他 VPN 或受管网络配置。</div>
+    <a class="store-link" href="https://apps.apple.com/app/apple-store/id6748090836?pt=127849696&amp;ct=seo_diagnose_231&amp;mt=8" target="_blank" rel="noopener">在 App Store 查看 MonoProxy</a>
+  </div>
+</main>
+
+<footer><div class="wrap"><a data-home-link href="index.html?lang=en">MonoProxy</a> · <a data-guide-link="guide-macos.html" href="guide-macos.html?lang=en">macOS</a> · <a data-guide-link="guide-windows.html" href="guide-windows.html?lang=en">Windows</a> · <a href="https://support.monoware.app/?product=monoproxy">Support</a></div></footer>
+<script>
+  const panels = document.querySelectorAll("[data-lang]");
+  const buttons = document.querySelectorAll("[data-switch]");
+  function showLanguage(language, updateAddress = false) {
+    panels.forEach(panel => panel.classList.toggle("visible", panel.dataset.lang === language));
+    buttons.forEach(button => button.classList.toggle("active", button.dataset.switch === language));
+    document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+    document.querySelectorAll("[data-home-link]").forEach(link => link.href = `index.html?lang=${language}`);
+    document.querySelectorAll("[data-guide-link]").forEach(link => link.href = `${link.dataset.guideLink}?lang=${language}`);
+    if (updateAddress) {
+      const url = new URL(location.href);
+      url.searchParams.set("lang", language);
+      history.replaceState({}, "", url);
+    }
+  }
+  const requested = new URLSearchParams(location.search).get("lang");
+  showLanguage(requested === "zh" ? "zh" : "en");
+  buttons.forEach(button => button.addEventListener("click", () => showLanguage(button.dataset.switch, true)));
+</script>
+</body>
+</html>
