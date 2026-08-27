@@ -27,7 +27,7 @@
   "alternateName": "MonoProxy by MonoWare",
   "applicationCategory": "DeveloperApplication",
   "applicationSuite": "MonoWare",
-  "operatingSystem": "iOS 17 or later",
+  "operatingSystem": "iOS 15 or later",
   "url": "https://proxy.monoware.app/",
   "mainEntityOfPage": {
     "@id": "https://proxy.monoware.app/"
@@ -193,7 +193,7 @@
   .live-card strong::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(48,199,109,.13)}
   .live-card span{color:#9fb0c3;font-size:12px}
   .protocol-bar{position:relative;border-bottom:1px solid var(--line);background:#fff}
-  .protocol-list{display:grid;grid-template-columns:repeat(5,1fr)}
+  .protocol-list{display:grid;grid-template-columns:repeat(6,1fr)}
   .protocol-list span{padding:20px;text-align:center;border-right:1px solid var(--line);font-size:14px;font-weight:800;color:#425269}
   .protocol-list span:last-child{border-right:0}
 
@@ -452,12 +452,12 @@
   <header class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <span class="kicker" data-i18n="hero.kicker">iOS 1.2.5 release ready</span>
+        <span class="kicker" data-i18n="hero.kicker">MonoProxy 2.3.1 is live</span>
         <h1>
           <span data-i18n="hero.line1">A cleaner proxy hub.</span><br>
           <span class="gradient" data-i18n="hero.line2">Every local device connected.</span>
         </h1>
-        <p data-i18n="hero.body">The latest MonoProxy for iOS brings a redesigned Hub view, shared HTTP/HTTPS/SOCKS endpoint, QR setup, on-device diagnostics and feedback from the first screen.</p>
+        <p data-i18n="hero.body">MonoProxy 2.3.1 for iPhone and iPad adds stronger access controls, more reliable transfers, shared HTTP/HTTPS/WebSocket/SOCKS setup and clearer on-device diagnostics.</p>
         <div class="actions">
           <a class="button primary" href="https://apps.apple.com/app/id6748090836" target="_blank" rel="noopener" data-i18n="action.appstore">View on the App Store</a>
           <a class="button secondary" href="#flow" data-i18n="action.explore">See how it works</a>
@@ -465,7 +465,7 @@
         <div class="hero-facts">
           <span class="hero-fact"><i></i><span data-i18n="hero.fact1">New Proxy Hub UI</span></span>
           <span class="hero-fact" data-i18n="hero.fact2">HTTP/HTTPS + SOCKS4/5</span>
-          <span class="hero-fact" data-i18n="hero.fact3">QR setup and support built in</span>
+          <span class="hero-fact" data-i18n="hero.fact3">PAC + QR setup built in</span>
         </div>
       </div>
       <div class="phone-stage" aria-label="MonoProxy app preview">
@@ -488,6 +488,7 @@
     <div class="wrap protocol-list">
       <span>HTTP</span>
       <span>HTTPS</span>
+      <span>WebSocket</span>
       <span>SOCKS4</span>
       <span>SOCKS4a</span>
       <span>SOCKS5</span>
@@ -498,41 +499,41 @@
     <div class="wrap release-panel">
       <div class="release-head">
         <div>
-          <span class="release-version" data-i18n="release.version">New in iOS 1.2.5</span>
-          <h2 data-i18n="release.title">A release focused on clarity, speed and confidence.</h2>
+          <span class="release-version" data-i18n="release.version">New in MonoProxy 2.3.1</span>
+          <h2 data-i18n="release.title">Stronger controls. More reliable connections.</h2>
         </div>
-        <p data-i18n="release.body">The new interface puts the selected network address, protocol support, service state, diagnostics and support paths where users expect them: one tap from the main screen.</p>
+        <p data-i18n="release.body">Version 2.3.1 strengthens authentication and large transfers, adds reusable profiles and IP/CIDR access rules, and improves recovery across network changes.</p>
       </div>
       <div class="release-grid">
         <article class="release-card">
           <div class="release-index">01</div>
-          <strong data-i18n="release.card1Title">Proxy Hub Ready</strong>
-          <p data-i18n="release.card1Body">A new visual status card shows the reachable interface, shared port model and current service state without digging into settings.</p>
+          <strong data-i18n="release.card1Title">Start, share, verify</strong>
+          <p data-i18n="release.card1Body">PAC and QR sharing now sit inside a clearer flow from listener startup to client connection and verified traffic.</p>
         </article>
         <article class="release-card">
           <div class="release-index">02</div>
-          <strong data-i18n="release.card2Title">One shared endpoint</strong>
-          <p data-i18n="release.card2Body">HTTP, HTTPS, SOCKS4, SOCKS4a and SOCKS5 stay on one host and port, with automatic protocol detection for clients.</p>
+          <strong data-i18n="release.card2Title">One broader endpoint</strong>
+          <p data-i18n="release.card2Body">HTTP, HTTPS CONNECT, plain WebSocket, SOCKS4, SOCKS4a and SOCKS5 share one host and port.</p>
         </article>
         <article class="release-card">
           <div class="release-index">03</div>
-          <strong data-i18n="release.card3Title">QR setup up front</strong>
-          <p data-i18n="release.card3Body">The QR entry is now a top-level action, making it faster to bring a Mac, PC, tablet or test device onto the proxy.</p>
+          <strong data-i18n="release.card3Title">Client access controls</strong>
+          <p data-i18n="release.card3Body">Generate credentials, limit connections per client, apply IP/CIDR rules and disconnect sessions when needed.</p>
         </article>
         <article class="release-card">
           <div class="release-index">04</div>
-          <strong data-i18n="release.card4Title">Insight menu</strong>
-          <p data-i18n="release.card4Body">Connections, statistics, site traffic, diagnostics and browsing history are grouped behind one compact chart icon.</p>
+          <strong data-i18n="release.card4Title">Useful session evidence</strong>
+          <p data-i18n="release.card4Body">Review live and completed sessions, run actionable diagnostics and export reports with sensitive addresses redacted.</p>
         </article>
         <article class="release-card">
           <div class="release-index">05</div>
-          <strong data-i18n="release.card5Title">Feedback from the app</strong>
-          <p data-i18n="release.card5Body">A dedicated support entry helps users report problems with useful context instead of leaving the connection flow.</p>
+          <strong data-i18n="release.card5Title">Reliability under load</strong>
+          <p data-i18n="release.card5Body">Improved IPv4/IPv6 handling, network recovery, concurrent browsing, large transfers and authentication behavior.</p>
         </article>
       </div>
       <div class="release-proof">
         <strong data-i18n="release.proofTitle">Release focus:</strong>
-        <span data-i18n="release.proofBody">shorter setup paths, clearer runtime signals and local-first diagnostics for real proxy use.</span>
+        <span data-i18n="release.proofBody">safer client access, clearer evidence and steadier proxy sessions across real network conditions.</span>
       </div>
     </div>
   </section>
@@ -654,7 +655,7 @@
           <div class="showcase-copy">
             <span class="tag" data-i18n="feature.protocolTag">One port</span>
             <h3 data-i18n="feature.protocolTitle">Multiple proxy protocols, one endpoint</h3>
-            <p data-i18n="feature.protocolBody">HTTP, HTTPS, SOCKS4, SOCKS4a and SOCKS5 share the same host and port. MonoProxy detects the client protocol automatically.</p>
+            <p data-i18n="feature.protocolBody">HTTP, HTTPS CONNECT, plain WebSocket, SOCKS4, SOCKS4a and SOCKS5 share the same host and port. MonoProxy detects the client protocol automatically.</p>
           </div>
           <div class="screen-well">
             <div class="screen-shot"><img src="images/web/home_green.jpg" width="720" height="1560" alt="MonoProxy multi-protocol home screen" loading="lazy" decoding="async"></div>
@@ -768,32 +769,32 @@
       "nav.themes": "Themes",
       "nav.guides": "Setup guides",
       "nav.support": "Support",
-      "hero.kicker": "iOS 1.2.5 release ready",
+      "hero.kicker": "MonoProxy 2.3.1 is live",
       "hero.line1": "A cleaner proxy hub.",
       "hero.line2": "Every local device connected.",
-      "hero.body": "The latest MonoProxy for iOS brings a redesigned Hub view, shared HTTP/HTTPS/SOCKS endpoint, QR setup, on-device diagnostics and feedback from the first screen.",
+      "hero.body": "MonoProxy 2.3.1 for iPhone and iPad adds stronger access controls, more reliable transfers, shared HTTP/HTTPS/WebSocket/SOCKS setup and clearer on-device diagnostics.",
       "action.appstore": "View on the App Store",
       "action.explore": "See how it works",
       "hero.fact1": "New Proxy Hub UI",
       "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
-      "hero.fact3": "QR setup and support built in",
+      "hero.fact3": "PAC + QR setup built in",
       "hero.liveTitle": "Hub ready",
       "hero.liveBody": "One port, clear status, faster setup.",
-      "release.version": "New in iOS 1.2.5",
-      "release.title": "A release focused on clarity, speed and confidence.",
-      "release.body": "The new interface puts the selected network address, protocol support, service state, diagnostics and support paths where users expect them: one tap from the main screen.",
-      "release.card1Title": "Proxy Hub Ready",
-      "release.card1Body": "A new visual status card shows the reachable interface, shared port model and current service state without digging into settings.",
-      "release.card2Title": "One shared endpoint",
-      "release.card2Body": "HTTP, HTTPS, SOCKS4, SOCKS4a and SOCKS5 stay on one host and port, with automatic protocol detection for clients.",
-      "release.card3Title": "QR setup up front",
-      "release.card3Body": "The QR entry is now a top-level action, making it faster to bring a Mac, PC, tablet or test device onto the proxy.",
-      "release.card4Title": "Insight menu",
-      "release.card4Body": "Connections, statistics, site traffic, diagnostics and browsing history are grouped behind one compact chart icon.",
-      "release.card5Title": "Feedback from the app",
-      "release.card5Body": "A dedicated support entry helps users report problems with useful context instead of leaving the connection flow.",
+      "release.version": "New in MonoProxy 2.3.1",
+      "release.title": "Stronger controls. More reliable connections.",
+      "release.body": "Version 2.3.1 strengthens authentication and large transfers, adds reusable profiles and IP/CIDR access rules, and improves recovery across network changes.",
+      "release.card1Title": "Start, share, verify",
+      "release.card1Body": "PAC and QR sharing now sit inside a clearer flow from listener startup to client connection and verified traffic.",
+      "release.card2Title": "One broader endpoint",
+      "release.card2Body": "HTTP, HTTPS CONNECT, plain WebSocket, SOCKS4, SOCKS4a and SOCKS5 share one host and port.",
+      "release.card3Title": "Client access controls",
+      "release.card3Body": "Generate credentials, limit connections per client, apply IP/CIDR rules and disconnect sessions when needed.",
+      "release.card4Title": "Useful session evidence",
+      "release.card4Body": "Review live and completed sessions, run actionable diagnostics and export reports with sensitive addresses redacted.",
+      "release.card5Title": "Reliability under load",
+      "release.card5Body": "Improved IPv4/IPv6 handling, network recovery, concurrent browsing, large transfers and authentication behavior.",
       "release.proofTitle": "Release focus:",
-      "release.proofBody": "shorter setup paths, clearer runtime signals and local-first diagnostics for real proxy use.",
+      "release.proofBody": "safer client access, clearer evidence and steadier proxy sessions across real network conditions.",
       "flow.kicker": "A clear connection path",
       "flow.title": "Start it. Connect it. Know it works.",
       "flow.body": "MonoProxy keeps “the port is open” separate from “a client is connected” and “traffic really moved,” so every status has a precise meaning.",
@@ -827,7 +828,7 @@
       "feature.settingsBody": "Change language, theme, animations, port, SOCKS support, authentication and local history controls from one organized screen.",
       "feature.protocolTag": "One port",
       "feature.protocolTitle": "Multiple proxy protocols, one endpoint",
-      "feature.protocolBody": "HTTP, HTTPS, SOCKS4, SOCKS4a and SOCKS5 share the same host and port. MonoProxy detects the client protocol automatically.",
+      "feature.protocolBody": "HTTP, HTTPS CONNECT, plain WebSocket, SOCKS4, SOCKS4a and SOCKS5 share the same host and port. MonoProxy detects the client protocol automatically.",
       "themes.kicker": "Make it yours",
       "themes.title": "Three moods. The same clear status.",
       "themes.body": "Choose a color that suits your workspace without changing how the connection workflow behaves.",
@@ -867,32 +868,32 @@
       "nav.themes": "主题",
       "nav.guides": "配置指南",
       "nav.support": "支持",
-      "hero.kicker": "iOS 1.2.5 已准备发版",
+      "hero.kicker": "MonoProxy 2.3.1 现已上线",
       "hero.line1": "更清晰的代理中心，",
       "hero.line2": "连接所有本地设备。",
-      "hero.body": "最新版 iOS MonoProxy 带来全新的 Hub 首屏、HTTP/HTTPS/SOCKS 共享端点、二维码配置、设备端诊断，以及首屏可达的反馈入口。",
+      "hero.body": "MonoProxy 2.3.1 为 iPhone 和 iPad 带来更强的访问控制、更可靠的传输、共享的 HTTP/HTTPS/WebSocket/SOCKS 配置与更清晰的设备端诊断。",
       "action.appstore": "前往 App Store",
       "action.explore": "查看工作方式",
       "hero.fact1": "新版 Proxy Hub 界面",
       "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
-      "hero.fact3": "内置二维码配置与支持入口",
+      "hero.fact3": "内置 PAC 与二维码配置",
       "hero.liveTitle": "Hub 已就绪",
       "hero.liveBody": "单端口、清晰状态、更快配置。",
-      "release.version": "iOS 1.2.5 新内容",
-      "release.title": "围绕清晰、速度和可靠感打磨的一次发版。",
-      "release.body": "新版界面把网络地址、协议支持、服务状态、诊断和支持入口放到用户最需要的位置：从首屏一步可达。",
-      "release.card1Title": "Proxy Hub Ready",
-      "release.card1Body": "新的可视化状态卡直接展示可连接地址、共享端口模型和当前服务状态，不必进入设置翻找。",
-      "release.card2Title": "一个共享端点",
-      "release.card2Body": "HTTP、HTTPS、SOCKS4、SOCKS4a 与 SOCKS5 共用同一主机和端口，并自动识别客户端协议。",
-      "release.card3Title": "二维码配置前置",
-      "release.card3Body": "二维码入口提升为首屏核心操作，让 Mac、PC、平板和测试设备更快接入代理。",
-      "release.card4Title": "洞察菜单",
-      "release.card4Body": "连接、统计、站点流量、诊断和浏览历史统一收进紧凑的图表入口。",
-      "release.card5Title": "App 内反馈",
-      "release.card5Body": "独立支持入口让用户带着有效上下文反馈问题，不需要离开当前连接流程。",
+      "release.version": "MonoProxy 2.3.1 新内容",
+      "release.title": "更强控制，更可靠的连接。",
+      "release.body": "2.3.1 加强认证与大文件传输，新增可复用配置、IP/CIDR 访问规则，并改善网络变化后的恢复能力。",
+      "release.card1Title": "启动、共享、验证",
+      "release.card1Body": "PAC 与二维码共享融入更清晰的流程，从启动监听、客户端连接一直到真实流量验证。",
+      "release.card2Title": "覆盖更广的单一端点",
+      "release.card2Body": "HTTP、HTTPS CONNECT、普通 WebSocket、SOCKS4、SOCKS4a 与 SOCKS5 共用一个主机和端口。",
+      "release.card3Title": "客户端访问控制",
+      "release.card3Body": "生成强凭据、限制单个客户端连接数、应用 IP/CIDR 规则，并可按需断开会话。",
+      "release.card4Title": "真正有用的会话证据",
+      "release.card4Body": "查看实时与已完成会话、运行可操作诊断，并导出已脱敏地址的报告。",
+      "release.card5Title": "负载下依然可靠",
+      "release.card5Body": "改善 IPv4/IPv6、网络恢复、并发浏览、大文件传输与认证行为。",
       "release.proofTitle": "发版重点：",
-      "release.proofBody": "更短配置路径、更清晰运行信号，以及面向真实代理使用的本地优先诊断。",
+      "release.proofBody": "更安全的客户端访问、更清晰的证据，以及真实网络环境下更稳定的代理会话。",
       "flow.kicker": "清晰的连接路径",
       "flow.title": "启动、连接，并确认它真的有效。",
       "flow.body": "MonoProxy 将“端口已监听”“客户端已连接”和“流量确实传输”区分开，让每个状态都有准确含义。",
@@ -926,7 +927,7 @@
       "feature.settingsBody": "在一个页面调整语言、主题、动画、端口、SOCKS、认证以及本地历史记录选项。",
       "feature.protocolTag": "单一端口",
       "feature.protocolTitle": "多种代理协议，共用一个端点",
-      "feature.protocolBody": "HTTP、HTTPS、SOCKS4、SOCKS4a 与 SOCKS5 共用同一主机和端口，MonoProxy 会自动识别客户端协议。",
+      "feature.protocolBody": "HTTP、HTTPS CONNECT、普通 WebSocket、SOCKS4、SOCKS4a 与 SOCKS5 共用同一主机和端口，MonoProxy 会自动识别客户端协议。",
       "themes.kicker": "选择你的风格",
       "themes.title": "三种氛围，同样清晰的状态。",
       "themes.body": "选择适合工作环境的配色，而连接流程和状态表达始终保持一致。",
@@ -966,32 +967,32 @@
       "nav.themes": "テーマ",
       "nav.guides": "設定ガイド",
       "nav.support": "サポート",
-      "hero.kicker": "iOS 1.2.5 リリース準備完了",
+      "hero.kicker": "MonoProxy 2.3.1 配信開始",
       "hero.line1": "より見やすいプロキシハブ。",
       "hero.line2": "ローカル端末をまとめて接続。",
-      "hero.body": "最新の MonoProxy for iOS は、刷新された Hub 画面、HTTP/HTTPS/SOCKS 共通エンドポイント、QR 設定、端末内診断、フィードバック入口を最初の画面に集約しました。",
+      "hero.body": "MonoProxy 2.3.1 for iPhone and iPad は、アクセス制御、転送の信頼性、HTTP/HTTPS/WebSocket/SOCKS の共通設定、端末内診断を強化しました。",
       "action.appstore": "App Store で見る",
       "action.explore": "使い方を見る",
       "hero.fact1": "新しい Proxy Hub UI",
       "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
-      "hero.fact3": "QR 設定とサポートを内蔵",
+      "hero.fact3": "PAC と QR 設定を内蔵",
       "hero.liveTitle": "Hub 準備完了",
       "hero.liveBody": "1 つのポート、明確な状態、より速い設定。",
-      "release.version": "iOS 1.2.5 の新機能",
-      "release.title": "見やすさ、速度、安心感を磨いたリリース。",
-      "release.body": "新しい画面は、選択中のネットワークアドレス、対応プロトコル、サービス状態、診断、サポート導線を、ユーザーが必要とする場所に配置します。",
-      "release.card1Title": "Proxy Hub Ready",
-      "release.card1Body": "新しいビジュアルステータスカードで、到達可能なアドレス、共通ポートモデル、現在のサービス状態を設定画面に入らず確認できます。",
-      "release.card2Title": "1 つの共通エンドポイント",
-      "release.card2Body": "HTTP、HTTPS、SOCKS4、SOCKS4a、SOCKS5 は同じホストとポートを使い、クライアントプロトコルは自動判別されます。",
-      "release.card3Title": "QR 設定を前面に",
-      "release.card3Body": "QR 入口をトップレベル操作にし、Mac、PC、タブレット、テスト端末をより速くプロキシへ接続できます。",
-      "release.card4Title": "インサイトメニュー",
-      "release.card4Body": "接続、統計、サイト別トラフィック、診断、閲覧履歴をコンパクトなチャートアイコンにまとめました。",
-      "release.card5Title": "アプリ内フィードバック",
-      "release.card5Body": "専用サポート入口により、接続フローを離れずに必要な情報を含めて問題を報告できます。",
+      "release.version": "MonoProxy 2.3.1 の新機能",
+      "release.title": "より強い制御。より安定した接続。",
+      "release.body": "2.3.1 は認証と大容量転送を強化し、再利用可能なプロファイルと IP/CIDR アクセスルールを追加して、ネットワーク変更後の復旧を改善しました。",
+      "release.card1Title": "開始、共有、確認",
+      "release.card1Body": "PAC と QR 共有を、リスナー起動からクライアント接続、実トラフィック確認までの明確な流れに統合しました。",
+      "release.card2Title": "より幅広い共通エンドポイント",
+      "release.card2Body": "HTTP、HTTPS CONNECT、通常の WebSocket、SOCKS4、SOCKS4a、SOCKS5 が 1 つのホストとポートを共有します。",
+      "release.card3Title": "クライアントアクセス制御",
+      "release.card3Body": "認証情報の生成、クライアント別接続制限、IP/CIDR ルール、必要に応じたセッション切断に対応しました。",
+      "release.card4Title": "役立つセッション情報",
+      "release.card4Body": "進行中と完了済みのセッションを確認し、診断を実行して、機密アドレスを伏せたレポートを出力できます。",
+      "release.card5Title": "負荷時の信頼性",
+      "release.card5Body": "IPv4/IPv6、ネットワーク復旧、同時ブラウジング、大容量転送、認証動作を改善しました。",
       "release.proofTitle": "リリースの焦点:",
-      "release.proofBody": "短い設定導線、明確な実行状態、実運用向けのローカル優先診断。",
+      "release.proofBody": "より安全なクライアントアクセス、明確な証拠、実環境で安定したプロキシセッション。",
       "flow.kicker": "明確な接続フロー",
       "flow.title": "起動し、接続し、動作を確認。",
       "flow.body": "MonoProxy は「ポートが開いている」「クライアントが接続した」「実際にトラフィックが流れた」を分けて表示し、それぞれの状態を正確に伝えます。",
@@ -1025,7 +1026,7 @@
       "feature.settingsBody": "言語、テーマ、アニメーション、ポート、SOCKS、認証、ローカル履歴制御を 1 つの整理された画面で変更できます。",
       "feature.protocolTag": "1 ポート",
       "feature.protocolTitle": "複数のプロキシプロトコルを 1 つのエンドポイントで",
-      "feature.protocolBody": "HTTP、HTTPS、SOCKS4、SOCKS4a、SOCKS5 は同じホストとポートを共有し、MonoProxy がクライアントプロトコルを自動判別します。",
+      "feature.protocolBody": "HTTP、HTTPS CONNECT、通常の WebSocket、SOCKS4、SOCKS4a、SOCKS5 は同じホストとポートを共有し、MonoProxy がクライアントプロトコルを自動判別します。",
       "themes.kicker": "自分らしく",
       "themes.title": "3 つの雰囲気。同じ明確な状態表示。",
       "themes.body": "接続フローを変えずに、作業環境に合う配色を選べます。",
@@ -1065,32 +1066,32 @@
       "nav.themes": "테마",
       "nav.guides": "설정 가이드",
       "nav.support": "지원",
-      "hero.kicker": "iOS 1.2.5 출시 준비 완료",
+      "hero.kicker": "MonoProxy 2.3.1 출시",
       "hero.line1": "더 깔끔한 프록시 허브.",
       "hero.line2": "모든 로컬 기기를 연결.",
-      "hero.body": "최신 iOS용 MonoProxy는 새롭게 디자인된 Hub 화면, HTTP/HTTPS/SOCKS 공용 엔드포인트, QR 설정, 기기 내 진단, 피드백 진입점을 첫 화면에 배치합니다.",
+      "hero.body": "iPhone 및 iPad용 MonoProxy 2.3.1은 더 강력한 접근 제어, 안정적인 전송, 공용 HTTP/HTTPS/WebSocket/SOCKS 설정과 명확한 기기 내 진단을 제공합니다.",
       "action.appstore": "App Store에서 보기",
       "action.explore": "작동 방식 보기",
       "hero.fact1": "새 Proxy Hub UI",
       "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
-      "hero.fact3": "QR 설정과 지원 내장",
+      "hero.fact3": "PAC 및 QR 설정 내장",
       "hero.liveTitle": "Hub 준비 완료",
       "hero.liveBody": "하나의 포트, 명확한 상태, 더 빠른 설정.",
-      "release.version": "iOS 1.2.5의 새로운 기능",
-      "release.title": "명확성, 속도, 신뢰감에 집중한 릴리스.",
-      "release.body": "새 인터페이스는 선택한 네트워크 주소, 프로토콜 지원, 서비스 상태, 진단, 지원 경로를 사용자가 기대하는 위치에 둡니다.",
-      "release.card1Title": "Proxy Hub Ready",
-      "release.card1Body": "새 시각적 상태 카드는 설정을 뒤지지 않아도 접근 가능한 주소, 공용 포트 모델, 현재 서비스 상태를 보여줍니다.",
-      "release.card2Title": "하나의 공용 엔드포인트",
-      "release.card2Body": "HTTP, HTTPS, SOCKS4, SOCKS4a, SOCKS5가 같은 호스트와 포트를 사용하며 클라이언트 프로토콜은 자동으로 감지됩니다.",
-      "release.card3Title": "QR 설정 전면 배치",
-      "release.card3Body": "QR 진입점을 최상위 동작으로 올려 Mac, PC, 태블릿, 테스트 기기를 더 빠르게 프록시에 연결할 수 있습니다.",
-      "release.card4Title": "인사이트 메뉴",
-      "release.card4Body": "연결, 통계, 사이트 트래픽, 진단, 브라우징 기록을 하나의 컴팩트한 차트 아이콘에 모았습니다.",
-      "release.card5Title": "앱 내 피드백",
-      "release.card5Body": "전용 지원 진입점으로 연결 흐름을 떠나지 않고 필요한 맥락과 함께 문제를 보고할 수 있습니다.",
+      "release.version": "MonoProxy 2.3.1의 새로운 기능",
+      "release.title": "더 강력한 제어. 더 안정적인 연결.",
+      "release.body": "2.3.1은 인증과 대용량 전송을 강화하고 재사용 가능한 프로필과 IP/CIDR 접근 규칙을 추가하며 네트워크 변경 후 복구를 개선했습니다.",
+      "release.card1Title": "시작, 공유, 확인",
+      "release.card1Body": "PAC 및 QR 공유를 리스너 시작, 클라이언트 연결, 실제 트래픽 확인까지 이어지는 명확한 흐름에 통합했습니다.",
+      "release.card2Title": "더 폭넓은 공용 엔드포인트",
+      "release.card2Body": "HTTP, HTTPS CONNECT, 일반 WebSocket, SOCKS4, SOCKS4a, SOCKS5가 하나의 호스트와 포트를 공유합니다.",
+      "release.card3Title": "클라이언트 접근 제어",
+      "release.card3Body": "인증 정보를 생성하고 클라이언트별 연결을 제한하며 IP/CIDR 규칙을 적용하고 필요할 때 세션을 종료할 수 있습니다.",
+      "release.card4Title": "유용한 세션 근거",
+      "release.card4Body": "실시간 및 완료된 세션을 확인하고 진단을 실행하며 민감한 주소가 제거된 보고서를 내보낼 수 있습니다.",
+      "release.card5Title": "부하 상황의 안정성",
+      "release.card5Body": "IPv4/IPv6 처리, 네트워크 복구, 동시 브라우징, 대용량 전송 및 인증 동작을 개선했습니다.",
       "release.proofTitle": "릴리스 초점:",
-      "release.proofBody": "더 짧은 설정 경로, 더 명확한 런타임 신호, 실제 프록시 사용을 위한 로컬 우선 진단.",
+      "release.proofBody": "더 안전한 클라이언트 접근, 명확한 근거, 실제 네트워크 환경에서 안정적인 프록시 세션.",
       "flow.kicker": "명확한 연결 경로",
       "flow.title": "시작하고, 연결하고, 작동을 확인하세요.",
       "flow.body": "MonoProxy는 '포트 열림', '클라이언트 연결됨', '실제 트래픽 이동'을 구분해 각 상태의 의미를 정확히 보여줍니다.",
@@ -1124,7 +1125,7 @@
       "feature.settingsBody": "언어, 테마, 애니메이션, 포트, SOCKS 지원, 인증, 로컬 기록 제어를 하나의 정리된 화면에서 변경합니다.",
       "feature.protocolTag": "하나의 포트",
       "feature.protocolTitle": "여러 프록시 프로토콜을 하나의 엔드포인트로",
-      "feature.protocolBody": "HTTP, HTTPS, SOCKS4, SOCKS4a, SOCKS5가 같은 호스트와 포트를 공유하며 MonoProxy가 클라이언트 프로토콜을 자동 감지합니다.",
+      "feature.protocolBody": "HTTP, HTTPS CONNECT, 일반 WebSocket, SOCKS4, SOCKS4a, SOCKS5가 같은 호스트와 포트를 공유하며 MonoProxy가 클라이언트 프로토콜을 자동 감지합니다.",
       "themes.kicker": "나에게 맞게",
       "themes.title": "세 가지 분위기. 같은 명확한 상태.",
       "themes.body": "연결 흐름은 그대로 유지하면서 작업 환경에 맞는 색상을 선택할 수 있습니다.",
@@ -1171,7 +1172,8 @@
     metaTitle: "MonoProxy - iPhone 本地 HTTP、HTTPS 與 SOCKS 代理中心",
     metaDescription: "MonoProxy 把 iPhone 變成私有本地代理中心，提供新版狀態介面、HTTP/HTTPS/SOCKS 共用端點、QR Code 配置、診斷與本地流量洞察。",
     "nav.support": "支援",
-    "hero.kicker": "iOS 1.2.5 已準備發佈",
+    "hero.kicker": "MonoProxy 2.3.1 現已推出",
+    "release.version": "MonoProxy 2.3.1 新內容",
     "hero.body": "最新版 iOS MonoProxy 帶來全新的 Hub 首屏、HTTP/HTTPS/SOCKS 共用端點、QR Code 配置、設備端診斷，以及首屏可達的回饋入口。",
     "release.card2Title": "一個共用端點",
     "release.card2Body": "HTTP、HTTPS、SOCKS4、SOCKS4a 與 SOCKS5 共用同一主機和端口，並自動識別客戶端協議。",
