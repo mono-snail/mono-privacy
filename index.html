@@ -19,7 +19,7 @@
 <meta name="twitter:image:alt" content="MonoProxy by MonoWare local proxy topology for iPhone and nearby devices">
 <link rel="canonical" href="https://proxy.monoware.app/">
 <meta name="theme-color" content="#07111f">
-<meta name="apple-itunes-app" content="app-id=6748090836, affiliate-data=pt=127849696&amp;ct=owned_smartbanner_231&amp;mt=8">
+<meta name="apple-itunes-app" content="app-id=6748090836, affiliate-data=pt=127849696&amp;ct=owned_smartbanner_240&amp;mt=8">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,6 +28,7 @@
   "alternateName": "MonoProxy by MonoWare",
   "applicationCategory": "DeveloperApplication",
   "applicationSuite": "MonoWare",
+  "softwareVersion": "2.4.0",
   "operatingSystem": "iOS 15 or later",
   "url": "https://proxy.monoware.app/",
   "mainEntityOfPage": {
@@ -216,6 +217,12 @@
   .release-version::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(48,199,109,.13)}
   .release-head h2{margin-bottom:0}
   .release-head p{margin-bottom:0;color:var(--muted);font-size:17px;line-height:1.72}
+  .release-copy{display:grid;gap:16px;align-items:start}
+  .release-link{
+    display:inline-flex;align-items:center;width:max-content;color:var(--blue);font-size:14px;font-weight:800;
+    text-decoration:none;border-bottom:1px solid rgba(8,124,240,.28);transition:border-color .2s ease,color .2s ease;
+  }
+  .release-link:hover{color:#0566c9;border-color:currentColor}
   .release-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
   .release-card{
     min-height:214px;padding:20px;border:1px solid #dce7f1;border-radius:22px;background:rgba(255,255,255,.88);
@@ -433,7 +440,7 @@
         <a href="#features" data-i18n="nav.features">Features</a>
         <a href="#themes" data-i18n="nav.themes">Themes</a>
         <a data-href-en="guide-macos.html?lang=en" data-href-zh="guide-macos.html?lang=zh" data-href-zh-hant="guide-macos.html?lang=zh" data-href-ja="guide-macos.html?lang=en" data-href-ko="guide-macos.html?lang=en" data-i18n="nav.guides">Setup guides</a>
-        <a href="https://apps.apple.com/app/apple-store/id6748090836?pt=127849696&amp;ct=owned_231&amp;mt=8" target="_blank" rel="noopener">App Store</a>
+        <a href="https://apps.apple.com/app/apple-store/id6748090836?pt=127849696&amp;ct=owned_240&amp;mt=8" target="_blank" rel="noopener">App Store</a>
         <a data-href-en="https://support.monoware.app/?product=monoproxy" data-href-zh="https://support.monoware.app/?product=monoproxy" data-href-zh-hant="https://support.monoware.app/?product=monoproxy" data-href-ja="https://support.monoware.app/?product=monoproxy" data-href-ko="https://support.monoware.app/?product=monoproxy" data-i18n="nav.support">Support</a>
       </div>
       <div class="language-switch">
@@ -453,14 +460,14 @@
   <header class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <span class="kicker" data-i18n="hero.kicker">MonoProxy 2.3.1 is live</span>
+        <span class="kicker" data-i18n="hero.kicker">MonoProxy 2.4.0 is live</span>
         <h1>
           <span data-i18n="hero.line1">A cleaner proxy hub.</span><br>
           <span class="gradient" data-i18n="hero.line2">Every local device connected.</span>
         </h1>
-        <p data-i18n="hero.body">MonoProxy 2.3.1 for iPhone and iPad adds stronger access controls, more reliable transfers, shared HTTP/HTTPS/WebSocket/SOCKS setup and clearer on-device diagnostics.</p>
+        <p data-i18n="hero.body">MonoProxy 2.4.0 for iPhone and iPad improves large transfers, local setup, outbound IP checks and diagnostics for shared HTTP/HTTPS/WebSocket/SOCKS connections.</p>
         <div class="actions">
-          <a class="button primary" href="https://apps.apple.com/app/apple-store/id6748090836?pt=127849696&amp;ct=owned_231&amp;mt=8" target="_blank" rel="noopener" data-i18n="action.appstore">View on the App Store</a>
+          <a class="button primary" href="https://apps.apple.com/app/apple-store/id6748090836?pt=127849696&amp;ct=owned_240&amp;mt=8" target="_blank" rel="noopener" data-i18n="action.appstore">View on the App Store</a>
           <a class="button secondary" href="#flow" data-i18n="action.explore">See how it works</a>
         </div>
         <div class="hero-facts">
@@ -500,10 +507,13 @@
     <div class="wrap release-panel">
       <div class="release-head">
         <div>
-          <span class="release-version" data-i18n="release.version">New in MonoProxy 2.3.1</span>
+          <span class="release-version" data-i18n="release.version">New in MonoProxy 2.4.0</span>
           <h2 data-i18n="release.title">Stronger controls. More reliable connections.</h2>
         </div>
-        <p data-i18n="release.body">Version 2.3.1 strengthens authentication and large transfers, adds reusable profiles and IP/CIDR access rules, and improves recovery across network changes.</p>
+        <div class="release-copy">
+          <p data-i18n="release.body">Version 2.4.0 improves large-file, upload, Range and long-lived session handling, adds a local setup page with desktop commands, and makes network diagnostics clearer.</p>
+          <a class="release-link" href="https://monoware.app/blog/monoproxy-2-4-0-now-available" data-i18n="release.blogLink">Read the 2.4.0 release notes</a>
+        </div>
       </div>
       <div class="release-grid">
         <article class="release-card">
@@ -735,7 +745,7 @@
       <h2 data-i18n="cta.title">Make your iPhone the local proxy hub.</h2>
       <p data-i18n="cta.body">Start once, connect your devices, and see when real traffic arrives.</p>
       <div class="actions">
-        <a class="button primary" href="https://apps.apple.com/app/apple-store/id6748090836?pt=127849696&amp;ct=owned_231&amp;mt=8" target="_blank" rel="noopener" data-i18n="action.appstore">View on the App Store</a>
+        <a class="button primary" href="https://apps.apple.com/app/apple-store/id6748090836?pt=127849696&amp;ct=owned_240&amp;mt=8" target="_blank" rel="noopener" data-i18n="action.appstore">View on the App Store</a>
         <a class="button secondary" data-href-en="https://support.monoware.app/?product=monoproxy" data-href-zh="https://support.monoware.app/?product=monoproxy" data-href-zh-hant="https://support.monoware.app/?product=monoproxy" data-href-ja="https://support.monoware.app/?product=monoproxy" data-href-ko="https://support.monoware.app/?product=monoproxy" data-i18n="cta.support">Contact support</a>
       </div>
     </div>
@@ -754,7 +764,7 @@
       <a data-href-en="guide-macos.html?lang=en" data-href-zh="guide-macos.html?lang=zh" data-href-zh-hant="guide-macos.html?lang=zh" data-href-ja="guide-macos.html?lang=en" data-href-ko="guide-macos.html?lang=en" data-i18n="footer.macos">macOS guide</a>
       <a data-href-en="guide-windows.html?lang=en" data-href-zh="guide-windows.html?lang=zh" data-href-zh-hant="guide-windows.html?lang=en" data-href-ja="guide-windows.html?lang=en" data-href-ko="guide-windows.html?lang=en" data-i18n="footer.windows">Windows guide</a>
       <a data-href-en="guide-troubleshooting.html?lang=en" data-href-zh="guide-troubleshooting.html?lang=zh" data-href-zh-hant="guide-troubleshooting.html?lang=zh" data-href-ja="guide-troubleshooting.html?lang=en" data-href-ko="guide-troubleshooting.html?lang=en">Troubleshooting</a>
-      <a href="https://apps.apple.com/app/apple-store/id6748090836?pt=127849696&amp;ct=owned_231&amp;mt=8" target="_blank" rel="noopener">App Store</a>
+      <a href="https://apps.apple.com/app/apple-store/id6748090836?pt=127849696&amp;ct=owned_240&amp;mt=8" target="_blank" rel="noopener">App Store</a>
     </div>
     <span>© 2026 MonoProxy</span>
   </div>
@@ -771,10 +781,10 @@
       "nav.themes": "Themes",
       "nav.guides": "Setup guides",
       "nav.support": "Support",
-      "hero.kicker": "MonoProxy 2.3.1 is live",
+      "hero.kicker": "MonoProxy 2.4.0 is live",
       "hero.line1": "A cleaner proxy hub.",
       "hero.line2": "Every local device connected.",
-      "hero.body": "MonoProxy 2.3.1 for iPhone and iPad adds stronger access controls, more reliable transfers, shared HTTP/HTTPS/WebSocket/SOCKS setup and clearer on-device diagnostics.",
+      "hero.body": "MonoProxy 2.4.0 for iPhone and iPad improves large transfers, local setup, outbound IP checks and diagnostics for shared HTTP/HTTPS/WebSocket/SOCKS connections.",
       "action.appstore": "View on the App Store",
       "action.explore": "See how it works",
       "hero.fact1": "New Proxy Hub UI",
@@ -782,9 +792,10 @@
       "hero.fact3": "PAC + QR setup built in",
       "hero.liveTitle": "Hub ready",
       "hero.liveBody": "One port, clear status, faster setup.",
-      "release.version": "New in MonoProxy 2.3.1",
+      "release.version": "New in MonoProxy 2.4.0",
       "release.title": "Stronger controls. More reliable connections.",
-      "release.body": "Version 2.3.1 strengthens authentication and large transfers, adds reusable profiles and IP/CIDR access rules, and improves recovery across network changes.",
+      "release.body": "Version 2.4.0 improves large-file, upload, Range and long-lived session handling, adds a local setup page with desktop commands, and makes network diagnostics clearer.",
+      "release.blogLink": "Read the 2.4.0 release notes",
       "release.card1Title": "Start, share, verify",
       "release.card1Body": "PAC and QR sharing now sit inside a clearer flow from listener startup to client connection and verified traffic.",
       "release.card2Title": "One broader endpoint",
@@ -870,10 +881,10 @@
       "nav.themes": "主题",
       "nav.guides": "配置指南",
       "nav.support": "支持",
-      "hero.kicker": "MonoProxy 2.3.1 现已上线",
+      "hero.kicker": "MonoProxy 2.4.0 现已上线",
       "hero.line1": "更清晰的代理中心，",
       "hero.line2": "连接所有本地设备。",
-      "hero.body": "MonoProxy 2.3.1 为 iPhone 和 iPad 带来更强的访问控制、更可靠的传输、共享的 HTTP/HTTPS/WebSocket/SOCKS 配置与更清晰的设备端诊断。",
+      "hero.body": "MonoProxy 2.4.0 为 iPhone 和 iPad 改进大文件传输、本地接入页、出口 IP 核验，以及 HTTP/HTTPS/WebSocket/SOCKS 共享连接诊断。",
       "action.appstore": "前往 App Store",
       "action.explore": "查看工作方式",
       "hero.fact1": "新版 Proxy Hub 界面",
@@ -881,9 +892,10 @@
       "hero.fact3": "内置 PAC 与二维码配置",
       "hero.liveTitle": "Hub 已就绪",
       "hero.liveBody": "单端口、清晰状态、更快配置。",
-      "release.version": "MonoProxy 2.3.1 新内容",
+      "release.version": "MonoProxy 2.4.0 新内容",
       "release.title": "更强控制，更可靠的连接。",
-      "release.body": "2.3.1 加强认证与大文件传输，新增可复用配置、IP/CIDR 访问规则，并改善网络变化后的恢复能力。",
+      "release.body": "2.4.0 改进大文件、上传、断点续传和长连接处理，新增本地接入页与桌面配置命令，并让网络诊断更清晰。",
+      "release.blogLink": "阅读 2.4.0 发布说明",
       "release.card1Title": "启动、共享、验证",
       "release.card1Body": "PAC 与二维码共享融入更清晰的流程，从启动监听、客户端连接一直到真实流量验证。",
       "release.card2Title": "覆盖更广的单一端点",
@@ -969,10 +981,10 @@
       "nav.themes": "テーマ",
       "nav.guides": "設定ガイド",
       "nav.support": "サポート",
-      "hero.kicker": "MonoProxy 2.3.1 配信開始",
+      "hero.kicker": "MonoProxy 2.4.0 配信開始",
       "hero.line1": "より見やすいプロキシハブ。",
       "hero.line2": "ローカル端末をまとめて接続。",
-      "hero.body": "MonoProxy 2.3.1 for iPhone and iPad は、アクセス制御、転送の信頼性、HTTP/HTTPS/WebSocket/SOCKS の共通設定、端末内診断を強化しました。",
+      "hero.body": "MonoProxy 2.4.0 for iPhone and iPad は、大容量転送、ローカル設定、出口 IP チェック、HTTP/HTTPS/WebSocket/SOCKS 接続の診断を改善しました。",
       "action.appstore": "App Store で見る",
       "action.explore": "使い方を見る",
       "hero.fact1": "新しい Proxy Hub UI",
@@ -980,9 +992,10 @@
       "hero.fact3": "PAC と QR 設定を内蔵",
       "hero.liveTitle": "Hub 準備完了",
       "hero.liveBody": "1 つのポート、明確な状態、より速い設定。",
-      "release.version": "MonoProxy 2.3.1 の新機能",
+      "release.version": "MonoProxy 2.4.0 の新機能",
       "release.title": "より強い制御。より安定した接続。",
-      "release.body": "2.3.1 は認証と大容量転送を強化し、再利用可能なプロファイルと IP/CIDR アクセスルールを追加して、ネットワーク変更後の復旧を改善しました。",
+      "release.body": "2.4.0 は大容量ファイル、アップロード、Range、長時間セッションを改善し、ローカル設定ページとデスクトップ用コマンドを追加して診断をわかりやすくしました。",
+      "release.blogLink": "2.4.0 リリースノートを読む",
       "release.card1Title": "開始、共有、確認",
       "release.card1Body": "PAC と QR 共有を、リスナー起動からクライアント接続、実トラフィック確認までの明確な流れに統合しました。",
       "release.card2Title": "より幅広い共通エンドポイント",
@@ -1068,10 +1081,10 @@
       "nav.themes": "테마",
       "nav.guides": "설정 가이드",
       "nav.support": "지원",
-      "hero.kicker": "MonoProxy 2.3.1 출시",
+      "hero.kicker": "MonoProxy 2.4.0 출시",
       "hero.line1": "더 깔끔한 프록시 허브.",
       "hero.line2": "모든 로컬 기기를 연결.",
-      "hero.body": "iPhone 및 iPad용 MonoProxy 2.3.1은 더 강력한 접근 제어, 안정적인 전송, 공용 HTTP/HTTPS/WebSocket/SOCKS 설정과 명확한 기기 내 진단을 제공합니다.",
+      "hero.body": "iPhone 및 iPad용 MonoProxy 2.4.0은 대용량 전송, 로컬 설정, 출구 IP 확인, HTTP/HTTPS/WebSocket/SOCKS 연결 진단을 개선합니다.",
       "action.appstore": "App Store에서 보기",
       "action.explore": "작동 방식 보기",
       "hero.fact1": "새 Proxy Hub UI",
@@ -1079,9 +1092,10 @@
       "hero.fact3": "PAC 및 QR 설정 내장",
       "hero.liveTitle": "Hub 준비 완료",
       "hero.liveBody": "하나의 포트, 명확한 상태, 더 빠른 설정.",
-      "release.version": "MonoProxy 2.3.1의 새로운 기능",
+      "release.version": "MonoProxy 2.4.0의 새로운 기능",
       "release.title": "더 강력한 제어. 더 안정적인 연결.",
-      "release.body": "2.3.1은 인증과 대용량 전송을 강화하고 재사용 가능한 프로필과 IP/CIDR 접근 규칙을 추가하며 네트워크 변경 후 복구를 개선했습니다.",
+      "release.body": "2.4.0은 대용량 파일, 업로드, Range, 장시간 세션 처리를 개선하고 로컬 설정 페이지와 데스크톱 명령을 추가해 진단을 더 명확하게 합니다.",
+      "release.blogLink": "2.4.0 릴리스 노트 읽기",
       "release.card1Title": "시작, 공유, 확인",
       "release.card1Body": "PAC 및 QR 공유를 리스너 시작, 클라이언트 연결, 실제 트래픽 확인까지 이어지는 명확한 흐름에 통합했습니다.",
       "release.card2Title": "더 폭넓은 공용 엔드포인트",
@@ -1174,9 +1188,10 @@
     metaTitle: "MonoProxy - iPhone 本地 HTTP、HTTPS 與 SOCKS 代理中心",
     metaDescription: "MonoProxy 把 iPhone 變成私有本地代理中心，提供新版狀態介面、HTTP/HTTPS/SOCKS 共用端點、QR Code 配置、診斷與本地流量洞察。",
     "nav.support": "支援",
-    "hero.kicker": "MonoProxy 2.3.1 現已推出",
-    "release.version": "MonoProxy 2.3.1 新內容",
-    "hero.body": "最新版 iOS MonoProxy 帶來全新的 Hub 首屏、HTTP/HTTPS/SOCKS 共用端點、QR Code 配置、設備端診斷，以及首屏可達的回饋入口。",
+    "hero.kicker": "MonoProxy 2.4.0 現已推出",
+    "release.version": "MonoProxy 2.4.0 新內容",
+    "hero.body": "MonoProxy 2.4.0 改進大檔案傳輸、本地接入頁、出口 IP 核驗，以及 HTTP/HTTPS/WebSocket/SOCKS 共用連線診斷。",
+    "release.blogLink": "閱讀 2.4.0 發布說明",
     "release.card2Title": "一個共用端點",
     "release.card2Body": "HTTP、HTTPS、SOCKS4、SOCKS4a 與 SOCKS5 共用同一主機和端口，並自動識別客戶端協議。",
     "release.card3Title": "QR Code 配置前置",
