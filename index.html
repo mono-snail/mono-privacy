@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MonoProxy - iPhone Local Proxy Hub for HTTP, HTTPS and SOCKS</title>
-<meta name="description" content="MonoProxy turns your iPhone into a private local proxy hub with a redesigned status UI, shared HTTP/HTTPS/SOCKS endpoint, QR setup, diagnostics and on-device traffic insight.">
+<title>MonoProxy: iPhone Proxy Server for Mac, PC and SOCKS5</title>
+<meta name="description" content="Turn your iPhone into a local HTTP and SOCKS5 proxy server for Mac, Windows and test devices. Connect with PAC, QR details or desktop commands.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
-<meta property="og:title" content="MonoProxy - Your iPhone, One Private Proxy Hub">
-<meta property="og:description" content="Share one local endpoint with Macs, PCs, tablets and test devices, then verify real HTTP, HTTPS and SOCKS traffic on device.">
+<meta name="apple-itunes-app" content="app-id=6748090836, affiliate-data=pt=127849696&amp;ct=owned_smartbanner_250&amp;mt=8">
+<meta property="og:title" content="MonoProxy: iPhone Proxy Server for Mac and PC">
+<meta property="og:description" content="Use your iPhone's network path in proxy-aware Mac, Windows and test-device apps through one local HTTP and SOCKS5 endpoint.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://proxy.monoware.app/">
 <meta property="og:image" content="https://proxy.monoware.app/images/proxy-topology.jpg">
 <meta property="og:image:alt" content="MonoProxy by MonoWare local proxy topology for iPhone and nearby devices">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="MonoProxy by MonoWare - iPhone Local Proxy Hub">
-<meta name="twitter:description" content="Turn your iPhone into a private local HTTP, HTTPS and SOCKS proxy hub for nearby devices.">
+<meta name="twitter:title" content="MonoProxy: iPhone Proxy Server for Mac and PC">
+<meta name="twitter:description" content="Use one local HTTP and SOCKS5 endpoint to connect proxy-aware Mac, Windows and test-device apps through your iPhone.">
 <meta name="twitter:image" content="https://proxy.monoware.app/images/proxy-topology.jpg">
 <meta name="twitter:image:alt" content="MonoProxy by MonoWare local proxy topology for iPhone and nearby devices">
 <link rel="canonical" href="https://proxy.monoware.app/">
 <link rel="icon" href="/images/app-icon.jpg" type="image/jpeg">
 <meta name="theme-color" content="#07111f">
-<meta name="apple-itunes-app" content="app-id=6748090836, affiliate-data=pt=127849696&amp;ct=owned_smartbanner_240&amp;mt=8">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -29,8 +29,8 @@
   "alternateName": "MonoProxy by MonoWare",
   "applicationCategory": "DeveloperApplication",
   "applicationSuite": "MonoWare",
-  "softwareVersion": "2.4.0",
   "operatingSystem": "iOS 15 or later",
+  "softwareVersion": "2.5.0",
   "url": "https://proxy.monoware.app/",
   "mainEntityOfPage": {
     "@id": "https://proxy.monoware.app/"
@@ -38,8 +38,8 @@
   "image": "https://proxy.monoware.app/images/app-icon.jpg",
   "screenshot": "https://proxy.monoware.app/images/web/home_ready.jpg",
   "thumbnailUrl": "https://proxy.monoware.app/images/app-icon.jpg",
-  "description": "MonoProxy turns iPhone into a private local HTTP, HTTPS and SOCKS proxy hub with QR setup, diagnostics, and local traffic insight.",
-  "keywords": "MonoProxy by MonoWare, iPhone proxy server, local proxy hub, HTTP proxy, HTTPS proxy, SOCKS proxy",
+  "description": "MonoProxy turns iPhone into a local HTTP and SOCKS5 proxy server for proxy-aware apps on Mac, Windows, tablets, and test devices.",
+  "keywords": "MonoProxy, iPhone proxy server, local HTTP proxy, SOCKS5 server, Mac proxy, Windows proxy, PAC proxy",
   "featureList": [
     "Shared HTTP, HTTPS and SOCKS endpoint",
     "QR setup for nearby devices",
@@ -52,6 +52,13 @@
   "sameAs": [
     "https://apps.apple.com/us/app/monoproxy/id6748090836"
   ],
+  "offers": {
+    "@type": "Offer",
+    "price": "3.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://apps.apple.com/us/app/monoproxy/id6748090836"
+  },
   "brand": {
     "@type": "Brand",
     "name": "MonoWare"
@@ -83,9 +90,9 @@
     --radius:28px;
   }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{max-width:100%;overflow-x:hidden;scroll-behavior:smooth}
   body{
-    margin:0;color:var(--ink);background:var(--paper);
+    max-width:100%;margin:0;overflow-x:hidden;color:var(--ink);background:var(--paper);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     line-height:1.6;-webkit-font-smoothing:antialiased;
   }
@@ -153,7 +160,7 @@
   }
   .hero-grid{position:relative;display:grid;grid-template-columns:1.03fr .97fr;gap:72px;align-items:center}
   .hero .kicker{color:#63d8ee}
-  .hero-copy{padding:24px 0}
+  .hero-copy{min-width:0;padding:24px 0}
   .hero-copy p{max-width:630px;margin-bottom:32px;color:#aebdd0;font-size:20px;line-height:1.75}
   .actions{display:flex;flex-wrap:wrap;gap:12px}
   .button{
@@ -218,12 +225,6 @@
   .release-version::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(48,199,109,.13)}
   .release-head h2{margin-bottom:0}
   .release-head p{margin-bottom:0;color:var(--muted);font-size:17px;line-height:1.72}
-  .release-copy{display:grid;gap:16px;align-items:start}
-  .release-link{
-    display:inline-flex;align-items:center;width:max-content;color:var(--blue);font-size:14px;font-weight:800;
-    text-decoration:none;border-bottom:1px solid rgba(8,124,240,.28);transition:border-color .2s ease,color .2s ease;
-  }
-  .release-link:hover{color:#0566c9;border-color:currentColor}
   .release-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
   .release-card{
     min-height:214px;padding:20px;border:1px solid #dce7f1;border-radius:22px;background:rgba(255,255,255,.88);
@@ -384,9 +385,18 @@
     .section{padding:78px 0}
     .nav-inner{height:62px}
     .nav-right{gap:8px}
-    .hero{padding:70px 0 52px}
-    .hero-grid{gap:26px}
-    .hero-copy p{font-size:17px}
+    .hero{padding:44px 0 40px}
+    .hero .wrap,.hero-grid,.hero-copy{min-width:0;max-width:100%}
+    .hero-grid{grid-template-columns:minmax(0,1fr);gap:26px}
+    .hero h1{max-width:100%;font-size:38px;overflow-wrap:anywhere;word-break:break-word}
+    .hero h1 span{display:block;max-width:100%;overflow-wrap:anywhere;word-break:break-word}
+    .hero .kicker{display:block;max-width:100%;font-size:10px;overflow-wrap:anywhere}
+    .hero .kicker::before{display:none}
+    .hero-copy p{max-width:100%;font-size:16px;line-height:1.65;overflow-wrap:anywhere}
+    .hero .actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+    .hero .button{min-width:0;max-width:100%;padding:0 12px;font-size:13px;overflow-wrap:anywhere}
+    .hero-facts{max-width:100%}
+    .hero-fact{min-width:0;max-width:100%;overflow-wrap:anywhere}
     .phone-stage{min-height:520px}
     .phone-main{width:232px}
     .phone-mini{left:2px;bottom:24px;width:138px}
@@ -418,12 +428,16 @@
   }
   @media(max-width:420px){
     .brand span{display:none}
+    .hero h1{font-size:36px}
     .phone-stage{min-height:480px}
     .phone-main{width:214px}
     .phone-mini{width:124px}
     .live-card{width:155px}
     .flow-visual{min-height:500px}
     .flow-phone-a,.flow-phone-b{width:165px}
+  }
+  @media(max-width:340px){
+    .hero .actions{grid-template-columns:1fr}
   }
 </style>
 </head>
@@ -441,7 +455,7 @@
         <a href="#features" data-i18n="nav.features">Features</a>
         <a href="#themes" data-i18n="nav.themes">Themes</a>
         <a data-href-en="guide-macos.html?lang=en" data-href-zh="guide-macos.html?lang=zh" data-href-zh-hant="guide-macos.html?lang=zh" data-href-ja="guide-macos.html?lang=en" data-href-ko="guide-macos.html?lang=en" data-i18n="nav.guides">Setup guides</a>
-        <a href="https://apps.apple.com/us/app/monoproxy/id6748090836?ppid=3a2defaf-7841-48f9-b45c-ec305ba267ef&amp;pt=127849696&amp;ct=cpp_home_240&amp;mt=8" target="_blank" rel="noopener">App Store</a>
+        <a href="https://apps.apple.com/us/app/monoproxy/id6748090836?ppid=3a2defaf-7841-48f9-b45c-ec305ba267ef&amp;pt=127849696&amp;ct=cpp_home_250&amp;mt=8" target="_blank" rel="noopener">App Store</a>
         <a data-href-en="https://support.monoware.app/?product=monoproxy" data-href-zh="https://support.monoware.app/?product=monoproxy" data-href-zh-hant="https://support.monoware.app/?product=monoproxy" data-href-ja="https://support.monoware.app/?product=monoproxy" data-href-ko="https://support.monoware.app/?product=monoproxy" data-i18n="nav.support">Support</a>
       </div>
       <div class="language-switch">
@@ -461,18 +475,18 @@
   <header class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <span class="kicker" data-i18n="hero.kicker">MonoProxy 2.4.0 is live</span>
+        <span class="kicker" data-i18n="hero.kicker">MonoProxy 2.5.0 for iPhone and iPad</span>
         <h1>
-          <span data-i18n="hero.line1">A cleaner proxy hub.</span><br>
-          <span class="gradient" data-i18n="hero.line2">Every local device connected.</span>
+          <span data-i18n="hero.line1">MonoProxy for iPhone.</span><br>
+          <span class="gradient" data-i18n="hero.line2">A local proxy server for Mac and PC.</span>
         </h1>
-        <p data-i18n="hero.body">MonoProxy 2.4.0 for iPhone and iPad improves large transfers, local setup, outbound IP checks and diagnostics for shared HTTP/HTTPS/WebSocket/SOCKS connections.</p>
+        <p data-i18n="hero.body">Use the network path available to your iPhone in proxy-aware Mac, Windows and test-device apps. Connect through one local HTTP, HTTPS or SOCKS5 endpoint, then verify real traffic.</p>
         <div class="actions">
-          <a class="button primary" href="https://apps.apple.com/us/app/monoproxy/id6748090836?ppid=3a2defaf-7841-48f9-b45c-ec305ba267ef&amp;pt=127849696&amp;ct=cpp_home_240&amp;mt=8" target="_blank" rel="noopener" data-i18n="action.appstore">View on the App Store</a>
+          <a class="button primary" href="https://apps.apple.com/us/app/monoproxy/id6748090836?ppid=3a2defaf-7841-48f9-b45c-ec305ba267ef&amp;pt=127849696&amp;ct=cpp_home_250&amp;mt=8" target="_blank" rel="noopener" data-i18n="action.appstore">View on the App Store</a>
           <a class="button secondary" href="#flow" data-i18n="action.explore">See how it works</a>
         </div>
         <div class="hero-facts">
-          <span class="hero-fact"><i></i><span data-i18n="hero.fact1">New Proxy Hub UI</span></span>
+          <span class="hero-fact"><i></i><span data-i18n="hero.fact1">Connect Device from Home</span></span>
           <span class="hero-fact" data-i18n="hero.fact2">HTTP/HTTPS + SOCKS4/5</span>
           <span class="hero-fact" data-i18n="hero.fact3">PAC + QR setup built in</span>
         </div>
@@ -508,19 +522,16 @@
     <div class="wrap release-panel">
       <div class="release-head">
         <div>
-          <span class="release-version" data-i18n="release.version">New in MonoProxy 2.4.0</span>
-          <h2 data-i18n="release.title">Stronger controls. More reliable connections.</h2>
+          <span class="release-version" data-i18n="release.version">New in MonoProxy 2.5.0</span>
+          <h2 data-i18n="release.title">Connect the next device without hunting through settings.</h2>
         </div>
-        <div class="release-copy">
-          <p data-i18n="release.body">Version 2.4.0 improves large-file, upload, Range and long-lived session handling, adds a local setup page with desktop commands, and makes network diagnostics clearer.</p>
-          <a class="release-link" href="https://monoware.app/blog/monoproxy-2-4-0-now-available" data-i18n="release.blogLink">Read the 2.4.0 release notes</a>
-        </div>
+        <p data-i18n="release.body">Version 2.5.0 puts Connect a Device on the running home screen, opens diagnostics when no client appears, and includes the latest transfer, setup and access-control improvements.</p>
       </div>
       <div class="release-grid">
         <article class="release-card">
           <div class="release-index">01</div>
-          <strong data-i18n="release.card1Title">Start, share, verify</strong>
-          <p data-i18n="release.card1Body">PAC and QR sharing now sit inside a clearer flow from listener startup to client connection and verified traffic.</p>
+          <strong data-i18n="release.card1Title">Connect from Home</strong>
+          <p data-i18n="release.card1Body">The running screen now opens device setup directly, keeping the primary workflow in one place.</p>
         </article>
         <article class="release-card">
           <div class="release-index">02</div>
@@ -534,8 +545,8 @@
         </article>
         <article class="release-card">
           <div class="release-index">04</div>
-          <strong data-i18n="release.card4Title">Useful session evidence</strong>
-          <p data-i18n="release.card4Body">Review live and completed sessions, run actionable diagnostics and export reports with sensitive addresses redacted.</p>
+          <strong data-i18n="release.card4Title">Help at the right time</strong>
+          <p data-i18n="release.card4Body">If no client appears after startup, MonoProxy offers connection diagnostics while the issue is visible.</p>
         </article>
         <article class="release-card">
           <div class="release-index">05</div>
@@ -545,7 +556,7 @@
       </div>
       <div class="release-proof">
         <strong data-i18n="release.proofTitle">Release focus:</strong>
-        <span data-i18n="release.proofBody">safer client access, clearer evidence and steadier proxy sessions across real network conditions.</span>
+        <span data-i18n="release.proofBody">a shorter first-success path, clearer evidence and steadier proxy sessions across real network conditions.</span>
       </div>
     </div>
   </section>
@@ -637,7 +648,7 @@
             <p data-i18n="feature.historyBody">Inspect active and completed host connections, durations and timestamps. History remains local and clearable.</p>
           </div>
           <div class="screen-well purple">
-            <div class="screen-shot"><img src="images/web/browsing_history.jpg" width="720" height="1560" alt="MonoProxy browsing history screen" loading="lazy" decoding="async"></div>
+            <div class="screen-shot"><img src="images/web/statistics.jpg" width="720" height="1560" alt="MonoProxy local session statistics screen" loading="lazy" decoding="async"></div>
           </div>
         </article>
 
@@ -746,7 +757,7 @@
       <h2 data-i18n="cta.title">Make your iPhone the local proxy hub.</h2>
       <p data-i18n="cta.body">Start once, connect your devices, and see when real traffic arrives.</p>
       <div class="actions">
-        <a class="button primary" href="https://apps.apple.com/us/app/monoproxy/id6748090836?ppid=3a2defaf-7841-48f9-b45c-ec305ba267ef&amp;pt=127849696&amp;ct=cpp_home_240&amp;mt=8" target="_blank" rel="noopener" data-i18n="action.appstore">View on the App Store</a>
+        <a class="button primary" href="https://apps.apple.com/us/app/monoproxy/id6748090836?ppid=3a2defaf-7841-48f9-b45c-ec305ba267ef&amp;pt=127849696&amp;ct=cpp_home_250&amp;mt=8" target="_blank" rel="noopener" data-i18n="action.appstore">View on the App Store</a>
         <a class="button secondary" data-href-en="https://support.monoware.app/?product=monoproxy" data-href-zh="https://support.monoware.app/?product=monoproxy" data-href-zh-hant="https://support.monoware.app/?product=monoproxy" data-href-ja="https://support.monoware.app/?product=monoproxy" data-href-ko="https://support.monoware.app/?product=monoproxy" data-i18n="cta.support">Contact support</a>
       </div>
     </div>
@@ -765,7 +776,7 @@
       <a data-href-en="guide-macos.html?lang=en" data-href-zh="guide-macos.html?lang=zh" data-href-zh-hant="guide-macos.html?lang=zh" data-href-ja="guide-macos.html?lang=en" data-href-ko="guide-macos.html?lang=en" data-i18n="footer.macos">macOS guide</a>
       <a data-href-en="guide-windows.html?lang=en" data-href-zh="guide-windows.html?lang=zh" data-href-zh-hant="guide-windows.html?lang=en" data-href-ja="guide-windows.html?lang=en" data-href-ko="guide-windows.html?lang=en" data-i18n="footer.windows">Windows guide</a>
       <a data-href-en="guide-troubleshooting.html?lang=en" data-href-zh="guide-troubleshooting.html?lang=zh" data-href-zh-hant="guide-troubleshooting.html?lang=zh" data-href-ja="guide-troubleshooting.html?lang=en" data-href-ko="guide-troubleshooting.html?lang=en">Troubleshooting</a>
-      <a href="https://apps.apple.com/us/app/monoproxy/id6748090836?ppid=3a2defaf-7841-48f9-b45c-ec305ba267ef&amp;pt=127849696&amp;ct=cpp_home_240&amp;mt=8" target="_blank" rel="noopener">App Store</a>
+      <a href="https://apps.apple.com/us/app/monoproxy/id6748090836?ppid=3a2defaf-7841-48f9-b45c-ec305ba267ef&amp;pt=127849696&amp;ct=cpp_home_250&amp;mt=8" target="_blank" rel="noopener">App Store</a>
     </div>
     <span>© 2026 MonoProxy</span>
   </div>
@@ -774,41 +785,40 @@
 <script>
   const translations = {
     en: {
-      metaTitle: "MonoProxy - iPhone Local Proxy Hub for HTTP, HTTPS and SOCKS",
-      metaDescription: "MonoProxy turns your iPhone into a private local proxy hub with a redesigned status UI, shared HTTP/HTTPS/SOCKS endpoint, QR setup, diagnostics and on-device traffic insight.",
+      metaTitle: "MonoProxy: iPhone Proxy Server for Mac, PC and SOCKS5",
+      metaDescription: "Turn your iPhone into a local HTTP and SOCKS5 proxy server for Mac, Windows and test devices. Connect with PAC, QR details or desktop commands.",
       "nav.latest": "What’s new",
       "nav.flow": "How it works",
       "nav.features": "Features",
       "nav.themes": "Themes",
       "nav.guides": "Setup guides",
       "nav.support": "Support",
-      "hero.kicker": "MonoProxy 2.4.0 is live",
-      "hero.line1": "A cleaner proxy hub.",
-      "hero.line2": "Every local device connected.",
-      "hero.body": "MonoProxy 2.4.0 for iPhone and iPad improves large transfers, local setup, outbound IP checks and diagnostics for shared HTTP/HTTPS/WebSocket/SOCKS connections.",
+      "hero.kicker": "MonoProxy 2.5.0 for iPhone and iPad",
+      "hero.line1": "MonoProxy for iPhone.",
+      "hero.line2": "A local proxy server for Mac and PC.",
+      "hero.body": "Use the network path available to your iPhone in proxy-aware Mac, Windows and test-device apps. Connect through one local HTTP, HTTPS or SOCKS5 endpoint, then verify real traffic.",
       "action.appstore": "View on the App Store",
       "action.explore": "See how it works",
-      "hero.fact1": "New Proxy Hub UI",
+      "hero.fact1": "Connect Device from Home",
       "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
       "hero.fact3": "PAC + QR setup built in",
       "hero.liveTitle": "Hub ready",
       "hero.liveBody": "One port, clear status, faster setup.",
-      "release.version": "New in MonoProxy 2.4.0",
-      "release.title": "Stronger controls. More reliable connections.",
-      "release.body": "Version 2.4.0 improves large-file, upload, Range and long-lived session handling, adds a local setup page with desktop commands, and makes network diagnostics clearer.",
-      "release.blogLink": "Read the 2.4.0 release notes",
-      "release.card1Title": "Start, share, verify",
-      "release.card1Body": "PAC and QR sharing now sit inside a clearer flow from listener startup to client connection and verified traffic.",
+      "release.version": "New in MonoProxy 2.5.0",
+      "release.title": "Connect the next device without hunting through settings.",
+      "release.body": "Version 2.5.0 puts Connect a Device on the running home screen, opens diagnostics when no client appears, and includes the latest transfer, setup and access-control improvements.",
+      "release.card1Title": "Connect from Home",
+      "release.card1Body": "The running screen now opens device setup directly, keeping the primary workflow in one place.",
       "release.card2Title": "One broader endpoint",
       "release.card2Body": "HTTP, HTTPS CONNECT, plain WebSocket, SOCKS4, SOCKS4a and SOCKS5 share one host and port.",
       "release.card3Title": "Client access controls",
       "release.card3Body": "Generate credentials, limit connections per client, apply IP/CIDR rules and disconnect sessions when needed.",
-      "release.card4Title": "Useful session evidence",
-      "release.card4Body": "Review live and completed sessions, run actionable diagnostics and export reports with sensitive addresses redacted.",
+      "release.card4Title": "Help at the right time",
+      "release.card4Body": "If no client appears after startup, MonoProxy offers connection diagnostics while the issue is visible.",
       "release.card5Title": "Reliability under load",
       "release.card5Body": "Improved IPv4/IPv6 handling, network recovery, concurrent browsing, large transfers and authentication behavior.",
       "release.proofTitle": "Release focus:",
-      "release.proofBody": "safer client access, clearer evidence and steadier proxy sessions across real network conditions.",
+      "release.proofBody": "a shorter first-success path, clearer evidence and steadier proxy sessions across real network conditions.",
       "flow.kicker": "A clear connection path",
       "flow.title": "Start it. Connect it. Know it works.",
       "flow.body": "MonoProxy keeps “the port is open” separate from “a client is connected” and “traffic really moved,” so every status has a precise meaning.",
@@ -874,41 +884,40 @@
       "footer.windows": "Windows guide"
     },
     zh: {
-      metaTitle: "MonoProxy - iPhone 本地 HTTP、HTTPS 与 SOCKS 代理中心",
-      metaDescription: "MonoProxy 把 iPhone 变成私有本地代理中心，提供新版状态界面、HTTP/HTTPS/SOCKS 共享端点、二维码配置、诊断与本地流量洞察。",
+      metaTitle: "MonoProxy：iPhone 代理服务器，支持 Mac、PC 与 SOCKS5",
+      metaDescription: "将 iPhone 变成本地 HTTP 与 SOCKS5 代理服务器，通过 PAC、二维码信息或桌面命令连接 Mac、Windows 与测试设备。",
       "nav.latest": "本次更新",
       "nav.flow": "工作方式",
       "nav.features": "功能",
       "nav.themes": "主题",
       "nav.guides": "配置指南",
       "nav.support": "支持",
-      "hero.kicker": "MonoProxy 2.4.0 现已上线",
-      "hero.line1": "更清晰的代理中心，",
-      "hero.line2": "连接所有本地设备。",
-      "hero.body": "MonoProxy 2.4.0 为 iPhone 和 iPad 改进大文件传输、本地接入页、出口 IP 核验，以及 HTTP/HTTPS/WebSocket/SOCKS 共享连接诊断。",
+      "hero.kicker": "MonoProxy 2.5.0，支持 iPhone 与 iPad",
+      "hero.line1": "iPhone 上的 MonoProxy。",
+      "hero.line2": "面向 Mac 与 PC 的本地代理服务器。",
+      "hero.body": "让支持代理的 Mac、Windows 与测试设备应用使用 iPhone 当前可用的网络路径。通过一个本地 HTTP、HTTPS 或 SOCKS5 端点连接，并验证真实流量。",
       "action.appstore": "前往 App Store",
       "action.explore": "查看工作方式",
-      "hero.fact1": "新版 Proxy Hub 界面",
+      "hero.fact1": "首屏直接连接设备",
       "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
       "hero.fact3": "内置 PAC 与二维码配置",
       "hero.liveTitle": "Hub 已就绪",
       "hero.liveBody": "单端口、清晰状态、更快配置。",
-      "release.version": "MonoProxy 2.4.0 新内容",
-      "release.title": "更强控制，更可靠的连接。",
-      "release.body": "2.4.0 改进大文件、上传、断点续传和长连接处理，新增本地接入页与桌面配置命令，并让网络诊断更清晰。",
-      "release.blogLink": "阅读 2.4.0 发布说明",
-      "release.card1Title": "启动、共享、验证",
-      "release.card1Body": "PAC 与二维码共享融入更清晰的流程，从启动监听、客户端连接一直到真实流量验证。",
+      "release.version": "MonoProxy 2.5.0 新内容",
+      "release.title": "无需进入设置，即可连接下一台设备。",
+      "release.body": "2.5.0 将“连接设备”放到运行首屏；等待客户端超时后可直接打开诊断，并包含最新的传输、接入与访问控制改进。",
+      "release.card1Title": "从首屏连接",
+      "release.card1Body": "运行首屏可直接打开设备接入，让核心操作保持在同一路径中。",
       "release.card2Title": "覆盖更广的单一端点",
       "release.card2Body": "HTTP、HTTPS CONNECT、普通 WebSocket、SOCKS4、SOCKS4a 与 SOCKS5 共用一个主机和端口。",
       "release.card3Title": "客户端访问控制",
       "release.card3Body": "生成强凭据、限制单个客户端连接数、应用 IP/CIDR 规则，并可按需断开会话。",
-      "release.card4Title": "真正有用的会话证据",
-      "release.card4Body": "查看实时与已完成会话、运行可操作诊断，并导出已脱敏地址的报告。",
+      "release.card4Title": "在需要时提供帮助",
+      "release.card4Body": "启动后仍无客户端时，MonoProxy 会在问题仍可见时提供连接诊断入口。",
       "release.card5Title": "负载下依然可靠",
       "release.card5Body": "改善 IPv4/IPv6、网络恢复、并发浏览、大文件传输与认证行为。",
       "release.proofTitle": "发版重点：",
-      "release.proofBody": "更安全的客户端访问、更清晰的证据，以及真实网络环境下更稳定的代理会话。",
+      "release.proofBody": "更短的首次成功路径、更清晰的证据，以及真实网络环境下更稳定的代理会话。",
       "flow.kicker": "清晰的连接路径",
       "flow.title": "启动、连接，并确认它真的有效。",
       "flow.body": "MonoProxy 将“端口已监听”“客户端已连接”和“流量确实传输”区分开，让每个状态都有准确含义。",
@@ -974,41 +983,40 @@
       "footer.windows": "Windows 指南"
     },
     ja: {
-      metaTitle: "MonoProxy - iPhone ローカル HTTP、HTTPS、SOCKS プロキシハブ",
-      metaDescription: "MonoProxy は iPhone をプライベートなローカルプロキシハブに変えます。新しいステータス UI、HTTP/HTTPS/SOCKS 共通エンドポイント、QR 設定、診断、端末内トラフィック分析を備えています。",
+      metaTitle: "MonoProxy: iPhone プロキシサーバー for Mac・PC・SOCKS5",
+      metaDescription: "iPhone を Mac、Windows、テスト端末向けのローカル HTTP・SOCKS5 プロキシサーバーに。PAC、QR 情報、コマンドで接続できます。",
       "nav.latest": "最新情報",
       "nav.flow": "使い方",
       "nav.features": "機能",
       "nav.themes": "テーマ",
       "nav.guides": "設定ガイド",
       "nav.support": "サポート",
-      "hero.kicker": "MonoProxy 2.4.0 配信開始",
-      "hero.line1": "より見やすいプロキシハブ。",
-      "hero.line2": "ローカル端末をまとめて接続。",
-      "hero.body": "MonoProxy 2.4.0 for iPhone and iPad は、大容量転送、ローカル設定、出口 IP チェック、HTTP/HTTPS/WebSocket/SOCKS 接続の診断を改善しました。",
+      "hero.kicker": "MonoProxy 2.5.0 for iPhone and iPad",
+      "hero.line1": "MonoProxy for iPhone。",
+      "hero.line2": "Mac・PC 向けローカルプロキシサーバー。",
+      "hero.body": "iPhone で利用可能なネットワーク経路を、プロキシ対応の Mac、Windows、テスト端末アプリで利用できます。ローカル HTTP、HTTPS、SOCKS5 エンドポイントに接続し、実際の通信を確認できます。",
       "action.appstore": "App Store で見る",
       "action.explore": "使い方を見る",
-      "hero.fact1": "新しい Proxy Hub UI",
+      "hero.fact1": "ホームからデバイスを接続",
       "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
       "hero.fact3": "PAC と QR 設定を内蔵",
       "hero.liveTitle": "Hub 準備完了",
       "hero.liveBody": "1 つのポート、明確な状態、より速い設定。",
-      "release.version": "MonoProxy 2.4.0 の新機能",
-      "release.title": "より強い制御。より安定した接続。",
-      "release.body": "2.4.0 は大容量ファイル、アップロード、Range、長時間セッションを改善し、ローカル設定ページとデスクトップ用コマンドを追加して診断をわかりやすくしました。",
-      "release.blogLink": "2.4.0 リリースノートを読む",
-      "release.card1Title": "開始、共有、確認",
-      "release.card1Body": "PAC と QR 共有を、リスナー起動からクライアント接続、実トラフィック確認までの明確な流れに統合しました。",
+      "release.version": "MonoProxy 2.5.0 の新機能",
+      "release.title": "設定画面を探さず、次のデバイスを接続。",
+      "release.body": "2.5.0 は実行中のホーム画面に「デバイスを接続」を追加し、クライアントが現れない場合は診断を直接開けます。転送、設定、アクセス制御も改善しました。",
+      "release.card1Title": "ホームから接続",
+      "release.card1Body": "実行中の画面からデバイス設定を直接開き、主要な操作を 1 か所にまとめました。",
       "release.card2Title": "より幅広い共通エンドポイント",
       "release.card2Body": "HTTP、HTTPS CONNECT、通常の WebSocket、SOCKS4、SOCKS4a、SOCKS5 が 1 つのホストとポートを共有します。",
       "release.card3Title": "クライアントアクセス制御",
       "release.card3Body": "認証情報の生成、クライアント別接続制限、IP/CIDR ルール、必要に応じたセッション切断に対応しました。",
-      "release.card4Title": "役立つセッション情報",
-      "release.card4Body": "進行中と完了済みのセッションを確認し、診断を実行して、機密アドレスを伏せたレポートを出力できます。",
+      "release.card4Title": "必要なときに診断",
+      "release.card4Body": "起動後にクライアントが現れない場合、問題が見えているうちに接続診断を開けます。",
       "release.card5Title": "負荷時の信頼性",
       "release.card5Body": "IPv4/IPv6、ネットワーク復旧、同時ブラウジング、大容量転送、認証動作を改善しました。",
       "release.proofTitle": "リリースの焦点:",
-      "release.proofBody": "より安全なクライアントアクセス、明確な証拠、実環境で安定したプロキシセッション。",
+      "release.proofBody": "初回成功までの短い導線、明確な証拠、実環境で安定したプロキシセッション。",
       "flow.kicker": "明確な接続フロー",
       "flow.title": "起動し、接続し、動作を確認。",
       "flow.body": "MonoProxy は「ポートが開いている」「クライアントが接続した」「実際にトラフィックが流れた」を分けて表示し、それぞれの状態を正確に伝えます。",
@@ -1074,41 +1082,40 @@
       "footer.windows": "Windows ガイド"
     },
     ko: {
-      metaTitle: "MonoProxy - iPhone 로컬 HTTP, HTTPS, SOCKS 프록시 허브",
-      metaDescription: "MonoProxy는 iPhone을 개인 로컬 프록시 허브로 바꿉니다. 새 상태 UI, HTTP/HTTPS/SOCKS 공용 엔드포인트, QR 설정, 진단, 기기 내 트래픽 인사이트를 제공합니다.",
+      metaTitle: "MonoProxy: Mac·PC용 iPhone 프록시 서버와 SOCKS5",
+      metaDescription: "iPhone을 Mac, Windows 및 테스트 기기용 로컬 HTTP·SOCKS5 프록시 서버로 사용하세요. PAC, QR 정보 또는 명령어로 연결합니다.",
       "nav.latest": "새로운 기능",
       "nav.flow": "작동 방식",
       "nav.features": "기능",
       "nav.themes": "테마",
       "nav.guides": "설정 가이드",
       "nav.support": "지원",
-      "hero.kicker": "MonoProxy 2.4.0 출시",
-      "hero.line1": "더 깔끔한 프록시 허브.",
-      "hero.line2": "모든 로컬 기기를 연결.",
-      "hero.body": "iPhone 및 iPad용 MonoProxy 2.4.0은 대용량 전송, 로컬 설정, 출구 IP 확인, HTTP/HTTPS/WebSocket/SOCKS 연결 진단을 개선합니다.",
+      "hero.kicker": "iPhone 및 iPad용 MonoProxy 2.5.0",
+      "hero.line1": "iPhone용 MonoProxy.",
+      "hero.line2": "Mac과 PC를 위한 로컬 프록시 서버.",
+      "hero.body": "iPhone에서 사용할 수 있는 네트워크 경로를 프록시 지원 Mac, Windows 및 테스트 기기 앱에서 사용하세요. 하나의 로컬 HTTP, HTTPS 또는 SOCKS5 엔드포인트로 연결하고 실제 트래픽을 확인할 수 있습니다.",
       "action.appstore": "App Store에서 보기",
       "action.explore": "작동 방식 보기",
-      "hero.fact1": "새 Proxy Hub UI",
+      "hero.fact1": "홈에서 바로 기기 연결",
       "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
       "hero.fact3": "PAC 및 QR 설정 내장",
       "hero.liveTitle": "Hub 준비 완료",
       "hero.liveBody": "하나의 포트, 명확한 상태, 더 빠른 설정.",
-      "release.version": "MonoProxy 2.4.0의 새로운 기능",
-      "release.title": "더 강력한 제어. 더 안정적인 연결.",
-      "release.body": "2.4.0은 대용량 파일, 업로드, Range, 장시간 세션 처리를 개선하고 로컬 설정 페이지와 데스크톱 명령을 추가해 진단을 더 명확하게 합니다.",
-      "release.blogLink": "2.4.0 릴리스 노트 읽기",
-      "release.card1Title": "시작, 공유, 확인",
-      "release.card1Body": "PAC 및 QR 공유를 리스너 시작, 클라이언트 연결, 실제 트래픽 확인까지 이어지는 명확한 흐름에 통합했습니다.",
+      "release.version": "MonoProxy 2.5.0의 새로운 기능",
+      "release.title": "설정을 찾아다니지 않고 다음 기기를 연결하세요.",
+      "release.body": "2.5.0은 실행 중인 홈 화면에 '기기 연결'을 추가하고 클라이언트가 나타나지 않으면 진단을 바로 엽니다. 전송, 설정 및 접근 제어도 개선했습니다.",
+      "release.card1Title": "홈에서 연결",
+      "release.card1Body": "실행 화면에서 기기 설정을 바로 열어 핵심 작업을 한곳에 유지합니다.",
       "release.card2Title": "더 폭넓은 공용 엔드포인트",
       "release.card2Body": "HTTP, HTTPS CONNECT, 일반 WebSocket, SOCKS4, SOCKS4a, SOCKS5가 하나의 호스트와 포트를 공유합니다.",
       "release.card3Title": "클라이언트 접근 제어",
       "release.card3Body": "인증 정보를 생성하고 클라이언트별 연결을 제한하며 IP/CIDR 규칙을 적용하고 필요할 때 세션을 종료할 수 있습니다.",
-      "release.card4Title": "유용한 세션 근거",
-      "release.card4Body": "실시간 및 완료된 세션을 확인하고 진단을 실행하며 민감한 주소가 제거된 보고서를 내보낼 수 있습니다.",
+      "release.card4Title": "필요한 순간에 진단",
+      "release.card4Body": "시작 후 클라이언트가 나타나지 않으면 문제가 보이는 동안 연결 진단을 열 수 있습니다.",
       "release.card5Title": "부하 상황의 안정성",
       "release.card5Body": "IPv4/IPv6 처리, 네트워크 복구, 동시 브라우징, 대용량 전송 및 인증 동작을 개선했습니다.",
       "release.proofTitle": "릴리스 초점:",
-      "release.proofBody": "더 안전한 클라이언트 접근, 명확한 근거, 실제 네트워크 환경에서 안정적인 프록시 세션.",
+      "release.proofBody": "더 짧은 첫 성공 경로, 명확한 근거, 실제 네트워크 환경에서 안정적인 프록시 세션.",
       "flow.kicker": "명확한 연결 경로",
       "flow.title": "시작하고, 연결하고, 작동을 확인하세요.",
       "flow.body": "MonoProxy는 '포트 열림', '클라이언트 연결됨', '실제 트래픽 이동'을 구분해 각 상태의 의미를 정확히 보여줍니다.",
@@ -1186,13 +1193,12 @@
     Object.entries(translations.zh).map(([key, value]) => [key, toTraditionalChinese(value)])
   );
   Object.assign(translations["zh-Hant"], {
-    metaTitle: "MonoProxy - iPhone 本地 HTTP、HTTPS 與 SOCKS 代理中心",
-    metaDescription: "MonoProxy 把 iPhone 變成私有本地代理中心，提供新版狀態介面、HTTP/HTTPS/SOCKS 共用端點、QR Code 配置、診斷與本地流量洞察。",
+    metaTitle: "MonoProxy：iPhone 代理伺服器，支援 Mac、PC 與 SOCKS5",
+    metaDescription: "將 iPhone 變成本地 HTTP 與 SOCKS5 代理伺服器，透過 PAC、QR Code 資訊或桌面命令連接 Mac、Windows 與測試裝置。",
     "nav.support": "支援",
-    "hero.kicker": "MonoProxy 2.4.0 現已推出",
-    "release.version": "MonoProxy 2.4.0 新內容",
-    "hero.body": "MonoProxy 2.4.0 改進大檔案傳輸、本地接入頁、出口 IP 核驗，以及 HTTP/HTTPS/WebSocket/SOCKS 共用連線診斷。",
-    "release.blogLink": "閱讀 2.4.0 發布說明",
+    "hero.kicker": "MonoProxy 2.5.0，支援 iPhone 與 iPad",
+    "release.version": "MonoProxy 2.5.0 新內容",
+    "hero.body": "讓支援代理的 Mac、Windows 與測試裝置 App 使用 iPhone 目前可用的網路路徑。透過一個本地 HTTP、HTTPS 或 SOCKS5 端點連接，並驗證真實流量。",
     "release.card2Title": "一個共用端點",
     "release.card2Body": "HTTP、HTTPS、SOCKS4、SOCKS4a 與 SOCKS5 共用同一主機和端口，並自動識別客戶端協議。",
     "release.card3Title": "QR Code 配置前置",
