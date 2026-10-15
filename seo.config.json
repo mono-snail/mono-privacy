@@ -1,0 +1,30 @@
+{
+  "kind": "ios",
+  "site_url": "https://proxy.monoware.app/",
+  "name": "MonoProxy",
+  "languages": [
+    "en",
+    "zh",
+    "zh-Hant",
+    "ja",
+    "ko"
+  ],
+  "title_key": "metaTitle",
+  "description_key": "metaDescription",
+  "social_image": "images/proxy-topology.jpg",
+  "application": {
+    "operatingSystem": "iOS 15 or later",
+    "applicationCategory": "DeveloperApplication",
+    "softwareVersion": "2.8.3",
+    "installUrl": "https://apps.apple.com/app/id6748090836",
+    "sameAs": [
+      "https://apps.apple.com/app/id6748090836"
+    ],
+    "featureList": [
+      "Local HTTP, HTTPS CONNECT and SOCKS5 proxy server",
+      "PAC configuration",
+      "Proxy authentication",
+      "Device traffic and connection diagnostics"
+    ]
+  }
+}

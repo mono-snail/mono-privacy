@@ -6,12 +6,14 @@
 - 当前工作分支：`main`；旧发布记录也使用此分支
 - 站点入口：仓库根目录 `index.html`，纯静态页面，无构建依赖。
 - `CNAME` 保持 `proxy.monoware.app`，不得按父目录旧文档改成 `monoware.app`。
-- `../MonoProxyServer/MonoProxyWebsite/` 是 Mac Companion 站点，不能用来替换此站。
+- `../proxy-companion-website/` 是 Mac Companion 站点，不能用来替换此站。
 
 ## 本地检查与预览
 
 ```sh
+python3 scripts/seo.py
 python3 scripts/check.py
+python3 scripts/check_seo.py
 git diff --check
 python3 -m http.server 4196 --bind 127.0.0.1
 ```
@@ -40,7 +42,9 @@ Mac 素材目录需包含 `ios-mac-overview-en.png` 和 `ios-mac-overview-zh.png
 在**本仓库**审阅并提交网站改动，再推送 `main`：
 
 ```sh
+python3 scripts/seo.py
 python3 scripts/check.py
+python3 scripts/check_seo.py
 git diff --check
 git add index.html guide-macos.html homepage.css homepage.js images/ios scripts README.md sitemap.xml
 git commit -m "feat: refresh iOS homepage with native previews and Mac setup"
@@ -58,3 +62,13 @@ git push origin main
 结构化数据中的已发布版本同步为用户确认的 2.8.3；更新区只展示“本次更新”的用户亮点，截图区域保留新版预览标识，不表示新版本已经上架。
 
 版本和 tag 对比只作为内部内容核验依据，官网正文不展示基线、版本差异或源码提交号。更新亮点仍按核实后的真实差异整理。
+
+## SEO 本地优化（未发布）
+
+首页重点覆盖 iPhone proxy server、iOS proxy server、HTTP proxy server、SOCKS5 proxy server，以及中文 iPhone 代理服务器、HTTP 代理、SOCKS5 和局域网代理。新增面向实际接入问题的可见 FAQ 与 Mac/Windows 指南链接，不使用免费 VPN、无限流量等不符合产品的引流表述。关键词依据产品用途和相关搜索结果筛选，不代表已获得 Keyword Planner 或 Search Console 的搜索量。
+
+`index.html` 及其内联 translations 是维护入口。运行 `python3 scripts/seo.py` 会生成 `/zh/`、`/zh-hant/`、`/ja/`、`/ko/` 的完整静态首页，并同步标题、描述、Open Graph、Twitter、canonical、互相引用的 hreflang、结构化数据和 sitemap。`?lang=` 旧链接由客户端兼容到新路径。语言选择器与页脚语言链接使用独立 URL，不再仅修改当前页面的文字。
+
+生成器只使用 Python 标准库，Cloudflare 根目录发布方式不变；未来发布前需要提交语言目录及 `seo.config.json`。`scripts/check_seo.py` 检查各语言的静态信息、分享元数据、结构化数据、互相对应的语言地址和资源链接。本轮未提交、推送或部署。
+
+参考：[Google SEO 入门指南](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)与[多语言站点指南](https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites)。优先使用清晰、准确的标题与可抓取内容，不以 meta keywords 或重复堆词代替内容。

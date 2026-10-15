@@ -66,3 +66,14 @@ section[id]{scroll-margin-top:88px}
   .screenshot-dialog figcaption{margin:10px 15px 0}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* Searchable setup answers and crawlable language links. */
+.setup-faq{background:var(--soft)}
+.setup-faq-list{margin:28px 0;max-width:900px}
+.setup-faq-list details{padding:20px 0;border-bottom:1px solid var(--line)}
+.setup-faq-list summary{font-weight:650;cursor:pointer}
+.setup-faq-list p{color:var(--muted);margin:16px 0 0}
+.locale-links{display:flex;flex-wrap:wrap;gap:14px;font-size:13px}
+.locale-links a:hover,.locale-links a:focus-visible{text-decoration:underline}
+
+html[lang|="zh"] .hero h1 span{word-break:keep-all}
