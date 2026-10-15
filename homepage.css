@@ -9,6 +9,10 @@ section[id]{scroll-margin-top:88px}
 .mac-section{background:#fff}
 .mac-section .section-head{max-width:820px}
 .hero .hero-assurance{margin:18px 0 0;font-size:13px;line-height:1.6;color:#aebdd0}
+.mac-automations{display:flex;flex-wrap:wrap;gap:12px 28px;margin:26px 0 0;padding:0;list-style:none;color:#1764a8;font-size:15px;font-weight:700}
+.mac-automations li{display:flex;align-items:center;gap:9px}
+.mac-automations li::before{content:'✓';display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#eaf4ff;font-size:13px}
+.mac-switch-note{max-width:95ch;margin:4px 0 0;color:var(--muted);font-size:13px;line-height:1.8}
 .mac-benefits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:48px;margin-top:36px}
 .mac-benefit{display:flex;align-items:flex-start;gap:18px;padding:28px 0;border-top:1px solid var(--line);min-width:0}
 .mac-benefit>svg{flex:none;width:27px;height:27px;margin-top:3px;color:var(--blue)}
