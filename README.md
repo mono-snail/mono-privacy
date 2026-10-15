@@ -50,3 +50,7 @@ git push origin main
 上级旧文档记载此仓库由 GitHub Pages 从 `main` 的根目录发布；另一本通用手册介绍 Cloudflare Pages，不能将其他产品的 Pages 项目配置直接套用。正式上线前，需核对当前站点的实际托管配置，等待对应提交的生产部署成功，再访问自定义域名验证页面、图片和指南。Git push 成功不等于部署完成。
 
 本轮环境检查中，读取 GitHub SSH 远端返回 `Permission denied (publickey)`，未推送或部署，也未能读取生产部署记录。需要先恢复此设备对该仓库的 GitHub 认证。不得把 SSH 私钥、访问令牌或 Cloudflare 配置加入仓库。
+
+## 2.9.3 更新说明的对比依据
+
+以 iOS 发布源码 `54a36159ade5957b9cbde107f760d50a73f8b9d7`（2.8.3 / build 16）对比当前 2.9.3 / build 23。该历史提交的工程版本与旧发布文档相符，原本没有同名本地 tag，本轮在 App 仓库补齐。完整变更证据和验证结果保存在 App 仓库的 `mono_docs/APP_STORE_RELEASE_2.9.3.md`、`docs/ios-release-2.9.3-comparison.json`。官网更新区介绍新增/增强的设备管理、会话分析、诊断、配置库和运行恢复，不把旧版本已经具备的长按停止、皮肤或基础诊断写成新增。
