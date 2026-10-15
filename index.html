@@ -480,18 +480,19 @@
         <span class="kicker" data-i18n="hero.kicker">MonoProxy for iPhone and iPad</span>
         <h1>
           <span data-i18n="hero.line1">Your iPhone.</span><br>
-          <span class="gradient" data-i18n="hero.line2">A capable proxy hub.</span>
+          <span class="gradient" data-i18n="hero.line2">Your proxy server.</span>
         </h1>
-        <p data-i18n="hero.body">Use the network path available to your iPhone in proxy-aware Mac, Windows and test-device apps. Connect through one local HTTP, HTTPS or SOCKS5 endpoint, then verify real traffic.</p>
+        <p data-i18n="hero.body">Run an HTTP, HTTPS CONNECT and SOCKS proxy on your iPhone. Connect your Mac, Windows PC or test devices on the same local network, then see their connections and real traffic.</p>
         <div class="actions">
           <a class="button primary" href="https://apps.apple.com/us/app/monoproxy/id6748090836?ppid=3a2defaf-7841-48f9-b45c-ec305ba267ef&amp;pt=127849696&amp;ct=cpp_home_250&amp;mt=8" target="_blank" rel="noopener" data-i18n="action.appstore">View on the App Store</a>
-          <a class="button secondary" href="#flow" data-i18n="action.explore">See how it works</a>
+          <a class="button secondary" href="#mac" data-i18n="action.explore">Make Mac setup easier</a>
         </div>
         <div class="hero-facts">
-          <span class="hero-fact"><i></i><span data-i18n="hero.fact1">Connect Device from Home</span></span>
-          <span class="hero-fact" data-i18n="hero.fact2">HTTP/HTTPS + SOCKS4/5</span>
-          <span class="hero-fact" data-i18n="hero.fact3">PAC + QR setup built in</span>
+          <span class="hero-fact"><i></i><span data-i18n="hero.fact1">One port, multiple protocols</span></span>
+          <span class="hero-fact" data-i18n="hero.fact2">See devices and traffic</span>
+          <span class="hero-fact" data-i18n="hero.fact3">One purchase. No subscription.</span>
         </div>
+        <p class="hero-assurance" data-i18n="hero.assurance">No account to create. The proxy service runs on your device.</p>
       </div>
       <div class="phone-stage" aria-label="MonoProxy app preview">
         <div class="orb"></div>
@@ -693,9 +694,10 @@
 
   <section class="section mac-section" id="mac" aria-labelledby="mac-title">
     <div class="wrap">
-      <div class="section-head"><h2 id="mac-title" data-i18n="mac.title">Your iPhone serves. Your Mac connects.</h2><p class="lead" data-i18n="mac.body">Run the proxy service in MonoProxy on your iPhone. Companion helps your Mac discover it, save its proxy credentials and connect your apps.</p></div>
-      <figure class="mac-preview"><img src="images/ios/ios-mac-overview-en.webp" data-screen="mac-overview" data-i18n-alt="image.mac" alt="MonoProxy Companion native Mac workspace with sample data" width="1600" height="1026" loading="lazy" decoding="async"><figcaption data-i18n="mac.caption">Native Mac workspace · Sample data</figcaption></figure>
-      <ol class="mac-steps"><li><h3 data-i18n="mac.step1Title">Start on iPhone</h3><p data-i18n="mac.step1Body">Keep both devices on the same local network and start the proxy service. Open Connect a Device and select macOS.</p></li><li><h3 data-i18n="mac.step2Title">Add it on Mac</h3><p data-i18n="mac.step2Body">In Companion, add the discovered phone service as a configuration. If discovery is unavailable, enter the address and port shown on iPhone.</p></li><li><h3 data-i18n="mac.step3Title">Connect and verify</h3><p data-i18n="mac.step3Body">Enter the proxy credentials if required, then connect. Open a page and confirm verified traffic in the iOS app.</p></li></ol><aside class="mac-auth"><h3 data-i18n="mac.authTitle">You set the proxy credentials</h3><p data-i18n="mac.authBody">Set this proxy service’s username and password in the iOS app’s authentication settings. When authentication is enabled, enter that same username and password on the device connecting to it.</p></aside>
+      <div class="section-head"><h2 id="mac-title" data-i18n="mac.title">Less proxy friction on Mac.</h2><p class="lead" data-i18n="mac.body">Copying addresses, repeated proxy sign-in, apps that ignore proxy settings: Proxy Companion handles the details between your Mac apps and your iPhone’s MonoProxy service.</p></div>
+      <div class="mac-benefits"><article class="mac-benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="m12 12 7-7"/></svg><div><p class="mac-pain" data-i18n="mac.pain1">Another address to type</p><h3 data-i18n="mac.result1">Discover your phone on the network</h3><p class="mac-solution" data-i18n="mac.solution1">Find the running MonoProxy service on the same local network, add it as a configuration and connect. Manual entry is available when discovery cannot reach it.</p></div></article><article class="mac-benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="9" r="5"/><path d="m12 13 8 8h3v-4l-3-3h-3v-3"/></svg><div><p class="mac-pain" data-i18n="mac.pain2">Proxy sign-in keeps interrupting</p><h3 data-i18n="mac.result2">Save once. Let Companion authenticate.</h3><p class="mac-solution" data-i18n="mac.solution2">Store your proxy credentials in macOS Keychain. Companion authenticates the connections it manages, so those apps do not each need to enter the upstream proxy credentials again.</p></div></article><article class="mac-benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><div><p class="mac-pain" data-i18n="mac.pain3">The browser works. Other apps do not.</p><h3 data-i18n="mac.result3">Go beyond system proxy settings</h3><p class="mac-solution" data-i18n="mac.solution3">Transparent mode handles eligible app connections, including apps that ignore system proxy settings. Rules let you proxy, connect directly or block. First use requires network extension approval.</p></div></article><article class="mac-benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17h4l3-10 4 14 3-9h4"/></svg><div><p class="mac-pain" data-i18n="mac.pain4">A failed connection with no clue why</p><h3 data-i18n="mac.result4">See the app, destination and failure stage</h3><p class="mac-solution" data-i18n="mac.solution4">Inspect connection records, matched rules and diagnostic stages to find the next useful check.</p></div></article></div>
+      <figure class="mac-preview"><img src="images/ios/ios-mac-overview-en.webp" data-screen="mac-overview" data-i18n-alt="image.mac" alt="Proxy Companion native Mac workspace with sample data" width="1600" height="1026" loading="lazy" decoding="async"><figcaption data-i18n="mac.caption">Native Mac workspace · Sample data</figcaption></figure>
+      <details class="mac-setup"><summary data-i18n="mac.setupTitle">Connect your iPhone and Mac in three steps</summary><ol class="mac-steps"><li><h3 data-i18n="mac.step1Title">Start on iPhone</h3><p data-i18n="mac.step1Body">Keep both devices on the same local network and start the proxy service. Open Connect a Device and select macOS.</p></li><li><h3 data-i18n="mac.step2Title">Add it on Mac</h3><p data-i18n="mac.step2Body">In Companion, add the discovered phone service as a configuration. If discovery is unavailable, enter the address and port shown on iPhone.</p></li><li><h3 data-i18n="mac.step3Title">Connect and verify</h3><p data-i18n="mac.step3Body">Enter the proxy credentials if required, then connect. Open a page and confirm verified traffic in the iOS app.</p></li></ol><aside class="mac-auth"><h3 data-i18n="mac.authTitle">You set the proxy credentials</h3><p data-i18n="mac.authBody">Set this proxy service’s username and password in the iOS app’s authentication settings. When authentication is enabled, enter that same username and password on the device connecting to it.</p></aside></details>
       <a class="text-link" href="guide-macos.html?lang=en#companion" data-mac-guide data-i18n="mac.guide">Read the Mac setup guide</a><p class="preview-note" data-i18n="mac.availability">The public Companion installer is being prepared. The setup guide also explains manual macOS configuration.</p>
     </div>
   </section>
@@ -807,13 +809,13 @@
     "nav.support": "Support",
     "hero.kicker": "MonoProxy for iPhone and iPad",
     "hero.line1": "Your iPhone.",
-    "hero.line2": "A capable proxy hub.",
-    "hero.body": "Use the network path available to your iPhone in proxy-aware Mac, Windows and test-device apps. Connect through one local HTTP, HTTPS or SOCKS5 endpoint, then verify real traffic.",
+    "hero.line2": "Your proxy server.",
+    "hero.body": "Run an HTTP, HTTPS CONNECT and SOCKS proxy on your iPhone. Connect your Mac, Windows PC or test devices on the same local network, then see their connections and real traffic.",
     "action.appstore": "View on the App Store",
-    "action.explore": "See how it works",
-    "hero.fact1": "Connect Device from Home",
-    "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
-    "hero.fact3": "PAC + QR setup built in",
+    "action.explore": "Make Mac setup easier",
+    "hero.fact1": "One port, multiple protocols",
+    "hero.fact2": "See devices and traffic",
+    "hero.fact3": "One purchase. No subscription.",
     "hero.liveTitle": "Your proxy, in view",
     "hero.liveBody": "Devices, traffic and connection evidence.",
     "release.version": "New interface preview",
@@ -896,8 +898,8 @@
     "footer.windows": "Windows guide",
     "preview.note": "New iOS interface · Simulator captures with local test sessions. Select a screenshot to enlarge.",
     "nav.mac": "iPhone + Mac",
-    "mac.title": "Your iPhone serves. Your Mac connects.",
-    "mac.body": "Run the proxy service in MonoProxy on your iPhone. Companion helps your Mac discover it, save its proxy credentials and connect your apps.",
+    "mac.title": "Less proxy friction on Mac.",
+    "mac.body": "Copying addresses, repeated proxy sign-in, apps that ignore proxy settings: Proxy Companion handles the details between your Mac apps and your iPhone’s MonoProxy service.",
     "mac.step1Title": "Start on iPhone",
     "mac.step1Body": "Keep both devices on the same local network and start the proxy service. Open Connect a Device and select macOS.",
     "mac.step2Title": "Add it on Mac",
@@ -921,7 +923,21 @@
     "image.green": "MonoProxy green skin",
     "image.purple": "MonoProxy purple skin",
     "image.dark": "MonoProxy dark skin",
-    "image.mac": "MonoProxy Companion native Mac workspace with sample data"
+    "image.mac": "Proxy Companion native Mac workspace with sample data",
+    "hero.assurance": "No account to create. The proxy service runs on your device.",
+    "mac.pain1": "Another address to type",
+    "mac.result1": "Discover your phone on the network",
+    "mac.solution1": "Find the running MonoProxy service on the same local network, add it as a configuration and connect. Manual entry is available when discovery cannot reach it.",
+    "mac.pain2": "Proxy sign-in keeps interrupting",
+    "mac.result2": "Save once. Let Companion authenticate.",
+    "mac.solution2": "Store your proxy credentials in macOS Keychain. Companion authenticates the connections it manages, so those apps do not each need to enter the upstream proxy credentials again.",
+    "mac.pain3": "The browser works. Other apps do not.",
+    "mac.result3": "Go beyond system proxy settings",
+    "mac.solution3": "Transparent mode handles eligible app connections, including apps that ignore system proxy settings. Rules let you proxy, connect directly or block. First use requires network extension approval.",
+    "mac.pain4": "A failed connection with no clue why",
+    "mac.result4": "See the app, destination and failure stage",
+    "mac.solution4": "Inspect connection records, matched rules and diagnostic stages to find the next useful check.",
+    "mac.setupTitle": "Connect your iPhone and Mac in three steps"
   },
   "zh": {
     "metaTitle": "MonoProxy：iPhone 代理服务器，支持 Mac、PC 与 SOCKS5",
@@ -933,14 +949,14 @@
     "nav.guides": "配置指南",
     "nav.support": "支持",
     "hero.kicker": "MonoProxy，适用于 iPhone 和 iPad",
-    "hero.line1": "你的 iPhone，",
-    "hero.line2": "专业代理中枢。",
-    "hero.body": "让支持代理的 Mac、Windows 与测试设备应用使用 iPhone 当前可用的网络路径。通过一个本地 HTTP、HTTPS 或 SOCKS5 端点连接，并验证真实流量。",
+    "hero.line1": "把 iPhone 变成",
+    "hero.line2": "代理服务器。",
+    "hero.body": "在 iPhone 上开启 HTTP、HTTPS CONNECT 与 SOCKS 代理，让同一局域网的 Mac、Windows 和测试设备接入。连了哪些设备、流量是否真的经过，都能看清。",
     "action.appstore": "前往 App Store",
-    "action.explore": "查看工作方式",
-    "hero.fact1": "首屏直接连接设备",
-    "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
-    "hero.fact3": "内置 PAC 与二维码配置",
+    "action.explore": "让 Mac 接入更省心",
+    "hero.fact1": "一个端口，多种协议",
+    "hero.fact2": "设备与流量，看得见",
+    "hero.fact3": "一次购买，无订阅",
     "hero.liveTitle": "代理状态，一眼看清",
     "hero.liveBody": "设备、流量和连接证据，尽在掌握。",
     "release.version": "新版界面预览",
@@ -1023,8 +1039,8 @@
     "footer.windows": "Windows 指南",
     "preview.note": "新版 iOS 界面 · 模拟器实拍，使用本地测试会话。点击截图可放大。",
     "nav.mac": "iPhone + Mac",
-    "mac.title": "iPhone 提供服务，Mac 轻松接入。",
-    "mac.body": "在 iPhone 上运行 MonoProxy 代理服务，用 Companion 在 Mac 上发现服务、保存代理凭据并连接应用。",
+    "mac.title": "Mac 用代理的麻烦，交给伴侣。",
+    "mac.body": "手填地址、反复输入代理密码、部分应用不走系统代理——Proxy伴侣连接 Mac 应用与 iPhone 上的 MonoProxy 服务，帮你处理这些繁琐步骤。",
     "mac.step1Title": "在 iPhone 开启服务",
     "mac.step1Body": "让两台设备处于同一局域网，开启代理服务，打开“连接设备”并选择 macOS。",
     "mac.step2Title": "在 Mac 添加配置",
@@ -1048,7 +1064,21 @@
     "image.green": "MonoProxy 绿色皮肤",
     "image.purple": "MonoProxy 紫色皮肤",
     "image.dark": "MonoProxy 深色皮肤",
-    "image.mac": "MonoProxy Companion Mac 原生工作台，使用示例数据"
+    "image.mac": "MonoProxy Companion Mac 原生工作台，使用示例数据",
+    "hero.assurance": "无需注册账号，代理服务运行在你的设备上。",
+    "mac.pain1": "地址总要手动填写",
+    "mac.result1": "自动发现手机服务",
+    "mac.solution1": "在同一局域网发现已开启的 MonoProxy 服务，添加为配置后连接。无法自动发现时，也可以手动输入地址。",
+    "mac.pain2": "代理认证反复打断操作",
+    "mac.result2": "凭据存一次，代理认证交给伴侣",
+    "mac.solution2": "将代理账号密码保存在 macOS 钥匙串。对于伴侣接管的连接，由伴侣向上游完成认证，应用无需各自重复输入代理凭据。",
+    "mac.pain3": "浏览器能用，其他应用却不走代理",
+    "mac.result3": "让更多应用用上代理",
+    "mac.solution3": "透明模式接管符合条件的应用连接，也覆盖不遵循系统代理的应用。按规则选择代理、直连或阻止；首次使用需批准网络扩展。",
+    "mac.pain4": "连接失败，却不知道卡在哪里",
+    "mac.result4": "看清应用、目标与失败阶段",
+    "mac.solution4": "查看连接记录、命中规则和诊断阶段，找到下一步值得检查的地方。",
+    "mac.setupTitle": "三步连接 iPhone 与 Mac"
   },
   "ja": {
     "metaTitle": "MonoProxy: iPhone プロキシサーバー for Mac・PC・SOCKS5",
@@ -1061,13 +1091,13 @@
     "nav.support": "サポート",
     "hero.kicker": "iPhone・iPad のための MonoProxy",
     "hero.line1": "あなたの iPhone を、",
-    "hero.line2": "プロキシの拠点に。",
-    "hero.body": "iPhone で利用可能なネットワーク経路を、プロキシ対応の Mac、Windows、テスト端末アプリで利用できます。ローカル HTTP、HTTPS、SOCKS5 エンドポイントに接続し、実際の通信を確認できます。",
+    "hero.line2": "プロキシサーバーに。",
+    "hero.body": "iPhone で HTTP、HTTPS CONNECT、SOCKS プロキシを起動。同じローカルネットワークの Mac、Windows PC、テスト端末を接続し、接続状況と実際の通信を確認できます。",
     "action.appstore": "App Store で見る",
-    "action.explore": "使い方を見る",
-    "hero.fact1": "ホームからデバイスを接続",
-    "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
-    "hero.fact3": "PAC と QR 設定を内蔵",
+    "action.explore": "Mac の接続をもっと簡単に",
+    "hero.fact1": "1つのポートで複数プロトコル",
+    "hero.fact2": "デバイスと通信量を確認",
+    "hero.fact3": "買い切り。サブスクなし。",
     "hero.liveTitle": "プロキシの状態をひと目で",
     "hero.liveBody": "デバイス、通信量、接続の確認を一か所に。",
     "release.version": "新しい画面のプレビュー",
@@ -1150,8 +1180,8 @@
     "footer.windows": "Windows ガイド",
     "preview.note": "新しい iOS 画面 · シミュレータで撮影、ローカルのテスト通信を使用。画像を選択すると拡大します。",
     "nav.mac": "iPhone + Mac",
-    "mac.title": "iPhone が提供し、Mac がつながる。",
-    "mac.body": "iPhone の MonoProxy でプロキシを起動。Mac の Companion で検出し、認証情報を保存してアプリを接続します。",
+    "mac.title": "Mac のプロキシ設定を、もっと快適に。",
+    "mac.body": "アドレス入力、繰り返すプロキシ認証、設定を無視するアプリ。Proxy Companion が Mac アプリと iPhone の MonoProxy サービスの間を取り持ちます。",
     "mac.step1Title": "iPhone で起動",
     "mac.step1Body": "両方を同じローカルネットワークに接続し、サービスを起動。「デバイスを接続」で macOS を選びます。",
     "mac.step2Title": "Mac に設定を追加",
@@ -1175,7 +1205,21 @@
     "image.green": "MonoProxy グリーンテーマ",
     "image.purple": "MonoProxy パープルテーマ",
     "image.dark": "MonoProxy ダークテーマ",
-    "image.mac": "MonoProxy Companion Mac ネイティブ画面、サンプルデータ"
+    "image.mac": "MonoProxy Companion Mac ネイティブ画面、サンプルデータ",
+    "hero.assurance": "アカウント登録は不要。プロキシサービスは手元のデバイスで動作します。",
+    "mac.pain1": "アドレスを毎回入力",
+    "mac.result1": "ネットワーク上の iPhone を検出",
+    "mac.solution1": "同じネットワークで起動中のサービスを検出し、設定として追加して接続。検出できない場合は手動入力も使えます。",
+    "mac.pain2": "プロキシ認証で何度も中断",
+    "mac.result2": "一度保存して、認証は Companion に",
+    "mac.solution2": "プロキシの認証情報を macOS キーチェーンに保存。Companion が管理する接続は上流の認証を代行し、各アプリでの繰り返し入力を減らします。",
+    "mac.pain3": "ブラウザは使えるのに、ほかのアプリはつながらない",
+    "mac.result3": "システムプロキシ設定の先へ",
+    "mac.solution3": "透過モードは対象アプリの接続を扱い、システムプロキシを無視するアプリにも対応。ルールでプロキシ、直接接続、遮断を指定できます。初回はネットワーク機能拡張の承認が必要です。",
+    "mac.pain4": "接続に失敗しても原因が見えない",
+    "mac.result4": "アプリ、接続先、失敗段階を確認",
+    "mac.solution4": "接続記録、適用ルール、診断段階を確認して、次に調べる箇所を見つけます。",
+    "mac.setupTitle": "3ステップで iPhone と Mac を接続"
   },
   "ko": {
     "metaTitle": "MonoProxy: Mac·PC용 iPhone 프록시 서버와 SOCKS5",
@@ -1188,13 +1232,13 @@
     "nav.support": "지원",
     "hero.kicker": "iPhone 및 iPad용 MonoProxy",
     "hero.line1": "나의 iPhone을",
-    "hero.line2": "프록시 허브로.",
-    "hero.body": "iPhone에서 사용할 수 있는 네트워크 경로를 프록시 지원 Mac, Windows 및 테스트 기기 앱에서 사용하세요. 하나의 로컬 HTTP, HTTPS 또는 SOCKS5 엔드포인트로 연결하고 실제 트래픽을 확인할 수 있습니다.",
+    "hero.line2": "프록시 서버로.",
+    "hero.body": "iPhone에서 HTTP, HTTPS CONNECT, SOCKS 프록시를 실행하세요. 같은 로컬 네트워크의 Mac, Windows PC, 테스트 기기를 연결하고 연결 상태와 실제 트래픽을 확인하세요.",
     "action.appstore": "App Store에서 보기",
-    "action.explore": "작동 방식 보기",
-    "hero.fact1": "홈에서 바로 기기 연결",
-    "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
-    "hero.fact3": "PAC 및 QR 설정 내장",
+    "action.explore": "Mac 연결을 더 간편하게",
+    "hero.fact1": "포트 하나로 여러 프로토콜",
+    "hero.fact2": "기기와 트래픽 확인",
+    "hero.fact3": "한 번 구매. 구독 없음.",
     "hero.liveTitle": "프록시 상태를 한눈에",
     "hero.liveBody": "기기, 트래픽, 연결 확인을 한곳에서.",
     "release.version": "새 인터페이스 미리 보기",
@@ -1277,8 +1321,8 @@
     "footer.windows": "Windows 가이드",
     "preview.note": "새 iOS 화면 · 시뮬레이터 촬영, 로컬 테스트 세션 사용. 이미지를 선택하면 확대됩니다.",
     "nav.mac": "iPhone + Mac",
-    "mac.title": "iPhone이 제공하고 Mac이 연결합니다.",
-    "mac.body": "iPhone의 MonoProxy에서 프록시를 실행하세요. Mac의 Companion에서 검색하고 인증 정보를 저장해 앱을 연결하세요.",
+    "mac.title": "Mac 프록시 설정의 번거로움을 줄이세요.",
+    "mac.body": "주소 입력, 반복되는 프록시 인증, 설정을 따르지 않는 앱. Proxy Companion이 Mac 앱과 iPhone의 MonoProxy 서비스를 연결합니다.",
     "mac.step1Title": "iPhone에서 시작",
     "mac.step1Body": "두 기기를 같은 로컬 네트워크에 연결하고 서비스를 시작하세요. 기기 연결에서 macOS를 선택하세요.",
     "mac.step2Title": "Mac에 설정 추가",
@@ -1302,7 +1346,21 @@
     "image.green": "MonoProxy 녹색 테마",
     "image.purple": "MonoProxy 보라색 테마",
     "image.dark": "MonoProxy 다크 테마",
-    "image.mac": "MonoProxy Companion Mac 네이티브 화면, 예시 데이터"
+    "image.mac": "MonoProxy Companion Mac 네이티브 화면, 예시 데이터",
+    "hero.assurance": "계정 등록 없이 기기에서 프록시 서비스를 실행합니다.",
+    "mac.pain1": "주소를 매번 직접 입력",
+    "mac.result1": "네트워크에서 iPhone 검색",
+    "mac.solution1": "같은 네트워크에서 실행 중인 서비스를 검색하고 설정으로 추가해 연결하세요. 검색할 수 없으면 직접 입력할 수도 있습니다.",
+    "mac.pain2": "프록시 인증으로 반복되는 중단",
+    "mac.result2": "한 번 저장하고 인증은 Companion에",
+    "mac.solution2": "프록시 인증 정보를 macOS 키체인에 저장하세요. Companion이 관리하는 연결의 상위 프록시 인증을 처리하여 앱마다 정보를 반복 입력할 필요를 줄여줍니다.",
+    "mac.pain3": "브라우저는 되는데 다른 앱은 연결되지 않음",
+    "mac.result3": "시스템 프록시 설정을 넘어",
+    "mac.solution3": "투명 모드는 대상 앱의 연결을 처리하며 시스템 프록시를 따르지 않는 앱도 지원합니다. 규칙으로 프록시, 직접 연결, 차단을 선택하세요. 처음에는 네트워크 확장 승인이 필요합니다.",
+    "mac.pain4": "연결 실패 원인을 알 수 없음",
+    "mac.result4": "앱, 대상, 실패 단계를 확인",
+    "mac.solution4": "연결 기록, 적용된 규칙, 진단 단계를 살펴보고 다음 점검 지점을 찾으세요.",
+    "mac.setupTitle": "세 단계로 iPhone과 Mac 연결"
   },
   "zh-Hant": {
     "metaTitle": "MonoProxy：iPhone 代理伺服器，支援 Mac、PC 與 SOCKS5",
@@ -1314,14 +1372,14 @@
     "nav.guides": "配置指南",
     "nav.support": "支援",
     "hero.kicker": "MonoProxy，適用於 iPhone 與 iPad",
-    "hero.line1": "你的 iPhone，",
-    "hero.line2": "專業代理中樞。",
-    "hero.body": "讓支援代理的 Mac、Windows 與測試裝置 App 使用 iPhone 目前可用的網路路徑。透過一個本地 HTTP、HTTPS 或 SOCKS5 端點連接，並驗證真實流量。",
+    "hero.line1": "把 iPhone 變成",
+    "hero.line2": "代理伺服器。",
+    "hero.body": "在 iPhone 上啟動 HTTP、HTTPS CONNECT 與 SOCKS 代理，讓同一區域網路的 Mac、Windows 與測試裝置連接。連了哪些裝置、流量是否確實經過，都能看清。",
     "action.appstore": "前往 App Store",
-    "action.explore": "查看工作方式",
-    "hero.fact1": "首屏直接連接設備",
-    "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
-    "hero.fact3": "內置 PAC 與二維碼配置",
+    "action.explore": "讓 Mac 連接更省心",
+    "hero.fact1": "一個連接埠，多種協定",
+    "hero.fact2": "裝置與流量，看得見",
+    "hero.fact3": "一次購買，無訂閱",
     "hero.liveTitle": "代理狀態，一目瞭然",
     "hero.liveBody": "裝置、流量與連線證據，盡在掌握。",
     "release.version": "新版介面預覽",
@@ -1404,8 +1462,8 @@
     "footer.windows": "Windows 指南",
     "preview.note": "新版 iOS 介面 · 模擬器實拍，使用本地測試工作階段。點選截圖可放大。",
     "nav.mac": "iPhone + Mac",
-    "mac.title": "iPhone 提供服務，Mac 輕鬆連接。",
-    "mac.body": "在 iPhone 上執行 MonoProxy 代理服務，用 Companion 在 Mac 上探索服務、儲存代理憑證並連接應用程式。",
+    "mac.title": "Mac 使用代理的麻煩，交給伴侶。",
+    "mac.body": "手填位址、反覆輸入代理密碼、部分應用程式不使用系統代理——Proxy伴侶連接 Mac 應用程式與 iPhone 上的 MonoProxy 服務，協助處理繁瑣步驟。",
     "mac.step1Title": "在 iPhone 開啟服務",
     "mac.step1Body": "讓兩台裝置處於同一區域網路，開啟代理服務，開啟「連接裝置」並選擇 macOS。",
     "mac.step2Title": "在 Mac 新增設定",
@@ -1429,7 +1487,21 @@
     "image.green": "MonoProxy 綠色外觀",
     "image.purple": "MonoProxy 紫色外觀",
     "image.dark": "MonoProxy 深色外觀",
-    "image.mac": "MonoProxy Companion Mac 原生工作台，使用範例資料"
+    "image.mac": "MonoProxy Companion Mac 原生工作台，使用範例資料",
+    "hero.assurance": "無需註冊帳號，代理服務在你的裝置上執行。",
+    "mac.pain1": "位址總要手動填寫",
+    "mac.result1": "自動探索手機服務",
+    "mac.solution1": "在同一區域網路探索已啟動的 MonoProxy 服務，新增為設定後連接。無法自動探索時，也能手動輸入位址。",
+    "mac.pain2": "代理驗證反覆打斷操作",
+    "mac.result2": "憑證存一次，代理驗證交給伴侶",
+    "mac.solution2": "將代理帳號與密碼儲存在 macOS 鑰匙圈。對於伴侶接管的連線，由伴侶向上游完成驗證，應用程式無需各自重複輸入代理憑證。",
+    "mac.pain3": "瀏覽器能用，其他應用程式卻不走代理",
+    "mac.result3": "讓更多應用程式使用代理",
+    "mac.solution3": "透明模式接管符合條件的應用程式連線，也涵蓋不遵循系統代理的應用程式。依規則選擇代理、直接連線或封鎖；首次使用需核准網路延伸功能。",
+    "mac.pain4": "連線失敗，卻不知道卡在哪裡",
+    "mac.result4": "看清應用程式、目標與失敗階段",
+    "mac.solution4": "查看連線記錄、符合的規則與診斷階段，找出下一步值得檢查的地方。",
+    "mac.setupTitle": "三步連接 iPhone 與 Mac"
   }
 };
 
