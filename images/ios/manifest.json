@@ -1,0 +1,208 @@
+{
+  "capturedOn": "2026-10-15",
+  "ios": "Release app, iPhone 17 Pro / iOS 27 simulator; real local HTTP, CONNECT and SOCKS5 test sessions; no interface compositing",
+  "mac": "Companion build 27 native workspace, isolated sample data; not evidence of a live Mac-to-simulator connection",
+  "conversion": "Resized preserving aspect ratio; WebP quality 90, method 6; app controls unchanged",
+  "images": [
+    {
+      "file": "ios-devices-en.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "4918e4433ed0223c3658d11f747558fcb00538395663d6fedb504b14a20f41ab",
+      "sha256": "ffaed7c145954942490fbf912f95d5fe23dbd691396129a4daa67bf9d5c3f7ac",
+      "bytes": 61668
+    },
+    {
+      "file": "ios-devices-zh.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "9e1da02a8e9551bb8a0afa040c251cbd6cb228fe3dffa5e2ebddb2307c0c6013",
+      "sha256": "dd073a4bc7562de03778c91dc275591f0073c88d136cf43a973ff15feaf7e0cf",
+      "bytes": 55658
+    },
+    {
+      "file": "ios-diagnostics-en.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "c548e3151b85c45c249d6042fb495edd9c97ff55f166f91d67944824c7d6a336",
+      "sha256": "61fa6226332492c1fdd253290876f323331d86f172c0e5dc853b2fd59798df5c",
+      "bytes": 84012
+    },
+    {
+      "file": "ios-diagnostics-zh.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "5ae39af3a6564f0ee5dfb873ced9c3b1a7bc39f9b54e763ee5c45ed52a6e6519",
+      "sha256": "1e9b18af53f23227a0c829b55c51ffb43eb98e2b269201be29823ed00168da87",
+      "bytes": 77574
+    },
+    {
+      "file": "ios-home-en.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "6baa72556773c04d331b0f7171d15af7bf846a7c7e8b73f09cf86df704063bda",
+      "sha256": "7e816792fec2c6bbf759adb6891f456be58b6723dabb662416da91ca223ccf78",
+      "bytes": 80748
+    },
+    {
+      "file": "ios-home-zh.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "d3f9ab9c4ba419354699169a1c00b130acdbb7736459d69dcdcb43a6e19e380f",
+      "sha256": "63893f5f93d564d230fa5a5661a9d5af88f2f1eb91b9b02167d219fc28dbfd80",
+      "bytes": 77910
+    },
+    {
+      "file": "ios-mac-guide-en.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "6fafd6880e0c0fd96a6c59d58dc0b1dbd92a28090669b63127a1b55e00562242",
+      "sha256": "c0287e4b31e89c8662715ba0701a4465bb4ecefaffeffa5ecd7f98d5acc26d68",
+      "bytes": 106994
+    },
+    {
+      "file": "ios-mac-guide-zh.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "74819629444401d05e0a7166a711c31e017e5714f4998d14748f404a3c49e6bd",
+      "sha256": "4d88dc96a515ce583e8e3460f0cb5f37ab727c10e3ecbda5240f3e73adfd7404",
+      "bytes": 105998
+    },
+    {
+      "file": "ios-mac-overview-en.webp",
+      "width": 1600,
+      "height": 1026,
+      "originalWidth": 2120,
+      "originalHeight": 1360,
+      "sourceSha256": "f83593f83f3718eb1511894bc78bc1c1eab996c80589da718fa7f996a610616f",
+      "sha256": "8411351035896c742eecc5aa5ec7eefcfe18dd590469b58bcc4509c252f822d7",
+      "bytes": 57902
+    },
+    {
+      "file": "ios-mac-overview-zh.webp",
+      "width": 1600,
+      "height": 1026,
+      "originalWidth": 2120,
+      "originalHeight": 1360,
+      "sourceSha256": "b999c73ae924242fec0ac3fc102ce7dc41ec6fb67176844b4e1d9f250d1b1989",
+      "sha256": "9efe8d13d5a0d8be14d072f9e32767fe88f67951ce9762ae682e02fe33fb9617",
+      "bytes": 51936
+    },
+    {
+      "file": "ios-sessions-en.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "911b4be50dc82da5f255933d0bf2755797977cd40fdae9e4327b37c3d60de0ff",
+      "sha256": "5002c8bf5bff6b8fe92bee4720ce1190703353e08348d3885465c32b1df3ff05",
+      "bytes": 51856
+    },
+    {
+      "file": "ios-sessions-zh.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "0b56622f00de25657677cbba70b1fe56b329dc4ff3b429e4aa99b1f471893cf5",
+      "sha256": "79010edfad491b1020c90bfc4df04baddf35303820830d6b8547aa8f77d44675",
+      "bytes": 48822
+    },
+    {
+      "file": "ios-settings-en.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "b6862a8d5290f934358acc4cc0e40c1dea410ac8f07fce87d0ad510cb2878ff4",
+      "sha256": "2b82e9f3f79d5773803e6966111e673ba66ef8e64b3bc53b0fd527e5752d9793",
+      "bytes": 72990
+    },
+    {
+      "file": "ios-settings-zh.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "83b6bec446c1b2ba37386dfcca2dcc93ed642cfaf1d5fcc1b05fa6e8c1289250",
+      "sha256": "846481a871c45e004f4faeb7cfda822cf3c8f7bd6602d1473848819e4cb561c1",
+      "bytes": 64634
+    },
+    {
+      "file": "ios-theme-dark-en.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "453c7c4a9c8d54fd6a25c3ea002b40486185400fb60ea08b6f43d38eed1ccb03",
+      "sha256": "e2bc07b6d69cf711da8f8073921ce32d4d6448ac29eacdd3a46f101023fdea5c",
+      "bytes": 56426
+    },
+    {
+      "file": "ios-theme-dark-zh.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "d658595ec82af8b5f80b7f7a43e1bcdf38ac48592ce17f5b46e2e85d7acbaca0",
+      "sha256": "3b90f39fdb96e417490ce25154f5bafe014ce8f77a2f4b5045fbad65a4272373",
+      "bytes": 53328
+    },
+    {
+      "file": "ios-theme-green-en.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "26211d6148e0f0506c1a4a901712e5c0a3fc3c132243ceed0eed5668bcf33fa8",
+      "sha256": "4c35a508f0e0bad00ec91bd842847c3f4564d0ba93eb92577cdd1178c56112ac",
+      "bytes": 56606
+    },
+    {
+      "file": "ios-theme-green-zh.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "8d582cfaea4c359d7ef3f7a0501d3e1938d1dccf8a2fc80cdefc60c9627bc7af",
+      "sha256": "396e0a45fafd17fb7f862d0d5824920613fce1eef6a3331d07881093b4ce6180",
+      "bytes": 53268
+    },
+    {
+      "file": "ios-theme-purple-en.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "a10db64745748081989815a59f051d930ee69ac994ebbb476c638fb73fbafac6",
+      "sha256": "b7fa68cdc66bd4bd7f86873cd7eeeec15f449db6e8c08725dd6e62d6a4c50c42",
+      "bytes": 57792
+    },
+    {
+      "file": "ios-theme-purple-zh.webp",
+      "width": 960,
+      "height": 2087,
+      "originalWidth": 1206,
+      "originalHeight": 2622,
+      "sourceSha256": "72ef9609003096db1d7796ea26d10faf5ae3d5d7b01b62671e85854368cf83d5",
+      "sha256": "22b509b681f6f10a00e8627f29c89a1f5229e1d04f29311514234b803c1690ae",
+      "bytes": 54398
+    }
+  ]
+}

@@ -18,6 +18,7 @@
 <meta name="twitter:description" content="Use one local HTTP and SOCKS5 endpoint to connect proxy-aware Mac, Windows and test-device apps through your iPhone.">
 <meta name="twitter:image" content="https://proxy.monoware.app/images/proxy-topology.jpg">
 <meta name="twitter:image:alt" content="MonoProxy by MonoWare local proxy topology for iPhone and nearby devices">
+<link rel="stylesheet" href="homepage.css">
 <link rel="canonical" href="https://proxy.monoware.app/">
 <link rel="icon" href="/images/app-icon.jpg" type="image/jpeg">
 <meta name="theme-color" content="#07111f">
@@ -36,7 +37,7 @@
     "@id": "https://proxy.monoware.app/"
   },
   "image": "https://proxy.monoware.app/images/app-icon.jpg",
-  "screenshot": "https://proxy.monoware.app/images/web/home_ready.jpg",
+  "screenshot": "https://proxy.monoware.app/images/ios/ios-home-en.webp",
   "thumbnailUrl": "https://proxy.monoware.app/images/app-icon.jpg",
   "description": "MonoProxy turns iPhone into a local HTTP and SOCKS5 proxy server for proxy-aware apps on Mac, Windows, tablets, and test devices.",
   "keywords": "MonoProxy, iPhone proxy server, local HTTP proxy, SOCKS5 server, Mac proxy, Windows proxy, PAC proxy",
@@ -444,16 +445,16 @@
 <body>
 <nav class="nav" aria-label="Primary navigation">
   <div class="wrap nav-inner">
-    <a class="brand" href="#top">
+    <a class="brand" href="#top" aria-label="MonoProxy">
       <img src="images/app-icon.jpg" width="128" height="128" alt="" fetchpriority="high" decoding="async">
       <span>MonoProxy</span>
     </a>
     <div class="nav-right">
-      <div class="nav-links">
+      <div class="nav-links" id="primary-links">
         <a href="#latest" data-i18n="nav.latest">What’s new</a>
         <a href="#flow" data-i18n="nav.flow">How it works</a>
         <a href="#features" data-i18n="nav.features">Features</a>
-        <a href="#themes" data-i18n="nav.themes">Themes</a>
+        <a href="#mac" data-i18n="nav.mac">iPhone + Mac</a>
         <a data-href-en="guide-macos.html?lang=en" data-href-zh="guide-macos.html?lang=zh" data-href-zh-hant="guide-macos.html?lang=zh" data-href-ja="guide-macos.html?lang=en" data-href-ko="guide-macos.html?lang=en" data-i18n="nav.guides">Setup guides</a>
         <a href="https://apps.apple.com/us/app/monoproxy/id6748090836?ppid=3a2defaf-7841-48f9-b45c-ec305ba267ef&amp;pt=127849696&amp;ct=cpp_home_250&amp;mt=8" target="_blank" rel="noopener">App Store</a>
         <a data-href-en="https://support.monoware.app/?product=monoproxy" data-href-zh="https://support.monoware.app/?product=monoproxy" data-href-zh-hant="https://support.monoware.app/?product=monoproxy" data-href-ja="https://support.monoware.app/?product=monoproxy" data-href-ko="https://support.monoware.app/?product=monoproxy" data-i18n="nav.support">Support</a>
@@ -467,6 +468,7 @@
           <option value="ko">한국어</option>
         </select>
       </div>
+      <button class="nav-toggle" type="button" aria-controls="primary-links" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
@@ -475,10 +477,10 @@
   <header class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <span class="kicker" data-i18n="hero.kicker">MonoProxy 2.5.0 for iPhone and iPad</span>
+        <span class="kicker" data-i18n="hero.kicker">MonoProxy for iPhone and iPad</span>
         <h1>
-          <span data-i18n="hero.line1">MonoProxy for iPhone.</span><br>
-          <span class="gradient" data-i18n="hero.line2">A local proxy server for Mac and PC.</span>
+          <span data-i18n="hero.line1">Your iPhone.</span><br>
+          <span class="gradient" data-i18n="hero.line2">A capable proxy hub.</span>
         </h1>
         <p data-i18n="hero.body">Use the network path available to your iPhone in proxy-aware Mac, Windows and test-device apps. Connect through one local HTTP, HTTPS or SOCKS5 endpoint, then verify real traffic.</p>
         <div class="actions">
@@ -494,14 +496,14 @@
       <div class="phone-stage" aria-label="MonoProxy app preview">
         <div class="orb"></div>
         <div class="phone phone-main">
-          <img src="images/web/home_ready.jpg" width="720" height="1560" alt="MonoProxy Proxy Hub Ready screen" fetchpriority="high" decoding="async">
+          <img src="images/ios/ios-home-en.webp" width="960" height="2087" alt="MonoProxy iOS home with the service address, verified traffic and hold-to-stop control" fetchpriority="high" decoding="async" data-screen="home" data-i18n-alt="image.home">
         </div>
         <div class="phone phone-mini">
-          <img src="images/web/home_green.jpg" width="720" height="1560" alt="MonoProxy running with traffic verified" fetchpriority="high" decoding="async">
+          <img src="images/ios/ios-diagnostics-en.webp" width="960" height="2087" alt="iOS connection diagnostics with staged evidence and report preview" fetchpriority="high" decoding="async" data-screen="diagnostics" data-i18n-alt="image.diagnostics">
         </div>
         <div class="live-card">
-          <strong data-i18n="hero.liveTitle">Hub ready</strong>
-          <span data-i18n="hero.liveBody">One port, clear status, faster setup.</span>
+          <strong data-i18n="hero.liveTitle">Your proxy, in view</strong>
+          <span data-i18n="hero.liveBody">Devices, traffic and connection evidence.</span>
         </div>
       </div>
     </div>
@@ -522,41 +524,41 @@
     <div class="wrap release-panel">
       <div class="release-head">
         <div>
-          <span class="release-version" data-i18n="release.version">New in MonoProxy 2.5.0</span>
-          <h2 data-i18n="release.title">Connect the next device without hunting through settings.</h2>
+          <span class="release-version" data-i18n="release.version">New interface preview</span>
+          <h2 data-i18n="release.title">More insight. Still your iPhone’s proxy.</h2>
         </div>
-        <p data-i18n="release.body">Version 2.5.0 puts Connect a Device on the running home screen, opens diagnostics when no client appears, and includes the latest transfer, setup and access-control improvements.</p>
+        <p data-i18n="release.body">Explore the new iOS workspace: device details, session analysis and connection diagnostics, alongside the skins and animations you already know.</p>
       </div>
       <div class="release-grid">
         <article class="release-card">
           <div class="release-index">01</div>
-          <strong data-i18n="release.card1Title">Connect from Home</strong>
-          <p data-i18n="release.card1Body">The running screen now opens device setup directly, keeping the primary workflow in one place.</p>
+          <strong data-i18n="release.card1Title">See each device</strong>
+          <p data-i18n="release.card1Body">Inspect its traffic and sessions, disconnect current connections or block a device when needed.</p>
         </article>
         <article class="release-card">
           <div class="release-index">02</div>
-          <strong data-i18n="release.card2Title">One broader endpoint</strong>
-          <p data-i18n="release.card2Body">HTTP, HTTPS CONNECT, plain WebSocket, SOCKS4, SOCKS4a and SOCKS5 share one host and port.</p>
+          <strong data-i18n="release.card2Title">Analyse sessions</strong>
+          <p data-i18n="release.card2Body">Group a filtered snapshot by protocol and destination, then open the underlying records.</p>
         </article>
         <article class="release-card">
           <div class="release-index">03</div>
-          <strong data-i18n="release.card3Title">Client access controls</strong>
-          <p data-i18n="release.card3Body">Generate credentials, limit connections per client, apply IP/CIDR rules and disconnect sessions when needed.</p>
+          <strong data-i18n="release.card3Title">Check the connection</strong>
+          <p data-i18n="release.card3Body">Review the interface, listener, client and verified traffic as separate evidence stages.</p>
         </article>
         <article class="release-card">
           <div class="release-index">04</div>
-          <strong data-i18n="release.card4Title">Help at the right time</strong>
-          <p data-i18n="release.card4Body">If no client appears after startup, MonoProxy offers connection diagnostics while the issue is visible.</p>
+          <strong data-i18n="release.card4Title">Keep profiles ready</strong>
+          <p data-i18n="release.card4Body">Search saved profiles, preview import changes and choose which configurations to export.</p>
         </article>
         <article class="release-card">
           <div class="release-index">05</div>
-          <strong data-i18n="release.card5Title">Reliability under load</strong>
-          <p data-i18n="release.card5Body">Improved IPv4/IPv6 handling, network recovery, concurrent browsing, large transfers and authentication behavior.</p>
+          <strong data-i18n="release.card5Title">Stop deliberately</strong>
+          <p data-i18n="release.card5Body">Hold the stop control for one second to stop the service with one hand.</p>
         </article>
       </div>
       <div class="release-proof">
-        <strong data-i18n="release.proofTitle">Release focus:</strong>
-        <span data-i18n="release.proofBody">a shorter first-success path, clearer evidence and steadier proxy sessions across real network conditions.</span>
+        <strong data-i18n="release.proofTitle">About these previews:</strong>
+        <span data-i18n="release.proofBody">Captured from the new Release app in the simulator using local test traffic. App Store availability may differ.</span>
       </div>
     </div>
   </section>
@@ -584,11 +586,11 @@
       </div>
       <div class="flow-visual">
         <div class="phone flow-phone-a">
-          <img src="images/web/home_ready.jpg" width="720" height="1560" alt="MonoProxy service stopped and ready" loading="lazy" decoding="async">
+          <img src="images/ios/ios-mac-guide-en.webp" width="960" height="2087" alt="iOS Connect a Device assistant with macOS selected" loading="lazy" decoding="async" data-screen="mac-guide" data-i18n-alt="image.guide">
         </div>
         <div class="flow-arrow" aria-hidden="true">→</div>
         <div class="phone flow-phone-b">
-          <img src="images/web/home_green.jpg" width="720" height="1560" alt="MonoProxy running and verifying traffic" loading="lazy" decoding="async">
+          <img src="images/ios/ios-home-en.webp" width="960" height="2087" alt="MonoProxy iOS home with the service address, verified traffic and hold-to-stop control" loading="lazy" decoding="async" data-screen="home" data-i18n-alt="image.home">
         </div>
       </div>
     </div>
@@ -618,37 +620,38 @@
         <p class="lead" data-i18n="features.body">The latest MonoProxy interface keeps configuration simple while exposing the details that matter when you need them.</p>
       </div>
 
+      <p class="preview-note" data-i18n="preview.note">New iOS interface · Simulator captures with local test sessions. Select a screenshot to enlarge.</p>
       <div class="showcase-grid">
         <article class="showcase-card large">
           <div class="showcase-copy">
-            <span class="tag" data-i18n="feature.statsTag">Live metrics</span>
-            <h3 data-i18n="feature.statsTitle">Statistics that explain the session</h3>
-            <p data-i18n="feature.statsBody">Follow runtime, connections, upload, download, peak speed, averages and the recent traffic trend in one view.</p>
+            <span class="tag" data-i18n="feature.statsTag">Session analysis</span>
+            <h3 data-i18n="feature.statsTitle">See what the sessions have in common</h3>
+            <p data-i18n="feature.statsBody">Analyse the filtered snapshot by protocol and destination, inspect the records behind each group and export what you need.</p>
           </div>
           <div class="screen-well">
-            <div class="screen-shot"><img src="images/web/statistics.jpg" width="720" height="1560" alt="MonoProxy statistics screen" loading="lazy" decoding="async"></div>
+            <div class="screen-shot"><img src="images/ios/ios-sessions-en.webp" width="960" height="2087" alt="iOS session analysis grouped by protocol and destination" loading="lazy" decoding="async" data-screen="sessions" data-i18n-alt="image.sessions"></div>
           </div>
         </article>
 
         <article class="showcase-card small">
           <div class="showcase-copy">
-            <span class="tag" data-i18n="feature.siteTag">Local insight</span>
-            <h3 data-i18n="feature.siteTitle">Site traffic totals</h3>
-            <p data-i18n="feature.siteBody">See bounded, on-device upload and download totals by domain or IP without saving request paths.</p>
+            <span class="tag" data-i18n="feature.siteTag">Devices</span>
+            <h3 data-i18n="feature.siteTitle">Manage each connected device</h3>
+            <p data-i18n="feature.siteBody">Inspect a device’s connection count and traffic, open its sessions, or disconnect and block it when needed.</p>
           </div>
           <div class="screen-well green">
-            <div class="screen-shot"><img src="images/web/site_traffic.jpg" width="720" height="1560" alt="MonoProxy site traffic screen" loading="lazy" decoding="async"></div>
+            <div class="screen-shot"><img src="images/ios/ios-devices-en.webp" width="960" height="2087" alt="iOS device details with traffic and session actions" loading="lazy" decoding="async" data-screen="devices" data-i18n-alt="image.devices"></div>
           </div>
         </article>
 
         <article class="showcase-card small">
           <div class="showcase-copy">
-            <span class="tag" data-i18n="feature.historyTag">Connection detail</span>
-            <h3 data-i18n="feature.historyTitle">Searchable browsing history</h3>
-            <p data-i18n="feature.historyBody">Inspect active and completed host connections, durations and timestamps. History remains local and clearable.</p>
+            <span class="tag" data-i18n="feature.historyTag">Diagnostics</span>
+            <h3 data-i18n="feature.historyTitle">Find the next useful check</h3>
+            <p data-i18n="feature.historyBody">Check the network interface, listener, client connection and verified traffic separately. Preview a redacted diagnostic report before sharing.</p>
           </div>
           <div class="screen-well purple">
-            <div class="screen-shot"><img src="images/web/statistics.jpg" width="720" height="1560" alt="MonoProxy local session statistics screen" loading="lazy" decoding="async"></div>
+            <div class="screen-shot"><img src="images/ios/ios-diagnostics-en.webp" width="960" height="2087" alt="iOS connection diagnostics with staged evidence and report preview" loading="lazy" decoding="async" data-screen="diagnostics" data-i18n-alt="image.diagnostics"></div>
           </div>
         </article>
 
@@ -656,10 +659,10 @@
           <div class="showcase-copy">
             <span class="tag" data-i18n="feature.configTag">Guided setup</span>
             <h3 data-i18n="feature.configTitle">Configuration made shareable</h3>
-            <p data-i18n="feature.configBody">Choose a client platform, copy the active values, scan a QR configuration, and follow concise steps without guessing which address to use.</p>
+            <p data-i18n="feature.configBody">Open Connect a Device, select a platform and follow its setup steps. The macOS guide includes Companion discovery and manual proxy setup.</p>
           </div>
           <div class="screen-well">
-            <div class="screen-shot"><img src="images/web/quick_config.jpg" width="720" height="1560" alt="MonoProxy quick configuration screen" loading="lazy" decoding="async"></div>
+            <div class="screen-shot"><img src="images/ios/ios-mac-guide-en.webp" width="960" height="2087" alt="iOS Connect a Device assistant with macOS selected" loading="lazy" decoding="async" data-screen="mac-guide" data-i18n-alt="image.guide"></div>
           </div>
         </article>
 
@@ -667,10 +670,10 @@
           <div class="showcase-copy">
             <span class="tag" data-i18n="feature.settingsTag">Control</span>
             <h3 data-i18n="feature.settingsTitle">Settings that stay out of the way</h3>
-            <p data-i18n="feature.settingsBody">Change language, theme, animations, port, SOCKS support, authentication and local history controls from one organized screen.</p>
+            <p data-i18n="feature.settingsBody">Control skins, animations, the proxy port, SOCKS support, authentication and local history in the iOS app.</p>
           </div>
           <div class="screen-well green">
-            <div class="screen-shot"><img src="images/web/settings_language.jpg" width="720" height="1560" alt="MonoProxy settings screen" loading="lazy" decoding="async"></div>
+            <div class="screen-shot"><img src="images/ios/ios-settings-en.webp" width="960" height="2087" alt="iOS settings with appearance and proxy controls" loading="lazy" decoding="async" data-screen="settings" data-i18n-alt="image.settings"></div>
           </div>
         </article>
 
@@ -681,10 +684,19 @@
             <p data-i18n="feature.protocolBody">HTTP, HTTPS CONNECT, plain WebSocket, SOCKS4, SOCKS4a and SOCKS5 share the same host and port. MonoProxy detects the client protocol automatically.</p>
           </div>
           <div class="screen-well">
-            <div class="screen-shot"><img src="images/web/home_green.jpg" width="720" height="1560" alt="MonoProxy multi-protocol home screen" loading="lazy" decoding="async"></div>
+            <div class="screen-shot"><img src="images/ios/ios-home-en.webp" width="960" height="2087" alt="MonoProxy iOS home with the service address, verified traffic and hold-to-stop control" loading="lazy" decoding="async" data-screen="home" data-i18n-alt="image.home"></div>
           </div>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="section mac-section" id="mac" aria-labelledby="mac-title">
+    <div class="wrap">
+      <div class="section-head"><h2 id="mac-title" data-i18n="mac.title">Your iPhone serves. Your Mac connects.</h2><p class="lead" data-i18n="mac.body">Run the proxy service in MonoProxy on your iPhone. Companion helps your Mac discover it, save its proxy credentials and connect your apps.</p></div>
+      <figure class="mac-preview"><img src="images/ios/ios-mac-overview-en.webp" data-screen="mac-overview" data-i18n-alt="image.mac" alt="MonoProxy Companion native Mac workspace with sample data" width="1600" height="1026" loading="lazy" decoding="async"><figcaption data-i18n="mac.caption">Native Mac workspace · Sample data</figcaption></figure>
+      <ol class="mac-steps"><li><h3 data-i18n="mac.step1Title">Start on iPhone</h3><p data-i18n="mac.step1Body">Keep both devices on the same local network and start the proxy service. Open Connect a Device and select macOS.</p></li><li><h3 data-i18n="mac.step2Title">Add it on Mac</h3><p data-i18n="mac.step2Body">In Companion, add the discovered phone service as a configuration. If discovery is unavailable, enter the address and port shown on iPhone.</p></li><li><h3 data-i18n="mac.step3Title">Connect and verify</h3><p data-i18n="mac.step3Body">Enter the proxy credentials if required, then connect. Open a page and confirm verified traffic in the iOS app.</p></li></ol><aside class="mac-auth"><h3 data-i18n="mac.authTitle">You set the proxy credentials</h3><p data-i18n="mac.authBody">Set this proxy service’s username and password in the iOS app’s authentication settings. When authentication is enabled, enter that same username and password on the device connecting to it.</p></aside>
+      <a class="text-link" href="guide-macos.html?lang=en#companion" data-mac-guide data-i18n="mac.guide">Read the Mac setup guide</a><p class="preview-note" data-i18n="mac.availability">The public Companion installer is being prepared. The setup guide also explains manual macOS configuration.</p>
     </div>
   </section>
 
@@ -699,17 +711,17 @@
         <article class="theme-card">
           <h3><span class="theme-dot" style="background:#30c76d"></span><span data-i18n="themes.greenTitle">Fresh Green</span></h3>
           <p data-i18n="themes.greenBody">Bright, calm and focused</p>
-          <div class="theme-phone"><img src="images/web/home_green.jpg" width="720" height="1560" alt="MonoProxy green theme" loading="lazy" decoding="async"></div>
+          <div class="theme-phone"><img src="images/ios/ios-theme-green-en.webp" width="960" height="2087" alt="MonoProxy green skin" loading="lazy" decoding="async" data-screen="theme-green" data-i18n-alt="image.green"></div>
         </article>
         <article class="theme-card">
           <h3><span class="theme-dot" style="background:#9a57d5"></span><span data-i18n="themes.purpleTitle">Soft Purple</span></h3>
           <p data-i18n="themes.purpleBody">Expressive without distraction</p>
-          <div class="theme-phone"><img src="images/web/home_purple.jpg" width="720" height="1560" alt="MonoProxy purple theme" loading="lazy" decoding="async"></div>
+          <div class="theme-phone"><img src="images/ios/ios-theme-purple-en.webp" width="960" height="2087" alt="MonoProxy purple skin" loading="lazy" decoding="async" data-screen="theme-purple" data-i18n-alt="image.purple"></div>
         </article>
         <article class="theme-card">
           <h3><span class="theme-dot" style="background:#6977a8"></span><span data-i18n="themes.darkTitle">Midnight</span></h3>
           <p data-i18n="themes.darkBody">Comfortable in low light</p>
-          <div class="theme-phone"><img src="images/web/home_dark.jpg" width="720" height="1560" alt="MonoProxy dark theme" loading="lazy" decoding="async"></div>
+          <div class="theme-phone"><img src="images/ios/ios-theme-dark-en.webp" width="960" height="2087" alt="MonoProxy dark skin" loading="lazy" decoding="async" data-screen="theme-dark" data-i18n-alt="image.dark"></div>
         </article>
       </div>
     </div>
@@ -784,430 +796,642 @@
 
 <script>
   const translations = {
-    en: {
-      metaTitle: "MonoProxy: iPhone Proxy Server for Mac, PC and SOCKS5",
-      metaDescription: "Turn your iPhone into a local HTTP and SOCKS5 proxy server for Mac, Windows and test devices. Connect with PAC, QR details or desktop commands.",
-      "nav.latest": "What’s new",
-      "nav.flow": "How it works",
-      "nav.features": "Features",
-      "nav.themes": "Themes",
-      "nav.guides": "Setup guides",
-      "nav.support": "Support",
-      "hero.kicker": "MonoProxy 2.5.0 for iPhone and iPad",
-      "hero.line1": "MonoProxy for iPhone.",
-      "hero.line2": "A local proxy server for Mac and PC.",
-      "hero.body": "Use the network path available to your iPhone in proxy-aware Mac, Windows and test-device apps. Connect through one local HTTP, HTTPS or SOCKS5 endpoint, then verify real traffic.",
-      "action.appstore": "View on the App Store",
-      "action.explore": "See how it works",
-      "hero.fact1": "Connect Device from Home",
-      "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
-      "hero.fact3": "PAC + QR setup built in",
-      "hero.liveTitle": "Hub ready",
-      "hero.liveBody": "One port, clear status, faster setup.",
-      "release.version": "New in MonoProxy 2.5.0",
-      "release.title": "Connect the next device without hunting through settings.",
-      "release.body": "Version 2.5.0 puts Connect a Device on the running home screen, opens diagnostics when no client appears, and includes the latest transfer, setup and access-control improvements.",
-      "release.card1Title": "Connect from Home",
-      "release.card1Body": "The running screen now opens device setup directly, keeping the primary workflow in one place.",
-      "release.card2Title": "One broader endpoint",
-      "release.card2Body": "HTTP, HTTPS CONNECT, plain WebSocket, SOCKS4, SOCKS4a and SOCKS5 share one host and port.",
-      "release.card3Title": "Client access controls",
-      "release.card3Body": "Generate credentials, limit connections per client, apply IP/CIDR rules and disconnect sessions when needed.",
-      "release.card4Title": "Help at the right time",
-      "release.card4Body": "If no client appears after startup, MonoProxy offers connection diagnostics while the issue is visible.",
-      "release.card5Title": "Reliability under load",
-      "release.card5Body": "Improved IPv4/IPv6 handling, network recovery, concurrent browsing, large transfers and authentication behavior.",
-      "release.proofTitle": "Release focus:",
-      "release.proofBody": "a shorter first-success path, clearer evidence and steadier proxy sessions across real network conditions.",
-      "flow.kicker": "A clear connection path",
-      "flow.title": "Start it. Connect it. Know it works.",
-      "flow.body": "MonoProxy keeps “the port is open” separate from “a client is connected” and “traffic really moved,” so every status has a precise meaning.",
-      "flow.step1Title": "Choose and start",
-      "flow.step1Body": "Select the Wi-Fi or LAN address your client can reach, then start the service.",
-      "flow.step2Title": "Connect a device",
-      "flow.step2Body": "Copy the address, scan a configuration, or follow the platform guide.",
-      "flow.step3Title": "Verify real traffic",
-      "flow.step3Body": "Watch Listening become Client Connected, then Traffic Verified after bytes transfer.",
-      "network.kicker": "One hub on your network",
-      "network.title": "Put the iPhone at the center.",
-      "network.body": "Run MonoProxy once, then point the computers, tablets and test devices already on the same local network at one endpoint.",
-      "network.badge": "MonoProxy is the local hub",
-      "features.kicker": "The complete toolkit",
-      "features.title": "Everything needed to run and understand the connection.",
-      "features.body": "The latest MonoProxy interface keeps configuration simple while exposing the details that matter when you need them.",
-      "feature.statsTag": "Live metrics",
-      "feature.statsTitle": "Statistics that explain the session",
-      "feature.statsBody": "Follow runtime, connections, upload, download, peak speed, averages and the recent traffic trend in one view.",
-      "feature.siteTag": "Local insight",
-      "feature.siteTitle": "Site traffic totals",
-      "feature.siteBody": "See bounded, on-device upload and download totals by domain or IP without saving request paths.",
-      "feature.historyTag": "Connection detail",
-      "feature.historyTitle": "Searchable browsing history",
-      "feature.historyBody": "Inspect active and completed host connections, durations and timestamps. History remains local and clearable.",
-      "feature.configTag": "Guided setup",
-      "feature.configTitle": "Configuration made shareable",
-      "feature.configBody": "Choose a client platform, copy the active values, scan a QR configuration, and follow concise steps without guessing which address to use.",
-      "feature.settingsTag": "Control",
-      "feature.settingsTitle": "Settings that stay out of the way",
-      "feature.settingsBody": "Change language, theme, animations, port, SOCKS support, authentication and local history controls from one organized screen.",
-      "feature.protocolTag": "One port",
-      "feature.protocolTitle": "Multiple proxy protocols, one endpoint",
-      "feature.protocolBody": "HTTP, HTTPS CONNECT, plain WebSocket, SOCKS4, SOCKS4a and SOCKS5 share the same host and port. MonoProxy detects the client protocol automatically.",
-      "themes.kicker": "Make it yours",
-      "themes.title": "Three moods. The same clear status.",
-      "themes.body": "Choose a color that suits your workspace without changing how the connection workflow behaves.",
-      "themes.greenTitle": "Fresh Green",
-      "themes.greenBody": "Bright, calm and focused",
-      "themes.purpleTitle": "Soft Purple",
-      "themes.purpleBody": "Expressive without distraction",
-      "themes.darkTitle": "Midnight",
-      "themes.darkBody": "Comfortable in low light",
-      "privacy.kicker": "Private by design",
-      "privacy.title": "Your traffic stays yours.",
-      "privacy.body": "MonoProxy runs on your iPhone without an account, analytics SDK or remote backend. It relays encrypted connections without installing certificates or inspecting content.",
-      "purchase.title": "One paid app, every capability included.",
-      "purchase.body": " No subscription, in-app upgrade, account or feature tier.",
-      "privacy.link": "Read the privacy policy →",
-      "privacy.localTitle": "Credentials stay local",
-      "privacy.localBody": "Proxy credentials remain on the device and never appear in connection logs.",
-      "privacy.collectTitle": "No tracking",
-      "privacy.collectBody": "No profiling, third-party analytics or remote traffic collection.",
-      "privacy.tlsTitle": "TLS stays end to end",
-      "privacy.tlsBody": "HTTPS tunnels are relayed without certificate installation or decryption.",
-      "privacy.historyTitle": "History is optional",
-      "privacy.historyBody": "Local host history and site totals are bounded, optional and clearable.",
-      "cta.title": "Make your iPhone the local proxy hub.",
-      "cta.body": "Start once, connect your devices, and see when real traffic arrives.",
-      "cta.support": "Contact support",
-      "footer.privacy": "Privacy",
-      "footer.macos": "macOS guide",
-      "footer.windows": "Windows guide"
-    },
-    zh: {
-      metaTitle: "MonoProxy：iPhone 代理服务器，支持 Mac、PC 与 SOCKS5",
-      metaDescription: "将 iPhone 变成本地 HTTP 与 SOCKS5 代理服务器，通过 PAC、二维码信息或桌面命令连接 Mac、Windows 与测试设备。",
-      "nav.latest": "本次更新",
-      "nav.flow": "工作方式",
-      "nav.features": "功能",
-      "nav.themes": "主题",
-      "nav.guides": "配置指南",
-      "nav.support": "支持",
-      "hero.kicker": "MonoProxy 2.5.0，支持 iPhone 与 iPad",
-      "hero.line1": "iPhone 上的 MonoProxy。",
-      "hero.line2": "面向 Mac 与 PC 的本地代理服务器。",
-      "hero.body": "让支持代理的 Mac、Windows 与测试设备应用使用 iPhone 当前可用的网络路径。通过一个本地 HTTP、HTTPS 或 SOCKS5 端点连接，并验证真实流量。",
-      "action.appstore": "前往 App Store",
-      "action.explore": "查看工作方式",
-      "hero.fact1": "首屏直接连接设备",
-      "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
-      "hero.fact3": "内置 PAC 与二维码配置",
-      "hero.liveTitle": "Hub 已就绪",
-      "hero.liveBody": "单端口、清晰状态、更快配置。",
-      "release.version": "MonoProxy 2.5.0 新内容",
-      "release.title": "无需进入设置，即可连接下一台设备。",
-      "release.body": "2.5.0 将“连接设备”放到运行首屏；等待客户端超时后可直接打开诊断，并包含最新的传输、接入与访问控制改进。",
-      "release.card1Title": "从首屏连接",
-      "release.card1Body": "运行首屏可直接打开设备接入，让核心操作保持在同一路径中。",
-      "release.card2Title": "覆盖更广的单一端点",
-      "release.card2Body": "HTTP、HTTPS CONNECT、普通 WebSocket、SOCKS4、SOCKS4a 与 SOCKS5 共用一个主机和端口。",
-      "release.card3Title": "客户端访问控制",
-      "release.card3Body": "生成强凭据、限制单个客户端连接数、应用 IP/CIDR 规则，并可按需断开会话。",
-      "release.card4Title": "在需要时提供帮助",
-      "release.card4Body": "启动后仍无客户端时，MonoProxy 会在问题仍可见时提供连接诊断入口。",
-      "release.card5Title": "负载下依然可靠",
-      "release.card5Body": "改善 IPv4/IPv6、网络恢复、并发浏览、大文件传输与认证行为。",
-      "release.proofTitle": "发版重点：",
-      "release.proofBody": "更短的首次成功路径、更清晰的证据，以及真实网络环境下更稳定的代理会话。",
-      "flow.kicker": "清晰的连接路径",
-      "flow.title": "启动、连接，并确认它真的有效。",
-      "flow.body": "MonoProxy 将“端口已监听”“客户端已连接”和“流量确实传输”区分开，让每个状态都有准确含义。",
-      "flow.step1Title": "选择并启动",
-      "flow.step1Body": "选择客户端可以访问的 Wi-Fi 或局域网地址，然后启动服务。",
-      "flow.step2Title": "连接一台设备",
-      "flow.step2Body": "复制地址、扫描配置，或按照对应平台指南操作。",
-      "flow.step3Title": "验证真实流量",
-      "flow.step3Body": "状态会从“正在监听”变为“客户端已连接”，传输数据后再显示“流量已验证”。",
-      "network.kicker": "局域网中的单一中心",
-      "network.title": "让 iPhone 位于网络中心。",
-      "network.body": "只需运行一次 MonoProxy，即可让同一局域网中的电脑、平板和测试设备连接同一个端点。",
-      "network.badge": "MonoProxy 是本地代理中心",
-      "features.kicker": "完整工具集",
-      "features.title": "运行代理并理解连接状态所需的一切。",
-      "features.body": "最新版 MonoProxy 保持配置简单，同时在需要时提供真正有用的连接细节。",
-      "feature.statsTag": "实时指标",
-      "feature.statsTitle": "解释当前会话的统计数据",
-      "feature.statsBody": "在一个页面查看运行时间、连接数、上传下载、峰值速度、平均速度和近期流量趋势。",
-      "feature.siteTag": "本地洞察",
-      "feature.siteTitle": "站点流量汇总",
-      "feature.siteBody": "按域名或 IP 查看设备本地保存的有限上传与下载汇总，不记录请求路径。",
-      "feature.historyTag": "连接详情",
-      "feature.historyTitle": "可搜索的浏览历史",
-      "feature.historyBody": "查看活动和已完成的主机连接、持续时间与时间戳。历史仅保存在本地，并可随时清除。",
-      "feature.configTag": "引导式配置",
-      "feature.configTitle": "轻松共享代理配置",
-      "feature.configBody": "选择客户端平台、复制当前参数、扫描二维码，并按照简明步骤操作，不必猜测应该使用哪个地址。",
-      "feature.settingsTag": "控制",
-      "feature.settingsTitle": "整洁而完整的设置",
-      "feature.settingsBody": "在一个页面调整语言、主题、动画、端口、SOCKS、认证以及本地历史记录选项。",
-      "feature.protocolTag": "单一端口",
-      "feature.protocolTitle": "多种代理协议，共用一个端点",
-      "feature.protocolBody": "HTTP、HTTPS CONNECT、普通 WebSocket、SOCKS4、SOCKS4a 与 SOCKS5 共用同一主机和端口，MonoProxy 会自动识别客户端协议。",
-      "themes.kicker": "选择你的风格",
-      "themes.title": "三种氛围，同样清晰的状态。",
-      "themes.body": "选择适合工作环境的配色，而连接流程和状态表达始终保持一致。",
-      "themes.greenTitle": "清新绿",
-      "themes.greenBody": "明亮、平静、专注",
-      "themes.purpleTitle": "柔和紫",
-      "themes.purpleBody": "有个性但不分散注意力",
-      "themes.darkTitle": "午夜黑",
-      "themes.darkBody": "适合低光环境",
-      "privacy.kicker": "隐私优先",
-      "privacy.title": "你的流量只属于你。",
-      "privacy.body": "MonoProxy 完全在 iPhone 上运行，无需账号，不含分析 SDK，也没有远程后端。加密连接会被直接转发，无需安装证书或检查内容。",
-      "purchase.title": "一个付费 App，包含全部功能。",
-      "purchase.body": " 没有订阅、App 内升级、账号或功能分级。",
-      "privacy.link": "阅读隐私政策 →",
-      "privacy.localTitle": "凭据保留在本地",
-      "privacy.localBody": "代理凭据仅保存在设备上，也不会出现在连接日志中。",
-      "privacy.collectTitle": "不跟踪用户",
-      "privacy.collectBody": "没有用户画像、第三方分析或远程流量收集。",
-      "privacy.tlsTitle": "TLS 保持端到端加密",
-      "privacy.tlsBody": "HTTPS 隧道无需安装证书或解密即可转发。",
-      "privacy.historyTitle": "历史记录完全可选",
-      "privacy.historyBody": "本地主机历史与站点汇总有容量限制，可选开启，并可随时清除。",
-      "cta.title": "让 iPhone 成为你的本地代理中心。",
-      "cta.body": "启动一次，连接设备，并确认真实流量何时到达。",
-      "cta.support": "联系支持",
-      "footer.privacy": "隐私",
-      "footer.macos": "macOS 指南",
-      "footer.windows": "Windows 指南"
-    },
-    ja: {
-      metaTitle: "MonoProxy: iPhone プロキシサーバー for Mac・PC・SOCKS5",
-      metaDescription: "iPhone を Mac、Windows、テスト端末向けのローカル HTTP・SOCKS5 プロキシサーバーに。PAC、QR 情報、コマンドで接続できます。",
-      "nav.latest": "最新情報",
-      "nav.flow": "使い方",
-      "nav.features": "機能",
-      "nav.themes": "テーマ",
-      "nav.guides": "設定ガイド",
-      "nav.support": "サポート",
-      "hero.kicker": "MonoProxy 2.5.0 for iPhone and iPad",
-      "hero.line1": "MonoProxy for iPhone。",
-      "hero.line2": "Mac・PC 向けローカルプロキシサーバー。",
-      "hero.body": "iPhone で利用可能なネットワーク経路を、プロキシ対応の Mac、Windows、テスト端末アプリで利用できます。ローカル HTTP、HTTPS、SOCKS5 エンドポイントに接続し、実際の通信を確認できます。",
-      "action.appstore": "App Store で見る",
-      "action.explore": "使い方を見る",
-      "hero.fact1": "ホームからデバイスを接続",
-      "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
-      "hero.fact3": "PAC と QR 設定を内蔵",
-      "hero.liveTitle": "Hub 準備完了",
-      "hero.liveBody": "1 つのポート、明確な状態、より速い設定。",
-      "release.version": "MonoProxy 2.5.0 の新機能",
-      "release.title": "設定画面を探さず、次のデバイスを接続。",
-      "release.body": "2.5.0 は実行中のホーム画面に「デバイスを接続」を追加し、クライアントが現れない場合は診断を直接開けます。転送、設定、アクセス制御も改善しました。",
-      "release.card1Title": "ホームから接続",
-      "release.card1Body": "実行中の画面からデバイス設定を直接開き、主要な操作を 1 か所にまとめました。",
-      "release.card2Title": "より幅広い共通エンドポイント",
-      "release.card2Body": "HTTP、HTTPS CONNECT、通常の WebSocket、SOCKS4、SOCKS4a、SOCKS5 が 1 つのホストとポートを共有します。",
-      "release.card3Title": "クライアントアクセス制御",
-      "release.card3Body": "認証情報の生成、クライアント別接続制限、IP/CIDR ルール、必要に応じたセッション切断に対応しました。",
-      "release.card4Title": "必要なときに診断",
-      "release.card4Body": "起動後にクライアントが現れない場合、問題が見えているうちに接続診断を開けます。",
-      "release.card5Title": "負荷時の信頼性",
-      "release.card5Body": "IPv4/IPv6、ネットワーク復旧、同時ブラウジング、大容量転送、認証動作を改善しました。",
-      "release.proofTitle": "リリースの焦点:",
-      "release.proofBody": "初回成功までの短い導線、明確な証拠、実環境で安定したプロキシセッション。",
-      "flow.kicker": "明確な接続フロー",
-      "flow.title": "起動し、接続し、動作を確認。",
-      "flow.body": "MonoProxy は「ポートが開いている」「クライアントが接続した」「実際にトラフィックが流れた」を分けて表示し、それぞれの状態を正確に伝えます。",
-      "flow.step1Title": "選んで起動",
-      "flow.step1Body": "クライアントから到達できる Wi-Fi または LAN アドレスを選び、サービスを起動します。",
-      "flow.step2Title": "端末を接続",
-      "flow.step2Body": "アドレスをコピーする、設定をスキャンする、またはプラットフォーム別ガイドに従います。",
-      "flow.step3Title": "実トラフィックを確認",
-      "flow.step3Body": "Listening が Client Connected に変わり、バイト転送後に Traffic Verified になることを確認します。",
-      "network.kicker": "ネットワーク上の 1 つのハブ",
-      "network.title": "iPhone を中心に置く。",
-      "network.body": "MonoProxy を一度起動すれば、同じローカルネットワーク上の PC、タブレット、テスト端末を 1 つのエンドポイントへ向けられます。",
-      "network.badge": "MonoProxy はローカルハブ",
-      "features.kicker": "完全なツールキット",
-      "features.title": "接続を動かし、理解するために必要なものをすべて。",
-      "features.body": "最新の MonoProxy は設定を簡潔に保ちながら、必要なときに重要な詳細を表示します。",
-      "feature.statsTag": "ライブ指標",
-      "feature.statsTitle": "セッションを説明する統計",
-      "feature.statsBody": "稼働時間、接続数、アップロード、ダウンロード、ピーク速度、平均速度、直近のトラフィック推移を 1 画面で確認できます。",
-      "feature.siteTag": "ローカル分析",
-      "feature.siteTitle": "サイト別トラフィック合計",
-      "feature.siteBody": "リクエストパスを保存せず、ドメインまたは IP ごとの端末内アップロード/ダウンロード合計を確認できます。",
-      "feature.historyTag": "接続詳細",
-      "feature.historyTitle": "検索可能な閲覧履歴",
-      "feature.historyBody": "進行中および完了済みのホスト接続、継続時間、タイムスタンプを確認できます。履歴はローカルに保存され、いつでも消去できます。",
-      "feature.configTag": "ガイド付き設定",
-      "feature.configTitle": "共有しやすい設定",
-      "feature.configBody": "クライアントの種類を選び、現在の値をコピーし、QR 設定をスキャンし、どのアドレスを使うか迷わず進められます。",
-      "feature.settingsTag": "コントロール",
-      "feature.settingsTitle": "邪魔にならない設定",
-      "feature.settingsBody": "言語、テーマ、アニメーション、ポート、SOCKS、認証、ローカル履歴制御を 1 つの整理された画面で変更できます。",
-      "feature.protocolTag": "1 ポート",
-      "feature.protocolTitle": "複数のプロキシプロトコルを 1 つのエンドポイントで",
-      "feature.protocolBody": "HTTP、HTTPS CONNECT、通常の WebSocket、SOCKS4、SOCKS4a、SOCKS5 は同じホストとポートを共有し、MonoProxy がクライアントプロトコルを自動判別します。",
-      "themes.kicker": "自分らしく",
-      "themes.title": "3 つの雰囲気。同じ明確な状態表示。",
-      "themes.body": "接続フローを変えずに、作業環境に合う配色を選べます。",
-      "themes.greenTitle": "フレッシュグリーン",
-      "themes.greenBody": "明るく、落ち着き、集中しやすい",
-      "themes.purpleTitle": "ソフトパープル",
-      "themes.purpleBody": "個性がありながら邪魔しない",
-      "themes.darkTitle": "ミッドナイト",
-      "themes.darkBody": "暗い環境でも快適",
-      "privacy.kicker": "プライバシー重視",
-      "privacy.title": "トラフィックはあなたのもの。",
-      "privacy.body": "MonoProxy は iPhone 上で動作し、アカウント、分析 SDK、リモートバックエンドを必要としません。暗号化接続は証明書のインストールや復号なしに中継されます。",
-      "purchase.title": "1 回購入で、すべての機能を利用可能。",
-      "purchase.body": " サブスクリプション、アプリ内アップグレード、アカウント、機能階層はありません。",
-      "privacy.link": "プライバシーポリシーを読む →",
-      "privacy.localTitle": "認証情報はローカルに保持",
-      "privacy.localBody": "プロキシ認証情報は端末内に残り、接続ログには表示されません。",
-      "privacy.collectTitle": "トラッキングなし",
-      "privacy.collectBody": "プロファイリング、サードパーティ分析、リモートトラフィック収集はありません。",
-      "privacy.tlsTitle": "TLS はエンドツーエンドのまま",
-      "privacy.tlsBody": "HTTPS トンネルは証明書のインストールや復号なしに中継されます。",
-      "privacy.historyTitle": "履歴は任意",
-      "privacy.historyBody": "ローカルホスト履歴とサイト合計は上限付きで、任意に有効化でき、いつでも消去できます。",
-      "cta.title": "iPhone をローカルプロキシハブに。",
-      "cta.body": "一度起動し、端末を接続し、実際のトラフィック到着を確認できます。",
-      "cta.support": "サポートに連絡",
-      "footer.privacy": "プライバシー",
-      "footer.macos": "macOS ガイド",
-      "footer.windows": "Windows ガイド"
-    },
-    ko: {
-      metaTitle: "MonoProxy: Mac·PC용 iPhone 프록시 서버와 SOCKS5",
-      metaDescription: "iPhone을 Mac, Windows 및 테스트 기기용 로컬 HTTP·SOCKS5 프록시 서버로 사용하세요. PAC, QR 정보 또는 명령어로 연결합니다.",
-      "nav.latest": "새로운 기능",
-      "nav.flow": "작동 방식",
-      "nav.features": "기능",
-      "nav.themes": "테마",
-      "nav.guides": "설정 가이드",
-      "nav.support": "지원",
-      "hero.kicker": "iPhone 및 iPad용 MonoProxy 2.5.0",
-      "hero.line1": "iPhone용 MonoProxy.",
-      "hero.line2": "Mac과 PC를 위한 로컬 프록시 서버.",
-      "hero.body": "iPhone에서 사용할 수 있는 네트워크 경로를 프록시 지원 Mac, Windows 및 테스트 기기 앱에서 사용하세요. 하나의 로컬 HTTP, HTTPS 또는 SOCKS5 엔드포인트로 연결하고 실제 트래픽을 확인할 수 있습니다.",
-      "action.appstore": "App Store에서 보기",
-      "action.explore": "작동 방식 보기",
-      "hero.fact1": "홈에서 바로 기기 연결",
-      "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
-      "hero.fact3": "PAC 및 QR 설정 내장",
-      "hero.liveTitle": "Hub 준비 완료",
-      "hero.liveBody": "하나의 포트, 명확한 상태, 더 빠른 설정.",
-      "release.version": "MonoProxy 2.5.0의 새로운 기능",
-      "release.title": "설정을 찾아다니지 않고 다음 기기를 연결하세요.",
-      "release.body": "2.5.0은 실행 중인 홈 화면에 '기기 연결'을 추가하고 클라이언트가 나타나지 않으면 진단을 바로 엽니다. 전송, 설정 및 접근 제어도 개선했습니다.",
-      "release.card1Title": "홈에서 연결",
-      "release.card1Body": "실행 화면에서 기기 설정을 바로 열어 핵심 작업을 한곳에 유지합니다.",
-      "release.card2Title": "더 폭넓은 공용 엔드포인트",
-      "release.card2Body": "HTTP, HTTPS CONNECT, 일반 WebSocket, SOCKS4, SOCKS4a, SOCKS5가 하나의 호스트와 포트를 공유합니다.",
-      "release.card3Title": "클라이언트 접근 제어",
-      "release.card3Body": "인증 정보를 생성하고 클라이언트별 연결을 제한하며 IP/CIDR 규칙을 적용하고 필요할 때 세션을 종료할 수 있습니다.",
-      "release.card4Title": "필요한 순간에 진단",
-      "release.card4Body": "시작 후 클라이언트가 나타나지 않으면 문제가 보이는 동안 연결 진단을 열 수 있습니다.",
-      "release.card5Title": "부하 상황의 안정성",
-      "release.card5Body": "IPv4/IPv6 처리, 네트워크 복구, 동시 브라우징, 대용량 전송 및 인증 동작을 개선했습니다.",
-      "release.proofTitle": "릴리스 초점:",
-      "release.proofBody": "더 짧은 첫 성공 경로, 명확한 근거, 실제 네트워크 환경에서 안정적인 프록시 세션.",
-      "flow.kicker": "명확한 연결 경로",
-      "flow.title": "시작하고, 연결하고, 작동을 확인하세요.",
-      "flow.body": "MonoProxy는 '포트 열림', '클라이언트 연결됨', '실제 트래픽 이동'을 구분해 각 상태의 의미를 정확히 보여줍니다.",
-      "flow.step1Title": "선택하고 시작",
-      "flow.step1Body": "클라이언트가 접근할 수 있는 Wi-Fi 또는 LAN 주소를 선택한 뒤 서비스를 시작합니다.",
-      "flow.step2Title": "기기 연결",
-      "flow.step2Body": "주소를 복사하거나, 설정을 스캔하거나, 플랫폼별 가이드를 따릅니다.",
-      "flow.step3Title": "실제 트래픽 확인",
-      "flow.step3Body": "Listening이 Client Connected로 바뀌고, 바이트가 전송된 뒤 Traffic Verified가 되는지 확인합니다.",
-      "network.kicker": "네트워크의 하나의 허브",
-      "network.title": "iPhone을 중심에 두세요.",
-      "network.body": "MonoProxy를 한 번 실행하면 같은 로컬 네트워크의 컴퓨터, 태블릿, 테스트 기기를 하나의 엔드포인트로 향하게 할 수 있습니다.",
-      "network.badge": "MonoProxy는 로컬 허브",
-      "features.kicker": "완전한 툴킷",
-      "features.title": "연결을 실행하고 이해하는 데 필요한 모든 것.",
-      "features.body": "최신 MonoProxy 인터페이스는 설정을 간단하게 유지하면서 필요할 때 중요한 세부 정보를 제공합니다.",
-      "feature.statsTag": "실시간 지표",
-      "feature.statsTitle": "세션을 설명하는 통계",
-      "feature.statsBody": "실행 시간, 연결 수, 업로드, 다운로드, 최고 속도, 평균 속도, 최근 트래픽 추이를 한 화면에서 확인합니다.",
-      "feature.siteTag": "로컬 인사이트",
-      "feature.siteTitle": "사이트 트래픽 합계",
-      "feature.siteBody": "요청 경로를 저장하지 않고 도메인 또는 IP별 기기 내 업로드/다운로드 합계를 확인합니다.",
-      "feature.historyTag": "연결 상세",
-      "feature.historyTitle": "검색 가능한 브라우징 기록",
-      "feature.historyBody": "활성 및 완료된 호스트 연결, 지속 시간, 타임스탬프를 확인합니다. 기록은 로컬에 남고 언제든 지울 수 있습니다.",
-      "feature.configTag": "안내형 설정",
-      "feature.configTitle": "공유하기 쉬운 설정",
-      "feature.configBody": "클라이언트 플랫폼을 선택하고, 활성 값을 복사하고, QR 설정을 스캔하며, 어떤 주소를 쓸지 추측하지 않아도 됩니다.",
-      "feature.settingsTag": "제어",
-      "feature.settingsTitle": "방해되지 않는 설정",
-      "feature.settingsBody": "언어, 테마, 애니메이션, 포트, SOCKS 지원, 인증, 로컬 기록 제어를 하나의 정리된 화면에서 변경합니다.",
-      "feature.protocolTag": "하나의 포트",
-      "feature.protocolTitle": "여러 프록시 프로토콜을 하나의 엔드포인트로",
-      "feature.protocolBody": "HTTP, HTTPS CONNECT, 일반 WebSocket, SOCKS4, SOCKS4a, SOCKS5가 같은 호스트와 포트를 공유하며 MonoProxy가 클라이언트 프로토콜을 자동 감지합니다.",
-      "themes.kicker": "나에게 맞게",
-      "themes.title": "세 가지 분위기. 같은 명확한 상태.",
-      "themes.body": "연결 흐름은 그대로 유지하면서 작업 환경에 맞는 색상을 선택할 수 있습니다.",
-      "themes.greenTitle": "프레시 그린",
-      "themes.greenBody": "밝고 차분하며 집중하기 좋음",
-      "themes.purpleTitle": "소프트 퍼플",
-      "themes.purpleBody": "개성이 있지만 산만하지 않음",
-      "themes.darkTitle": "미드나이트",
-      "themes.darkBody": "어두운 환경에 편안함",
-      "privacy.kicker": "개인정보 우선",
-      "privacy.title": "트래픽은 당신의 것입니다.",
-      "privacy.body": "MonoProxy는 iPhone에서 실행되며 계정, 분석 SDK, 원격 백엔드가 필요 없습니다. 암호화된 연결은 인증서 설치나 복호화 없이 중계됩니다.",
-      "purchase.title": "한 번 구매하면 모든 기능 포함.",
-      "purchase.body": " 구독, 앱 내 업그레이드, 계정, 기능 등급이 없습니다.",
-      "privacy.link": "개인정보 처리방침 읽기 →",
-      "privacy.localTitle": "인증 정보는 로컬에 보관",
-      "privacy.localBody": "프록시 인증 정보는 기기에 남으며 연결 로그에 표시되지 않습니다.",
-      "privacy.collectTitle": "추적 없음",
-      "privacy.collectBody": "프로파일링, 제3자 분석, 원격 트래픽 수집이 없습니다.",
-      "privacy.tlsTitle": "TLS는 끝까지 유지",
-      "privacy.tlsBody": "HTTPS 터널은 인증서 설치나 복호화 없이 중계됩니다.",
-      "privacy.historyTitle": "기록은 선택 사항",
-      "privacy.historyBody": "로컬 호스트 기록과 사이트 합계는 제한된 범위로 저장되며 선택적으로 켤 수 있고 언제든 지울 수 있습니다.",
-      "cta.title": "iPhone을 로컬 프록시 허브로 만드세요.",
-      "cta.body": "한 번 시작하고 기기를 연결한 뒤 실제 트래픽이 도착하는 순간을 확인하세요.",
-      "cta.support": "지원팀에 문의",
-      "footer.privacy": "개인정보",
-      "footer.macos": "macOS 가이드",
-      "footer.windows": "Windows 가이드"
-    }
-  };
-
-  const simplifiedToTraditionalMap = {
-    "与":"與","为":"為","个":"個","体":"體","发":"發","内":"內","网":"網","络":"絡","诊":"診","断":"斷","达":"達","历":"歷","录":"錄","隐":"隱","户":"戶","准":"準","带":"帶","来":"來","点":"點","维":"維","码":"碼","设":"設","备":"備","围":"圍","绕":"繞","协":"協","议":"議","状":"狀","态":"態","视":"視","觉":"覺","显":"顯","进":"進","连":"連","动":"動","识":"識","让":"讓","单":"單","统":"統","计":"計","浏":"瀏","览":"覽","独":"獨","题":"題","离":"離","当":"當","重":"重","径":"徑","实":"實","优":"優","骤":"驟","启":"啟","确":"確","认":"認","监":"監","听":"聽","区":"區","义":"義","选":"選","择":"擇","访":"訪","问":"問","后":"後","复":"複","扫":"掃","传":"傳","输":"輸","数":"數","据":"據","测":"測","电":"電","脑":"腦","简":"簡","细":"細","时":"時","间":"間","会":"會","标":"標","势":"勢","汇":"匯","请":"請","仅":"僅","随":"隨","导":"導","轻":"輕","松":"鬆","参":"參","应":"應","语":"語","题":"題","画":"畫","证":"證","记":"記","项":"項","种":"種","氛":"氛","环":"環","境":"境","样":"樣","绿":"綠","静":"靜","专":"專","适":"適","属":"屬","运":"運","账":"帳","号":"號","远":"遠","转":"轉","装":"裝","书":"書","检":"檢","查":"查","费":"費","订":"訂","阅":"閱","级":"級","读":"讀","凭":"憑","现":"現","终":"終","无":"無","开":"開","并":"並","联":"聯","系":"繫","页":"頁","础":"礎","础":"礎","务":"務","线":"線","过":"過","该":"該","负":"負","责":"責","储":"儲","清":"清","除":"除","负":"負","为":"為","处":"處"
-  };
-  const toTraditionalChinese = text => text.replace(
-    /[\u3400-\u9fff]/g,
-    character => simplifiedToTraditionalMap[character] || character
-  );
-  translations["zh-Hant"] = Object.fromEntries(
-    Object.entries(translations.zh).map(([key, value]) => [key, toTraditionalChinese(value)])
-  );
-  Object.assign(translations["zh-Hant"], {
-    metaTitle: "MonoProxy：iPhone 代理伺服器，支援 Mac、PC 與 SOCKS5",
-    metaDescription: "將 iPhone 變成本地 HTTP 與 SOCKS5 代理伺服器，透過 PAC、QR Code 資訊或桌面命令連接 Mac、Windows 與測試裝置。",
+  "en": {
+    "metaTitle": "MonoProxy: iPhone Proxy Server for Mac, PC and SOCKS5",
+    "metaDescription": "Turn your iPhone into a local HTTP and SOCKS5 proxy server for Mac, Windows and test devices. Connect with PAC, QR details or desktop commands.",
+    "nav.latest": "What’s new",
+    "nav.flow": "How it works",
+    "nav.features": "Features",
+    "nav.themes": "Themes",
+    "nav.guides": "Setup guides",
+    "nav.support": "Support",
+    "hero.kicker": "MonoProxy for iPhone and iPad",
+    "hero.line1": "Your iPhone.",
+    "hero.line2": "A capable proxy hub.",
+    "hero.body": "Use the network path available to your iPhone in proxy-aware Mac, Windows and test-device apps. Connect through one local HTTP, HTTPS or SOCKS5 endpoint, then verify real traffic.",
+    "action.appstore": "View on the App Store",
+    "action.explore": "See how it works",
+    "hero.fact1": "Connect Device from Home",
+    "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
+    "hero.fact3": "PAC + QR setup built in",
+    "hero.liveTitle": "Your proxy, in view",
+    "hero.liveBody": "Devices, traffic and connection evidence.",
+    "release.version": "New interface preview",
+    "release.title": "More insight. Still your iPhone’s proxy.",
+    "release.body": "Explore the new iOS workspace: device details, session analysis and connection diagnostics, alongside the skins and animations you already know.",
+    "release.card1Title": "See each device",
+    "release.card1Body": "Inspect its traffic and sessions, disconnect current connections or block a device when needed.",
+    "release.card2Title": "Analyse sessions",
+    "release.card2Body": "Group a filtered snapshot by protocol and destination, then open the underlying records.",
+    "release.card3Title": "Check the connection",
+    "release.card3Body": "Review the interface, listener, client and verified traffic as separate evidence stages.",
+    "release.card4Title": "Keep profiles ready",
+    "release.card4Body": "Search saved profiles, preview import changes and choose which configurations to export.",
+    "release.card5Title": "Stop deliberately",
+    "release.card5Body": "Hold the stop control for one second to stop the service with one hand.",
+    "release.proofTitle": "About these previews:",
+    "release.proofBody": "Captured from the new Release app in the simulator using local test traffic. App Store availability may differ.",
+    "flow.kicker": "A clear connection path",
+    "flow.title": "Start it. Connect it. Know it works.",
+    "flow.body": "MonoProxy keeps “the port is open” separate from “a client is connected” and “traffic really moved,” so every status has a precise meaning.",
+    "flow.step1Title": "Choose and start",
+    "flow.step1Body": "Select the Wi-Fi or LAN address your client can reach, then start the service.",
+    "flow.step2Title": "Connect a device",
+    "flow.step2Body": "Copy the address, scan a configuration, or follow the platform guide.",
+    "flow.step3Title": "Verify real traffic",
+    "flow.step3Body": "Watch Listening become Client Connected, then Traffic Verified after bytes transfer.",
+    "network.kicker": "One hub on your network",
+    "network.title": "Put the iPhone at the center.",
+    "network.body": "Run MonoProxy once, then point the computers, tablets and test devices already on the same local network at one endpoint.",
+    "network.badge": "MonoProxy is the local hub",
+    "features.kicker": "The complete toolkit",
+    "features.title": "Everything needed to run and understand the connection.",
+    "features.body": "The latest MonoProxy interface keeps configuration simple while exposing the details that matter when you need them.",
+    "feature.statsTag": "Session analysis",
+    "feature.statsTitle": "See what the sessions have in common",
+    "feature.statsBody": "Analyse the filtered snapshot by protocol and destination, inspect the records behind each group and export what you need.",
+    "feature.siteTag": "Devices",
+    "feature.siteTitle": "Manage each connected device",
+    "feature.siteBody": "Inspect a device’s connection count and traffic, open its sessions, or disconnect and block it when needed.",
+    "feature.historyTag": "Diagnostics",
+    "feature.historyTitle": "Find the next useful check",
+    "feature.historyBody": "Check the network interface, listener, client connection and verified traffic separately. Preview a redacted diagnostic report before sharing.",
+    "feature.configTag": "Guided setup",
+    "feature.configTitle": "Configuration made shareable",
+    "feature.configBody": "Open Connect a Device, select a platform and follow its setup steps. The macOS guide includes Companion discovery and manual proxy setup.",
+    "feature.settingsTag": "Control",
+    "feature.settingsTitle": "Settings that stay out of the way",
+    "feature.settingsBody": "Control skins, animations, the proxy port, SOCKS support, authentication and local history in the iOS app.",
+    "feature.protocolTag": "One port",
+    "feature.protocolTitle": "Multiple proxy protocols, one endpoint",
+    "feature.protocolBody": "HTTP, HTTPS CONNECT, plain WebSocket, SOCKS4, SOCKS4a and SOCKS5 share the same host and port. MonoProxy detects the client protocol automatically.",
+    "themes.kicker": "Make it yours",
+    "themes.title": "Three moods. The same clear status.",
+    "themes.body": "Choose a color that suits your workspace without changing how the connection workflow behaves.",
+    "themes.greenTitle": "Fresh Green",
+    "themes.greenBody": "Bright, calm and focused",
+    "themes.purpleTitle": "Soft Purple",
+    "themes.purpleBody": "Expressive without distraction",
+    "themes.darkTitle": "Midnight",
+    "themes.darkBody": "Comfortable in low light",
+    "privacy.kicker": "Private by design",
+    "privacy.title": "Your traffic stays yours.",
+    "privacy.body": "MonoProxy runs on your iPhone without an account, analytics SDK or remote backend. It relays encrypted connections without installing certificates or inspecting content.",
+    "purchase.title": "One paid app, every capability included.",
+    "purchase.body": " No subscription, in-app upgrade, account or feature tier.",
+    "privacy.link": "Read the privacy policy →",
+    "privacy.localTitle": "Credentials stay local",
+    "privacy.localBody": "Proxy credentials remain on the device and never appear in connection logs.",
+    "privacy.collectTitle": "No tracking",
+    "privacy.collectBody": "No profiling, third-party analytics or remote traffic collection.",
+    "privacy.tlsTitle": "TLS stays end to end",
+    "privacy.tlsBody": "HTTPS tunnels are relayed without certificate installation or decryption.",
+    "privacy.historyTitle": "History is optional",
+    "privacy.historyBody": "Local host history and site totals are bounded, optional and clearable.",
+    "cta.title": "Make your iPhone the local proxy hub.",
+    "cta.body": "Start once, connect your devices, and see when real traffic arrives.",
+    "cta.support": "Contact support",
+    "footer.privacy": "Privacy",
+    "footer.macos": "macOS guide",
+    "footer.windows": "Windows guide",
+    "preview.note": "New iOS interface · Simulator captures with local test sessions. Select a screenshot to enlarge.",
+    "nav.mac": "iPhone + Mac",
+    "mac.title": "Your iPhone serves. Your Mac connects.",
+    "mac.body": "Run the proxy service in MonoProxy on your iPhone. Companion helps your Mac discover it, save its proxy credentials and connect your apps.",
+    "mac.step1Title": "Start on iPhone",
+    "mac.step1Body": "Keep both devices on the same local network and start the proxy service. Open Connect a Device and select macOS.",
+    "mac.step2Title": "Add it on Mac",
+    "mac.step2Body": "In Companion, add the discovered phone service as a configuration. If discovery is unavailable, enter the address and port shown on iPhone.",
+    "mac.step3Title": "Connect and verify",
+    "mac.step3Body": "Enter the proxy credentials if required, then connect. Open a page and confirm verified traffic in the iOS app.",
+    "mac.authTitle": "You set the proxy credentials",
+    "mac.authBody": "Set this proxy service’s username and password in the iOS app’s authentication settings. When authentication is enabled, enter that same username and password on the device connecting to it.",
+    "mac.guide": "Read the Mac setup guide",
+    "mac.caption": "Native Mac workspace · Sample data",
+    "mac.availability": "The public Companion installer is being prepared. The setup guide also explains manual macOS configuration.",
+    "zoom.open": "Enlarge screenshot",
+    "zoom.close": "Close screenshot",
+    "zoom.caption": "New iOS interface · Simulator capture; local test sessions",
+    "image.home": "MonoProxy iOS home with the service address, verified traffic and hold-to-stop control",
+    "image.devices": "iOS device details with traffic and session actions",
+    "image.sessions": "iOS session analysis grouped by protocol and destination",
+    "image.diagnostics": "iOS connection diagnostics with staged evidence and report preview",
+    "image.guide": "iOS Connect a Device assistant with macOS selected",
+    "image.settings": "iOS settings with appearance and proxy controls",
+    "image.green": "MonoProxy green skin",
+    "image.purple": "MonoProxy purple skin",
+    "image.dark": "MonoProxy dark skin",
+    "image.mac": "MonoProxy Companion native Mac workspace with sample data"
+  },
+  "zh": {
+    "metaTitle": "MonoProxy：iPhone 代理服务器，支持 Mac、PC 与 SOCKS5",
+    "metaDescription": "将 iPhone 变成本地 HTTP 与 SOCKS5 代理服务器，通过 PAC、二维码信息或桌面命令连接 Mac、Windows 与测试设备。",
+    "nav.latest": "本次更新",
+    "nav.flow": "工作方式",
+    "nav.features": "功能",
+    "nav.themes": "主题",
+    "nav.guides": "配置指南",
+    "nav.support": "支持",
+    "hero.kicker": "MonoProxy，适用于 iPhone 和 iPad",
+    "hero.line1": "你的 iPhone，",
+    "hero.line2": "专业代理中枢。",
+    "hero.body": "让支持代理的 Mac、Windows 与测试设备应用使用 iPhone 当前可用的网络路径。通过一个本地 HTTP、HTTPS 或 SOCKS5 端点连接，并验证真实流量。",
+    "action.appstore": "前往 App Store",
+    "action.explore": "查看工作方式",
+    "hero.fact1": "首屏直接连接设备",
+    "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
+    "hero.fact3": "内置 PAC 与二维码配置",
+    "hero.liveTitle": "代理状态，一眼看清",
+    "hero.liveBody": "设备、流量和连接证据，尽在掌握。",
+    "release.version": "新版界面预览",
+    "release.title": "看得更清楚，管得更专业。",
+    "release.body": "新版 iOS 工作台带来设备详情、会话分析和连接诊断，也保留你熟悉的皮肤与动画。",
+    "release.card1Title": "查看每台设备",
+    "release.card1Body": "查看流量和会话，需要时断开当前连接或阻止设备。",
+    "release.card2Title": "分析代理会话",
+    "release.card2Body": "按协议和目标汇总筛选后的快照，再查看对应记录。",
+    "release.card3Title": "逐步检查连接",
+    "release.card3Body": "分别检查网络接口、监听状态、客户端与已验证流量。",
+    "release.card4Title": "管理常用配置",
+    "release.card4Body": "搜索已保存的配置，预览导入变更，选择需要导出的内容。",
+    "release.card5Title": "单手长按停止",
+    "release.card5Body": "长按停止按钮一秒，即可关闭代理服务，减少误触。",
+    "release.proofTitle": "预览说明：",
+    "release.proofBody": "使用新版 Release App，在模拟器中以本地测试流量实拍；App Store 当前版本可能有所不同。",
+    "flow.kicker": "清晰的连接路径",
+    "flow.title": "启动、连接，并确认它真的有效。",
+    "flow.body": "MonoProxy 将“端口已监听”“客户端已连接”和“流量确实传输”区分开，让每个状态都有准确含义。",
+    "flow.step1Title": "选择并启动",
+    "flow.step1Body": "选择客户端可以访问的 Wi-Fi 或局域网地址，然后启动服务。",
+    "flow.step2Title": "连接一台设备",
+    "flow.step2Body": "复制地址、扫描配置，或按照对应平台指南操作。",
+    "flow.step3Title": "验证真实流量",
+    "flow.step3Body": "状态会从“正在监听”变为“客户端已连接”，传输数据后再显示“流量已验证”。",
+    "network.kicker": "局域网中的单一中心",
+    "network.title": "让 iPhone 位于网络中心。",
+    "network.body": "只需运行一次 MonoProxy，即可让同一局域网中的电脑、平板和测试设备连接同一个端点。",
+    "network.badge": "MonoProxy 是本地代理中心",
+    "features.kicker": "完整工具集",
+    "features.title": "运行代理并理解连接状态所需的一切。",
+    "features.body": "最新版 MonoProxy 保持配置简单，同时在需要时提供真正有用的连接细节。",
+    "feature.statsTag": "会话分析",
+    "feature.statsTitle": "从会话中看清流量去向",
+    "feature.statsBody": "按协议与目标汇总筛选后的快照，查看每一组背后的会话记录，并导出需要的内容。",
+    "feature.siteTag": "设备管理",
+    "feature.siteTitle": "每台设备，都有清楚的详情",
+    "feature.siteBody": "查看设备的连接数和流量，打开对应会话；需要时断开当前连接或阻止设备。",
+    "feature.historyTag": "连接诊断",
+    "feature.historyTitle": "知道下一步该检查什么",
+    "feature.historyBody": "分开查看网络接口、监听状态、客户端连接与已验证流量，分享前先预览脱敏诊断报告。",
+    "feature.configTag": "引导式配置",
+    "feature.configTitle": "轻松共享代理配置",
+    "feature.configBody": "打开“连接设备”，选择客户端平台并按步骤配置。macOS 引导包含 Companion 发现服务和手动代理配置。",
+    "feature.settingsTag": "控制",
+    "feature.settingsTitle": "整洁而完整的设置",
+    "feature.settingsBody": "在 iOS App 中调整皮肤、动画、代理端口、SOCKS 支持、认证以及本地历史记录。",
+    "feature.protocolTag": "单一端口",
+    "feature.protocolTitle": "多种代理协议，共用一个端点",
+    "feature.protocolBody": "HTTP、HTTPS CONNECT、普通 WebSocket、SOCKS4、SOCKS4a 与 SOCKS5 共用同一主机和端口，MonoProxy 会自动识别客户端协议。",
+    "themes.kicker": "选择你的风格",
+    "themes.title": "三种氛围，同样清晰的状态。",
+    "themes.body": "选择适合工作环境的配色，而连接流程和状态表达始终保持一致。",
+    "themes.greenTitle": "清新绿",
+    "themes.greenBody": "明亮、平静、专注",
+    "themes.purpleTitle": "柔和紫",
+    "themes.purpleBody": "有个性但不分散注意力",
+    "themes.darkTitle": "午夜黑",
+    "themes.darkBody": "适合低光环境",
+    "privacy.kicker": "隐私优先",
+    "privacy.title": "你的流量只属于你。",
+    "privacy.body": "MonoProxy 完全在 iPhone 上运行，无需账号，不含分析 SDK，也没有远程后端。加密连接会被直接转发，无需安装证书或检查内容。",
+    "purchase.title": "一个付费 App，包含全部功能。",
+    "purchase.body": " 没有订阅、App 内升级、账号或功能分级。",
+    "privacy.link": "阅读隐私政策 →",
+    "privacy.localTitle": "凭据保留在本地",
+    "privacy.localBody": "代理凭据仅保存在设备上，也不会出现在连接日志中。",
+    "privacy.collectTitle": "不跟踪用户",
+    "privacy.collectBody": "没有用户画像、第三方分析或远程流量收集。",
+    "privacy.tlsTitle": "TLS 保持端到端加密",
+    "privacy.tlsBody": "HTTPS 隧道无需安装证书或解密即可转发。",
+    "privacy.historyTitle": "历史记录完全可选",
+    "privacy.historyBody": "本地主机历史与站点汇总有容量限制，可选开启，并可随时清除。",
+    "cta.title": "让 iPhone 成为你的本地代理中心。",
+    "cta.body": "启动一次，连接设备，并确认真实流量何时到达。",
+    "cta.support": "联系支持",
+    "footer.privacy": "隐私",
+    "footer.macos": "macOS 指南",
+    "footer.windows": "Windows 指南",
+    "preview.note": "新版 iOS 界面 · 模拟器实拍，使用本地测试会话。点击截图可放大。",
+    "nav.mac": "iPhone + Mac",
+    "mac.title": "iPhone 提供服务，Mac 轻松接入。",
+    "mac.body": "在 iPhone 上运行 MonoProxy 代理服务，用 Companion 在 Mac 上发现服务、保存代理凭据并连接应用。",
+    "mac.step1Title": "在 iPhone 开启服务",
+    "mac.step1Body": "让两台设备处于同一局域网，开启代理服务，打开“连接设备”并选择 macOS。",
+    "mac.step2Title": "在 Mac 添加配置",
+    "mac.step2Body": "在 Companion 中将发现的手机服务添加为配置。如果无法自动发现，手动输入 iPhone 显示的地址和端口。",
+    "mac.step3Title": "连接并验证流量",
+    "mac.step3Body": "如已启用认证，输入代理账号和密码，再连接。打开网页，并在 iOS App 中确认流量已验证。",
+    "mac.authTitle": "代理账号和密码，由你设置",
+    "mac.authBody": "在 iOS App 的认证设置中，设置这项代理服务的账号和密码。启用认证后，其他设备连接时，需要输入同一组账号和密码。",
+    "mac.guide": "查看 Mac 接入指南",
+    "mac.caption": "Mac 原生工作台 · 示例数据",
+    "mac.availability": "Companion 公开安装包正在准备中。接入指南也提供 macOS 手动配置方法。",
+    "zoom.open": "放大截图",
+    "zoom.close": "关闭截图",
+    "zoom.caption": "新版 iOS 界面 · 模拟器实拍，使用本地测试会话",
+    "image.home": "MonoProxy iOS 首页，显示服务地址、已验证流量与长按停止按钮",
+    "image.devices": "iOS 设备详情，显示流量与会话操作",
+    "image.sessions": "iOS 会话分析，按协议与目标汇总",
+    "image.diagnostics": "iOS 连接诊断，显示分阶段证据与报告预览",
+    "image.guide": "iOS 连接设备助手，已选择 macOS",
+    "image.settings": "iOS 设置，包含外观与代理控制",
+    "image.green": "MonoProxy 绿色皮肤",
+    "image.purple": "MonoProxy 紫色皮肤",
+    "image.dark": "MonoProxy 深色皮肤",
+    "image.mac": "MonoProxy Companion Mac 原生工作台，使用示例数据"
+  },
+  "ja": {
+    "metaTitle": "MonoProxy: iPhone プロキシサーバー for Mac・PC・SOCKS5",
+    "metaDescription": "iPhone を Mac、Windows、テスト端末向けのローカル HTTP・SOCKS5 プロキシサーバーに。PAC、QR 情報、コマンドで接続できます。",
+    "nav.latest": "最新情報",
+    "nav.flow": "使い方",
+    "nav.features": "機能",
+    "nav.themes": "テーマ",
+    "nav.guides": "設定ガイド",
+    "nav.support": "サポート",
+    "hero.kicker": "iPhone・iPad のための MonoProxy",
+    "hero.line1": "あなたの iPhone を、",
+    "hero.line2": "プロキシの拠点に。",
+    "hero.body": "iPhone で利用可能なネットワーク経路を、プロキシ対応の Mac、Windows、テスト端末アプリで利用できます。ローカル HTTP、HTTPS、SOCKS5 エンドポイントに接続し、実際の通信を確認できます。",
+    "action.appstore": "App Store で見る",
+    "action.explore": "使い方を見る",
+    "hero.fact1": "ホームからデバイスを接続",
+    "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
+    "hero.fact3": "PAC と QR 設定を内蔵",
+    "hero.liveTitle": "プロキシの状態をひと目で",
+    "hero.liveBody": "デバイス、通信量、接続の確認を一か所に。",
+    "release.version": "新しい画面のプレビュー",
+    "release.title": "接続を知り、細かく管理。",
+    "release.body": "デバイスの詳細、セッション分析、接続診断を備えた新しい iOS ワークスペース。おなじみのテーマとアニメーションも使えます。",
+    "release.card1Title": "デバイスを確認",
+    "release.card1Body": "通信量とセッションを確認し、必要に応じて切断やブロックを行えます。",
+    "release.card2Title": "セッションを分析",
+    "release.card2Body": "絞り込んだスナップショットをプロトコルと接続先で集計し、記録を確認します。",
+    "release.card3Title": "接続を段階的に確認",
+    "release.card3Body": "ネットワーク、待受状態、クライアント、確認済み通信を個別に調べます。",
+    "release.card4Title": "設定を管理",
+    "release.card4Body": "保存した設定の検索、読み込み内容のプレビュー、書き出しができます。",
+    "release.card5Title": "長押しで停止",
+    "release.card5Body": "停止ボタンを1秒間長押し。片手で操作でき、誤操作を防ぎます。",
+    "release.proofTitle": "プレビューについて：",
+    "release.proofBody": "新しい Release アプリをシミュレータで撮影し、ローカルのテスト通信を使用しています。App Store の現行版とは異なる場合があります。",
+    "flow.kicker": "明確な接続フロー",
+    "flow.title": "起動し、接続し、動作を確認。",
+    "flow.body": "MonoProxy は「ポートが開いている」「クライアントが接続した」「実際にトラフィックが流れた」を分けて表示し、それぞれの状態を正確に伝えます。",
+    "flow.step1Title": "選んで起動",
+    "flow.step1Body": "クライアントから到達できる Wi-Fi または LAN アドレスを選び、サービスを起動します。",
+    "flow.step2Title": "端末を接続",
+    "flow.step2Body": "アドレスをコピーする、設定をスキャンする、またはプラットフォーム別ガイドに従います。",
+    "flow.step3Title": "実トラフィックを確認",
+    "flow.step3Body": "Listening が Client Connected に変わり、バイト転送後に Traffic Verified になることを確認します。",
+    "network.kicker": "ネットワーク上の 1 つのハブ",
+    "network.title": "iPhone を中心に置く。",
+    "network.body": "MonoProxy を一度起動すれば、同じローカルネットワーク上の PC、タブレット、テスト端末を 1 つのエンドポイントへ向けられます。",
+    "network.badge": "MonoProxy はローカルハブ",
+    "features.kicker": "完全なツールキット",
+    "features.title": "接続を動かし、理解するために必要なものをすべて。",
+    "features.body": "最新の MonoProxy は設定を簡潔に保ちながら、必要なときに重要な詳細を表示します。",
+    "feature.statsTag": "セッション分析",
+    "feature.statsTitle": "セッションから通信先を把握",
+    "feature.statsBody": "絞り込んだ記録をプロトコルと接続先で集計し、個々のセッションを確認して必要な内容を書き出します。",
+    "feature.siteTag": "デバイス",
+    "feature.siteTitle": "接続デバイスを管理",
+    "feature.siteBody": "接続数と通信量を確認し、セッションを開いたり、必要に応じて切断やブロックを行えます。",
+    "feature.historyTag": "接続診断",
+    "feature.historyTitle": "次に確認することがわかる",
+    "feature.historyBody": "ネットワーク、待受状態、クライアント、確認済み通信を個別に確認。診断レポートは共有前にプレビューできます。",
+    "feature.configTag": "ガイド付き設定",
+    "feature.configTitle": "共有しやすい設定",
+    "feature.configBody": "「デバイスを接続」でプラットフォームを選び、手順に従います。macOS では Companion による検出と手動設定を案内します。",
+    "feature.settingsTag": "コントロール",
+    "feature.settingsTitle": "邪魔にならない設定",
+    "feature.settingsBody": "iOS アプリでテーマ、アニメーション、ポート、SOCKS、認証、ローカル履歴を管理します。",
+    "feature.protocolTag": "1 ポート",
+    "feature.protocolTitle": "複数のプロキシプロトコルを 1 つのエンドポイントで",
+    "feature.protocolBody": "HTTP、HTTPS CONNECT、通常の WebSocket、SOCKS4、SOCKS4a、SOCKS5 は同じホストとポートを共有し、MonoProxy がクライアントプロトコルを自動判別します。",
+    "themes.kicker": "自分らしく",
+    "themes.title": "3 つの雰囲気。同じ明確な状態表示。",
+    "themes.body": "接続フローを変えずに、作業環境に合う配色を選べます。",
+    "themes.greenTitle": "フレッシュグリーン",
+    "themes.greenBody": "明るく、落ち着き、集中しやすい",
+    "themes.purpleTitle": "ソフトパープル",
+    "themes.purpleBody": "個性がありながら邪魔しない",
+    "themes.darkTitle": "ミッドナイト",
+    "themes.darkBody": "暗い環境でも快適",
+    "privacy.kicker": "プライバシー重視",
+    "privacy.title": "トラフィックはあなたのもの。",
+    "privacy.body": "MonoProxy は iPhone 上で動作し、アカウント、分析 SDK、リモートバックエンドを必要としません。暗号化接続は証明書のインストールや復号なしに中継されます。",
+    "purchase.title": "1 回購入で、すべての機能を利用可能。",
+    "purchase.body": " サブスクリプション、アプリ内アップグレード、アカウント、機能階層はありません。",
+    "privacy.link": "プライバシーポリシーを読む →",
+    "privacy.localTitle": "認証情報はローカルに保持",
+    "privacy.localBody": "プロキシ認証情報は端末内に残り、接続ログには表示されません。",
+    "privacy.collectTitle": "トラッキングなし",
+    "privacy.collectBody": "プロファイリング、サードパーティ分析、リモートトラフィック収集はありません。",
+    "privacy.tlsTitle": "TLS はエンドツーエンドのまま",
+    "privacy.tlsBody": "HTTPS トンネルは証明書のインストールや復号なしに中継されます。",
+    "privacy.historyTitle": "履歴は任意",
+    "privacy.historyBody": "ローカルホスト履歴とサイト合計は上限付きで、任意に有効化でき、いつでも消去できます。",
+    "cta.title": "iPhone をローカルプロキシハブに。",
+    "cta.body": "一度起動し、端末を接続し、実際のトラフィック到着を確認できます。",
+    "cta.support": "サポートに連絡",
+    "footer.privacy": "プライバシー",
+    "footer.macos": "macOS ガイド",
+    "footer.windows": "Windows ガイド",
+    "preview.note": "新しい iOS 画面 · シミュレータで撮影、ローカルのテスト通信を使用。画像を選択すると拡大します。",
+    "nav.mac": "iPhone + Mac",
+    "mac.title": "iPhone が提供し、Mac がつながる。",
+    "mac.body": "iPhone の MonoProxy でプロキシを起動。Mac の Companion で検出し、認証情報を保存してアプリを接続します。",
+    "mac.step1Title": "iPhone で起動",
+    "mac.step1Body": "両方を同じローカルネットワークに接続し、サービスを起動。「デバイスを接続」で macOS を選びます。",
+    "mac.step2Title": "Mac に設定を追加",
+    "mac.step2Body": "Companion で検出したサービスを設定として追加。検出できない場合は iPhone のアドレスとポートを入力します。",
+    "mac.step3Title": "接続して通信を確認",
+    "mac.step3Body": "認証が有効な場合はプロキシのユーザー名とパスワードを入力して接続。ページを開き、iOS 側で通信を確認します。",
+    "mac.authTitle": "プロキシの認証情報は自分で設定",
+    "mac.authBody": "iOS アプリの認証設定で、このプロキシサービスのユーザー名とパスワードを設定します。認証が有効な場合、接続するデバイスにも同じ値を入力します。",
+    "mac.guide": "Mac 接続ガイドを読む",
+    "mac.caption": "Mac ネイティブ画面 · サンプルデータ",
+    "mac.availability": "Companion の公開インストーラは準備中です。ガイドには macOS の手動設定もあります。",
+    "zoom.open": "画像を拡大",
+    "zoom.close": "画像を閉じる",
+    "zoom.caption": "新しい iOS 画面 · シミュレータ撮影、ローカルのテスト通信",
+    "image.home": "MonoProxy iOS ホーム：サービスアドレス、通信確認、長押し停止",
+    "image.devices": "iOS デバイス詳細：通信量とセッション操作",
+    "image.sessions": "iOS セッション分析：プロトコルと接続先の集計",
+    "image.diagnostics": "iOS 接続診断：各段階の確認とレポート",
+    "image.guide": "macOS を選んだ iOS 接続アシスタント",
+    "image.settings": "iOS の外観とプロキシ設定",
+    "image.green": "MonoProxy グリーンテーマ",
+    "image.purple": "MonoProxy パープルテーマ",
+    "image.dark": "MonoProxy ダークテーマ",
+    "image.mac": "MonoProxy Companion Mac ネイティブ画面、サンプルデータ"
+  },
+  "ko": {
+    "metaTitle": "MonoProxy: Mac·PC용 iPhone 프록시 서버와 SOCKS5",
+    "metaDescription": "iPhone을 Mac, Windows 및 테스트 기기용 로컬 HTTP·SOCKS5 프록시 서버로 사용하세요. PAC, QR 정보 또는 명령어로 연결합니다.",
+    "nav.latest": "새로운 기능",
+    "nav.flow": "작동 방식",
+    "nav.features": "기능",
+    "nav.themes": "테마",
+    "nav.guides": "설정 가이드",
+    "nav.support": "지원",
+    "hero.kicker": "iPhone 및 iPad용 MonoProxy",
+    "hero.line1": "나의 iPhone을",
+    "hero.line2": "프록시 허브로.",
+    "hero.body": "iPhone에서 사용할 수 있는 네트워크 경로를 프록시 지원 Mac, Windows 및 테스트 기기 앱에서 사용하세요. 하나의 로컬 HTTP, HTTPS 또는 SOCKS5 엔드포인트로 연결하고 실제 트래픽을 확인할 수 있습니다.",
+    "action.appstore": "App Store에서 보기",
+    "action.explore": "작동 방식 보기",
+    "hero.fact1": "홈에서 바로 기기 연결",
+    "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
+    "hero.fact3": "PAC 및 QR 설정 내장",
+    "hero.liveTitle": "프록시 상태를 한눈에",
+    "hero.liveBody": "기기, 트래픽, 연결 확인을 한곳에서.",
+    "release.version": "새 인터페이스 미리 보기",
+    "release.title": "연결을 이해하고 세밀하게 관리하세요.",
+    "release.body": "기기 상세 정보, 세션 분석, 연결 진단을 갖춘 새로운 iOS 작업 공간입니다. 익숙한 테마와 애니메이션도 유지됩니다.",
+    "release.card1Title": "기기별 확인",
+    "release.card1Body": "트래픽과 세션을 살펴보고 필요하면 연결을 끊거나 기기를 차단하세요.",
+    "release.card2Title": "세션 분석",
+    "release.card2Body": "필터링한 스냅샷을 프로토콜과 대상별로 집계하고 해당 기록을 확인하세요.",
+    "release.card3Title": "단계별 연결 점검",
+    "release.card3Body": "네트워크, 수신 상태, 클라이언트, 검증된 트래픽을 개별적으로 확인하세요.",
+    "release.card4Title": "설정 관리",
+    "release.card4Body": "저장한 설정을 검색하고 가져오기 변경 사항을 미리 본 후 내보낼 항목을 선택하세요.",
+    "release.card5Title": "길게 눌러 중지",
+    "release.card5Body": "중지 버튼을 1초간 길게 눌러 한 손으로 서비스를 중지하고 실수를 줄이세요.",
+    "release.proofTitle": "미리 보기 안내:",
+    "release.proofBody": "새 Release 앱을 시뮬레이터에서 촬영했으며 로컬 테스트 트래픽을 사용했습니다. 현재 App Store 버전과 다를 수 있습니다.",
+    "flow.kicker": "명확한 연결 경로",
+    "flow.title": "시작하고, 연결하고, 작동을 확인하세요.",
+    "flow.body": "MonoProxy는 '포트 열림', '클라이언트 연결됨', '실제 트래픽 이동'을 구분해 각 상태의 의미를 정확히 보여줍니다.",
+    "flow.step1Title": "선택하고 시작",
+    "flow.step1Body": "클라이언트가 접근할 수 있는 Wi-Fi 또는 LAN 주소를 선택한 뒤 서비스를 시작합니다.",
+    "flow.step2Title": "기기 연결",
+    "flow.step2Body": "주소를 복사하거나, 설정을 스캔하거나, 플랫폼별 가이드를 따릅니다.",
+    "flow.step3Title": "실제 트래픽 확인",
+    "flow.step3Body": "Listening이 Client Connected로 바뀌고, 바이트가 전송된 뒤 Traffic Verified가 되는지 확인합니다.",
+    "network.kicker": "네트워크의 하나의 허브",
+    "network.title": "iPhone을 중심에 두세요.",
+    "network.body": "MonoProxy를 한 번 실행하면 같은 로컬 네트워크의 컴퓨터, 태블릿, 테스트 기기를 하나의 엔드포인트로 향하게 할 수 있습니다.",
+    "network.badge": "MonoProxy는 로컬 허브",
+    "features.kicker": "완전한 툴킷",
+    "features.title": "연결을 실행하고 이해하는 데 필요한 모든 것.",
+    "features.body": "최신 MonoProxy 인터페이스는 설정을 간단하게 유지하면서 필요할 때 중요한 세부 정보를 제공합니다.",
+    "feature.statsTag": "세션 분석",
+    "feature.statsTitle": "세션에서 트래픽 흐름 파악",
+    "feature.statsBody": "필터링한 스냅샷을 프로토콜과 대상별로 집계하고 각 그룹의 기록을 확인한 뒤 필요한 내용을 내보내세요.",
+    "feature.siteTag": "기기 관리",
+    "feature.siteTitle": "연결된 기기 관리",
+    "feature.siteBody": "연결 수와 트래픽을 확인하고 세션을 열거나 필요에 따라 연결을 끊고 기기를 차단하세요.",
+    "feature.historyTag": "연결 진단",
+    "feature.historyTitle": "다음 점검 항목 확인",
+    "feature.historyBody": "네트워크, 수신 상태, 클라이언트 연결과 검증된 트래픽을 따로 확인하세요. 진단 보고서는 공유 전에 미리 볼 수 있습니다.",
+    "feature.configTag": "안내형 설정",
+    "feature.configTitle": "공유하기 쉬운 설정",
+    "feature.configBody": "기기 연결에서 플랫폼을 선택하고 안내를 따르세요. macOS 안내에는 Companion 검색과 수동 프록시 설정이 포함됩니다.",
+    "feature.settingsTag": "제어",
+    "feature.settingsTitle": "방해되지 않는 설정",
+    "feature.settingsBody": "iOS 앱에서 테마, 애니메이션, 포트, SOCKS, 인증, 로컬 기록을 관리하세요.",
+    "feature.protocolTag": "하나의 포트",
+    "feature.protocolTitle": "여러 프록시 프로토콜을 하나의 엔드포인트로",
+    "feature.protocolBody": "HTTP, HTTPS CONNECT, 일반 WebSocket, SOCKS4, SOCKS4a, SOCKS5가 같은 호스트와 포트를 공유하며 MonoProxy가 클라이언트 프로토콜을 자동 감지합니다.",
+    "themes.kicker": "나에게 맞게",
+    "themes.title": "세 가지 분위기. 같은 명확한 상태.",
+    "themes.body": "연결 흐름은 그대로 유지하면서 작업 환경에 맞는 색상을 선택할 수 있습니다.",
+    "themes.greenTitle": "프레시 그린",
+    "themes.greenBody": "밝고 차분하며 집중하기 좋음",
+    "themes.purpleTitle": "소프트 퍼플",
+    "themes.purpleBody": "개성이 있지만 산만하지 않음",
+    "themes.darkTitle": "미드나이트",
+    "themes.darkBody": "어두운 환경에 편안함",
+    "privacy.kicker": "개인정보 우선",
+    "privacy.title": "트래픽은 당신의 것입니다.",
+    "privacy.body": "MonoProxy는 iPhone에서 실행되며 계정, 분석 SDK, 원격 백엔드가 필요 없습니다. 암호화된 연결은 인증서 설치나 복호화 없이 중계됩니다.",
+    "purchase.title": "한 번 구매하면 모든 기능 포함.",
+    "purchase.body": " 구독, 앱 내 업그레이드, 계정, 기능 등급이 없습니다.",
+    "privacy.link": "개인정보 처리방침 읽기 →",
+    "privacy.localTitle": "인증 정보는 로컬에 보관",
+    "privacy.localBody": "프록시 인증 정보는 기기에 남으며 연결 로그에 표시되지 않습니다.",
+    "privacy.collectTitle": "추적 없음",
+    "privacy.collectBody": "프로파일링, 제3자 분석, 원격 트래픽 수집이 없습니다.",
+    "privacy.tlsTitle": "TLS는 끝까지 유지",
+    "privacy.tlsBody": "HTTPS 터널은 인증서 설치나 복호화 없이 중계됩니다.",
+    "privacy.historyTitle": "기록은 선택 사항",
+    "privacy.historyBody": "로컬 호스트 기록과 사이트 합계는 제한된 범위로 저장되며 선택적으로 켤 수 있고 언제든 지울 수 있습니다.",
+    "cta.title": "iPhone을 로컬 프록시 허브로 만드세요.",
+    "cta.body": "한 번 시작하고 기기를 연결한 뒤 실제 트래픽이 도착하는 순간을 확인하세요.",
+    "cta.support": "지원팀에 문의",
+    "footer.privacy": "개인정보",
+    "footer.macos": "macOS 가이드",
+    "footer.windows": "Windows 가이드",
+    "preview.note": "새 iOS 화면 · 시뮬레이터 촬영, 로컬 테스트 세션 사용. 이미지를 선택하면 확대됩니다.",
+    "nav.mac": "iPhone + Mac",
+    "mac.title": "iPhone이 제공하고 Mac이 연결합니다.",
+    "mac.body": "iPhone의 MonoProxy에서 프록시를 실행하세요. Mac의 Companion에서 검색하고 인증 정보를 저장해 앱을 연결하세요.",
+    "mac.step1Title": "iPhone에서 시작",
+    "mac.step1Body": "두 기기를 같은 로컬 네트워크에 연결하고 서비스를 시작하세요. 기기 연결에서 macOS를 선택하세요.",
+    "mac.step2Title": "Mac에 설정 추가",
+    "mac.step2Body": "Companion에서 검색된 서비스를 설정으로 추가하세요. 검색되지 않으면 iPhone에 표시된 주소와 포트를 입력하세요.",
+    "mac.step3Title": "연결 후 트래픽 확인",
+    "mac.step3Body": "인증을 사용하면 프록시 사용자 이름과 비밀번호를 입력한 후 연결하세요. 페이지를 열고 iOS 앱에서 트래픽 검증을 확인하세요.",
+    "mac.authTitle": "프록시 인증 정보는 직접 설정",
+    "mac.authBody": "iOS 앱의 인증 설정에서 이 프록시 서비스의 사용자 이름과 비밀번호를 설정하세요. 인증을 사용하면 연결하는 기기에서도 같은 정보를 입력해야 합니다.",
+    "mac.guide": "Mac 연결 안내 보기",
+    "mac.caption": "Mac 네이티브 화면 · 예시 데이터",
+    "mac.availability": "Companion 공개 설치 프로그램은 준비 중입니다. 안내에는 macOS 수동 설정도 포함되어 있습니다.",
+    "zoom.open": "스크린샷 확대",
+    "zoom.close": "스크린샷 닫기",
+    "zoom.caption": "새 iOS 화면 · 시뮬레이터 촬영, 로컬 테스트 세션",
+    "image.home": "MonoProxy iOS 홈: 서비스 주소, 트래픽 검증, 길게 눌러 중지",
+    "image.devices": "iOS 기기 상세 정보: 트래픽과 세션 작업",
+    "image.sessions": "iOS 세션 분석: 프로토콜과 대상별 집계",
+    "image.diagnostics": "iOS 연결 진단: 단계별 확인과 보고서",
+    "image.guide": "macOS를 선택한 iOS 연결 도우미",
+    "image.settings": "iOS 화면 및 프록시 설정",
+    "image.green": "MonoProxy 녹색 테마",
+    "image.purple": "MonoProxy 보라색 테마",
+    "image.dark": "MonoProxy 다크 테마",
+    "image.mac": "MonoProxy Companion Mac 네이티브 화면, 예시 데이터"
+  },
+  "zh-Hant": {
+    "metaTitle": "MonoProxy：iPhone 代理伺服器，支援 Mac、PC 與 SOCKS5",
+    "metaDescription": "將 iPhone 變成本地 HTTP 與 SOCKS5 代理伺服器，透過 PAC、QR Code 資訊或桌面命令連接 Mac、Windows 與測試裝置。",
+    "nav.latest": "本次更新",
+    "nav.flow": "工作方式",
+    "nav.features": "功能",
+    "nav.themes": "主題",
+    "nav.guides": "配置指南",
     "nav.support": "支援",
-    "hero.kicker": "MonoProxy 2.5.0，支援 iPhone 與 iPad",
-    "release.version": "MonoProxy 2.5.0 新內容",
+    "hero.kicker": "MonoProxy，適用於 iPhone 與 iPad",
+    "hero.line1": "你的 iPhone，",
+    "hero.line2": "專業代理中樞。",
     "hero.body": "讓支援代理的 Mac、Windows 與測試裝置 App 使用 iPhone 目前可用的網路路徑。透過一個本地 HTTP、HTTPS 或 SOCKS5 端點連接，並驗證真實流量。",
-    "release.card2Title": "一個共用端點",
-    "release.card2Body": "HTTP、HTTPS、SOCKS4、SOCKS4a 與 SOCKS5 共用同一主機和端口，並自動識別客戶端協議。",
-    "release.card3Title": "QR Code 配置前置",
-    "feature.configBody": "選擇客戶端平台、複製目前參數、掃描 QR Code，並按照簡明步驟操作，不必猜測應該使用哪個地址。",
+    "action.appstore": "前往 App Store",
+    "action.explore": "查看工作方式",
+    "hero.fact1": "首屏直接連接設備",
+    "hero.fact2": "HTTP/HTTPS + SOCKS4/5",
+    "hero.fact3": "內置 PAC 與二維碼配置",
+    "hero.liveTitle": "代理狀態，一目瞭然",
+    "hero.liveBody": "裝置、流量與連線證據，盡在掌握。",
+    "release.version": "新版介面預覽",
+    "release.title": "看得更清楚，管理更專業。",
+    "release.body": "新版 iOS 工作台帶來裝置詳細資訊、工作階段分析與連線診斷，也保留熟悉的外觀與動畫。",
+    "release.card1Title": "查看每台裝置",
+    "release.card1Body": "查看流量與工作階段，需要時中斷目前連線或封鎖裝置。",
+    "release.card2Title": "分析代理工作階段",
+    "release.card2Body": "依協定與目標彙整篩選後的快照，再查看對應記錄。",
+    "release.card3Title": "逐步檢查連線",
+    "release.card3Body": "分別檢查網路介面、監聽狀態、用戶端與已驗證流量。",
+    "release.card4Title": "管理常用設定",
+    "release.card4Body": "搜尋已儲存的設定，預覽匯入變更，選擇要匯出的內容。",
+    "release.card5Title": "單手長按停止",
+    "release.card5Body": "長按停止按鈕一秒，即可關閉代理服務，減少誤觸。",
+    "release.proofTitle": "預覽說明：",
+    "release.proofBody": "使用新版 Release App，在模擬器中以本地測試流量實拍；App Store 目前版本可能有所不同。",
+    "flow.kicker": "清晰的連接路徑",
+    "flow.title": "啟動、連接，並確認它真的有效。",
+    "flow.body": "MonoProxy 将“端口已監聽”“客戶端已連接”和“流量確實傳輸”區分開，讓每個狀態都有準確含義。",
+    "flow.step1Title": "選擇並啟動",
+    "flow.step1Body": "選擇客戶端可以訪問的 Wi-Fi 或局域網地址，然後啟動服務。",
+    "flow.step2Title": "連接一台設備",
+    "flow.step2Body": "複制地址、掃描配置，或按照对應平台指南操作。",
+    "flow.step3Title": "验證真實流量",
+    "flow.step3Body": "狀態會从“正在監聽”变為“客戶端已連接”，傳輸數據後再顯示“流量已验證”。",
+    "network.kicker": "局域網中的單一中心",
+    "network.title": "讓 iPhone 位于網絡中心。",
+    "network.body": "只需運行一次 MonoProxy，即可讓同一局域網中的電腦、平板和測试設備連接同一個端點。",
+    "network.badge": "MonoProxy 是本地代理中心",
+    "features.kicker": "完整工具集",
+    "features.title": "運行代理並理解連接狀態所需的一切。",
+    "features.body": "最新版 MonoProxy 保持配置簡單，同時在需要時提供真正有用的連接細节。",
+    "feature.statsTag": "工作階段分析",
+    "feature.statsTitle": "從工作階段瞭解流量去向",
+    "feature.statsBody": "依協定與目標彙整篩選後的快照，查看每組背後的記錄，並匯出需要的內容。",
+    "feature.siteTag": "裝置管理",
+    "feature.siteTitle": "每台裝置，都有清楚的資訊",
+    "feature.siteBody": "查看裝置連線數與流量，開啟對應工作階段；需要時中斷連線或封鎖裝置。",
+    "feature.historyTag": "連線診斷",
+    "feature.historyTitle": "知道下一步該檢查什麼",
+    "feature.historyBody": "分開查看網路介面、監聽狀態、用戶端連線與已驗證流量，分享前先預覽去識別化診斷報告。",
+    "feature.configTag": "引導式配置",
+    "feature.configTitle": "輕鬆共享代理配置",
+    "feature.configBody": "開啟「連接裝置」，選擇用戶端平台並依步驟設定。macOS 引導包含 Companion 服務探索與手動代理設定。",
+    "feature.settingsTag": "控制",
+    "feature.settingsTitle": "整洁而完整的設置",
+    "feature.settingsBody": "在 iOS App 中調整外觀、動畫、代理連接埠、SOCKS 支援、驗證與本地歷史記錄。",
+    "feature.protocolTag": "單一端口",
+    "feature.protocolTitle": "多種代理協議，共用一個端點",
+    "feature.protocolBody": "HTTP、HTTPS CONNECT、普通 WebSocket、SOCKS4、SOCKS4a 與 SOCKS5 共用同一主机和端口，MonoProxy 會自動識别客戶端協議。",
+    "themes.kicker": "選擇你的风格",
+    "themes.title": "三種氛圍，同樣清晰的狀態。",
+    "themes.body": "選擇適合工作環境的配色，而連接流程和狀態表達始終保持一致。",
+    "themes.greenTitle": "清新綠",
+    "themes.greenBody": "明亮、平靜、專注",
+    "themes.purpleTitle": "柔和紫",
+    "themes.purpleBody": "有個性但不分散注意力",
+    "themes.darkTitle": "午夜黑",
+    "themes.darkBody": "適合低光環境",
+    "privacy.kicker": "隱私優先",
+    "privacy.title": "你的流量只屬于你。",
+    "privacy.body": "MonoProxy 完全在 iPhone 上運行，無需帳號，不含分析 SDK，也没有遠程後端。加密連接會被直接轉發，無需安裝證書或檢查內容。",
+    "purchase.title": "一個付費 App，包含全部功能。",
+    "purchase.body": " 没有訂閱、App 內升級、帳號或功能分級。",
+    "privacy.link": "閱讀隱私政策 →",
+    "privacy.localTitle": "憑據保留在本地",
+    "privacy.localBody": "代理憑據僅保存在設備上，也不會出現在連接日志中。",
+    "privacy.collectTitle": "不跟踪用戶",
+    "privacy.collectBody": "没有用戶畫像、第三方分析或遠程流量收集。",
+    "privacy.tlsTitle": "TLS 保持端到端加密",
+    "privacy.tlsBody": "HTTPS 隧道無需安裝證書或解密即可轉發。",
+    "privacy.historyTitle": "歷史記錄完全可選",
+    "privacy.historyBody": "本地主机歷史與站點匯总有容量限制，可選開啟，並可隨時清除。",
+    "cta.title": "讓 iPhone 成為你的本地代理中心。",
+    "cta.body": "啟動一次，連接設備，並確認真實流量何時到達。",
     "cta.support": "聯絡支援",
     "footer.privacy": "隱私",
     "footer.macos": "macOS 指南",
-    "footer.windows": "Windows 指南"
-  });
+    "footer.windows": "Windows 指南",
+    "preview.note": "新版 iOS 介面 · 模擬器實拍，使用本地測試工作階段。點選截圖可放大。",
+    "nav.mac": "iPhone + Mac",
+    "mac.title": "iPhone 提供服務，Mac 輕鬆連接。",
+    "mac.body": "在 iPhone 上執行 MonoProxy 代理服務，用 Companion 在 Mac 上探索服務、儲存代理憑證並連接應用程式。",
+    "mac.step1Title": "在 iPhone 開啟服務",
+    "mac.step1Body": "讓兩台裝置處於同一區域網路，開啟代理服務，開啟「連接裝置」並選擇 macOS。",
+    "mac.step2Title": "在 Mac 新增設定",
+    "mac.step2Body": "在 Companion 中將探索到的手機服務新增為設定。如果無法自動探索，手動輸入 iPhone 顯示的位址與連接埠。",
+    "mac.step3Title": "連接並驗證流量",
+    "mac.step3Body": "如已啟用驗證，輸入代理帳號與密碼後連接。開啟網頁，並在 iOS App 中確認流量已驗證。",
+    "mac.authTitle": "代理帳號與密碼，由你設定",
+    "mac.authBody": "在 iOS App 的驗證設定中，設定這項代理服務的帳號與密碼。啟用驗證後，其他裝置連接時，需要輸入同一組帳號與密碼。",
+    "mac.guide": "查看 Mac 連接指南",
+    "mac.caption": "Mac 原生工作台 · 範例資料",
+    "mac.availability": "Companion 公開安裝程式正在準備中。指南也提供 macOS 手動設定方法。",
+    "zoom.open": "放大截圖",
+    "zoom.close": "關閉截圖",
+    "zoom.caption": "新版 iOS 介面 · 模擬器實拍，使用本地測試工作階段",
+    "image.home": "MonoProxy iOS 首頁，顯示服務位址、已驗證流量與長按停止按鈕",
+    "image.devices": "iOS 裝置詳細資訊，顯示流量與工作階段操作",
+    "image.sessions": "iOS 工作階段分析，依協定與目標彙整",
+    "image.diagnostics": "iOS 連線診斷，顯示各階段證據與報告預覽",
+    "image.guide": "iOS 連接裝置助手，已選擇 macOS",
+    "image.settings": "iOS 設定，包含外觀與代理控制",
+    "image.green": "MonoProxy 綠色外觀",
+    "image.purple": "MonoProxy 紫色外觀",
+    "image.dark": "MonoProxy 深色外觀",
+    "image.mac": "MonoProxy Companion Mac 原生工作台，使用範例資料"
+  }
+};
 
   const languageSelect = document.querySelector("[data-language-select]");
   const supportedLanguages = new Set(Object.keys(translations));
@@ -1242,6 +1466,16 @@
       element.setAttribute("href", element.getAttribute(`data-href-${hrefLanguageKey}`) || element.getAttribute("data-href-en"));
     });
 
+    document.querySelectorAll('[data-screen]').forEach(image => {
+      const imageLanguage = selected === 'zh' || selected === 'zh-Hant' ? 'zh' : 'en';
+      image.src = `images/ios/ios-${image.dataset.screen}-${imageLanguage}.webp`;
+      image.alt = copy[image.dataset.i18nAlt] || image.alt;
+      const trigger = image.closest('.screenshot-trigger');
+      if (trigger) trigger.setAttribute('aria-label', `${copy['zoom.open']}: ${image.alt}`);
+    });
+    const macGuide = document.querySelector('[data-mac-guide]');
+    if (macGuide) macGuide.href = `guide-macos.html?lang=${selected.startsWith('zh') ? 'zh' : 'en'}#companion`;
+    document.dispatchEvent(new CustomEvent('monoproxy-language', {detail: copy}));
     if (languageSelect) languageSelect.value = selected;
 
     if (updateAddress) {
@@ -1260,5 +1494,6 @@
     languageSelect.addEventListener("change", () => applyLanguage(languageSelect.value, true));
   }
 </script>
+<script src="homepage.js" defer></script>
 </body>
 </html>
