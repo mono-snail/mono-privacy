@@ -47,9 +47,9 @@ git commit -m "feat: refresh iOS homepage with native previews and Mac setup"
 git push origin main
 ```
 
-上级旧文档记载此仓库由 GitHub Pages 从 `main` 的根目录发布；另一本通用手册介绍 Cloudflare Pages，不能将其他产品的 Pages 项目配置直接套用。正式上线前，需核对当前站点的实际托管配置，等待对应提交的生产部署成功，再访问自定义域名验证页面、图片和指南。Git push 成功不等于部署完成。
+用户已确认生产平台为 **Cloudflare**。上级旧 README 中关于 GitHub Pages 的记载已过时，不作为当前发布依据。发布采用 Git Integration；推送后必须核对正确项目的 Production 部署 SHA 和正式域名，不能只凭 Git push 判断上线成功。
 
-本轮环境检查中，读取 GitHub SSH 远端返回 `Permission denied (publickey)`，未推送或部署，也未能读取生产部署记录。需要先恢复此设备对该仓库的 GitHub 认证。不得把 SSH 私钥、访问令牌或 Cloudflare 配置加入仓库。
+可复用的仓库配置与 CLI 认证检查见 [docs/发布配置.md](docs/发布配置.md)。已核实 Pages 项目为 `monoproxy`，通过 GitHub `mono-snail/mono-privacy` 的 `main` 分支发布，绑定 `proxy.monoware.app`；构建命令为空，直接发布仓库根目录。GitHub CLI 与 Wrangler 认证已恢复，Git 改用 HTTPS 与 CLI credential helper。生产发布以对应 SHA 部署成功和域名验收为准。
 
 ## 2.9.3 更新说明的对比依据
 
