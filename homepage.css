@@ -43,8 +43,10 @@ section[id]{scroll-margin-top:88px}
 .screenshot-dialog figure{margin:0}
 .screenshot-dialog img{display:block;max-height:calc(100dvh - 112px);width:100%;height:auto;object-fit:contain}
 .screenshot-dialog figcaption{margin:10px 40px 0;text-align:center;color:var(--muted);font-size:12px;line-height:1.6}
-.screenshot-close{position:absolute;right:12px;top:12px;z-index:1;width:36px;height:36px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--ink);font-size:25px;cursor:pointer;box-shadow:0 2px 12px #0001}
-.screenshot-close:focus-visible,.nav-toggle:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+.screenshot-close{position:absolute;right:14px;top:14px;z-index:1;display:grid;place-items:center;width:44px;height:44px;padding:0;line-height:1;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--ink);cursor:pointer;box-shadow:0 2px 12px #0001}
+.screenshot-close svg{display:block;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;pointer-events:none}
+.screenshot-close:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.nav-toggle:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
 .nav-toggle{display:none;width:36px;height:36px;padding:9px;border:1px solid var(--line);border-radius:10px;background:#fff;cursor:pointer}
 .nav-toggle span{display:block;height:2px;margin:3px 0;background:var(--ink)}
 @media(max-width:1000px){

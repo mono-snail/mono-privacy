@@ -21,7 +21,14 @@
   dialog.className = 'screenshot-dialog';
   dialog.setAttribute('aria-labelledby','screenshot-caption');
   const close = document.createElement('button');
-  close.type = 'button'; close.className = 'screenshot-close'; close.textContent = '×';
+  close.type = 'button'; close.className = 'screenshot-close';
+  const closeIcon = document.createElementNS('http://www.w3.org/2000/svg','svg');
+  closeIcon.setAttribute('viewBox','0 0 24 24');
+  closeIcon.setAttribute('aria-hidden','true');
+  closeIcon.setAttribute('focusable','false');
+  const closePath = document.createElementNS('http://www.w3.org/2000/svg','path');
+  closePath.setAttribute('d','M6 6 18 18M18 6 6 18');
+  closeIcon.append(closePath); close.append(closeIcon);
   const figure = document.createElement('figure');
   const photo = document.createElement('img');
   const caption = document.createElement('figcaption'); caption.id = 'screenshot-caption';
