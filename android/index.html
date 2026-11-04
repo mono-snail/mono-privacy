@@ -10,12 +10,12 @@
 <meta property="og:description" content="A paid Android proxy gateway for nearby devices. One local endpoint, guided setup, VPN Bridge, device management and traffic verification.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://proxy.monoware.app/android/">
-<meta property="og:image" content="https://proxy.monoware.app/images/android/home_running.jpg?v=20260811-wave3">
+<meta property="og:image" content="https://proxy.monoware.app/images/android/1.6/connection.png">
 <meta property="og:image:alt" content="MonoProxy for Android showing a running private LAN proxy gateway">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MonoProxy for Android - Private LAN Proxy Gateway">
 <meta name="twitter:description" content="A paid Android proxy gateway with HTTP, HTTPS CONNECT, SOCKS, VPN Bridge, and local traffic insight.">
-<meta name="twitter:image" content="https://proxy.monoware.app/images/android/home_running.jpg?v=20260811-wave3">
+<meta name="twitter:image" content="https://proxy.monoware.app/images/android/1.6/connection.png">
 <meta name="twitter:image:alt" content="MonoProxy for Android showing a running private LAN proxy gateway">
 <link rel="canonical" href="https://proxy.monoware.app/android/">
 <meta name="theme-color" content="#07162c">
@@ -33,7 +33,7 @@
     "@id": "https://proxy.monoware.app/android/"
   },
   "image": "https://proxy.monoware.app/images/android/app-icon-256.png",
-  "screenshot": "https://proxy.monoware.app/images/android/home_running.jpg?v=20260811-wave3",
+  "screenshot": "https://proxy.monoware.app/images/android/1.6/connection.png",
   "thumbnailUrl": "https://proxy.monoware.app/images/android/app-icon-256.png",
   "description": "MonoProxy for Android turns your phone into a private LAN proxy gateway with HTTP, HTTPS CONNECT, SOCKS, VPN Bridge, device controls, and local traffic insight.",
   "keywords": "MonoProxy by MonoWare, Android proxy server, LAN proxy gateway, HTTP proxy, HTTPS CONNECT, SOCKS proxy, VPN Bridge",
@@ -44,10 +44,10 @@
     "Device controls",
     "On-device traffic insight"
   ],
-  "downloadUrl": "https://play.google.com/store/apps/details?id=app.monoware.proxy",
-  "installUrl": "https://play.google.com/store/apps/details?id=app.monoware.proxy",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=app.monoware.monoproxy",
+  "installUrl": "https://play.google.com/store/apps/details?id=app.monoware.monoproxy",
   "sameAs": [
-    "https://play.google.com/store/apps/details?id=app.monoware.proxy"
+    "https://play.google.com/store/apps/details?id=app.monoware.monoproxy"
   ],
   "brand": {
     "@type": "Brand",
@@ -109,7 +109,7 @@
   .kicker::before{content:"";width:26px;height:2px;border-radius:2px;background:currentColor}
   h1,h2,h3,p{margin-top:0}
   h1,h2,h3{letter-spacing:-.045em;line-height:1.04}
-  h1{max-width:780px;margin-bottom:24px;font-size:clamp(52px,7vw,88px);font-weight:900}
+  h1{max-width:780px;margin-bottom:24px;font-size:clamp(44px,5.6vw,72px);font-weight:900}
   h2{margin-bottom:18px;font-size:clamp(36px,4.3vw,58px);font-weight:880}
   h3{margin-bottom:10px;font-size:23px}
   .lead{margin-bottom:0;color:var(--muted);font-size:19px;line-height:1.75}
@@ -167,6 +167,7 @@
   .button:hover{transform:translateY(-2px)}
   .button.primary{color:#fff;background:var(--blue);box-shadow:0 18px 42px rgba(10,132,255,.32)}
   .button.secondary{color:#ecf6ff;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.075)}
+  .preview-note{margin:18px 0 0!important;font-size:13px!important;color:#d0deef!important}
   .price-strip{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
   .price-strip span{
     display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(255,255,255,.14);
@@ -474,7 +475,7 @@
         <a href="#bridge" data-i18n="nav.bridge">VPN Bridge</a>
         <a href="#features" data-i18n="nav.features">Features</a>
         <a href="#privacy" data-i18n="nav.privacy">Privacy</a>
-        <a class="nav-pill" href="https://play.google.com/store/apps/details?id=app.monoware.proxy" target="_blank" rel="noopener" data-i18n="nav.google">Google Play</a>
+        <a class="nav-pill" href="https://play.google.com/store/apps/details?id=app.monoware.monoproxy" target="_blank" rel="noopener" data-i18n="nav.google">Google Play</a>
       </div>
       <div class="language-switch">
         <select data-language-select aria-label="Language">
@@ -493,13 +494,14 @@
   <header class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <span class="kicker" data-i18n="hero.kicker">Android 1.1.0</span>
+        <span class="kicker" data-i18n="hero.kicker">Android 1.6 · Update preview</span>
         <h1><span data-i18n="hero.line1">Your Android phone,</span> <span class="gradient" data-i18n="hero.line2">one private LAN gateway.</span></h1>
         <p data-i18n="hero.body">MonoProxy for Android shares a single local HTTP, HTTPS CONNECT and SOCKS endpoint with nearby devices, then shows whether the network, listener, client and real traffic path are actually working.</p>
         <div class="actions">
-          <a class="button primary" href="https://play.google.com/store/apps/details?id=app.monoware.proxy" target="_blank" rel="noopener" data-i18n="action.google">Get it on Google Play</a>
+          <a class="button primary" href="https://play.google.com/store/apps/details?id=app.monoware.monoproxy" target="_blank" rel="noopener" data-i18n="action.google">Get it on Google Play</a>
           <a class="button secondary" href="#setup" data-i18n="action.flow">See the Android flow</a>
         </div>
+        <p class="preview-note" data-i18n="preview.note">1.6 interface preview · Available after Google Play review</p>
         <div class="price-strip">
           <span><i></i><span data-i18n="hero.paid">Paid download</span></span>
           <span data-i18n="hero.noSubscription">No subscription</span>
@@ -509,10 +511,10 @@
       <div class="android-stage" aria-label="MonoProxy Android app preview">
         <div class="halo"></div>
         <div class="phone phone-main">
-          <img src="../images/android/home_running.jpg?v=20260811-wave3" width="1080" height="2400" alt="MonoProxy Android home screen with proxy service running and visible traffic wave" fetchpriority="high" decoding="async">
+          <img src="../images/android/1.6/connection.png" width="1080" height="2400" alt="MonoProxy 1.6 connection workspace preview" fetchpriority="high" decoding="async">
         </div>
         <div class="phone phone-secondary">
-          <img src="../images/android/home.jpg?v=20260811-standby2" width="1080" height="2400" alt="MonoProxy Android home screen before the proxy service starts" fetchpriority="high" decoding="async">
+          <img src="../images/android/1.6/activity.png" width="1080" height="2400" alt="MonoProxy 1.6 activity workspace preview" fetchpriority="high" decoding="async">
         </div>
       </div>
     </div>
@@ -533,31 +535,31 @@
     <div class="wrap release-panel">
       <div class="release-head">
         <div>
-          <span class="version" data-i18n="release.version">Built for Android LAN sharing</span>
-          <h2 data-i18n="release.title">A proxy gateway that explains every step before users get lost.</h2>
+          <span class="version" data-i18n="release.version">A clearer connection workspace</span>
+          <h2 data-i18n="release.title">Connect, inspect and share from one focused workspace.</h2>
         </div>
-        <p data-i18n="release.body">The Android version keeps the main screen operational: selected address, protocol mode, connection path, four status blocks, live wave chart and one obvious action to connect another device.</p>
+        <p data-i18n="release.body">The 1.6 update brings a more focused connection screen, searchable sessions, portable profiles and full-screen diagnostics. The images preview the new interface; Google Play availability follows release review.</p>
       </div>
       <div class="capability-grid">
         <article class="cap-card">
           <div class="cap-icon">1</div>
-          <h3 data-i18n="release.card1Title">Recommended network</h3>
-          <p data-i18n="release.card1Body">Wi-Fi IPv4 is surfaced as the best local address. IPv6, cellular and advanced interfaces stay out of the way until needed.</p>
+          <h3 data-i18n="release.card1Title">Session analysis</h3>
+          <p data-i18n="release.card1Body">Search and filter sessions by protocol or result, inspect failure stages, and explore a captured analysis snapshot.</p>
         </article>
         <article class="cap-card">
           <div class="cap-icon">2</div>
-          <h3 data-i18n="release.card2Title">Local setup page</h3>
-          <p data-i18n="release.card2Body">Clients can open /setup to copy values, download PAC and run a reachability test before proxy traffic starts.</p>
+          <h3 data-i18n="release.card2Title">Portable profiles</h3>
+          <p data-i18n="release.card2Body">Preview imports, duplicate without credentials, and exchange compatible server profiles between Android and iOS.</p>
         </article>
         <article class="cap-card">
           <div class="cap-icon">3</div>
-          <h3 data-i18n="release.card3Title">Connection path</h3>
-          <p data-i18n="release.card3Body">Network, Listener, Client and Traffic each have a visible state, so "running" is not confused with "verified".</p>
+          <h3 data-i18n="release.card3Title">Configuration sharing</h3>
+          <p data-i18n="release.card3Body">Copy or share HTTP, SOCKS, PAC, QR and command formats. Including credentials always requires confirmation.</p>
         </article>
         <article class="cap-card">
           <div class="cap-icon">4</div>
-          <h3 data-i18n="release.card4Title">Notification actions</h3>
-          <p data-i18n="release.card4Body">Connect device, copy address and stop are available from the persistent foreground notification.</p>
+          <h3 data-i18n="release.card4Title">Exit diagnostics</h3>
+          <p data-i18n="release.card4Body">Inspect the selected exit and optionally run one consented 1 MiB speed sample. No measurement runs automatically.</p>
         </article>
       </div>
     </div>
@@ -586,11 +588,11 @@
       </div>
       <div class="flow-visual">
         <div class="phone flow-phone-a">
-          <img src="../images/android/home_running.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android running home screen with visible traffic wave" loading="lazy" decoding="async">
+          <img src="../images/android/1.6/connection.png" width="1080" height="2400" alt="MonoProxy 1.6 connection workspace preview" loading="lazy" decoding="async">
         </div>
         <div class="flow-arrow" aria-hidden="true">→</div>
         <div class="phone flow-phone-b">
-          <img src="../images/android/connect_device.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android connect device flow" loading="lazy" decoding="async">
+          <img src="../images/android/1.6/tools.png" width="1080" height="2400" alt="MonoProxy 1.6 tools workspace preview" loading="lazy" decoding="async">
         </div>
       </div>
     </div>
@@ -631,7 +633,7 @@
           <span data-i18n="network.consoleDetail">Same LAN</span>
         </article>
         <div class="phone network-phone">
-          <img src="../images/android/home_running.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy running on an Android phone at the center of the local network" loading="lazy" decoding="async">
+          <img src="../images/android/1.6/connection.png" width="1080" height="2400" alt="MonoProxy 1.6 connection workspace preview" loading="lazy" decoding="async">
         </div>
         <div class="network-badge" data-i18n="network.badge">One phone endpoint</div>
       </div>
@@ -679,75 +681,55 @@
       <div>
         <span class="kicker" data-i18n="features.kicker">Android toolkit</span>
         <h2 data-i18n="features.title">Made for running a real proxy, not just opening a port.</h2>
-        <p class="lead" data-i18n="features.body">MonoProxy combines setup, security, runtime visibility and device control in one local-first Android app.</p>
+        <p class="lead" data-i18n="features.body">Preview of the 1.6 interface. The connection, activity and tools screens are captures of the signed app on an emulator; the diagnostic view is a native render with sample data.</p>
       </div>
 
       <div class="showcase-grid">
         <article class="showcase-card large">
           <div class="showcase-copy">
-            <span class="tag" data-i18n="feature.homeTag">Home</span>
-            <h3 data-i18n="feature.homeTitle">Live status, four checks and a wave chart</h3>
-            <p data-i18n="feature.homeBody">The Android home panel keeps the service state, selected endpoint, connection path, session traffic and live rate trend visible at once.</p>
+            <span class="tag" data-i18n="feature.homeTag">Connection</span>
+            <h3 data-i18n="feature.homeTitle">Your endpoint and next action, up front</h3>
+            <p data-i18n="feature.homeBody">Read or copy the selected address, follow Network → Listener → Client → Traffic, and connect a device from the main screen.</p>
           </div>
           <div class="screen-well wave-focus">
-            <div class="screen-shot"><img src="../images/android/home_running.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android running home screen" loading="lazy" decoding="async"></div>
+            <div class="screen-shot"><img src="../images/android/1.6/connection.png" width="1080" height="2400" alt="MonoProxy 1.6 connection workspace preview" loading="lazy" decoding="async"></div>
           </div>
         </article>
 
         <article class="showcase-card small">
           <div class="showcase-copy">
-            <span class="tag" data-i18n="feature.setupTag">Guided setup</span>
-            <h3 data-i18n="feature.setupTitle">Connect Device is a full-screen flow</h3>
-            <p data-i18n="feature.setupBody">Choose a client, configure proxy values, then verify reachability and traffic without squeezing everything into one dialog.</p>
+            <span class="tag" data-i18n="feature.setupTag">Activity</span>
+            <h3 data-i18n="feature.setupTitle">Find the session behind a problem</h3>
+            <p data-i18n="feature.setupBody">Open sessions, traffic totals and local history from one activity workspace. Filter results and inspect captured session analysis.</p>
           </div>
           <div class="screen-well gold">
-            <div class="screen-shot"><img src="../images/android/connect_device.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android connect device screen" loading="lazy" decoding="async"></div>
+            <div class="screen-shot"><img src="../images/android/1.6/activity.png" width="1080" height="2400" alt="MonoProxy 1.6 activity workspace preview" loading="lazy" decoding="async"></div>
           </div>
         </article>
 
         <article class="showcase-card half">
           <div class="showcase-copy">
-            <span class="tag" data-i18n="feature.trafficTag">Traffic insight</span>
-            <h3 data-i18n="feature.trafficTitle">See which hosts actually used the proxy</h3>
-            <p data-i18n="feature.trafficBody">Site traffic is aggregated by host, with upload, download and last activity totals kept locally on the phone.</p>
+            <span class="tag" data-i18n="feature.trafficTag">Diagnostics</span>
+            <h3 data-i18n="feature.trafficTitle">A full workspace for troubleshooting</h3>
+            <p data-i18n="feature.trafficBody">Follow the connection path, inspect resource counters, preview a privacy-safe report and choose optional exit checks.</p>
           </div>
           <div class="screen-well green">
-            <div class="screen-shot"><img src="../images/android/site_traffic.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android site traffic screen with YouTube and Google traffic totals" loading="lazy" decoding="async"></div>
+            <div class="screen-shot"><img src="../images/android/1.6/diagnostics.png" width="1080" height="2400" alt="MonoProxy 1.6 diagnostics workspace preview" loading="lazy" decoding="async"></div>
           </div>
         </article>
 
         <article class="showcase-card half">
           <div class="showcase-copy">
-            <span class="tag" data-i18n="feature.historyTag">History</span>
-            <h3 data-i18n="feature.historyTitle">Local session records for debugging</h3>
-            <p data-i18n="feature.historyBody">Browsing history records host-level proxy sessions only when enabled, so connection problems are easier to explain without storing paths or credentials.</p>
+            <span class="tag" data-i18n="feature.historyTag">Tools</span>
+            <h3 data-i18n="feature.historyTitle">Profiles, devices and quick access</h3>
+            <p data-i18n="feature.historyBody">Keep server profiles, client controls, configuration sharing, the activity journal and Android background controls within reach.</p>
           </div>
           <div class="screen-well gold">
-            <div class="screen-shot"><img src="../images/android/browsing_history.jpg?v=20260811-wave2" width="1080" height="2400" alt="MonoProxy Android browsing history screen with active YouTube and Google proxy sessions" loading="lazy" decoding="async"></div>
+            <div class="screen-shot"><img src="../images/android/1.6/tools.png" width="1080" height="2400" alt="MonoProxy 1.6 tools workspace preview" loading="lazy" decoding="async"></div>
           </div>
         </article>
 
-        <article class="showcase-card small">
-          <div class="showcase-copy">
-            <span class="tag" data-i18n="feature.controlTag">Control</span>
-            <h3 data-i18n="feature.controlTitle">Settings for outbound routing and security</h3>
-            <p data-i18n="feature.controlBody">Configure SOCKS, authentication, private LAN access, outbound network mode, trusted network resume and local analytics.</p>
-          </div>
-          <div class="screen-well">
-            <div class="screen-shot"><img src="../images/android/settings.jpg?v=20260811-correct2" width="1080" height="2400" alt="MonoProxy Android settings screen" loading="lazy" decoding="async"></div>
-          </div>
-        </article>
 
-        <article class="showcase-card large">
-          <div class="showcase-copy">
-            <span class="tag" data-i18n="feature.devicesTag">Devices</span>
-            <h3 data-i18n="feature.devicesTitle">Client-level management for shared networks</h3>
-            <p data-i18n="feature.devicesBody">Group clients by IP, add aliases, disconnect sessions, temporarily block devices and apply per-client limits for connections, bandwidth and quota.</p>
-          </div>
-          <div class="screen-well green">
-            <div class="screen-shot"><img src="../images/android/device_management.jpg?v=20260811-correct2" width="1080" height="2400" alt="MonoProxy Android device management screen" loading="lazy" decoding="async"></div>
-          </div>
-        </article>
       </div>
     </div>
   </section>
@@ -782,7 +764,7 @@
         <article class="privacy-card">
           <div class="privacy-icon">D</div>
           <h3 data-i18n="privacy.card4Title">Device data stays local</h3>
-          <p data-i18n="privacy.card4Body">Aliases, usage counters, site totals and device policies are local runtime data, not a cloud account.</p>
+          <p data-i18n="privacy.card4Body">Profiles, device policies and traffic records stay on your phone. Optional exit IP and speed checks contact ipify and Cloudflare only after confirmation.</p>
         </article>
       </div>
     </div>
@@ -793,7 +775,7 @@
       <h2 data-i18n="cta.title">Make your Android phone the LAN proxy gateway.</h2>
       <p data-i18n="cta.body">Buy once on Google Play, start the listener, connect nearby devices and verify real traffic from the phone.</p>
       <div class="actions">
-        <a class="button primary" href="https://play.google.com/store/apps/details?id=app.monoware.proxy" target="_blank" rel="noopener" data-i18n="cta.google">Open Google Play</a>
+        <a class="button primary" href="https://play.google.com/store/apps/details?id=app.monoware.monoproxy" target="_blank" rel="noopener" data-i18n="cta.google">Open Google Play</a>
         <a class="button secondary" href="../" data-i18n="cta.ios">View iOS version</a>
       </div>
     </div>
@@ -810,458 +792,462 @@
       <a href="../privacy-android-en.html" data-i18n="footer.privacy">Privacy</a>
       <a href="https://support.monoware.app/?product=monoproxy" target="_blank" rel="noopener" data-i18n="footer.support">Support</a>
       <a href="../" data-i18n="footer.ios">iOS</a>
-      <a href="https://play.google.com/store/apps/details?id=app.monoware.proxy" target="_blank" rel="noopener" data-i18n="footer.google">Google Play</a>
+      <a href="https://play.google.com/store/apps/details?id=app.monoware.monoproxy" target="_blank" rel="noopener" data-i18n="footer.google">Google Play</a>
     </div>
     <span>© 2026 MonoProxy</span>
   </div>
 </footer>
 <script>
   const translations = {
-    en: {
-      metaTitle: "MonoProxy for Android - Private LAN Proxy Gateway",
-      metaDescription: "MonoProxy for Android turns your phone into a private LAN proxy gateway with HTTP, HTTPS CONNECT, SOCKS, guided setup, VPN Bridge, device controls and local traffic insight.",
-      "nav.ios": "iOS",
-      "nav.setup": "Setup",
-      "nav.network": "Network",
-      "nav.bridge": "VPN Bridge",
-      "nav.features": "Features",
-      "nav.privacy": "Privacy",
-      "nav.google": "Google Play",
-      "hero.kicker": "Android 1.1.0",
-      "hero.line1": "Your Android phone,",
-      "hero.line2": "one private LAN gateway.",
-      "hero.body": "MonoProxy for Android shares a single local HTTP, HTTPS CONNECT and SOCKS endpoint with nearby devices, then shows whether the network, listener, client and real traffic path are actually working.",
-      "action.google": "Get it on Google Play",
-      "action.flow": "See the Android flow",
-      "hero.paid": "Paid download",
-      "hero.noSubscription": "No subscription",
-      "hero.noPro": "No ads or Pro tier",
-      "hero.statusTitle": "Traffic verified",
-      "hero.statusBody": "Live sessions, wave history and local traffic records.",
-      "release.version": "Built for Android LAN sharing",
-      "release.title": "A proxy gateway that explains every step before users get lost.",
-      "release.body": "The Android version keeps the main screen operational: selected address, protocol mode, connection path, four status blocks, live wave chart and one obvious action to connect another device.",
-      "release.card1Title": "Recommended network",
-      "release.card1Body": "Wi-Fi IPv4 is surfaced as the best local address. IPv6, cellular and advanced interfaces stay out of the way until needed.",
-      "release.card2Title": "Local setup page",
-      "release.card2Body": "Clients can open /setup to copy values, download PAC and run a reachability test before proxy traffic starts.",
-      "release.card3Title": "Connection path",
-      "release.card3Body": "Network, Listener, Client and Traffic each have a visible state, so \"running\" is not confused with \"verified\".",
-      "release.card4Title": "Notification actions",
-      "release.card4Body": "Connect device, copy address and stop are available from the persistent foreground notification.",
-      "flow.kicker": "Fast local setup",
-      "flow.title": "Start once. Connect nearby devices without guessing.",
-      "flow.body": "The Android flow is designed for the real support problem: users need to know which address to use, where to paste it, and whether traffic really passed through the phone.",
-      "flow.step1Title": "Choose Wi-Fi IPv4",
-      "flow.step1Body": "Pick the reachable local interface, not a cellular or system address clients cannot see.",
-      "flow.step2Title": "Open Connect Device",
-      "flow.step2Body": "Use the full-screen flow for Android, iOS, macOS or Windows client setup.",
-      "flow.step3Title": "Verify traffic",
-      "flow.step3Body": "The wave chart and status blocks update only after real client activity reaches the proxy path.",
-      "network.kicker": "Home network",
-      "network.title": "Put the Android phone in the middle.",
-      "network.body": "Run MonoProxy once, then point nearby laptops, desktops, tablets and test devices at the phone's local endpoint.",
-      "network.laptop": "Laptop",
-      "network.laptopDetail": "HTTP / SOCKS",
-      "network.desktop": "Desktop",
-      "network.desktopDetail": "Browser proxy",
-      "network.tablet": "Tablet",
-      "network.tabletDetail": "PAC or manual",
-      "network.console": "TV / console",
-      "network.consoleDetail": "Same LAN",
-      "network.badge": "One phone endpoint",
-      "bridge.kicker": "VPN Bridge",
-      "bridge.title": "Share the phone's active route, including VPN.",
-      "bridge.body": "MonoProxy does not create a device-wide VPN. It binds proxy upstream sockets to the selected Android network, so client traffic can exit through default routing, Wi-Fi, cellular or an already-active VPN network. Useful when only the phone has the desired VPN route.",
-      "bridge.defaultTag": "Default",
-      "bridge.defaultTitle": "System route",
-      "bridge.defaultBody": "Follow Android's current default network for normal proxy use.",
-      "bridge.vpnTag": "VPN",
-      "bridge.vpnTitle": "Bridge mode",
-      "bridge.vpnBody": "Send proxy upstream traffic through the active VPN Network when available.",
-      "bridge.wifiTag": "Wi-Fi",
-      "bridge.wifiTitle": "Local first",
-      "bridge.wifiBody": "Prefer a Wi-Fi network for stable LAN and internet access.",
-      "bridge.cellTag": "Cellular",
-      "bridge.cellTitle": "Fallback path",
-      "bridge.cellBody": "Route upstream requests through mobile data when that is the intended exit.",
-      "features.kicker": "Android toolkit",
-      "features.title": "Made for running a real proxy, not just opening a port.",
-      "features.body": "MonoProxy combines setup, security, runtime visibility and device control in one local-first Android app.",
-      "feature.homeTag": "Home",
-      "feature.homeTitle": "Live status, four checks and a wave chart",
-      "feature.homeBody": "The Android home panel keeps the service state, selected endpoint, connection path, session traffic and live rate trend visible at once.",
-      "feature.setupTag": "Guided setup",
-      "feature.setupTitle": "Connect Device is a full-screen flow",
-      "feature.setupBody": "Choose a client, configure proxy values, then verify reachability and traffic without squeezing everything into one dialog.",
-      "feature.trafficTag": "Traffic insight",
-      "feature.trafficTitle": "See which hosts actually used the proxy",
-      "feature.trafficBody": "Site traffic is aggregated by host, with upload, download and last activity totals kept locally on the phone.",
-      "feature.historyTag": "History",
-      "feature.historyTitle": "Local session records for debugging",
-      "feature.historyBody": "Browsing history records host-level proxy sessions only when enabled, so connection problems are easier to explain without storing paths or credentials.",
-      "feature.controlTag": "Control",
-      "feature.controlTitle": "Settings for outbound routing and security",
-      "feature.controlBody": "Configure SOCKS, authentication, private LAN access, outbound network mode, trusted network resume and local analytics.",
-      "feature.devicesTag": "Devices",
-      "feature.devicesTitle": "Client-level management for shared networks",
-      "feature.devicesBody": "Group clients by IP, add aliases, disconnect sessions, temporarily block devices and apply per-client limits for connections, bandwidth and quota.",
-      "privacy.kicker": "Private by design",
-      "privacy.title": "Local proxy, local control, one paid download.",
-      "privacy.body": "MonoProxy for Android runs on the phone without accounts, subscriptions or in-app unlocks. It relays client connections and keeps operational data local to the device.",
-      "privacy.purchaseTitle": "Google Play:",
-      "privacy.purchaseBody": " one-time paid download. Every Android feature is included after purchase.",
-      "privacy.card1Title": "Authentication available",
-      "privacy.card1Body": "Use username and password protection for HTTP and SOCKS5 clients on shared networks.",
-      "privacy.card2Title": "LAN-first access",
-      "privacy.card2Body": "Private clients only is the default posture, with allow and block controls for stronger policy.",
-      "privacy.card3Title": "TLS remains end to end",
-      "privacy.card3Body": "HTTPS CONNECT traffic is tunneled without certificate installation or content inspection.",
-      "privacy.card4Title": "Device data stays local",
-      "privacy.card4Body": "Aliases, usage counters, site totals and device policies are local runtime data, not a cloud account.",
-      "cta.title": "Make your Android phone the LAN proxy gateway.",
-      "cta.body": "Buy once on Google Play, start the listener, connect nearby devices and verify real traffic from the phone.",
-      "cta.google": "Open Google Play",
-      "cta.ios": "View iOS version",
-      "footer.privacy": "Privacy",
-      "footer.support": "Support",
-      "footer.ios": "iOS",
-      "footer.google": "Google Play"
+    "en": {
+        "metaTitle": "MonoProxy for Android - Private LAN Proxy Gateway",
+        "metaDescription": "MonoProxy for Android turns your phone into a private LAN proxy gateway with HTTP, HTTPS CONNECT, SOCKS, guided setup, VPN Bridge, device controls and local traffic insight.",
+        "nav.ios": "iOS",
+        "nav.setup": "Setup",
+        "nav.network": "Network",
+        "nav.bridge": "VPN Bridge",
+        "nav.features": "Features",
+        "nav.privacy": "Privacy",
+        "nav.google": "Google Play",
+        "hero.kicker": "Android 1.6 · Update preview",
+        "hero.line1": "Your Android phone,",
+        "hero.line2": "one private LAN gateway.",
+        "hero.body": "MonoProxy for Android shares a single local HTTP, HTTPS CONNECT and SOCKS endpoint with nearby devices, then shows whether the network, listener, client and real traffic path are actually working.",
+        "action.google": "Get it on Google Play",
+        "action.flow": "See the Android flow",
+        "hero.paid": "Paid download",
+        "hero.noSubscription": "No subscription",
+        "hero.noPro": "No ads or Pro tier",
+        "hero.statusTitle": "Traffic verified",
+        "hero.statusBody": "Live sessions, wave history and local traffic records.",
+        "release.version": "A clearer connection workspace",
+        "release.title": "Connect, inspect and share from one focused workspace.",
+        "release.body": "The 1.6 update brings a more focused connection screen, searchable sessions, portable profiles and full-screen diagnostics. The images preview the new interface; Google Play availability follows release review.",
+        "release.card1Title": "Session analysis",
+        "release.card1Body": "Search and filter sessions by protocol or result, inspect failure stages, and explore a captured analysis snapshot.",
+        "release.card2Title": "Portable profiles",
+        "release.card2Body": "Preview imports, duplicate without credentials, and exchange compatible server profiles between Android and iOS.",
+        "release.card3Title": "Configuration sharing",
+        "release.card3Body": "Copy or share HTTP, SOCKS, PAC, QR and command formats. Including credentials always requires confirmation.",
+        "release.card4Title": "Exit diagnostics",
+        "release.card4Body": "Inspect the selected exit and optionally run one consented 1 MiB speed sample. No measurement runs automatically.",
+        "flow.kicker": "Fast local setup",
+        "flow.title": "Start once. Connect nearby devices without guessing.",
+        "flow.body": "The Android flow is designed for the real support problem: users need to know which address to use, where to paste it, and whether traffic really passed through the phone.",
+        "flow.step1Title": "Choose Wi-Fi IPv4",
+        "flow.step1Body": "Pick the reachable local interface, not a cellular or system address clients cannot see.",
+        "flow.step2Title": "Open Connect Device",
+        "flow.step2Body": "Use the full-screen flow for Android, iOS, macOS or Windows client setup.",
+        "flow.step3Title": "Verify traffic",
+        "flow.step3Body": "The wave chart and status blocks update only after real client activity reaches the proxy path.",
+        "network.kicker": "Home network",
+        "network.title": "Put the Android phone in the middle.",
+        "network.body": "Run MonoProxy once, then point nearby laptops, desktops, tablets and test devices at the phone's local endpoint.",
+        "network.laptop": "Laptop",
+        "network.laptopDetail": "HTTP / SOCKS",
+        "network.desktop": "Desktop",
+        "network.desktopDetail": "Browser proxy",
+        "network.tablet": "Tablet",
+        "network.tabletDetail": "PAC or manual",
+        "network.console": "TV / console",
+        "network.consoleDetail": "Same LAN",
+        "network.badge": "One phone endpoint",
+        "bridge.kicker": "VPN Bridge",
+        "bridge.title": "Share the phone's active route, including VPN.",
+        "bridge.body": "MonoProxy does not create a device-wide VPN. It binds proxy upstream sockets to the selected Android network, so client traffic can exit through default routing, Wi-Fi, cellular or an already-active VPN network. Useful when only the phone has the desired VPN route.",
+        "bridge.defaultTag": "Default",
+        "bridge.defaultTitle": "System route",
+        "bridge.defaultBody": "Follow Android's current default network for normal proxy use.",
+        "bridge.vpnTag": "VPN",
+        "bridge.vpnTitle": "Bridge mode",
+        "bridge.vpnBody": "Send proxy upstream traffic through the active VPN Network when available.",
+        "bridge.wifiTag": "Wi-Fi",
+        "bridge.wifiTitle": "Local first",
+        "bridge.wifiBody": "Prefer a Wi-Fi network for stable LAN and internet access.",
+        "bridge.cellTag": "Cellular",
+        "bridge.cellTitle": "Fallback path",
+        "bridge.cellBody": "Route upstream requests through mobile data when that is the intended exit.",
+        "features.kicker": "Android toolkit",
+        "features.title": "Made for running a real proxy, not just opening a port.",
+        "features.body": "Preview of the 1.6 interface. The connection, activity and tools screens are captures of the signed app on an emulator; the diagnostic view is a native render with sample data.",
+        "feature.homeTag": "Connection",
+        "feature.homeTitle": "Your endpoint and next action, up front",
+        "feature.homeBody": "Read or copy the selected address, follow Network → Listener → Client → Traffic, and connect a device from the main screen.",
+        "feature.setupTag": "Activity",
+        "feature.setupTitle": "Find the session behind a problem",
+        "feature.setupBody": "Open sessions, traffic totals and local history from one activity workspace. Filter results and inspect captured session analysis.",
+        "feature.trafficTag": "Diagnostics",
+        "feature.trafficTitle": "A full workspace for troubleshooting",
+        "feature.trafficBody": "Follow the connection path, inspect resource counters, preview a privacy-safe report and choose optional exit checks.",
+        "feature.historyTag": "Tools",
+        "feature.historyTitle": "Profiles, devices and quick access",
+        "feature.historyBody": "Keep server profiles, client controls, configuration sharing, the activity journal and Android background controls within reach.",
+        "feature.controlTag": "Control",
+        "feature.controlTitle": "Settings for outbound routing and security",
+        "feature.controlBody": "Configure SOCKS, authentication, private LAN access, outbound network mode, trusted network resume and local analytics.",
+        "feature.devicesTag": "Devices",
+        "feature.devicesTitle": "Client-level management for shared networks",
+        "feature.devicesBody": "Group clients by IP, add aliases, disconnect sessions, temporarily block devices and apply per-client limits for connections, bandwidth and quota.",
+        "privacy.kicker": "Private by design",
+        "privacy.title": "Local proxy, local control, one paid download.",
+        "privacy.body": "MonoProxy for Android runs on the phone without accounts, subscriptions or in-app unlocks. It relays client connections and keeps operational data local to the device.",
+        "privacy.purchaseTitle": "Google Play:",
+        "privacy.purchaseBody": " one-time paid download. Every Android feature is included after purchase.",
+        "privacy.card1Title": "Authentication available",
+        "privacy.card1Body": "Use username and password protection for HTTP and SOCKS5 clients on shared networks.",
+        "privacy.card2Title": "LAN-first access",
+        "privacy.card2Body": "Private clients only is the default posture, with allow and block controls for stronger policy.",
+        "privacy.card3Title": "TLS remains end to end",
+        "privacy.card3Body": "HTTPS CONNECT traffic is tunneled without certificate installation or content inspection.",
+        "privacy.card4Title": "Device data stays local",
+        "privacy.card4Body": "Profiles, device policies and traffic records stay on your phone. Optional exit IP and speed checks contact ipify and Cloudflare only after confirmation.",
+        "cta.title": "Make your Android phone the LAN proxy gateway.",
+        "cta.body": "Buy once on Google Play, start the listener, connect nearby devices and verify real traffic from the phone.",
+        "cta.google": "Open Google Play",
+        "cta.ios": "View iOS version",
+        "footer.privacy": "Privacy",
+        "footer.support": "Support",
+        "footer.ios": "iOS",
+        "footer.google": "Google Play",
+        "preview.note": "1.6 interface preview · Available after Google Play review"
     },
-    zh: {
-      metaTitle: "MonoProxy Android - 私有局域网代理网关",
-      metaDescription: "MonoProxy Android 可将手机变成私有局域网代理网关，支持 HTTP、HTTPS CONNECT、SOCKS、引导式配置、VPN Bridge、设备控制和本地流量洞察。",
-      "nav.ios": "iOS",
-      "nav.setup": "配置",
-      "nav.network": "网络",
-      "nav.bridge": "VPN Bridge",
-      "nav.features": "功能",
-      "nav.privacy": "隐私",
-      "nav.google": "Google Play",
-      "hero.kicker": "Android 1.1.0",
-      "hero.line1": "你的 Android 手机，",
-      "hero.line2": "一个私有局域网网关。",
-      "hero.body": "MonoProxy Android 向附近设备共享一个本地 HTTP、HTTPS CONNECT 和 SOCKS 端点，并清楚显示网络、监听器、客户端和真实流量路径是否正常工作。",
-      "action.google": "前往 Google Play",
-      "action.flow": "查看 Android 流程",
-      "hero.paid": "付费下载",
-      "hero.noSubscription": "无订阅",
-      "hero.noPro": "无广告或 Pro 档位",
-      "hero.statusTitle": "流量已验证",
-      "hero.statusBody": "实时会话、波形历史和本地流量记录。",
-      "release.version": "为 Android 局域网共享而构建",
-      "release.title": "一个会在用户迷路前解释每一步的代理网关。",
-      "release.body": "Android 版让首页保持可操作：所选地址、协议模式、连接路径、四个状态块、实时波形图，以及一个清晰的连接设备入口。",
-      "release.card1Title": "推荐网络",
-      "release.card1Body": "优先展示 Wi-Fi IPv4 作为最佳本地地址。IPv6、蜂窝网络和高级接口会在需要前保持收起。",
-      "release.card2Title": "本地配置页",
-      "release.card2Body": "客户端可打开 /setup 复制参数、下载 PAC，并在代理流量开始前执行可达性测试。",
-      "release.card3Title": "连接路径",
-      "release.card3Body": "Network、Listener、Client 和 Traffic 都有清晰状态，因此“正在运行”不会和“已验证”混淆。",
-      "release.card4Title": "通知快捷操作",
-      "release.card4Body": "常驻前台通知中提供连接设备、复制地址和停止操作。",
-      "flow.kicker": "快速本地配置",
-      "flow.title": "启动一次。不用猜也能连接附近设备。",
-      "flow.body": "Android 流程面向真实支持问题：用户需要知道用哪个地址、粘贴到哪里，以及流量是否真的经过手机。",
-      "flow.step1Title": "选择 Wi-Fi IPv4",
-      "flow.step1Body": "选择可被客户端访问的本地接口，而不是客户端看不到的蜂窝或系统地址。",
-      "flow.step2Title": "打开连接设备",
-      "flow.step2Body": "使用全屏流程配置 Android、iOS、macOS 或 Windows 客户端。",
-      "flow.step3Title": "验证流量",
-      "flow.step3Body": "只有真实客户端活动到达代理路径后，波形图和状态块才会更新。",
-      "network.kicker": "家庭网络",
-      "network.title": "把 Android 手机放在中间。",
-      "network.body": "运行一次 MonoProxy，然后让附近的笔记本、台式机、平板和测试设备指向手机的本地端点。",
-      "network.laptop": "笔记本",
-      "network.laptopDetail": "HTTP / SOCKS",
-      "network.desktop": "台式机",
-      "network.desktopDetail": "浏览器代理",
-      "network.tablet": "平板",
-      "network.tabletDetail": "PAC 或手动",
-      "network.console": "电视 / 主机",
-      "network.consoleDetail": "同一局域网",
-      "network.badge": "一个手机端点",
-      "bridge.kicker": "VPN Bridge",
-      "bridge.title": "共享手机当前路由，包括 VPN。",
-      "bridge.body": "MonoProxy 不会创建整机 VPN。它会将代理上游 socket 绑定到所选 Android 网络，让客户端流量可通过默认路由、Wi-Fi、蜂窝网络或已激活的 VPN 网络出口离开。适用于只有手机拥有目标 VPN 路由的场景。",
-      "bridge.defaultTag": "默认",
-      "bridge.defaultTitle": "系统路由",
-      "bridge.defaultBody": "普通代理使用 Android 当前默认网络。",
-      "bridge.vpnTag": "VPN",
-      "bridge.vpnTitle": "桥接模式",
-      "bridge.vpnBody": "可用时，将代理上游流量发送到活跃 VPN Network。",
-      "bridge.wifiTag": "Wi-Fi",
-      "bridge.wifiTitle": "本地优先",
-      "bridge.wifiBody": "优先使用 Wi-Fi 获得稳定的局域网和互联网访问。",
-      "bridge.cellTag": "蜂窝",
-      "bridge.cellTitle": "备用出口",
-      "bridge.cellBody": "当移动数据是目标出口时，通过蜂窝网络转发上游请求。",
-      "features.kicker": "Android 工具集",
-      "features.title": "面向真实代理运行，而不是只打开一个端口。",
-      "features.body": "MonoProxy 将配置、安全、运行可见性和设备控制整合在一个本地优先的 Android App 中。",
-      "feature.homeTag": "首页",
-      "feature.homeTitle": "实时状态、四项检查和波形图",
-      "feature.homeBody": "Android 首页同时展示服务状态、所选端点、连接路径、会话流量和实时速率趋势。",
-      "feature.setupTag": "引导配置",
-      "feature.setupTitle": "Connect Device 是全屏流程",
-      "feature.setupBody": "选择客户端、配置代理参数，再验证可达性和流量，不再把所有东西挤进一个弹窗。",
-      "feature.trafficTag": "流量洞察",
-      "feature.trafficTitle": "看清哪些主机真正使用了代理",
-      "feature.trafficBody": "站点流量按主机聚合，上传、下载和最后活动时间都保存在手机本地。",
-      "feature.historyTag": "历史",
-      "feature.historyTitle": "用于排查问题的本地会话记录",
-      "feature.historyBody": "开启后仅记录主机级代理会话，让连接问题更容易解释，同时不保存路径或凭据。",
-      "feature.controlTag": "控制",
-      "feature.controlTitle": "出站路由与安全设置",
-      "feature.controlBody": "配置 SOCKS、认证、私有局域网访问、出站网络模式、可信网络恢复和本地分析。",
-      "feature.devicesTag": "设备",
-      "feature.devicesTitle": "适合共享网络的客户端级管理",
-      "feature.devicesBody": "按 IP 聚合客户端、添加别名、断开会话、临时阻止设备，并设置每客户端连接数、带宽和配额限制。",
-      "privacy.kicker": "隐私优先",
-      "privacy.title": "本地代理、本地控制、一次付费下载。",
-      "privacy.body": "MonoProxy Android 在手机上运行，不需要账号、订阅或应用内解锁。它转发客户端连接，并将运行数据保留在设备本地。",
-      "privacy.purchaseTitle": "Google Play：",
-      "privacy.purchaseBody": " 一次付费下载。购买后包含所有 Android 功能。",
-      "privacy.card1Title": "可用认证",
-      "privacy.card1Body": "在共享网络中，用用户名和密码保护 HTTP 与 SOCKS5 客户端。",
-      "privacy.card2Title": "局域网优先访问",
-      "privacy.card2Body": "默认只允许私有客户端，并提供允许和阻止控制以建立更强策略。",
-      "privacy.card3Title": "TLS 保持端到端",
-      "privacy.card3Body": "HTTPS CONNECT 流量无需安装证书或检查内容即可隧道转发。",
-      "privacy.card4Title": "设备数据保留本地",
-      "privacy.card4Body": "别名、使用计数、站点汇总和设备策略都是本地运行数据，不是云账号数据。",
-      "cta.title": "让你的 Android 手机成为局域网代理网关。",
-      "cta.body": "在 Google Play 买断后，启动监听器、连接附近设备，并从手机验证真实流量。",
-      "cta.google": "打开 Google Play",
-      "cta.ios": "查看 iOS 版本",
-      "footer.privacy": "隐私",
-      "footer.support": "支持",
-      "footer.ios": "iOS",
-      "footer.google": "Google Play"
+    "zh": {
+        "metaTitle": "MonoProxy Android - 私有局域网代理网关",
+        "metaDescription": "MonoProxy Android 可将手机变成私有局域网代理网关，支持 HTTP、HTTPS CONNECT、SOCKS、引导式配置、VPN Bridge、设备控制和本地流量洞察。",
+        "nav.ios": "iOS",
+        "nav.setup": "配置",
+        "nav.network": "网络",
+        "nav.bridge": "VPN Bridge",
+        "nav.features": "功能",
+        "nav.privacy": "隐私",
+        "nav.google": "Google Play",
+        "hero.kicker": "Android 1.6 · 更新预览",
+        "hero.line1": "手机网络，",
+        "hero.line2": "分享给身边设备。",
+        "hero.body": "MonoProxy Android 向附近设备共享一个本地 HTTP、HTTPS CONNECT 和 SOCKS 端点，并清楚显示网络、监听器、客户端和真实流量路径是否正常工作。",
+        "action.google": "前往 Google Play",
+        "action.flow": "查看 Android 流程",
+        "hero.paid": "付费下载",
+        "hero.noSubscription": "无订阅",
+        "hero.noPro": "无广告或 Pro 档位",
+        "hero.statusTitle": "流量已验证",
+        "hero.statusBody": "实时会话、波形历史和本地流量记录。",
+        "release.version": "更清晰的连接工作区",
+        "release.title": "连接、排障与分享，各有清晰入口。",
+        "release.body": "1.6 更新重新整理连接首页，增强会话搜索、便携配置与全屏诊断。页面图片为新版界面预览，正式可用时间以 Google Play 审核发布为准。",
+        "release.card1Title": "会话分析",
+        "release.card1Body": "按协议和结果搜索、筛选会话，查看失败阶段，并从捕获的分析快照继续定位问题。",
+        "release.card2Title": "便携配置",
+        "release.card2Body": "导入前预览，创建不含凭据的副本，在 Android 与 iOS 之间交换兼容的服务端配置。",
+        "release.card3Title": "多格式分享",
+        "release.card3Body": "复制或分享 HTTP、SOCKS、PAC、二维码和命令格式；包含凭据的内容每次都需要确认。",
+        "release.card4Title": "出口诊断",
+        "release.card4Body": "查看所选出口，确认后可执行一次 1 MiB 出口采样。不会自动测速。",
+        "flow.kicker": "快速本地配置",
+        "flow.title": "启动一次。不用猜也能连接附近设备。",
+        "flow.body": "Android 流程面向真实支持问题：用户需要知道用哪个地址、粘贴到哪里，以及流量是否真的经过手机。",
+        "flow.step1Title": "选择 Wi-Fi IPv4",
+        "flow.step1Body": "选择可被客户端访问的本地接口，而不是客户端看不到的蜂窝或系统地址。",
+        "flow.step2Title": "打开连接设备",
+        "flow.step2Body": "使用全屏流程配置 Android、iOS、macOS 或 Windows 客户端。",
+        "flow.step3Title": "验证流量",
+        "flow.step3Body": "只有真实客户端活动到达代理路径后，波形图和状态块才会更新。",
+        "network.kicker": "家庭网络",
+        "network.title": "把 Android 手机放在中间。",
+        "network.body": "运行一次 MonoProxy，然后让附近的笔记本、台式机、平板和测试设备指向手机的本地端点。",
+        "network.laptop": "笔记本",
+        "network.laptopDetail": "HTTP / SOCKS",
+        "network.desktop": "台式机",
+        "network.desktopDetail": "浏览器代理",
+        "network.tablet": "平板",
+        "network.tabletDetail": "PAC 或手动",
+        "network.console": "电视 / 主机",
+        "network.consoleDetail": "同一局域网",
+        "network.badge": "一个手机端点",
+        "bridge.kicker": "VPN Bridge",
+        "bridge.title": "共享手机当前路由，包括 VPN。",
+        "bridge.body": "MonoProxy 不会创建整机 VPN。它会将代理上游 socket 绑定到所选 Android 网络，让客户端流量可通过默认路由、Wi-Fi、蜂窝网络或已激活的 VPN 网络出口离开。适用于只有手机拥有目标 VPN 路由的场景。",
+        "bridge.defaultTag": "默认",
+        "bridge.defaultTitle": "系统路由",
+        "bridge.defaultBody": "普通代理使用 Android 当前默认网络。",
+        "bridge.vpnTag": "VPN",
+        "bridge.vpnTitle": "桥接模式",
+        "bridge.vpnBody": "可用时，将代理上游流量发送到活跃 VPN Network。",
+        "bridge.wifiTag": "Wi-Fi",
+        "bridge.wifiTitle": "本地优先",
+        "bridge.wifiBody": "优先使用 Wi-Fi 获得稳定的局域网和互联网访问。",
+        "bridge.cellTag": "蜂窝",
+        "bridge.cellTitle": "备用出口",
+        "bridge.cellBody": "当移动数据是目标出口时，通过蜂窝网络转发上游请求。",
+        "features.kicker": "Android 工具集",
+        "features.title": "面向真实代理运行，而不是只打开一个端口。",
+        "features.body": "1.6 界面预览。连接、活动与工具页面来自模拟器中的签名应用实拍；诊断页面为包含示例数据的原生界面渲染。",
+        "feature.homeTag": "连接",
+        "feature.homeTitle": "地址与下一步操作，直接可见",
+        "feature.homeBody": "读取、复制所选地址，沿网络、监听、客户端与流量确认连接进度，从首页连接设备。",
+        "feature.setupTag": "活动",
+        "feature.setupTitle": "找到问题对应的那次会话",
+        "feature.setupBody": "在统一的活动工作区打开会话、流量汇总与本地历史；筛选结果并查看捕获的会话分析。",
+        "feature.trafficTag": "诊断",
+        "feature.trafficTitle": "完整页面，逐步排查",
+        "feature.trafficBody": "沿连接路径查看状态与资源计数，预览隐私安全的报告，按需选择出口检查。",
+        "feature.historyTag": "工具",
+        "feature.historyTitle": "配置、设备与快捷操作集中管理",
+        "feature.historyBody": "服务端配置、客户端控制、多格式分享、运行记录和 Android 后台控制，都有直接入口。",
+        "feature.controlTag": "控制",
+        "feature.controlTitle": "出站路由与安全设置",
+        "feature.controlBody": "配置 SOCKS、认证、私有局域网访问、出站网络模式、可信网络恢复和本地分析。",
+        "feature.devicesTag": "设备",
+        "feature.devicesTitle": "适合共享网络的客户端级管理",
+        "feature.devicesBody": "按 IP 聚合客户端、添加别名、断开会话、临时阻止设备，并设置每客户端连接数、带宽和配额限制。",
+        "privacy.kicker": "隐私优先",
+        "privacy.title": "本地代理、本地控制、一次付费下载。",
+        "privacy.body": "MonoProxy Android 在手机上运行，不需要账号、订阅或应用内解锁。它转发客户端连接，并将运行数据保留在设备本地。",
+        "privacy.purchaseTitle": "Google Play：",
+        "privacy.purchaseBody": " 一次付费下载。购买后包含所有 Android 功能。",
+        "privacy.card1Title": "可用认证",
+        "privacy.card1Body": "在共享网络中，用用户名和密码保护 HTTP 与 SOCKS5 客户端。",
+        "privacy.card2Title": "局域网优先访问",
+        "privacy.card2Body": "默认只允许私有客户端，并提供允许和阻止控制以建立更强策略。",
+        "privacy.card3Title": "TLS 保持端到端",
+        "privacy.card3Body": "HTTPS CONNECT 流量无需安装证书或检查内容即可隧道转发。",
+        "privacy.card4Title": "设备数据保留本地",
+        "privacy.card4Body": "配置、设备策略和流量记录保留在手机本地。可选出口 IP 检查和采样仅在确认后联系 ipify 与 Cloudflare。",
+        "cta.title": "让你的 Android 手机成为局域网代理网关。",
+        "cta.body": "在 Google Play 买断后，启动监听器、连接附近设备，并从手机验证真实流量。",
+        "cta.google": "打开 Google Play",
+        "cta.ios": "查看 iOS 版本",
+        "footer.privacy": "隐私",
+        "footer.support": "支持",
+        "footer.ios": "iOS",
+        "footer.google": "Google Play",
+        "preview.note": "1.6 界面预览 · Google Play 审核发布后可用"
     },
-    ja: {
-      metaTitle: "MonoProxy Android - プライベート LAN プロキシゲートウェイ",
-      metaDescription: "MonoProxy Android は、HTTP、HTTPS CONNECT、SOCKS、ガイド付き設定、VPN Bridge、デバイス管理、ローカルトラフィック分析を備えたプライベート LAN プロキシゲートウェイです。",
-      "nav.ios": "iOS",
-      "nav.setup": "設定",
-      "nav.network": "ネットワーク",
-      "nav.bridge": "VPN Bridge",
-      "nav.features": "機能",
-      "nav.privacy": "プライバシー",
-      "nav.google": "Google Play",
-      "hero.kicker": "Android 1.1.0",
-      "hero.line1": "Android スマートフォンを、",
-      "hero.line2": "プライベート LAN ゲートウェイに。",
-      "hero.body": "MonoProxy Android は近くのデバイスへ 1 つのローカル HTTP、HTTPS CONNECT、SOCKS エンドポイントを共有し、ネットワーク、リスナー、クライアント、実トラフィック経路が動作しているかを表示します。",
-      "action.google": "Google Play で見る",
-      "action.flow": "Android の流れを見る",
-      "hero.paid": "有料ダウンロード",
-      "hero.noSubscription": "サブスクリプションなし",
-      "hero.noPro": "広告や Pro 階層なし",
-      "hero.statusTitle": "通信確認済み",
-      "hero.statusBody": "ライブセッション、波形履歴、ローカル通信記録。",
-      "release.version": "Android LAN 共有向け",
-      "release.title": "迷う前に各ステップを説明するプロキシゲートウェイ。",
-      "release.body": "Android 版は、選択アドレス、プロトコルモード、接続経路、4 つの状態ブロック、ライブ波形、デバイス接続の明確な操作をホームにまとめます。",
-      "release.card1Title": "推奨ネットワーク",
-      "release.card1Body": "Wi-Fi IPv4 を最適なローカルアドレスとして表示します。IPv6、モバイル通信、詳細インターフェースは必要になるまで控えめにします。",
-      "release.card2Title": "ローカル設定ページ",
-      "release.card2Body": "クライアントは /setup を開き、値のコピー、PAC のダウンロード、プロキシ通信前の到達性テストを実行できます。",
-      "release.card3Title": "接続経路",
-      "release.card3Body": "Network、Listener、Client、Traffic がそれぞれ状態を持つため、「実行中」と「確認済み」を混同しません。",
-      "release.card4Title": "通知アクション",
-      "release.card4Body": "常駐通知からデバイス接続、アドレスコピー、停止を実行できます。",
-      "flow.kicker": "高速なローカル設定",
-      "flow.title": "一度開始。迷わず近くのデバイスを接続。",
-      "flow.body": "Android の流れは、どのアドレスを使うか、どこへ貼るか、通信が本当にスマートフォンを通ったかを明確にします。",
-      "flow.step1Title": "Wi-Fi IPv4 を選択",
-      "flow.step1Body": "クライアントから到達できるローカルインターフェースを選びます。モバイル通信やシステムアドレスではありません。",
-      "flow.step2Title": "Connect Device を開く",
-      "flow.step2Body": "Android、iOS、macOS、Windows のクライアント設定を全画面フローで進めます。",
-      "flow.step3Title": "通信を確認",
-      "flow.step3Body": "実際のクライアント活動がプロキシ経路へ届いた後だけ、波形と状態ブロックが更新されます。",
-      "network.kicker": "ホームネットワーク",
-      "network.title": "Android スマートフォンを中心に。",
-      "network.body": "MonoProxy を一度起動し、近くのノート PC、デスクトップ、タブレット、テスト端末をスマートフォンのローカルエンドポイントへ向けます。",
-      "network.laptop": "ノート PC",
-      "network.laptopDetail": "HTTP / SOCKS",
-      "network.desktop": "デスクトップ",
-      "network.desktopDetail": "ブラウザプロキシ",
-      "network.tablet": "タブレット",
-      "network.tabletDetail": "PAC または手動",
-      "network.console": "TV / コンソール",
-      "network.consoleDetail": "同じ LAN",
-      "network.badge": "1 つのスマートフォン端点",
-      "bridge.kicker": "VPN Bridge",
-      "bridge.title": "VPN を含むスマートフォンの有効ルートを共有。",
-      "bridge.body": "MonoProxy は端末全体の VPN を作りません。プロキシの上流ソケットを選択した Android ネットワークへ束縛し、クライアント通信を既定ルート、Wi-Fi、モバイル通信、または有効な VPN ネットワークから出せます。目的の VPN ルートがスマートフォンにしかない時に便利です。",
-      "bridge.defaultTag": "既定",
-      "bridge.defaultTitle": "システムルート",
-      "bridge.defaultBody": "通常のプロキシ利用では Android の現在の既定ネットワークに従います。",
-      "bridge.vpnTag": "VPN",
-      "bridge.vpnTitle": "ブリッジモード",
-      "bridge.vpnBody": "利用可能な場合、プロキシ上流通信を有効な VPN Network へ送ります。",
-      "bridge.wifiTag": "Wi-Fi",
-      "bridge.wifiTitle": "ローカル優先",
-      "bridge.wifiBody": "安定した LAN とインターネット接続のため Wi-Fi を優先します。",
-      "bridge.cellTag": "モバイル",
-      "bridge.cellTitle": "予備経路",
-      "bridge.cellBody": "モバイルデータを出口にしたい場合、上流リクエストをそこへ流します。",
-      "features.kicker": "Android ツールキット",
-      "features.title": "単にポートを開くだけでなく、実際のプロキシ運用のために。",
-      "features.body": "MonoProxy は設定、セキュリティ、実行状態の可視化、デバイス制御を 1 つのローカル優先 Android アプリにまとめます。",
-      "feature.homeTag": "ホーム",
-      "feature.homeTitle": "ライブ状態、4 つの確認、波形チャート",
-      "feature.homeBody": "Android のホームはサービス状態、選択端点、接続経路、セッション通信、ライブ速度傾向を同時に表示します。",
-      "feature.setupTag": "ガイド設定",
-      "feature.setupTitle": "Connect Device は全画面フロー",
-      "feature.setupBody": "クライアントを選び、プロキシ値を設定し、到達性と通信を確認します。すべてを小さなダイアログに詰め込みません。",
-      "feature.trafficTag": "通信インサイト",
-      "feature.trafficTitle": "実際にプロキシを使ったホストを確認",
-      "feature.trafficBody": "サイト通信はホスト単位で集計され、アップロード、ダウンロード、最終活動がスマートフォンにローカル保存されます。",
-      "feature.historyTag": "履歴",
-      "feature.historyTitle": "デバッグ用のローカルセッション記録",
-      "feature.historyBody": "有効時だけホスト単位のプロキシセッションを記録し、パスや認証情報を保存せずに接続問題を説明しやすくします。",
-      "feature.controlTag": "制御",
-      "feature.controlTitle": "送信ルーティングとセキュリティ設定",
-      "feature.controlBody": "SOCKS、認証、プライベート LAN アクセス、送信ネットワークモード、信頼済みネットワーク再開、ローカル分析を設定できます。",
-      "feature.devicesTag": "デバイス",
-      "feature.devicesTitle": "共有ネットワーク向けのクライアント管理",
-      "feature.devicesBody": "IP ごとにクライアントをまとめ、別名、切断、一時ブロック、接続数、帯域、通信量の制限を適用できます。",
-      "privacy.kicker": "プライバシー重視",
-      "privacy.title": "ローカルプロキシ、ローカル制御、1 回の有料ダウンロード。",
-      "privacy.body": "MonoProxy Android はアカウント、サブスクリプション、アプリ内解除なしでスマートフォン上で動作します。クライアント接続を中継し、運用データは端末内に保持します。",
-      "privacy.purchaseTitle": "Google Play:",
-      "privacy.purchaseBody": " 1 回の有料ダウンロード。購入後はすべての Android 機能が含まれます。",
-      "privacy.card1Title": "認証を利用可能",
-      "privacy.card1Body": "共有ネットワークで HTTP と SOCKS5 クライアントをユーザー名とパスワードで保護できます。",
-      "privacy.card2Title": "LAN 優先アクセス",
-      "privacy.card2Body": "既定ではプライベートクライアントのみ許可し、より強いポリシー向けに許可とブロックを制御できます。",
-      "privacy.card3Title": "TLS はエンドツーエンドのまま",
-      "privacy.card3Body": "HTTPS CONNECT 通信は証明書のインストールや内容検査なしにトンネルされます。",
-      "privacy.card4Title": "デバイスデータはローカルに保持",
-      "privacy.card4Body": "別名、使用カウンター、サイト合計、デバイスポリシーはローカル実行データであり、クラウドアカウントではありません。",
-      "cta.title": "Android スマートフォンを LAN プロキシゲートウェイに。",
-      "cta.body": "Google Play で一度購入し、リスナーを開始し、近くのデバイスを接続し、スマートフォンから実通信を確認します。",
-      "cta.google": "Google Play を開く",
-      "cta.ios": "iOS 版を見る",
-      "footer.privacy": "プライバシー",
-      "footer.support": "サポート",
-      "footer.ios": "iOS",
-      "footer.google": "Google Play"
+    "ja": {
+        "metaTitle": "MonoProxy Android - プライベート LAN プロキシゲートウェイ",
+        "metaDescription": "MonoProxy Android は、HTTP、HTTPS CONNECT、SOCKS、ガイド付き設定、VPN Bridge、デバイス管理、ローカルトラフィック分析を備えたプライベート LAN プロキシゲートウェイです。",
+        "nav.ios": "iOS",
+        "nav.setup": "設定",
+        "nav.network": "ネットワーク",
+        "nav.bridge": "VPN Bridge",
+        "nav.features": "機能",
+        "nav.privacy": "プライバシー",
+        "nav.google": "Google Play",
+        "hero.kicker": "Android 1.6 · 更新プレビュー",
+        "hero.line1": "Android スマートフォンを、",
+        "hero.line2": "プライベート LAN ゲートウェイに。",
+        "hero.body": "MonoProxy Android は近くのデバイスへ 1 つのローカル HTTP、HTTPS CONNECT、SOCKS エンドポイントを共有し、ネットワーク、リスナー、クライアント、実トラフィック経路が動作しているかを表示します。",
+        "action.google": "Google Play で見る",
+        "action.flow": "Android の流れを見る",
+        "hero.paid": "有料ダウンロード",
+        "hero.noSubscription": "サブスクリプションなし",
+        "hero.noPro": "広告や Pro 階層なし",
+        "hero.statusTitle": "通信確認済み",
+        "hero.statusBody": "ライブセッション、波形履歴、ローカル通信記録。",
+        "release.version": "見やすい接続ワークスペース",
+        "release.title": "接続、確認、共有へのわかりやすい入口。",
+        "release.body": "1.6 では接続画面を整理し、セッション検索、持ち運べる設定、全画面診断を強化しました。画像は新画面のプレビューです。提供開始は Google Play の審査・公開後となります。",
+        "release.card1Title": "セッション分析",
+        "release.card1Body": "プロトコルや結果でセッションを検索・絞り込み、失敗段階と保存した分析スナップショットを確認できます。",
+        "release.card2Title": "持ち運べる設定",
+        "release.card2Body": "読み込み前の確認、認証情報を含めない複製、Android と iOS 間の互換設定交換に対応します。",
+        "release.card3Title": "複数形式で共有",
+        "release.card3Body": "HTTP、SOCKS、PAC、QR、コマンド形式をコピー・共有。認証情報を含める際は毎回確認します。",
+        "release.card4Title": "出口の診断",
+        "release.card4Body": "選択中の出口を確認し、同意後に1回だけ 1 MiB の速度サンプルを取得できます。自動測定は行いません。",
+        "flow.kicker": "高速なローカル設定",
+        "flow.title": "一度開始。迷わず近くのデバイスを接続。",
+        "flow.body": "Android の流れは、どのアドレスを使うか、どこへ貼るか、通信が本当にスマートフォンを通ったかを明確にします。",
+        "flow.step1Title": "Wi-Fi IPv4 を選択",
+        "flow.step1Body": "クライアントから到達できるローカルインターフェースを選びます。モバイル通信やシステムアドレスではありません。",
+        "flow.step2Title": "Connect Device を開く",
+        "flow.step2Body": "Android、iOS、macOS、Windows のクライアント設定を全画面フローで進めます。",
+        "flow.step3Title": "通信を確認",
+        "flow.step3Body": "実際のクライアント活動がプロキシ経路へ届いた後だけ、波形と状態ブロックが更新されます。",
+        "network.kicker": "ホームネットワーク",
+        "network.title": "Android スマートフォンを中心に。",
+        "network.body": "MonoProxy を一度起動し、近くのノート PC、デスクトップ、タブレット、テスト端末をスマートフォンのローカルエンドポイントへ向けます。",
+        "network.laptop": "ノート PC",
+        "network.laptopDetail": "HTTP / SOCKS",
+        "network.desktop": "デスクトップ",
+        "network.desktopDetail": "ブラウザプロキシ",
+        "network.tablet": "タブレット",
+        "network.tabletDetail": "PAC または手動",
+        "network.console": "TV / コンソール",
+        "network.consoleDetail": "同じ LAN",
+        "network.badge": "1 つのスマートフォン端点",
+        "bridge.kicker": "VPN Bridge",
+        "bridge.title": "VPN を含むスマートフォンの有効ルートを共有。",
+        "bridge.body": "MonoProxy は端末全体の VPN を作りません。プロキシの上流ソケットを選択した Android ネットワークへ束縛し、クライアント通信を既定ルート、Wi-Fi、モバイル通信、または有効な VPN ネットワークから出せます。目的の VPN ルートがスマートフォンにしかない時に便利です。",
+        "bridge.defaultTag": "既定",
+        "bridge.defaultTitle": "システムルート",
+        "bridge.defaultBody": "通常のプロキシ利用では Android の現在の既定ネットワークに従います。",
+        "bridge.vpnTag": "VPN",
+        "bridge.vpnTitle": "ブリッジモード",
+        "bridge.vpnBody": "利用可能な場合、プロキシ上流通信を有効な VPN Network へ送ります。",
+        "bridge.wifiTag": "Wi-Fi",
+        "bridge.wifiTitle": "ローカル優先",
+        "bridge.wifiBody": "安定した LAN とインターネット接続のため Wi-Fi を優先します。",
+        "bridge.cellTag": "モバイル",
+        "bridge.cellTitle": "予備経路",
+        "bridge.cellBody": "モバイルデータを出口にしたい場合、上流リクエストをそこへ流します。",
+        "features.kicker": "Android ツールキット",
+        "features.title": "単にポートを開くだけでなく、実際のプロキシ運用のために。",
+        "features.body": "1.6 の画面プレビュー。接続・アクティビティ・ツールはエミュレーター上の署名済みアプリ、診断はサンプルデータを使ったネイティブ描画です。",
+        "feature.homeTag": "接続",
+        "feature.homeTitle": "アドレスと次の操作をすぐ確認",
+        "feature.homeBody": "選択中のアドレスをコピーし、ネットワーク、リスナー、クライアント、通信の状態を確認して機器を接続します。",
+        "feature.setupTag": "アクティビティ",
+        "feature.setupTitle": "問題が起きたセッションを探す",
+        "feature.setupBody": "セッション、通信量、ローカル履歴を一つの画面から開き、結果の絞り込みや分析を行えます。",
+        "feature.trafficTag": "診断",
+        "feature.trafficTitle": "全画面で接続を調べる",
+        "feature.trafficBody": "接続経路とリソースを確認し、プライバシーに配慮したレポートをプレビュー。出口の確認は任意で実行できます。",
+        "feature.historyTag": "ツール",
+        "feature.historyTitle": "設定、機器、クイック操作をまとめて",
+        "feature.historyBody": "サーバー設定、クライアント管理、共有、稼働記録、Android のバックグラウンド設定へ移動できます。",
+        "feature.controlTag": "制御",
+        "feature.controlTitle": "送信ルーティングとセキュリティ設定",
+        "feature.controlBody": "SOCKS、認証、プライベート LAN アクセス、送信ネットワークモード、信頼済みネットワーク再開、ローカル分析を設定できます。",
+        "feature.devicesTag": "デバイス",
+        "feature.devicesTitle": "共有ネットワーク向けのクライアント管理",
+        "feature.devicesBody": "IP ごとにクライアントをまとめ、別名、切断、一時ブロック、接続数、帯域、通信量の制限を適用できます。",
+        "privacy.kicker": "プライバシー重視",
+        "privacy.title": "ローカルプロキシ、ローカル制御、1 回の有料ダウンロード。",
+        "privacy.body": "MonoProxy Android はアカウント、サブスクリプション、アプリ内解除なしでスマートフォン上で動作します。クライアント接続を中継し、運用データは端末内に保持します。",
+        "privacy.purchaseTitle": "Google Play:",
+        "privacy.purchaseBody": " 1 回の有料ダウンロード。購入後はすべての Android 機能が含まれます。",
+        "privacy.card1Title": "認証を利用可能",
+        "privacy.card1Body": "共有ネットワークで HTTP と SOCKS5 クライアントをユーザー名とパスワードで保護できます。",
+        "privacy.card2Title": "LAN 優先アクセス",
+        "privacy.card2Body": "既定ではプライベートクライアントのみ許可し、より強いポリシー向けに許可とブロックを制御できます。",
+        "privacy.card3Title": "TLS はエンドツーエンドのまま",
+        "privacy.card3Body": "HTTPS CONNECT 通信は証明書のインストールや内容検査なしにトンネルされます。",
+        "privacy.card4Title": "デバイスデータはローカルに保持",
+        "privacy.card4Body": "設定、機器ポリシー、通信記録は端末内に保存。任意の出口 IP・速度チェックは確認後に ipify と Cloudflare に接続します。",
+        "cta.title": "Android スマートフォンを LAN プロキシゲートウェイに。",
+        "cta.body": "Google Play で一度購入し、リスナーを開始し、近くのデバイスを接続し、スマートフォンから実通信を確認します。",
+        "cta.google": "Google Play を開く",
+        "cta.ios": "iOS 版を見る",
+        "footer.privacy": "プライバシー",
+        "footer.support": "サポート",
+        "footer.ios": "iOS",
+        "footer.google": "Google Play",
+        "preview.note": "1.6 画面プレビュー · Google Play 審査・公開後に提供"
     },
-    ko: {
-      metaTitle: "MonoProxy Android - 개인 LAN 프록시 게이트웨이",
-      metaDescription: "MonoProxy Android는 HTTP, HTTPS CONNECT, SOCKS, 안내형 설정, VPN Bridge, 기기 제어, 로컬 트래픽 인사이트를 갖춘 개인 LAN 프록시 게이트웨이입니다.",
-      "nav.ios": "iOS",
-      "nav.setup": "설정",
-      "nav.network": "네트워크",
-      "nav.bridge": "VPN Bridge",
-      "nav.features": "기능",
-      "nav.privacy": "개인정보",
-      "nav.google": "Google Play",
-      "hero.kicker": "Android 1.1.0",
-      "hero.line1": "Android 휴대폰을,",
-      "hero.line2": "개인 LAN 게이트웨이로.",
-      "hero.body": "MonoProxy Android는 주변 기기와 하나의 로컬 HTTP, HTTPS CONNECT, SOCKS 엔드포인트를 공유하고 네트워크, 리스너, 클라이언트, 실제 트래픽 경로가 작동하는지 보여줍니다.",
-      "action.google": "Google Play에서 보기",
-      "action.flow": "Android 흐름 보기",
-      "hero.paid": "유료 다운로드",
-      "hero.noSubscription": "구독 없음",
-      "hero.noPro": "광고와 Pro 티어 없음",
-      "hero.statusTitle": "트래픽 확인됨",
-      "hero.statusBody": "실시간 세션, 파형 기록, 로컬 트래픽 기록.",
-      "release.version": "Android LAN 공유용",
-      "release.title": "사용자가 길을 잃기 전에 모든 단계를 설명하는 프록시 게이트웨이.",
-      "release.body": "Android 버전은 선택 주소, 프로토콜 모드, 연결 경로, 네 개의 상태 블록, 실시간 파형 차트, 기기 연결 액션을 홈 화면에 유지합니다.",
-      "release.card1Title": "권장 네트워크",
-      "release.card1Body": "Wi-Fi IPv4를 가장 좋은 로컬 주소로 보여줍니다. IPv6, 셀룰러, 고급 인터페이스는 필요할 때까지 뒤로 둡니다.",
-      "release.card2Title": "로컬 설정 페이지",
-      "release.card2Body": "클라이언트는 /setup을 열어 값을 복사하고 PAC를 다운로드하며 프록시 트래픽 전에 도달성 테스트를 실행할 수 있습니다.",
-      "release.card3Title": "연결 경로",
-      "release.card3Body": "Network, Listener, Client, Traffic이 각각 보이는 상태를 가지므로 \"실행 중\"과 \"확인됨\"이 혼동되지 않습니다.",
-      "release.card4Title": "알림 액션",
-      "release.card4Body": "상주 전경 알림에서 기기 연결, 주소 복사, 중지를 사용할 수 있습니다.",
-      "flow.kicker": "빠른 로컬 설정",
-      "flow.title": "한 번 시작하고, 주변 기기를 추측 없이 연결.",
-      "flow.body": "Android 흐름은 어떤 주소를 써야 하는지, 어디에 붙여야 하는지, 트래픽이 실제로 휴대폰을 통과했는지 알려줍니다.",
-      "flow.step1Title": "Wi-Fi IPv4 선택",
-      "flow.step1Body": "클라이언트가 도달할 수 있는 로컬 인터페이스를 선택합니다. 클라이언트가 볼 수 없는 셀룰러나 시스템 주소가 아닙니다.",
-      "flow.step2Title": "기기 연결 열기",
-      "flow.step2Body": "Android, iOS, macOS, Windows 클라이언트 설정을 전체 화면 흐름으로 진행합니다.",
-      "flow.step3Title": "트래픽 확인",
-      "flow.step3Body": "실제 클라이언트 활동이 프록시 경로에 도달한 뒤에만 파형 차트와 상태 블록이 업데이트됩니다.",
-      "network.kicker": "홈 네트워크",
-      "network.title": "Android 휴대폰을 가운데에.",
-      "network.body": "MonoProxy를 한 번 실행한 뒤 가까운 노트북, 데스크톱, 태블릿, 테스트 기기를 휴대폰의 로컬 엔드포인트로 향하게 합니다.",
-      "network.laptop": "노트북",
-      "network.laptopDetail": "HTTP / SOCKS",
-      "network.desktop": "데스크톱",
-      "network.desktopDetail": "브라우저 프록시",
-      "network.tablet": "태블릿",
-      "network.tabletDetail": "PAC 또는 수동",
-      "network.console": "TV / 콘솔",
-      "network.consoleDetail": "같은 LAN",
-      "network.badge": "하나의 휴대폰 엔드포인트",
-      "bridge.kicker": "VPN Bridge",
-      "bridge.title": "VPN을 포함한 휴대폰의 활성 경로 공유.",
-      "bridge.body": "MonoProxy는 기기 전체 VPN을 만들지 않습니다. 프록시 업스트림 소켓을 선택한 Android 네트워크에 바인딩하여 클라이언트 트래픽이 기본 라우팅, Wi-Fi, 셀룰러 또는 이미 활성화된 VPN 네트워크로 나갈 수 있게 합니다. 원하는 VPN 경로가 휴대폰에만 있을 때 유용합니다.",
-      "bridge.defaultTag": "기본",
-      "bridge.defaultTitle": "시스템 경로",
-      "bridge.defaultBody": "일반 프록시 사용 시 Android의 현재 기본 네트워크를 따릅니다.",
-      "bridge.vpnTag": "VPN",
-      "bridge.vpnTitle": "브리지 모드",
-      "bridge.vpnBody": "가능하면 프록시 업스트림 트래픽을 활성 VPN Network로 보냅니다.",
-      "bridge.wifiTag": "Wi-Fi",
-      "bridge.wifiTitle": "로컬 우선",
-      "bridge.wifiBody": "안정적인 LAN과 인터넷 접근을 위해 Wi-Fi 네트워크를 우선합니다.",
-      "bridge.cellTag": "셀룰러",
-      "bridge.cellTitle": "대체 경로",
-      "bridge.cellBody": "모바일 데이터가 의도한 출구일 때 업스트림 요청을 그쪽으로 라우팅합니다.",
-      "features.kicker": "Android 도구 세트",
-      "features.title": "단순히 포트를 여는 것이 아니라 실제 프록시 실행을 위해.",
-      "features.body": "MonoProxy는 설정, 보안, 런타임 가시성, 기기 제어를 하나의 로컬 우선 Android 앱에 결합합니다.",
-      "feature.homeTag": "홈",
-      "feature.homeTitle": "실시간 상태, 네 가지 확인, 파형 차트",
-      "feature.homeBody": "Android 홈 패널은 서비스 상태, 선택한 엔드포인트, 연결 경로, 세션 트래픽, 실시간 속도 추세를 한 번에 보여줍니다.",
-      "feature.setupTag": "안내형 설정",
-      "feature.setupTitle": "기기 연결은 전체 화면 흐름",
-      "feature.setupBody": "클라이언트를 선택하고 프록시 값을 구성한 뒤 도달성과 트래픽을 확인합니다. 모든 것을 하나의 대화상자에 밀어 넣지 않습니다.",
-      "feature.trafficTag": "트래픽 인사이트",
-      "feature.trafficTitle": "실제로 프록시를 사용한 호스트 확인",
-      "feature.trafficBody": "사이트 트래픽은 호스트별로 집계되며 업로드, 다운로드, 마지막 활동 합계가 휴대폰에 로컬 저장됩니다.",
-      "feature.historyTag": "기록",
-      "feature.historyTitle": "디버깅용 로컬 세션 기록",
-      "feature.historyBody": "활성화된 경우 호스트 단위 프록시 세션을 기록해 경로나 인증 정보를 저장하지 않고 연결 문제를 설명하기 쉽게 합니다.",
-      "feature.controlTag": "제어",
-      "feature.controlTitle": "아웃바운드 라우팅과 보안 설정",
-      "feature.controlBody": "SOCKS, 인증, 개인 LAN 접근, 아웃바운드 네트워크 모드, 신뢰 네트워크 재개, 로컬 분석을 구성합니다.",
-      "feature.devicesTag": "기기",
-      "feature.devicesTitle": "공유 네트워크용 클라이언트 관리",
-      "feature.devicesBody": "IP별로 클라이언트를 묶고 별칭 추가, 세션 끊기, 임시 차단, 클라이언트별 연결 수, 대역폭, 할당량 제한을 적용합니다.",
-      "privacy.kicker": "개인정보 우선",
-      "privacy.title": "로컬 프록시, 로컬 제어, 한 번의 유료 다운로드.",
-      "privacy.body": "MonoProxy Android는 계정, 구독, 앱 내 잠금 해제 없이 휴대폰에서 실행됩니다. 클라이언트 연결을 중계하고 운영 데이터를 기기에 로컬로 유지합니다.",
-      "privacy.purchaseTitle": "Google Play:",
-      "privacy.purchaseBody": " 한 번의 유료 다운로드. 구매 후 모든 Android 기능이 포함됩니다.",
-      "privacy.card1Title": "인증 사용 가능",
-      "privacy.card1Body": "공유 네트워크에서 사용자 이름과 비밀번호로 HTTP 및 SOCKS5 클라이언트를 보호합니다.",
-      "privacy.card2Title": "LAN 우선 접근",
-      "privacy.card2Body": "기본적으로 개인 클라이언트만 허용하며 더 강한 정책을 위해 허용 및 차단 제어를 제공합니다.",
-      "privacy.card3Title": "TLS는 끝까지 유지",
-      "privacy.card3Body": "HTTPS CONNECT 트래픽은 인증서 설치나 콘텐츠 검사 없이 터널링됩니다.",
-      "privacy.card4Title": "기기 데이터는 로컬에 유지",
-      "privacy.card4Body": "별칭, 사용 카운터, 사이트 합계, 기기 정책은 클라우드 계정이 아닌 로컬 런타임 데이터입니다.",
-      "cta.title": "Android 휴대폰을 LAN 프록시 게이트웨이로 만드세요.",
-      "cta.body": "Google Play에서 한 번 구매하고 리스너를 시작한 뒤 주변 기기를 연결하고 휴대폰에서 실제 트래픽을 확인하세요.",
-      "cta.google": "Google Play 열기",
-      "cta.ios": "iOS 버전 보기",
-      "footer.privacy": "개인정보",
-      "footer.support": "지원",
-      "footer.ios": "iOS",
-      "footer.google": "Google Play"
+    "ko": {
+        "metaTitle": "MonoProxy Android - 개인 LAN 프록시 게이트웨이",
+        "metaDescription": "MonoProxy Android는 HTTP, HTTPS CONNECT, SOCKS, 안내형 설정, VPN Bridge, 기기 제어, 로컬 트래픽 인사이트를 갖춘 개인 LAN 프록시 게이트웨이입니다.",
+        "nav.ios": "iOS",
+        "nav.setup": "설정",
+        "nav.network": "네트워크",
+        "nav.bridge": "VPN Bridge",
+        "nav.features": "기능",
+        "nav.privacy": "개인정보",
+        "nav.google": "Google Play",
+        "hero.kicker": "Android 1.6 · 업데이트 미리보기",
+        "hero.line1": "Android 휴대폰을,",
+        "hero.line2": "개인 LAN 게이트웨이로.",
+        "hero.body": "MonoProxy Android는 주변 기기와 하나의 로컬 HTTP, HTTPS CONNECT, SOCKS 엔드포인트를 공유하고 네트워크, 리스너, 클라이언트, 실제 트래픽 경로가 작동하는지 보여줍니다.",
+        "action.google": "Google Play에서 보기",
+        "action.flow": "Android 흐름 보기",
+        "hero.paid": "유료 다운로드",
+        "hero.noSubscription": "구독 없음",
+        "hero.noPro": "광고와 Pro 티어 없음",
+        "hero.statusTitle": "트래픽 확인됨",
+        "hero.statusBody": "실시간 세션, 파형 기록, 로컬 트래픽 기록.",
+        "release.version": "더 명확한 연결 작업 공간",
+        "release.title": "연결, 확인, 공유를 한곳에서.",
+        "release.body": "1.6은 연결 화면을 정리하고 세션 검색, 이동 가능한 설정과 전체 화면 진단을 개선합니다. 이미지는 새 화면 미리보기이며 Google Play 심사와 출시 후 제공됩니다.",
+        "release.card1Title": "세션 분석",
+        "release.card1Body": "프로토콜이나 결과로 세션을 검색·필터링하고 실패 단계와 캡처한 분석 스냅샷을 확인하세요.",
+        "release.card2Title": "이동 가능한 설정",
+        "release.card2Body": "가져오기 전 미리보기, 인증 정보 없는 복제, Android와 iOS 간 호환 설정 교환을 지원합니다.",
+        "release.card3Title": "다양한 형식으로 공유",
+        "release.card3Body": "HTTP, SOCKS, PAC, QR, 명령 형식을 복사·공유하세요. 인증 정보를 포함할 때마다 확인을 받습니다.",
+        "release.card4Title": "출구 진단",
+        "release.card4Body": "선택한 출구를 확인하고 동의 후 한 번만 1 MiB 속도 샘플을 받을 수 있습니다. 자동 측정은 하지 않습니다.",
+        "flow.kicker": "빠른 로컬 설정",
+        "flow.title": "한 번 시작하고, 주변 기기를 추측 없이 연결.",
+        "flow.body": "Android 흐름은 어떤 주소를 써야 하는지, 어디에 붙여야 하는지, 트래픽이 실제로 휴대폰을 통과했는지 알려줍니다.",
+        "flow.step1Title": "Wi-Fi IPv4 선택",
+        "flow.step1Body": "클라이언트가 도달할 수 있는 로컬 인터페이스를 선택합니다. 클라이언트가 볼 수 없는 셀룰러나 시스템 주소가 아닙니다.",
+        "flow.step2Title": "기기 연결 열기",
+        "flow.step2Body": "Android, iOS, macOS, Windows 클라이언트 설정을 전체 화면 흐름으로 진행합니다.",
+        "flow.step3Title": "트래픽 확인",
+        "flow.step3Body": "실제 클라이언트 활동이 프록시 경로에 도달한 뒤에만 파형 차트와 상태 블록이 업데이트됩니다.",
+        "network.kicker": "홈 네트워크",
+        "network.title": "Android 휴대폰을 가운데에.",
+        "network.body": "MonoProxy를 한 번 실행한 뒤 가까운 노트북, 데스크톱, 태블릿, 테스트 기기를 휴대폰의 로컬 엔드포인트로 향하게 합니다.",
+        "network.laptop": "노트북",
+        "network.laptopDetail": "HTTP / SOCKS",
+        "network.desktop": "데스크톱",
+        "network.desktopDetail": "브라우저 프록시",
+        "network.tablet": "태블릿",
+        "network.tabletDetail": "PAC 또는 수동",
+        "network.console": "TV / 콘솔",
+        "network.consoleDetail": "같은 LAN",
+        "network.badge": "하나의 휴대폰 엔드포인트",
+        "bridge.kicker": "VPN Bridge",
+        "bridge.title": "VPN을 포함한 휴대폰의 활성 경로 공유.",
+        "bridge.body": "MonoProxy는 기기 전체 VPN을 만들지 않습니다. 프록시 업스트림 소켓을 선택한 Android 네트워크에 바인딩하여 클라이언트 트래픽이 기본 라우팅, Wi-Fi, 셀룰러 또는 이미 활성화된 VPN 네트워크로 나갈 수 있게 합니다. 원하는 VPN 경로가 휴대폰에만 있을 때 유용합니다.",
+        "bridge.defaultTag": "기본",
+        "bridge.defaultTitle": "시스템 경로",
+        "bridge.defaultBody": "일반 프록시 사용 시 Android의 현재 기본 네트워크를 따릅니다.",
+        "bridge.vpnTag": "VPN",
+        "bridge.vpnTitle": "브리지 모드",
+        "bridge.vpnBody": "가능하면 프록시 업스트림 트래픽을 활성 VPN Network로 보냅니다.",
+        "bridge.wifiTag": "Wi-Fi",
+        "bridge.wifiTitle": "로컬 우선",
+        "bridge.wifiBody": "안정적인 LAN과 인터넷 접근을 위해 Wi-Fi 네트워크를 우선합니다.",
+        "bridge.cellTag": "셀룰러",
+        "bridge.cellTitle": "대체 경로",
+        "bridge.cellBody": "모바일 데이터가 의도한 출구일 때 업스트림 요청을 그쪽으로 라우팅합니다.",
+        "features.kicker": "Android 도구 세트",
+        "features.title": "단순히 포트를 여는 것이 아니라 실제 프록시 실행을 위해.",
+        "features.body": "1.6 화면 미리보기입니다. 연결·활동·도구는 에뮬레이터의 서명된 앱 화면이며 진단은 샘플 데이터를 사용한 네이티브 렌더링입니다.",
+        "feature.homeTag": "연결",
+        "feature.homeTitle": "주소와 다음 작업을 바로 확인",
+        "feature.homeBody": "선택한 주소를 복사하고 네트워크, 리스너, 클라이언트, 트래픽 상태를 따라 기기를 연결하세요.",
+        "feature.setupTag": "활동",
+        "feature.setupTitle": "문제가 발생한 세션 찾기",
+        "feature.setupBody": "한 작업 공간에서 세션, 트래픽 합계와 로컬 기록을 열고 결과를 필터링하거나 세션 분석을 확인하세요.",
+        "feature.trafficTag": "진단",
+        "feature.trafficTitle": "전체 화면으로 연결 문제 확인",
+        "feature.trafficBody": "연결 경로와 리소스 카운터를 확인하고 개인정보를 보호하는 보고서를 미리 보세요. 출구 확인은 선택 사항입니다.",
+        "feature.historyTag": "도구",
+        "feature.historyTitle": "설정, 기기, 빠른 작업을 한곳에서",
+        "feature.historyBody": "서버 설정, 클라이언트 제어, 공유, 실행 기록과 Android 백그라운드 제어에 바로 접근하세요.",
+        "feature.controlTag": "제어",
+        "feature.controlTitle": "아웃바운드 라우팅과 보안 설정",
+        "feature.controlBody": "SOCKS, 인증, 개인 LAN 접근, 아웃바운드 네트워크 모드, 신뢰 네트워크 재개, 로컬 분석을 구성합니다.",
+        "feature.devicesTag": "기기",
+        "feature.devicesTitle": "공유 네트워크용 클라이언트 관리",
+        "feature.devicesBody": "IP별로 클라이언트를 묶고 별칭 추가, 세션 끊기, 임시 차단, 클라이언트별 연결 수, 대역폭, 할당량 제한을 적용합니다.",
+        "privacy.kicker": "개인정보 우선",
+        "privacy.title": "로컬 프록시, 로컬 제어, 한 번의 유료 다운로드.",
+        "privacy.body": "MonoProxy Android는 계정, 구독, 앱 내 잠금 해제 없이 휴대폰에서 실행됩니다. 클라이언트 연결을 중계하고 운영 데이터를 기기에 로컬로 유지합니다.",
+        "privacy.purchaseTitle": "Google Play:",
+        "privacy.purchaseBody": " 한 번의 유료 다운로드. 구매 후 모든 Android 기능이 포함됩니다.",
+        "privacy.card1Title": "인증 사용 가능",
+        "privacy.card1Body": "공유 네트워크에서 사용자 이름과 비밀번호로 HTTP 및 SOCKS5 클라이언트를 보호합니다.",
+        "privacy.card2Title": "LAN 우선 접근",
+        "privacy.card2Body": "기본적으로 개인 클라이언트만 허용하며 더 강한 정책을 위해 허용 및 차단 제어를 제공합니다.",
+        "privacy.card3Title": "TLS는 끝까지 유지",
+        "privacy.card3Body": "HTTPS CONNECT 트래픽은 인증서 설치나 콘텐츠 검사 없이 터널링됩니다.",
+        "privacy.card4Title": "기기 데이터는 로컬에 유지",
+        "privacy.card4Body": "설정, 기기 정책과 트래픽 기록은 휴대폰에 보관됩니다. 선택적인 출구 IP·속도 확인은 동의 후 ipify와 Cloudflare에 연결합니다.",
+        "cta.title": "Android 휴대폰을 LAN 프록시 게이트웨이로 만드세요.",
+        "cta.body": "Google Play에서 한 번 구매하고 리스너를 시작한 뒤 주변 기기를 연결하고 휴대폰에서 실제 트래픽을 확인하세요.",
+        "cta.google": "Google Play 열기",
+        "cta.ios": "iOS 버전 보기",
+        "footer.privacy": "개인정보",
+        "footer.support": "지원",
+        "footer.ios": "iOS",
+        "footer.google": "Google Play",
+        "preview.note": "1.6 화면 미리보기 · Google Play 심사 및 출시 후 제공"
     }
-  };
+};
 
   const simplifiedToTraditionalMap = {
     "与":"與","为":"為","个":"個","体":"體","发":"發","内":"內","网":"網","络":"絡","诊":"診","断":"斷","达":"達","历":"歷","录":"錄","隐":"隱","户":"戶","准":"準","带":"帶","来":"來","点":"點","维":"維","码":"碼","设":"設","备":"備","围":"圍","绕":"繞","协":"協","议":"議","状":"狀","态":"態","视":"視","觉":"覺","显":"顯","进":"進","连":"連","动":"動","识":"識","让":"讓","单":"單","统":"統","计":"計","浏":"瀏","览":"覽","独":"獨","题":"題","离":"離","当":"當","重":"重","径":"徑","实":"實","优":"優","骤":"驟","启":"啟","确":"確","认":"認","监":"監","听":"聽","区":"區","义":"義","选":"選","择":"擇","访":"訪","问":"問","后":"後","复":"複","扫":"掃","传":"傳","输":"輸","数":"數","据":"據","测":"測","电":"電","脑":"腦","简":"簡","细":"細","时":"時","间":"間","会":"會","标":"標","势":"勢","汇":"匯","请":"請","仅":"僅","随":"隨","导":"導","轻":"輕","松":"鬆","参":"參","应":"應","语":"語","画":"畫","证":"證","记":"記","项":"項","种":"種","环":"環","绿":"綠","静":"靜","专":"專","适":"適","属":"屬","运":"運","账":"帳","号":"號","远":"遠","转":"轉","装":"裝","书":"書","检":"檢","查":"查","费":"費","订":"訂","阅":"閱","级":"級","读":"讀","凭":"憑","现":"現","终":"終","无":"無","开":"開","并":"並","联":"聯","系":"繫","页":"頁","础":"礎","务":"務","线":"線","过":"過","该":"該","负":"負","责":"責","储":"儲","除":"除","处":"處","桥":"橋","优":"優","宽":"寬","额":"額","买":"買","断":"斷","额":"額","览":"覽","击":"擊","压":"壓"
@@ -1276,10 +1262,40 @@
   Object.assign(translations["zh-Hant"], {
     metaTitle: "MonoProxy Android - 私有局域網代理閘道",
     metaDescription: "MonoProxy Android 可將手機變成私有局域網代理閘道，支援 HTTP、HTTPS CONNECT、SOCKS、引導式配置、VPN Bridge、設備控制和本地流量洞察。",
-    "hero.line1": "你的 Android 手機，",
-    "hero.line2": "一個私有局域網閘道。",
+    "hero.line1": "手機網路，",
+    "hero.line2": "分享給身邊裝置。",
     "privacy.purchaseTitle": "Google Play："
   });
+
+  Object.assign(translations["zh-Hant"], {
+    "hero.kicker": "Android 1.6 · 更新預覽",
+    "release.version": "更清晰的連線工作區",
+    "release.title": "連線、排障與分享，各有清晰入口。",
+    "release.body": "1.6 更新重新整理連線首頁，增強工作階段搜尋、可攜設定與全螢幕診斷。頁面圖片為新版介面預覽，正式可用時間以 Google Play 審核發布為準。",
+    "release.card1Title": "工作階段分析",
+    "release.card1Body": "依通訊協定與結果搜尋、篩選工作階段，檢視失敗階段，並從擷取的分析快照繼續定位問題。",
+    "release.card2Title": "可攜設定",
+    "release.card2Body": "匯入前預覽、建立不含憑證的副本，在 Android 與 iOS 之間交換相容的伺服器設定。",
+    "release.card3Title": "多格式分享",
+    "release.card3Body": "複製或分享 HTTP、SOCKS、PAC、QR 碼與命令格式；包含憑證的內容每次都需要確認。",
+    "release.card4Title": "出口診斷",
+    "release.card4Body": "檢視所選出口，確認後可執行一次 1 MiB 出口取樣。不會自動測速。",
+    "feature.homeTag": "連線",
+    "feature.homeTitle": "位址與下一步操作，直接可見",
+    "feature.homeBody": "讀取、複製所選位址，沿網路、監聽、用戶端與流量確認連線進度，從首頁連接裝置。",
+    "feature.setupTag": "活動",
+    "feature.setupTitle": "找到問題對應的那次工作階段",
+    "feature.setupBody": "在統一的活動工作區開啟工作階段、流量彙總與本機歷史；篩選結果並檢視擷取的分析。",
+    "feature.trafficTag": "診斷",
+    "feature.trafficTitle": "完整頁面，逐步排查",
+    "feature.trafficBody": "沿連線路徑檢視狀態與資源計數，預覽保護隱私的報告，依需求選擇出口檢查。",
+    "feature.historyTag": "工具",
+    "feature.historyTitle": "設定、裝置與快捷操作集中管理",
+    "feature.historyBody": "伺服器設定、用戶端控制、多格式分享、執行記錄與 Android 背景控制，都有直接入口。",
+    "privacy.card4Body": "設定、裝置政策與流量記錄保留在手機本機。可選出口 IP 檢查與取樣僅在確認後聯絡 ipify 與 Cloudflare。",
+    "features.body": "1.6 介面預覽。連線、活動與工具頁面來自模擬器中的簽署應用實拍；診斷頁面為包含範例資料的原生介面繪製。",
+    "preview.note": "1.6 介面預覽 · Google Play 審核發布後可用"
+});
 
   const languageSelect = document.querySelector("[data-language-select]");
   const supportedLanguages = new Set(Object.keys(translations));
@@ -1311,6 +1327,9 @@
       if (value) element.textContent = value;
     });
 
+    const privacyLink = document.querySelector('[data-i18n="footer.privacy"]');
+    if (privacyLink) privacyLink.href = selected === "zh" || selected === "zh-Hant"
+      ? "../privacy-android.html" : "../privacy-android-en.html";
     if (languageSelect) languageSelect.value = selected;
 
     if (updateAddress) {

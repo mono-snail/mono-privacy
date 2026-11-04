@@ -1,0 +1,30 @@
+{
+  "version": "1.6.0 preview",
+  "captured_at": "2026-11-04",
+  "screens": [
+    {
+      "file": "connection.png",
+      "source": "release/android-release-2026-11-04/simulator-audit/build14-production-connection.png",
+      "kind": "actual signed build14 emulator screen; build15 changes external launches only",
+      "sha256": "a8cd76bb86498cdeaabca5cf8f8bbf7bcf1b4bafb76b85143c54238efd89db7d"
+    },
+    {
+      "file": "activity.png",
+      "source": "release/android-release-2026-11-04/simulator-audit/build14-production-activity.png",
+      "kind": "actual signed build14 emulator screen; build15 changes external launches only",
+      "sha256": "40b6b71b7091b466501e8d6ad5e6487d01f8bc0e2a7f4f2d77d3cc65b41654cf"
+    },
+    {
+      "file": "tools.png",
+      "source": "release/android-release-2026-11-04/simulator-audit/build14-production-tools.png",
+      "kind": "actual signed build14 emulator screen; build15 changes external launches only",
+      "sha256": "9eea1d871b91ce5fb7f81b75fa5418977f92367b5edd2f73aadc4206a693d936"
+    },
+    {
+      "file": "diagnostics.png",
+      "source": "Android/MonoProxy/docs/verification/2026-11-04/host-screenshots/diagnostics-light.png",
+      "kind": "actual Compose host render, sample data, not an emulator capture",
+      "sha256": "f9ace5550e0e49b0e554cbe737ec22a550e8e85bd4ec1901a4bcd0b5f4de65ae"
+    }
+  ]
+}

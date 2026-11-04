@@ -72,3 +72,11 @@ git push origin main
 生成器只使用 Python 标准库，Cloudflare 根目录发布方式不变；未来发布前需要提交语言目录及 `seo.config.json`。`scripts/check_seo.py` 检查各语言的静态信息、分享元数据、结构化数据、互相对应的语言地址和资源链接。本轮未提交、推送或部署。
 
 参考：[Google SEO 入门指南](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)与[多语言站点指南](https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites)。优先使用清晰、准确的标题与可抓取内容，不以 meta keywords 或重复堆词代替内容。
+
+## Android 1.6 更新预览（2026-11-04）
+
+`android/index.html` 保留既有静态站结构，更新英文、简体中文、繁体中文、日文和韩文的连接工作区、会话分析、便携配置、分享及诊断介绍。所有 Google Play 入口统一为已在 Console 核实的包名 `app.monoware.monoproxy`，修正旧的 `app.monoware.proxy` 链接。
+
+`images/android/1.6/manifest.json` 记录四张新版预览的来源与 SHA-256：连接、活动和工具来自签名 build 14 的实际模拟器页面；诊断为真实 Compose 组件的 host render，使用示例数据。build 15 仅修复外部 Activity 启动，不改变这些页面外观。网页明确标注 1.6 预览及审核发布后可用，不把待审版本写成已经上架，也不把示例画面写成真实网络性能证据。
+
+Android 隐私政策（中英文）补充 ipify 出口 IP 检查与 Cloudflare 单次 1 MiB 出口采样的请求说明。检查依然由用户主动确认，不自动下载。中文页面的隐私入口指向中文政策。
